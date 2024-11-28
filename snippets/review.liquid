@@ -1,0 +1,48 @@
+{% if settings.product_reviews_enable %}
+  <div class="ratings {{ cclass }}">
+    {% case settings.product_reviews_app %}
+      {% when 'shopifyreviews' %}
+        <div class="rating-box">
+          <div class="star-rating temp">
+            <span class="star full" data-value="1">&#9733;</span>
+            <span class="star full" data-value="2">&#9733;</span>
+            <span class="star half" data-value="2.5">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+          </div>
+        </div>
+        {% comment %} <div class="rating-box"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></div> {% endcomment %}
+      {% when 'loox' %}
+        <a href="#looxReviews">
+          <div
+            class="loox-rating"
+            data-id="{{ product.id }}"
+            data-rating="{{ product.metafields.loox.avg_rating }}"
+            data-raters="{{ product.metafields.loox.num_reviews }}"
+          ></div>
+        </a>
+      {% when 'alireviews' %}
+        <div product-id="{{ product.id }}" class="arv-collection arv-collection--{{ product.id }}"></div>
+      {% when 'judgeme' %}
+        <div
+          style="{{ jm_style }}"
+          class="jdgm-widget jdgm-preview-badge"
+          data-id="{{ product.id }}"
+          data-auto-install="false"
+        >
+          {{ product.metafields.judgeme.badge }}
+        </div>
+      {% when 'stamped' %}
+        <span
+          class="stamped-product-reviews-badge stamped-main-badge"
+          data-id="{{ product.id }}"
+          data-product-sku="{{ product.handle }}"
+          data-product-type="{{ product.type }}"
+          data-product-title="{{ product.title }}"
+          style="display: inline-block;"
+        >
+          {{- product.metafields.stamped.badge -}}
+        </span>
+    {% endcase %}
+  </div>
+{% endif %}

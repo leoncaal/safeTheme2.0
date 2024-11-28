@@ -1,0 +1,70 @@
+{
+  "type": "footer",
+  "name": "Footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "top_footer_ypm9dN": {
+          "type": "top_footer",
+          "settings": {
+            "footer_message_box": "<h3>We Have <b>Recommendations<\/b> for You<\/h3>\n<p>Take 30% off when you spend $150 or more with code Autima11<\/p>",
+            "link_text": "Discover Now",
+            "link": "shopify:\/\/collections\/all",
+            "footer_social_enable": true
+          }
+        },
+        "contact_information_Lr3LaV": {
+          "type": "contact_information",
+          "settings": {
+            "footer_about_us": "We are a team of designers and developers who creates high quality premium Shopify themes.",
+            "footer_address": "No 40 Baria Sreet 133\/2, NewYork, USA.",
+            "footer_phone": "(012) 800 456 789",
+            "footer_email": "support@masstechnologist"
+          }
+        },
+        "menu_VhTWnH": {
+          "type": "menu",
+          "settings": {
+            "footer_menu_1": "main-menu"
+          }
+        },
+        "menu_7DXi3w": {
+          "type": "menu",
+          "settings": {
+            "footer_menu_1": "main-menu"
+          }
+        },
+        "newsletter_3XWLLQ": {
+          "type": "newsletter",
+          "settings": {
+            "mailing_list_form_action": "",
+            "heading": "Subscribe"
+          }
+        },
+        "bottom_footer_CpQK87": {
+          "type": "bottom_footer",
+          "settings": {
+            "footer_content_text": "Copyright © 2024  <a href=\"http:\/\/masstechnologist.com\/\">MassTechnologist.com.<\/a> All rights reserved.",
+            "payment_image": "shopify:\/\/shop_images\/payment_b2ee1a49-89a6-4685-8231-10acd8d463c0.png"
+          }
+        }
+      },
+      "block_order": [
+        "top_footer_ypm9dN",
+        "contact_information_Lr3LaV",
+        "menu_VhTWnH",
+        "menu_7DXi3w",
+        "newsletter_3XWLLQ",
+        "bottom_footer_CpQK87"
+      ],
+      "settings": {
+        "footer_layout": "footer-1",
+        "footer_top_margin": false
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

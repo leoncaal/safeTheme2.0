@@ -1,0 +1,117 @@
+{% capture tabs %}{{ section.settings.products_tab_collection1 }},{{ section.settings.products_tab_collection2 }},{{ section.settings.products_tab_collection3 }}{% endcapture %}
+{% assign tabs_collection = tabs | split: "," %}
+<div class="sub-col col-sm-12 col-md-12">
+  <div class="tt_tabsproduct_module multi-rows product-tabs-container-slider module-nav2" id="product_module{{section.id}}">
+    <div class="module-title">
+      {% if section.settings.heading != blank %}  
+      <h2>{{ section.settings.heading }}</h2>
+      {% endif %}
+      <div class="box-tab">
+        <ul class="tab-heading tabs-categorys">
+          {% for coll in tabs_collection %}
+          {% assign title = collections[coll].title %}
+          <li {% if forloop.first %} class="active" {% endif %}>
+            <a data-toggle="pill" href="#tab-{{ section.id }}{{ forloop.index0 }}"><span>{{ title }}</span></a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="box-style">
+      <div class="owl-container">
+        <div class="tt-product ">
+          <div class="tab-content">
+            {% for coll in tabs_collection %}
+            {% assign coll_products = collections[coll].products %}
+            <div class="tab-pane tab-product-container  fade {% if forloop.first %} active in{% endif %}" id="tab-{{ section.id }}{{ forloop.index0 }}">
+              <div class="inner">
+                <div class="trd-products_tab">
+                  {% assign product = coll_products[0] %}
+                  {% include 'product-grid-item-tab' %}
+                </div>
+                <!-- trd-products-tab -->
+                <div class="owl-demo-tabproduct tab-container-{{section.id}} owl-carousel owl-theme ">
+                  <!-- Grid -->
+                  <!-- other type -->
+                  <div class="row_items">
+                    {% for product in coll_products limit:section.settings.products_tab_count %}
+                    {% include 'product-grid-item-list', c:true %}
+                    {% assign ind = forloop.index | times: 1 | modulo:3 %}
+                    {% if  ind == 0 and forloop.last != true %}
+                  </div><div class="row_items">
+                  {% endif %}
+                  {% endfor %}
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <script >
+    $(document).ready(function() {
+      $('a[href="#tab-{{section.id}}0"]').trigger( "click" );
+        $(".tab-container-{{section.id}}").owlCarousel({
+        items: 2,
+        loop:  false ,
+        margin:  0 ,
+        nav:  true ,
+        dots:  false ,
+        autoplay:   false ,
+        autoplayTimeout:  1000 ,
+        autoplayHoverPause: true,
+        autoplaySpeed:  1000 ,
+        navSpeed:  1000 ,
+        dotsSpeed:  1000 ,
+        lazyLoad: true,
+        responsive:{
+        0:{
+        items: 1,
+        nav: true
+        },
+        480:{
+        items: 1,
+        nav: true
+        },
+        768:{
+        items: 1
+        },
+        992:{
+        items: 2
+        },
+        1200:{
+        items: 2
+        },
+        1600:{
+        items: 2
+        }
+        },
+        onInitialized: function() {
+        var count = $(".tab-container-{{section.id}} .owl-item.active").length;
+                      if(count == 1) {
+          $(".tab-container-{{section.id}} .owl-item").removeClass('first');
+            $(".tab-container-{{section.id}} .owl-item.active").addClass('first');
+            } else {
+            $(".tab-container-{{section.id}} .owl-item").removeClass('first');
+            $(".tab-container-{{section.id}} .owl-item.active:first").addClass('first');
+            }
+            },
+            onTranslated: function() {
+            var count = $(".tab-container-{{section.id}} .owl-item.active").length;
+                          if(count == 1) {
+              $(".tab-container-{{section.id}} .owl-item").removeClass('first');
+                $(".tab-container-{{section.id}} .owl-item.active").addClass('first');
+                } else {
+                $(".tab-container-{{section.id}} .owl-item").removeClass('first');
+                $(".tab-container-{{section.id}} .owl-item.active:first").addClass('first');
+                }
+                }
+                });
+            });
+  </script>
+</div>

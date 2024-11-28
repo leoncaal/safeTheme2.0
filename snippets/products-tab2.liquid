@@ -1,0 +1,105 @@
+{% capture tabs %}{{ section.settings.products_tab_collection1 }},{{ section.settings.products_tab_collection2 }},{{ section.settings.products_tab_collection3 }}{% endcapture %}
+{% assign tabs_collection = tabs | split: ',' %}
+{% for coll in tabs_collection %}
+  <div class="sub-col col-sm-12 col-md-4">
+    <div class="tt_product_module multi-rows list-module" id="product_module_{{ coll }}_{{section.id}}">
+      {% assign title = collections[coll].title %}
+      <div class="module-title">
+        <h2>{{ title }}</h2>
+      </div>
+      <div class="box-style">
+        <div class="col-product">
+          <div class="owl-container">
+            {% assign coll_products = collections[coll].products %}
+            <div
+              class="tab-container-{{ section.id }}{{ forloop.index0 }} tt-product owl-carousel owl-theme "
+              id="tab-{{ section.id }}{{ forloop.index0 }}0"
+            >
+              {% if section.settings.listing_rows == 1 %}
+                {% for product in coll_products limit: section.settings.products_tab_count %}
+                  <div class="row_items {% cycle 'odd','even' %}">
+                    {% include 'product-grid-item-list-small' %}
+                  </div>
+                {% endfor %}
+              {% else %}
+                <div class="row_items {% cycle 'odd','even' %}">
+                  {% for product in coll_products limit: section.settings.products_tab_count %}
+                    {% include 'product-grid-item-list-small' %}
+                    {% assign ind = forloop.index | times: 1 | modulo: section.settings.listing_rows %}
+                    {% if ind == 0 %}
+                      </div>
+                      <div class="row_items">
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              {% endif %}
+              <!-- productTabContent -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        var product_owlCarousel = $('#product_module_{{ coll }}_{{section.id}} .tt-product');
+        product_owlCarousel.owlCarousel({
+          loop: false,
+          margin: 0,
+          nav: false,
+          dots: false,
+          autoplay: false,
+          autoplayTimeout: 1000,
+          autoplayHoverPause: true,
+          autoplaySpeed: 1000,
+          navSpeed: 1000,
+          dotsSpeed: 1000,
+          lazyLoad: true,
+          responsive: {
+            0: {
+              items: 1,
+              nav: true,
+            },
+            480: {
+              items: 2,
+              nav: true,
+            },
+            768: {
+              items: 2,
+            },
+            992: {
+              items: 1,
+            },
+            1200: {
+              items: 1,
+            },
+            1600: {
+              items: 1,
+            },
+          },
+          onInitialized: function () {
+            owlAction();
+            var i = 0;
+            $('.owl-dots > .owl-dot').each(function () {
+              $(this).addClass('clk-' + i);
+              i++;
+            });
+          },
+          onTranslated: function () {
+            owlAction();
+          },
+        });
+        function owlAction() {
+          $('#product_module_{{ coll }}_{{section.id}} .tt-product .owl-item').removeClass('first');
+          $('#product_module_{{ coll }}_{{section.id}} .tt-product .owl-item').removeClass('last');
+          $('#product_module_{{ coll }}_{{section.id}} .tt-product .owl-item').removeClass('before-active');
+          $('#product_module_{{ coll }}_{{section.id}} .tt-product .owl-item.active:first').addClass('first');
+          $('#product_module_{{ coll }}_{{section.id}} .tt-product .owl-item.active:last').addClass('last');
+          $('#product_module_{{ coll }}_{{section.id}} .tt-product .owl-item.active:first')
+            .prev()
+            .addClass('before-active');
+        }
+      });
+    </script>
+  </div>
+{% endfor %}

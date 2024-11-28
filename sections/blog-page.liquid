@@ -1,0 +1,168 @@
+{% paginate blog.articles by section.settings.no_articles %}
+  <div class="container">
+    {% render 'breadcrumb' %}
+  </div>
+  {% assign blog_image_size = '270x334' %}
+  {% if section.settings.blog_layout == 'full' or section.settings.blog_layout contains 'grid' %}
+    {% assign blog_image_size = 'master' %}
+  {% endif %}
+
+  <div class="container">
+    <div class="main">
+      <div class="row">
+        <div class="col-order">
+          <div
+            id="content"
+            class=" col-sm-12 col-xs-12"
+          >
+            <h1>{{ 'blogs.title' | t }}</h1>
+            <div class="article-page blog-article">
+              {% for article in blog.articles %}
+                <div class="article-layout article-list {% if section.settings.blog_layout == 'grid2' %}grid col-md-6 {% elsif section.settings.blog_layout == 'grid3' %}grid col-md-4{% endif %}">
+                  <div class="article-item {% cycle 'odd', 'even' %}">
+                    <div class="article-item-inner row text-{{ section.settings.text_align }}">
+                      <div class="article-intro">
+                        <div class="intro-content">
+                          <div class="col-sm-3">
+                            {% if article.image %}
+                              <a href="{{ article.url }}">
+                                <img
+                                  {% if settings.lazyloading_enable %}
+                                    loading="lazy" data-
+                                  {% endif %}
+                                  src="{{ article | image_url }}"
+                                  alt="{{ article.title }}"
+                                  width="{{ blog_image_size | split: 'x' | first }}"
+                                  height="{{ blog_image_size | split: 'x' | last }}"
+                                >
+                              </a>
+                            {% endif %}
+                          </div>
+                          <div class="col-sm-9">
+                            <div class="article-name">
+                              <h3>
+                                <a href="{{ article.url }}">{{ article.title }}</a>
+                              </h3>
+                            </div>
+                            <p class="articledate">
+                              <time datetime="{{ article.published_at }}">
+                                {{- article.published_at | date: '%d/%m/%Y' -}}
+                              </time>
+                              | {{ article.author }}
+                            </p>
+                            {% if section.settings.show_summary %}
+                              <div style="padding: 20px 0 10px;">
+                                {% if article.excerpt.size > 0 %}
+                                  <p>{{ article.excerpt | truncatewords: section.settings.blog_summary_words, '' }}</p>
+                                {% else %}
+                                  {% if section.settings.show_summary_stripped %}
+                                    <p>
+                                      {{
+                                        article.content
+                                        | strip_html
+                                        | truncatewords: section.settings.blog_summary_words, ''
+                                      }}
+                                    </p>
+                                  {% else %}
+                                    <p>
+                                      {{ article.content | truncatewords: section.settings.blog_summary_words, '' }}
+                                    </p>
+                                  {% endif %}
+                                {% endif %}
+                              </div>
+                            {% endif %}
+                            <a class="readmore-page" href="{{ article.url }}">
+                              {{- 'blogs.article.readmore' | t -}}
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+            {% if paginate.pages > 1 %}
+              {% render 'pagination', paginate: paginate %}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endpaginate %}
+
+{% schema %}
+{
+  "name": "Blog Page",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "[Video Guide for blog page](https://youtu.be/krrVmNbR60k?list=PLvJCnPMUAdwr6XxWVo_f9dkVRh8GNCXoa)"
+    },
+    {
+      "type": "select",
+      "id": "blog_layout",
+      "label": "Layout",
+      "options": [
+        {
+          "value": "default",
+          "label": "default"
+        }
+      ],
+      "default": "default"
+    },
+    {
+      "type": "text",
+      "id": "no_articles",
+      "label": "No of articles to show (per page)",
+      "default": "5"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_summary",
+      "label": "Show Summary in list view",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_summary_stripped",
+      "label": "Strip Summary",
+      "default": true,
+      "info": "Strips html tags to show text without format"
+    },
+    {
+      "type": "text",
+      "id": "blog_summary_words",
+      "label": "Words count on summary area",
+      "default": "30"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Text Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "left"
+        },
+        {
+          "value": "center",
+          "label": "center"
+        },
+        {
+          "value": "right",
+          "label": "right"
+        },
+        {
+          "value": "justify",
+          "label": "justify"
+        }
+      ],
+      "default": "left"
+    }
+  ],
+  "blocks": [],
+  "presets": []
+}
+{% endschema %}

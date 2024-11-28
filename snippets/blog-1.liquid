@@ -1,0 +1,82 @@
+<div id="blog_home" class="menu-recent module-nav2">
+  <div class="">
+    <div class="blog-title module-title">
+      {% if section.settings.heading != blank %}  
+      <h2>{{ section.settings.heading }}</h2>
+      {% endif %}
+    </div>
+    <div class="owl-container">
+      <div class="articles-container owl-carousel owl-theme">
+        {% for article in blogs[section.settings.blog].articles %}
+        <div class="row_items">
+          <div class="articles-inner">
+            <div class="articles-image">
+              <a class="" href="{{ article.url }}">
+                <img src="{{ article.image.src | img_url: '260x179' }}" alt="{{ article.title }}">
+                <span class="icon-view"></span>
+              </a>
+            </div>
+            <div class="aritcles-content">
+              <div class="content-inner">
+                <p class="date-time-post">
+                  <time datetime="{{ article.published_at | date }}">
+                    <span>
+                      {{ article.published_at | date: '<span class="date-post">%d</span><span class="month-post">%b</span>' }}
+                    </span>
+                  </time>
+                </p>
+                <a class="articles-name" href="{{ article.url }}">{{ article.title }}</a>
+                <p class="author-name">{{ 'blogs.article.by' | t }} <span>{{ article.author }}</span></p>
+                <div class="articles-intro">
+                  <p>
+                    {% if article.excerpt.size > 0 %}
+                    {{ article.excerpt | truncatewords: 12 }}
+                    {% else %}
+                    {{ article.content | strip_html | truncatewords: 12 }}
+                    {% endif %}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+<script >
+  $(document).ready(function() {
+    $(".articles-container").owlCarousel({
+      autoPlay :  false ,
+      items : {{ section.settings.items }},
+      margin: 0,
+      loop: false,			
+      navSpeed : 1000,
+      dotsSpeed : 1000,
+      autoplaySpeed : 1000,
+      nav :  true ,
+      dots :  false ,
+
+      responsive:{
+      0:{
+      items: 1,
+      nav: true
+    },
+                                         480:{
+                                         items: 2,
+                                         nav: true
+                                         },
+                                         768:{
+                                         items: 3
+                                         },
+                                         992:{
+                                         items: 3
+                                         },
+                                         1200:{
+                                         items: {{ section.settings.items }}
+                                         }
+                                         }
+                                         });
+  });
+</script>

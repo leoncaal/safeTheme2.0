@@ -1,0 +1,112 @@
+<div class="main-row{% if section.settings.fullwidth == true %}full-width {% endif  %} {% if section.settings.background == true %} background-full {% endif  %}"{% if section.settings.top_margin %} style="margin-top: 80px;"{% endif %} data-section-id="{{ section.id }}">
+  <div class="container">
+    <div class="row">
+      <div class="main-col col-sm-12 col-md-12">
+        <div class="row sub-row">
+          <div class="sub-col col-sm-12 col-md-12">
+            {% include section.settings.layout %} 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Category Boxes section",
+  "max_blocks": 12,
+  "settings": [
+	{
+         "type": "select",
+         "id": "layout",
+         "label": "Select layout design",
+         "options": [
+            {
+               "value": "categories-section",
+               "label": "Design 1"
+            },
+			{
+               "value": "categories-section2",
+               "label": "Design 2"
+            }
+         ]
+      },
+	{
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Featured Category"
+    },
+    {
+      "type": "checkbox",
+      "id": "fullwidth",
+      "label": "Set Div fullwidth?",
+      "default": true
+    },
+	{
+        "type": "checkbox",
+        "id": "background",
+        "label": "Add Background",
+        "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "top_margin",
+      "label": "Add top margin?",
+      "info": "White empty space above section",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category",
+      "name": "Category Box",
+      "settings": [
+		{
+          "type": "image_picker",
+          "id": "image",
+          "label": "Category Image"
+		},
+        {
+          "type": "text",
+          "id": "heading_text",
+          "label": "Heading Text"
+        },
+		{
+          "type": "url",
+          "id": "heading_link",
+          "label": "Heading/Image Link URL"
+        },
+		{
+          "type": "link_list",
+          "id": "category",
+          "label": "Category Menu"
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Bottom Link Text",
+          "default": "Shop now"
+        },
+		{
+          "type": "url",
+          "id": "link",
+          "label": "Bottom Link URL"
+        }
+      ]
+    }
+  ],
+  "presets": [{
+    "name": "Category box section",
+    "category": "Feature Sections",
+    "blocks": [
+      {
+        "type": "category"
+      },
+      {
+        "type": "category"
+      }
+    ]
+  }]
+}
+{% endschema %}

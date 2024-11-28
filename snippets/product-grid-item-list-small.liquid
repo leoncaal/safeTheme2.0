@@ -1,0 +1,66 @@
+{% unless current_collection %}
+  {% assign current_collection = collection %}
+{% endunless %}
+
+{% assign on_sale = false %}
+{% if product.compare_at_price > product.price %}
+  {% assign on_sale = true %}
+{% endif %}
+
+{% assign sold_out = true %}
+{% if product.available %}
+  {% assign sold_out = false %}
+{% endif %}
+
+{% comment %}Select the product image size from settings.{% endcomment %}
+{% assign img_size = settings.img_size_grid %}
+<div class="product-layout list-style  {% if c == true %} product-customize {% endif %}">
+  <div class="product-thumb transition">
+    <div class="item">
+      <div class="item-inner">
+        <div class="image images-container">
+          <a href="{{ product.url }}" class="product-image">
+            <img
+              class="img-responsive {% if settings.hide_hover != true %}has-rotator{% endif %} img-default-image img-cate-{{product.id}}{% if section %}-{{section.id}}{%endif %}"
+              src="{{ product.featured_image.src | img_url: img_size }}"
+              alt="{{ product.featured_image.alt | escape }}"
+            >
+            {% if settings.hide_hover != true %}
+              <img
+                class="img-r"
+                src="{{ product.images.last | product_img_url: img_size }}"
+                alt="{{ product.images.last.alt | escape }}"
+              >
+            {% endif %}
+          </a>
+          <div class="box-label"></div>
+        </div>
+        <!-- image -->
+        <div class="caption">
+          <div class="inner {% if settings.grid_color_swatches != 'false' and section.settings.product_grid_img_carousel != true %} swtch{% endif %}">
+            {% if settings.grid_vendor_enable %}
+              <p class="manufacture-product">
+                {{ product.vendor | link_to_vendor }}
+              </p>
+            {% endif %}
+            <h4 class="product-name">
+              <a href="{{ product.url | within: collection }}">
+                {% if settings.limit_title_words == true -%}
+                  {{- product.title | truncatewords: settings.limit_title_words_count, '' -}}
+                {%- else -%}
+                  {{- product.title -}}
+                {%- endif %}
+              </a>
+            </h4>
+            {% include 'review' %}
+            {% include 'price' %}
+            <!-- price-container -->
+          </div>
+        </div>
+        <!-- caption -->
+      </div>
+    </div>
+  </div>
+  <!-- product-thumb -->
+</div>
+<!-- product-layout -->

@@ -1,0 +1,97 @@
+<div class="featured-categories-container module-nav2">
+  <div class="featured-categories-slider module-title">
+    {% if section.settings.heading != blank %}
+    <h2>{{ section.settings.heading }}</h2>
+    {% endif %}
+  </div>
+  <div class="featured-categories-content">
+    <div class="owl-container">
+      <div class="owl-featured-categories owl-carousel owl-theme">
+        {% if section.blocks.size > 0 %}
+        <div class="row_items">
+          {% for block in section.blocks %}
+          <div class="item">
+            <div class="item-inner">
+              <div class="fcategory-content">
+                {% if block.settings.link != blank %} 
+                <div class="image">
+                  <a href="{{ block.settings.link }}" {{ block.shopify_attributes }}>
+                    {% endif %}
+                    {% if block.settings.image != blank %}
+                    <img class="" src="{{ block.settings.image | img_url: '150x150' }}" alt="" class=""/>
+                    {% endif %}
+                    {% if block.settings.link != blank %}          
+                  </a>
+                </div>
+                {% endif %}
+                <div class="content-thumb">
+                  <h3 class="name">
+                    <a href="{{ block.settings.heading_link }}">{{ block.settings.heading_text }}</a>
+                  </h3>
+                  <ul class="sub-featured-categories">
+                    {% for link in linklists[block.settings.category].links %}
+                    <li><a href="{{link.url}}">{{link.title}}</a></li>
+                    {% endfor %}
+                  </ul>
+                  <a href="{{ block.settings.link }}" class="view-more">{{ block.settings.link_text }}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% if forloop.last == false %}
+          {% cycle '','</div><div class="row_items">' %}
+          {% endif %}
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+<script >
+  $(document).ready(function() { 
+    $(".owl-featured-categories").owlCarousel({
+      autoplaySpeed:  1000 ,
+      navSpeed:  1000 ,
+      dotsSpeed:  1000 ,
+      items :  3 ,
+      autoplay :  false ,
+      nav:  true ,
+      dots:  false ,
+      autoplayHoverPause : false,
+      margin: 0,
+      responsive:{
+        0:{
+          items:1,
+          nav: false
+        },
+        480:{
+          items: 2,
+          nav: false
+        },
+        768:{
+          items: 2
+        },
+        992:{
+          items: 3
+        },
+        1200:{
+          items:  3 		},
+      },
+      onInitialized: function() {
+        owlAction();
+      },
+      onTranslated: function() {
+        owlAction();
+      }
+    });
+    function owlAction() {
+      $(".owl-featured-categories .owl-item").removeClass('first');
+      $(".owl-featured-categories .owl-item").removeClass('last');
+      $(".owl-featured-categories .owl-item").removeClass('before-active');
+      $(".owl-featured-categories .owl-item.active:first").addClass('first');
+      $(".owl-featured-categories .owl-item.active:last").addClass('last');
+      $('.owl-featured-categories .owl-item.active:first').prev().addClass('before-active');
+    }
+  });
+</script>

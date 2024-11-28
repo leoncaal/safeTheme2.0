@@ -1,0 +1,104 @@
+{
+  "sections": {
+    "main": {
+      "type": "about-page",
+      "blocks": {
+        "1586972178284": {
+          "type": "message_box",
+          "settings": {
+            "description": "A separate template for team\/about us page. You can add multiple message box blocks, video blocks and team member blocks. There can be member blocks for single, two, three and four members."
+          }
+        },
+        "1586966337579": {
+          "type": "single_member",
+          "settings": {
+            "heading": "President",
+            "image_1": "shopify:\/\/shop_images\/1.png",
+            "heading_1": "Lorem ipsum dolor sit amet, consectetur adipiscing eli",
+            "description_1": "Lorem ipsum dolor sit amet, consectetur adipiscing eli",
+            "link_1": ""
+          }
+        },
+        "1586966373027": {
+          "type": "two_member",
+          "settings": {
+            "heading": "Directors",
+            "image_1": "shopify:\/\/shop_images\/2a.png",
+            "heading_1": "Director 1",
+            "description_1": "Lorem ipsum dolor sit amet, consectetur adipiscing eli",
+            "link_1": "",
+            "image_2": "shopify:\/\/shop_images\/2b.png",
+            "heading_2": "Director 2",
+            "description_2": "Lorem ipsum dolor sit amet, consectetur adipiscing eli",
+            "link_2": ""
+          }
+        },
+        "1586965960028": {
+          "type": "three_member",
+          "settings": {
+            "heading": "Team Leads",
+            "image_1": "shopify:\/\/shop_images\/3c.png",
+            "heading_1": "Team Lead One",
+            "description_1": "",
+            "link_1": "",
+            "image_2": "shopify:\/\/shop_images\/3a.png",
+            "heading_2": "Team Lead Two",
+            "description_2": "",
+            "link_2": "",
+            "image_3": "shopify:\/\/shop_images\/3b.png",
+            "heading_3": "Team Lead Three",
+            "description_3": "",
+            "link_3": ""
+          }
+        },
+        "1586966419162": {
+          "type": "four_member",
+          "settings": {
+            "heading": "Employee of the month",
+            "image_1": "shopify:\/\/shop_images\/4c.png",
+            "heading_1": "One",
+            "description_1": "",
+            "link_1": "",
+            "image_2": "shopify:\/\/shop_images\/4d.png",
+            "heading_2": "Two",
+            "description_2": "",
+            "link_2": "",
+            "image_3": "shopify:\/\/shop_images\/4b.png",
+            "heading_3": "Three",
+            "description_3": "",
+            "link_3": "",
+            "image_4": "shopify:\/\/shop_images\/4a.png",
+            "heading_4": "Four",
+            "description_4": "",
+            "link_4": ""
+          }
+        },
+        "dfd6f856-cca2-4bf6-a86f-4a8acbeed1ec": {
+          "type": "video",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/slider2-aero4-1920x943.jpg",
+            "video_type": "youtube",
+            "video_src": "bLwl0gRbyrk",
+            "video_autoplay": true
+          }
+        }
+      },
+      "block_order": [
+        "1586972178284",
+        "1586966337579",
+        "1586966373027",
+        "1586965960028",
+        "1586966419162",
+        "dfd6f856-cca2-4bf6-a86f-4a8acbeed1ec"
+      ],
+      "settings": {
+        "page_top": "shopify:\/\/shop_images\/slider2-aero4-1920x943.jpg",
+        "heading": "Our Team",
+        "show_content": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

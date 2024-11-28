@@ -1,0 +1,170 @@
+<footer
+  class=""
+  {% if section.settings.bkg_image != blank %}
+    style="background-image: url('{{ section.settings.bkg_image | img_url: 'master' }}') !important"
+  {% endif %}
+  {% if section.settings.footer_top_margin %}
+    style="margin-top: 80px;"
+  {% endif %}
+>
+  {% for block in section.blocks %}
+    {% if block.type == 'top_footer' %}
+      <div class="social-group">
+        <div class="container">
+          <div class="inner">
+            <div class="static-bottom-autima1">
+              {% if block.settings.footer_message_box %}
+                <div class="text">
+                  {{ block.settings.footer_message_box }}
+                </div>
+              {% endif %}
+              {% if block.settings.link != blank %}
+                <div>
+                  <a class="" href="{{ block.settings.link }}" {{ section.shopify_attributes }}>
+                    {{ block.settings.link_text }}
+                  </a>
+                </div>
+              {% endif %}
+            </div>
+            {% if block.settings.footer_social_enable %}
+              {% render 'social-button' %}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+        {% for block in section.blocks %}
+          {% if block.type == 'contact_information' %}
+            <div class="col col1 col-md-4 col-sm-6 col-xs-12 col-footer">
+              <div class="footer-title">
+                <h3>{{ 'layout.footer.about' | t }}</h3>
+              </div>
+              <div class="footer-contact footer-content">
+                {% if block.settings.image %}
+                  <a href="/" itemprop="url" class="logo-footer">
+                    <img
+                      src="{{ block.settings.image | img_url: 'master' }}"
+                      alt="{{ block.settings.image.alt | default: shop.name }}"
+                      itemprop="logo"
+                      loading="lazy"
+                    >
+                  </a>
+                {% else %}
+                  <h3>{{ 'layout.footer.contact' | t }}</h3>
+                {% endif %}
+                {% if block.settings.footer_about_us %}
+                  <p class="">{{ block.settings.footer_about_us }}</p>
+                {% endif %}
+                <ul class="list-unstyled text-content">
+                  {% if block.settings.footer_address != blank %}
+                    <li class="address">
+                      <p>
+                        <span>{{ 'layout.footer.address' | t }} :</span>{{ block.settings.footer_address }}
+                      </p>
+                    </li>
+                  {% endif %}
+                  {% if block.settings.footer_phone != blank %}
+                    <li class="phone">
+                      <p>
+                        <span>{{ 'layout.footer.phone' | t }} :</span>{{ block.settings.footer_phone }}
+                      </p>
+                    </li>
+                  {% endif %}
+                  {% if block.settings.footer_email != blank %}
+                    <li class="email">
+                      <p>
+                        <span>{{ 'layout.footer.email' | t }} :</span>{{ block.settings.footer_email }}
+                      </p>
+                    </li>
+                  {% endif %}
+                </ul>
+              </div>
+            </div>
+          {% elsif block.type == 'menu' %}
+            <div class="col col-md-2 col-sm-6 col-xs-12 col-footer">
+              <div class="footer-title">
+                <h5>{{ linklists[block.settings.footer_menu_1].title }}</h5>
+              </div>
+              <div class="footer-content">
+                <ul class="list-unstyled text-content">
+                  {% for link in linklists[block.settings.footer_menu_1].links %}
+                    <li>
+                      <a href="{{link.url}}">{{ link.title }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          {% elsif block.type == 'menu_wide' %}
+            <div class="col col3 col-md-3 col-sm-12 col-xs-12 col-footer">
+              <div class="footer-title">
+                <h5>{{ linklists[block.settings.footer_menu_2].title }}</h5>
+              </div>
+              <div class="footer-content">
+                <ul class="list-unstyled text-content">
+                  {% for link in linklists[block.settings.footer_menu_2].links %}
+                    <li>
+                      <a href="{{link.url}}">{{ link.title }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          {% elsif block.type == 'newsletter' %}
+            <div class="col col4 col-md-4 col-sm-6 col-xs-12 col-footer">
+              {% render 'newsletter', block: block %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% for block in section.blocks %}
+    {% if block.type == 'bottom_footer' %}
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="container-inner">
+            <div class="footer-copyright">
+              <p>{{ block.settings.footer_content_text }}</p>
+            </div>
+              {% render 'payment', block: block %}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+  <div id="back-top"><i class="fa fa-angle-up"></i></div>
+</footer>
+<script type="text/javascript">
+  $(document).ready(function () {
+    // hide #back-top first
+    $('#back-top').hide();
+    // fade in #back-top
+    $(function () {
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > $('body').height() / 3) {
+          $('#back-top').fadeIn();
+        } else {
+          $('#back-top').fadeOut();
+        }
+      });
+      // scroll body to 0px on click
+      $('#back-top').click(function () {
+        $('body,html').animate({ scrollTop: 0 }, 800);
+        return false;
+      });
+    });
+    // footer toggle
+    if (jQuery(window).width() < 992) {
+      jQuery('.footer-top .footer-title').click(function () {
+        jQuery(this).parent('.col').toggleClass('active').siblings().removeClass('active');
+        jQuery(this).next('.col .footer-content').toggle(300);
+        jQuery(this).parent('.col.active').siblings().children('.col .footer-content').slideUp(300);
+      });
+    }
+  });
+</script>

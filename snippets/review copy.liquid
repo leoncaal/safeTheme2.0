@@ -1,0 +1,75 @@
+{% if settings.product_reviews_enable %}
+  <div class="ratings {{ cclass }}">
+    {% case settings.product_reviews_app %}
+      {% when 'shopifyreviews' %}
+        {%- if product.metafields.reviews.rating.value != blank -%}
+          <div class="rating-wrapper">
+            {% liquid
+              assign rating_decimal = 0
+              assign decimal = product.metafields.reviews.rating.value.rating | modulo: 1
+              if decimal >= 0.3 and decimal <= 0.7
+                assign rating_decimal = 0.5
+              elsif decimal > 0.7
+                assign rating_decimal = 1
+              endif
+            %}
+            <div
+              class="rating"
+              role="img"
+              aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: product.metafields.reviews.rating.value, rating_max: product.metafields.reviews.rating.value.scale_max }}"
+            >
+              <span
+                aria-hidden="true"
+                class="rating-star"
+                style="--rating: {{ product.metafields.reviews.rating.value.rating | floor }}; --rating-max: {{ product.metafields.reviews.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }};"
+              ></span>
+            </div>
+            <p class="rating-text caption">
+              <span aria-hidden="true">
+                {{- product.metafields.reviews.rating.value }} /
+                {{ product.metafields.reviews.rating.value.scale_max -}}
+              </span>
+            </p>
+            <p class="rating-count caption">
+              <span aria-hidden="true">({{ product.metafields.reviews.rating_count }})</span>
+              <span class="visually-hidden">
+                {{- product.metafields.reviews.rating_count }}
+                {{ 'accessibility.total_reviews' | t -}}
+              </span>
+            </p>
+          </div>
+        {%- endif -%}
+      {% when 'loox' %}
+        <a href="#looxReviews">
+          <div
+            class="loox-rating"
+            data-id="{{ product.id }}"
+            data-rating="{{ product.metafields.loox.avg_rating }}"
+            data-raters="{{ product.metafields.loox.num_reviews }}"
+          ></div>
+        </a>
+      {% when 'alireviews' %}
+        <div product-id="{{ product.id }}" class="arv-collection arv-collection--{{ product.id }}"></div>
+      {% when 'judgeme' %}
+        <div
+          style="{{ jm_style }}"
+          class="jdgm-widget jdgm-preview-badge"
+          data-id="{{ product.id }}"
+          data-auto-install="false"
+        >
+          {{ product.metafields.judgeme.badge }}
+        </div>
+      {% when 'stamped' %}
+        <span
+          class="stamped-product-reviews-badge stamped-main-badge"
+          data-id="{{ product.id }}"
+          data-product-sku="{{ product.handle }}"
+          data-product-type="{{ product.type }}"
+          data-product-title="{{ product.title }}"
+          style="display: inline-block;"
+        >
+          {{- product.metafields.stamped.badge -}}
+        </span>
+    {% endcase %}
+  </div>
+{% endif %}

@@ -1,0 +1,191 @@
+{
+  "sections": {
+    "main": {
+      "type": "product-page",
+      "blocks": {
+        "tags_HKTpzT": {
+          "type": "tags",
+          "settings": {
+            "mt": "-0"
+          }
+        },
+        "title_NgmD4h": {
+          "type": "title",
+          "settings": {
+            "mt": "-2"
+          }
+        },
+        "reviews_zz8343": {
+          "type": "reviews",
+          "settings": {
+            "mt": "-0"
+          }
+        },
+        "price_kFnBNq": {
+          "type": "price",
+          "settings": {
+            "text_size": "fs-3",
+            "mt": "-0"
+          }
+        },
+        "vendor_HdaaW4": {
+          "type": "vendor",
+          "settings": {
+            "mt": "-1"
+          }
+        },
+        "availability_9gaRM9": {
+          "type": "availability",
+          "settings": {
+            "mt": "-1"
+          }
+        },
+        "sku_HwTMyh": {
+          "type": "sku",
+          "settings": {
+            "mt": "-1"
+          }
+        },
+        "deal_ihx9qL": {
+          "type": "deal",
+          "settings": {
+            "mt": "-0"
+          }
+        },
+        "barcode_AcMaYp": {
+          "type": "barcode",
+          "settings": {
+            "mt": "-1"
+          }
+        },
+        "divider_6amN8n": {
+          "type": "divider",
+          "settings": {
+            "mt": "-3",
+            "mb": "-3"
+          }
+        },
+        "summay_miKjBd": {
+          "type": "summay",
+          "settings": {
+            "show_summary_stripped": true,
+            "product_summary_words": "30",
+            "mt": "-0"
+          }
+        },
+        "divider_4nGiay": {
+          "type": "divider",
+          "settings": {
+            "mt": "-3",
+            "mb": "-3"
+          }
+        },
+        "product_variants_pGfFzp": {
+          "type": "product-variants",
+          "settings": {
+            "show_variant_swatches": "color",
+            "variant_title_display": "hide",
+            "mt": "-0"
+          }
+        },
+        "form_buy_maECtx": {
+          "type": "form-buy",
+          "settings": {
+            "product_quantity_message": true,
+            "product_quantity_enable": true,
+            "overwrite_addtocart_color": false,
+            "addtocart_color_text": "#454545",
+            "addtocart_color_bg": "#ffffff",
+            "show_buy_now": true,
+            "overwrite_buy_now_color": false,
+            "buy_now_color_text": "#454545",
+            "buy_now_color_bg": "#ffffff",
+            "mt": "-0"
+          }
+        }
+      },
+      "block_order": [
+        "tags_HKTpzT",
+        "title_NgmD4h",
+        "reviews_zz8343",
+        "price_kFnBNq",
+        "vendor_HdaaW4",
+        "availability_9gaRM9",
+        "sku_HwTMyh",
+        "deal_ihx9qL",
+        "barcode_AcMaYp",
+        "divider_6amN8n",
+        "summay_miKjBd",
+        "divider_4nGiay",
+        "product_variants_pGfFzp",
+        "form_buy_maECtx"
+      ],
+      "settings": {
+        "product_page_layout": "horizontal_thumbs",
+        "show_zoom": true,
+        "enable_preload": false,
+        "product_grid_img_carousel": false,
+        "product_sticky_cart": true,
+        "top_margin": false,
+        "top_padding": false,
+        "bottom_padding": false,
+        "bottom_margin": false,
+        "bottom_border": false
+      }
+    },
+    "product-page-tabs": {
+      "type": "product-page-tabs",
+      "settings": {
+        "product_description_layout": "tab",
+        "show_description_tab": true,
+        "show_reviews_tab": true,
+        "show_third_tab": true,
+        "third_tab_title": "Custom Tab",
+        "third_tab_text": "<p>Add text, HTML, images, and videos to this tab via product settings<\/p>",
+        "show_fourth_tab": false,
+        "fourth_tab_title": "Custom Tab 2",
+        "fourth_tab_text": "<p>You can incorporate text, HTML, images, and videos into this tab using the product settings.<\/p>",
+        "show_tags_tab": true,
+        "custom_tab_title": "Additional Information",
+        "top_margin": false,
+        "top_padding": false,
+        "bottom_padding": false,
+        "bottom_margin": false,
+        "bottom_border": false
+      }
+    },
+    "product-page-recommendations": {
+      "type": "product-page-recommendations",
+      "settings": {
+        "layout": "related-products",
+        "products_fetch_count": 6,
+        "items": 4,
+        "related_products_title": true,
+        "top_margin": false,
+        "top_padding": false,
+        "bottom_padding": false,
+        "bottom_margin": false,
+        "bottom_border": false
+      }
+    },
+    "product-page-recent": {
+      "type": "product-page-recent",
+      "settings": {
+        "show_title": true,
+        "items": 4,
+        "products_fetch_count": 8,
+        "top_margin": false,
+        "top_padding": false,
+        "bottom_padding": false,
+        "bottom_margin": false,
+        "bottom_border": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product-page-tabs",
+    "product-page-recommendations",
+    "product-page-recent"
+  ]
+}

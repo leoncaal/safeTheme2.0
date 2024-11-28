@@ -1,0 +1,641 @@
+{
+  "sections": {
+    "1480267833382": {
+      "type": "slideshow",
+      "blocks": {
+        "1480267833382-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/slider1-autima1-825x520.jpg",
+            "animation_style": "slider-1",
+            "heading": "Top Quality",
+            "heading_size": "24px",
+            "heading_color": "#3e444a",
+            "subheading": "Aftermarket Turbocharger",
+            "subheading_size": "48px",
+            "subheading_color": "#3e444a",
+            "description": "Specialist",
+            "description_size": "48px",
+            "description_color": "#3e444a",
+            "slide_link_text": "Shopping Now",
+            "slide_link": "shopify:\/\/collections",
+            "link_bg": "#ffd54c",
+            "link_color": "#3e444a",
+            "image_clickable": false,
+            "top": "50%",
+            "right": "0%",
+            "left": "6%",
+            "width": "45%",
+            "float": "left"
+          }
+        },
+        "1480267833382-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/slider3-autima1-825x520.jpg",
+            "animation_style": "slider-2",
+            "heading": "Highest - Quality",
+            "heading_size": "24px",
+            "heading_color": "#3e444a",
+            "subheading": "The Parts Of Shock Absorbers",
+            "subheading_size": "48px",
+            "subheading_color": "#3e444a",
+            "description": "&amp; Brake Kit",
+            "description_size": "48px",
+            "description_color": "#3e444a",
+            "slide_link_text": "Shopping Now",
+            "slide_link": "shopify:\/\/collections",
+            "link_bg": "#ffd54c",
+            "link_color": "#3e444a",
+            "image_clickable": false,
+            "top": "50%",
+            "right": "0%",
+            "left": "6%",
+            "width": "45%",
+            "float": "left"
+          }
+        },
+        "1554377046069": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/slider2-autima1-825x520.jpg",
+            "animation_style": "slider-3",
+            "heading": "Engine Oils",
+            "heading_size": "24px",
+            "heading_color": "#3e444a",
+            "subheading": "Top Quality Oil For Every",
+            "subheading_size": "48px",
+            "subheading_color": "#3e444a",
+            "description": "Vehicle",
+            "description_size": "48px",
+            "description_color": "#3e444a",
+            "slide_link_text": "Shopping Now",
+            "slide_link": "shopify:\/\/collections\/all",
+            "link_bg": "#ffd54c",
+            "link_color": "#3e444a",
+            "image_clickable": true,
+            "top": "50%",
+            "right": "0%",
+            "left": "6%",
+            "width": "45%",
+            "float": "left"
+          }
+        }
+      },
+      "block_order": [
+        "1480267833382-1",
+        "1480267833382-0",
+        "1554377046069"
+      ],
+      "disabled": true,
+      "settings": {
+        "autoplay": true,
+        "autoplay_speed": "5000",
+        "layout_slider": "slider-menu",
+        "collection": "",
+        "fullwidth": false
+      }
+    },
+    "multi_level_filter_JcVxjp": {
+      "type": "multi-level-filter",
+      "blocks": {
+        "filter_mrKia3": {
+          "type": "filter",
+          "settings": {
+            "no_of_filters": "3",
+            "title": "Search By Year, Make, Model",
+            "data_source": "file",
+            "variable_name": "makeObject",
+            "menu_handle": "",
+            "filter_1_title": "Make",
+            "filter_2_title": "Model",
+            "filter_3_title": "Year",
+            "filter_4_title": "Type"
+          }
+        }
+      },
+      "block_order": [
+        "filter_mrKia3"
+      ],
+      "settings": {
+        "heading": "Filter By Year, Make, Model",
+        "heading_color": "#ffde00",
+        "body_color": "#3e485c",
+        "hide_tab_headings": true,
+        "hide_filter_labels": false,
+        "filter_type": "default",
+        "move_up": false,
+        "enable_shadow": false,
+        "fullwidth": false,
+        "form_width": "full",
+        "see_through": false,
+        "box_background_color": "#efefef",
+        "background": "image",
+        "background_color": "#f8f8f8",
+        "background_gradient": "linear-gradient(90deg, rgba(227, 255, 231, 1), rgba(217, 231, 255, 1) 100%)",
+        "bg_image": "shopify:\/\/shop_images\/slider2-autima2-1920x520.jpg",
+        "top_margin": false,
+        "top_padding": false,
+        "bottom_padding": true,
+        "bottom_margin": false,
+        "bottom_border": false
+      }
+    },
+    "1504781997946": {
+      "type": "service-box",
+      "blocks": {
+        "1504781997946-0": {
+          "type": "box",
+          "settings": {
+            "feature_service_icon": "fa-shipping-fast",
+            "feature_service_title": "Free Shipping",
+            "feature_service_description": "Free shipping on all US order"
+          }
+        },
+        "1533603164812": {
+          "type": "box",
+          "settings": {
+            "feature_service_icon": "fa-redo",
+            "feature_service_title": "Support 24\/7",
+            "feature_service_description": "Contact us 24 hours a day"
+          }
+        },
+        "1504781997946-1": {
+          "type": "box",
+          "settings": {
+            "feature_service_icon": "fa-money-bill-wave",
+            "feature_service_title": "100% Money Back",
+            "feature_service_description": "You have 30 days to Return"
+          }
+        },
+        "1552303915285": {
+          "type": "box",
+          "settings": {
+            "feature_service_icon": "fa-support",
+            "feature_service_title": "Payment Secure",
+            "feature_service_description": "We ensure secure payment"
+          }
+        },
+        "1555441698859": {
+          "type": "box",
+          "settings": {
+            "feature_service_icon": "fa-shopping-cart",
+            "feature_service_title": "",
+            "feature_service_description": ""
+          }
+        }
+      },
+      "block_order": [
+        "1504781997946-0",
+        "1533603164812",
+        "1504781997946-1",
+        "1552303915285",
+        "1555441698859"
+      ],
+      "settings": {
+        "layout": "feature-service1",
+        "fullwidth": false
+      }
+    },
+    "1543060429425": {
+      "type": "collection-tab",
+      "settings": {
+        "products_tab_layout": "products-tab1",
+        "heading": "Our Products",
+        "fullwidth": false,
+        "products_tab_collection1": "brake-parts",
+        "products_tab_collection2": "engine-system",
+        "products_tab_collection3": "wheels-tires",
+        "products_tab_collection4": "",
+        "products_tab_collection5": "",
+        "listing_rows": 1,
+        "no_of_products": 4,
+        "products_tab_count": 8,
+        "product_grid_img_carousel": false,
+        "background": false,
+        "top_margin": false
+      }
+    },
+    "1554475534495": {
+      "type": "category",
+      "blocks": {
+        "1554475534495-0": {
+          "type": "category",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/f-cate6-150x150.jpg",
+            "heading_text": "Body Parts",
+            "heading_link": "shopify:\/\/collections\/all",
+            "category": "main-menu",
+            "link_text": "shop now",
+            "link": "shopify:\/\/collections\/all"
+          }
+        },
+        "1554475534495-1": {
+          "type": "category",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/f-cate5-150x150.jpg",
+            "heading_text": "Lighting",
+            "heading_link": "shopify:\/\/collections\/all",
+            "category": "main-menu",
+            "link_text": "shop now",
+            "link": "shopify:\/\/collections\/all"
+          }
+        },
+        "1554475604232": {
+          "type": "category",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/f-cate4-150x150.jpg",
+            "heading_text": "Turbo Systems",
+            "heading_link": "shopify:\/\/collections\/all",
+            "category": "main-menu",
+            "link_text": "shop now",
+            "link": "shopify:\/\/collections\/all"
+          }
+        },
+        "1554475624170": {
+          "type": "category",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/f-cate1-150x150.jpg",
+            "heading_text": "Brake Parts",
+            "heading_link": "shopify:\/\/collections\/all",
+            "category": "main-menu",
+            "link_text": "shop now",
+            "link": "shopify:\/\/collections\/all"
+          }
+        },
+        "1554475652754": {
+          "type": "category",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/f-cate3-150x150.jpg",
+            "heading_text": "Moto Oil",
+            "heading_link": "shopify:\/\/collections\/all",
+            "category": "main-menu",
+            "link_text": "shop now",
+            "link": "shopify:\/\/collections\/all"
+          }
+        },
+        "1554475665002": {
+          "type": "category",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/f-cate2-150x150.jpg",
+            "heading_text": "Wheels & Tires",
+            "heading_link": "shopify:\/\/collections\/all",
+            "category": "main-menu",
+            "link_text": "shop now",
+            "link": "shopify:\/\/collections\/all"
+          }
+        }
+      },
+      "block_order": [
+        "1554475534495-0",
+        "1554475534495-1",
+        "1554475604232",
+        "1554475624170",
+        "1554475652754",
+        "1554475665002"
+      ],
+      "settings": {
+        "layout": "categories-section",
+        "heading": "Featured Categories",
+        "fullwidth": false,
+        "background": true,
+        "top_margin": false
+      }
+    },
+    "1552581993254": {
+      "type": "collection",
+      "settings": {
+        "collection_layout": "feature-carousal3",
+        "heading": "Body Parts",
+        "collection": "brake-parts",
+        "listing_rows": 1,
+        "no_of_products": 3,
+        "products_tab_count": 6,
+        "fullwidth": false,
+        "product_grid_img_carousel": false,
+        "background": false,
+        "top_margin": false
+      }
+    },
+    "1544630300721": {
+      "type": "collection",
+      "settings": {
+        "collection_layout": "feature-carousal3",
+        "heading": "Engine Parts",
+        "collection": "engine-system",
+        "listing_rows": 1,
+        "no_of_products": 3,
+        "products_tab_count": 6,
+        "fullwidth": false,
+        "product_grid_img_carousel": false,
+        "background": false,
+        "top_margin": false
+      }
+    },
+    "1537796717812": {
+      "type": "ad-banner",
+      "blocks": {
+        "1537796717812-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img1-middle-autima1.jpg",
+            "heading": "Car Audio",
+            "heading_color": "#747c83",
+            "heading_size": "",
+            "sub_heading": "",
+            "sub_heading_color": "#014071",
+            "sub_heading_size": "140px",
+            "description": "Super Natural <span>Sound<\/span>",
+            "description_color": "#3e444a",
+            "link_text": "Shop Now",
+            "link": "shopify:\/\/collections\/all",
+            "ad_text_position": "left",
+            "ad_align": "left"
+          }
+        },
+        "1537796717812-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img2-middle-autima1.jpg",
+            "heading": "All - New",
+            "heading_color": "#747c83",
+            "heading_size": "",
+            "sub_heading": "",
+            "sub_heading_color": "#014071",
+            "sub_heading_size": "140px",
+            "description": "Perfomance <span>Parts<\/span>",
+            "description_color": "#3e444a",
+            "link_text": "Shop Now",
+            "link": "shopify:\/\/collections\/all",
+            "ad_text_position": "left",
+            "ad_align": "left"
+          }
+        }
+      },
+      "block_order": [
+        "1537796717812-0",
+        "1537796717812-1"
+      ],
+      "settings": {
+        "feature_advert_design": "feature-advert2",
+        "fullwidth": false
+      }
+    },
+    "1552653275118": {
+      "type": "collection",
+      "settings": {
+        "collection_layout": "feature-carousal",
+        "heading": "Special Offers",
+        "collection": "wheels-tires",
+        "listing_rows": 1,
+        "no_of_products": 4,
+        "products_tab_count": 8,
+        "fullwidth": false,
+        "product_grid_img_carousel": false,
+        "background": false,
+        "top_margin": false
+      }
+    },
+    "1544501819548": {
+      "type": "brands",
+      "blocks": {
+        "1544501819548-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/br1-164x38.png",
+            "link": "shopify:\/\/collections\/all"
+          }
+        },
+        "1544501819548-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/br5-164x38.png",
+            "link": "shopify:\/\/collections\/all"
+          }
+        },
+        "1544501874687": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/br2-164x38.png",
+            "link": "shopify:\/\/collections\/all"
+          }
+        },
+        "1544501892902": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/br3-164x38.png",
+            "link": "shopify:\/\/collections\/all"
+          }
+        },
+        "1544501910506": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/br4-164x38.png",
+            "link": "shopify:\/\/collections\/all"
+          }
+        },
+        "1544501928843": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/br1-164x38.png",
+            "link": "shopify:\/\/collections\/all"
+          }
+        }
+      },
+      "block_order": [
+        "1544501819548-0",
+        "1544501819548-1",
+        "1544501874687",
+        "1544501892902",
+        "1544501910506",
+        "1544501928843"
+      ],
+      "settings": {
+        "layout": "brands",
+        "heading": "",
+        "fullwidth": false
+      }
+    },
+    "1554828875484": {
+      "type": "collection-tab",
+      "settings": {
+        "products_tab_layout": "products-tab2",
+        "heading": "Featured collection",
+        "fullwidth": false,
+        "products_tab_collection1": "wheels-tires",
+        "products_tab_collection2": "brake-parts",
+        "products_tab_collection3": "engine-system",
+        "products_tab_collection4": "",
+        "products_tab_collection5": "",
+        "listing_rows": 3,
+        "no_of_products": 3,
+        "products_tab_count": 8,
+        "product_grid_img_carousel": false,
+        "background": false,
+        "top_margin": false
+      }
+    },
+    "1556106017051": {
+      "type": "videobox",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/slider2-aero4-1920x943_1920x846_526f5f6a-d166-4429-b796-89048d2b3df5.jpg",
+        "video_type": "youtube",
+        "video_src": "PSLroLJEI9M",
+        "video_autoplay": true,
+        "fullwidth": false
+      }
+    },
+    "1556104932280": {
+      "type": "instagram-feed",
+      "settings": {
+        "layout": "instafeed",
+        "fetch_mode": "insta",
+        "insta_title": "#WE ON INSTAGRAM",
+        "description": "How us how you are styling your Rare pieces on Instagram with the hashtag #Presiden.",
+        "insta_images_fetch": "6",
+        "no_of_products": "4",
+        "fullwidth": false
+      }
+    },
+    "1556106484441": {
+      "type": "blog",
+      "settings": {
+        "layout": "blog-1",
+        "heading": "Latest Blogs",
+        "blog": "news",
+        "items": 4,
+        "fullwidth": false
+      }
+    },
+    "1556106554969": {
+      "type": "testimonial",
+      "blocks": {
+        "1556106554969-0": {
+          "type": "testimonial",
+          "settings": {
+            "title": "Great Store",
+            "description": "Sed vel urna at dui iaculis gravida. Maecenas pretium, velit vitae placerat faucibus, velit quam facilisis elit, sit amet lacinia est est id ligula. Duis feugi.",
+            "image": "shopify:\/\/shop_images\/testimor2-110x110.jpg",
+            "author": "Max Verstappen"
+          }
+        },
+        "1556106554969-1": {
+          "type": "testimonial",
+          "settings": {
+            "title": "Genuine autoparts",
+            "description": "Sed vel urna at dui iaculis gravida. Maecenas pretium, velit vitae placerat faucibus, velit quam facilisis elit, sit amet lacinia est est id ligula. Duis feugi.",
+            "image": "shopify:\/\/shop_images\/testimor3-110x110.jpg",
+            "author": "Jenny Penny"
+          }
+        },
+        "1556106811344": {
+          "type": "testimonial",
+          "settings": {
+            "title": "Everything available",
+            "description": "Sed vel urna at dui iaculis gravida. Maecenas pretium, velit vitae placerat faucibus, velit quam facilisis elit, sit amet lacinia est est id ligula. Duis feugi..",
+            "image": "shopify:\/\/shop_images\/testimor2-110x110.jpg",
+            "author": "Lewis Hamilton"
+          }
+        }
+      },
+      "block_order": [
+        "1556106554969-0",
+        "1556106554969-1",
+        "1556106811344"
+      ],
+      "settings": {
+        "layout": "testimonials",
+        "heading": "WHAT OUR CLIENTS SAY",
+        "fullwidth": false,
+        "background": false
+      }
+    },
+    "1556112741820": {
+      "type": "ad-banner",
+      "blocks": {
+        "1556112741820-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/vintage-car-speedometer.jpg",
+            "heading": "Main Heading",
+            "heading_color": "#ffffff",
+            "heading_size": "140px",
+            "sub_heading": "Sub heading",
+            "sub_heading_color": "#ffffff",
+            "sub_heading_size": "140px",
+            "description": "Description text",
+            "description_color": "#ffffff",
+            "link_text": "link",
+            "link": "",
+            "ad_text_position": "left",
+            "ad_align": "left"
+          }
+        },
+        "1556112741820-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/classic-sports-car-interior.jpg",
+            "heading": "heading",
+            "heading_color": "#ffffff",
+            "heading_size": "140px",
+            "sub_heading": "sub heading",
+            "sub_heading_color": "#ffffff",
+            "sub_heading_size": "140px",
+            "description": "description",
+            "description_color": "#ffffff",
+            "link_text": "link 2",
+            "link": "shopify:\/\/collections\/all",
+            "ad_text_position": "left",
+            "ad_align": "left"
+          }
+        },
+        "1556112888459": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/vintage-car-interior.jpg",
+            "heading": "heading",
+            "heading_color": "#ffffff",
+            "heading_size": "140px",
+            "sub_heading": "sub heading",
+            "sub_heading_color": "#ffffff",
+            "sub_heading_size": "140px",
+            "description": "description",
+            "description_color": "#ffffff",
+            "link_text": "link 3",
+            "link": "shopify:\/\/collections\/all",
+            "ad_text_position": "left",
+            "ad_align": "left"
+          }
+        }
+      },
+      "block_order": [
+        "1556112741820-0",
+        "1556112741820-1",
+        "1556112888459"
+      ],
+      "disabled": true,
+      "settings": {
+        "feature_advert_design": "feature-advert3",
+        "fullwidth": false
+      }
+    }
+  },
+  "order": [
+    "1480267833382",
+    "multi_level_filter_JcVxjp",
+    "1504781997946",
+    "1543060429425",
+    "1554475534495",
+    "1552581993254",
+    "1544630300721",
+    "1537796717812",
+    "1552653275118",
+    "1544501819548",
+    "1554828875484",
+    "1556106017051",
+    "1556104932280",
+    "1556106484441",
+    "1556106554969",
+    "1556112741820"
+  ]
+}

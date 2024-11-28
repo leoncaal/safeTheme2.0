@@ -1,0 +1,29 @@
+<label for="input-sort">{{ 'collections.sorting.title' | t }}:</label>
+<select class="form-control" name="input-sort" id="input-sort">
+  <option value="manual">{{ 'collections.sorting.featured' | t }}</option>
+  <option value="best-selling">{{ 'collections.sorting.best_selling' | t }}</option>
+  <option value="title-ascending">{{ 'collections.sorting.az' | t }}</option>
+  <option value="title-descending">{{ 'collections.sorting.za' | t }}</option>
+  <option value="price-ascending">{{ 'collections.sorting.price_ascending' | t }}</option>
+  <option value="price-descending">{{ 'collections.sorting.price_descending' | t }}</option>
+  <option value="created-descending">{{ 'collections.sorting.date_descending' | t }}</option>
+  <option value="created-ascending">{{ 'collections.sorting.date_ascending' | t }}</option>
+</select>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.body.addEventListener('change', function (event) {
+      if (event.target && event.target.id === 'input-sort') {
+        const view = event.target.value;
+        let url = document.URL;
+        const hasParams = url.indexOf('?') > -1;
+
+        if (hasParams) {
+          url = replaceUrlParam(url, 'sort_by', view);
+        } else {
+          url = url + '?sort_by=' + view;
+        }
+        filterCollParam(url);
+      }
+    });
+  });
+</script>
