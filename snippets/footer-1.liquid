@@ -59,29 +59,6 @@
                 {% if block.settings.footer_about_us %}
                   <p class="">{{ block.settings.footer_about_us }}</p>
                 {% endif %}
-                <ul class="list-unstyled text-content">
-                  {% if block.settings.footer_address != blank %}
-                    <li class="address">
-                      <p>
-                        <span>{{ 'layout.footer.address' | t }} :</span>{{ block.settings.footer_address }}
-                      </p>
-                    </li>
-                  {% endif %}
-                  {% if block.settings.footer_phone != blank %}
-                    <li class="phone">
-                      <p>
-                        <span>{{ 'layout.footer.phone' | t }} :</span>{{ block.settings.footer_phone }}
-                      </p>
-                    </li>
-                  {% endif %}
-                  {% if block.settings.footer_email != blank %}
-                    <li class="email">
-                      <p>
-                        <span>{{ 'layout.footer.email' | t }} :</span>{{ block.settings.footer_email }}
-                      </p>
-                    </li>
-                  {% endif %}
-                </ul>
               </div>
             </div>
           {% elsif block.type == 'menu' %}
@@ -117,6 +94,32 @@
           {% elsif block.type == 'newsletter' %}
             <div class="col col4 col-md-4 col-sm-6 col-xs-12 col-footer">
               {% render 'newsletter', block: block %}
+            </div>
+          {% elsif block.type == 'contact_information2' %}
+            <div>
+              <ul class="list-unstyled text-content">
+                {% if block.settings.footer_address != blank %}
+                  <li class="address">
+                    <p>
+                      <span><b>{{ 'layout.footer.address' | t }} :<br/></b></span>{{ block.settings.footer_address }}
+                    </p>
+                  </li>
+                {% endif %}
+                {% if block.settings.footer_phone != blank %}
+                  <li class="phone">
+                    <p>
+                      <span><b>{{ 'layout.footer.phone' | t }} :<br/></b></span>{{ block.settings.footer_phone }}
+                    </p>
+                  </li>
+                {% endif %}
+                {% if block.settings.footer_email != blank %}
+                  <li class="email">
+                    <p>
+                      <span><b>{{ 'layout.footer.email' | t }} :<br/></b></span>{{ block.settings.footer_email }}
+                    </p>
+                  </li>
+                {% endif %}
+              </ul>
             </div>
           {% endif %}
         {% endfor %}
