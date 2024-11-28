@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "type": "header",
   "name": "Header",
@@ -8,7 +17,7 @@
         "1534685882068": {
           "type": "megamenu",
           "settings": {
-            "mega_menu": "shop",
+            "mega_menu": "",
             "menu_items_count": 5,
             "mega_menu_col_1": "menu",
             "mega_menu_title_col_1": "Mobile Phones",
@@ -37,14 +46,13 @@
             "mega_menu_ll_col_4": "main-menu",
             "mega_menu_collection_col_4": "",
             "mega_menu_product_col_4": "",
-            "mega_menu_image_link_col_4": "shopify:\/\/collections\/all",
-            "bottom_image": "shopify:\/\/shop_images\/img-bottom-menu.jpg"
+            "mega_menu_image_link_col_4": "shopify://collections/all"
           }
         },
         "1522697402496": {
           "type": "megamenu",
           "settings": {
-            "mega_menu": "specials",
+            "mega_menu": "",
             "menu_items_count": 6,
             "mega_menu_col_1": "product",
             "mega_menu_title_col_1": "",
@@ -81,15 +89,26 @@
         "1534685882068",
         "1522697402496"
       ],
+      "custom_css": [
+        ".img-responsive,.thumbnail > img,.thumbnail a > img,.carousel-inner > .item > img,.carousel-inner > .item > a > img {width: 12rem;}",
+        "#cart p.cart-button a {background: #292929;}",
+        "#cart p.cart-button a:hover {color: #292929; background: #fce200;}",
+        "#cart .cart-name {color: #292929;}",
+        "#cart .cart-name:hover {color: #fce200;}",
+        ".mega-menu-container h4 {color: #292929;}",
+        ".mobile-menu .flyout-third-items {display: block;}",
+        "#oc-menu-header .mega-menu-container .a-mega-third-link {font-weight: 600;}",
+        "#top .btn-group .dropdown-menu li > a {font-weight: 600;}"
+      ],
       "settings": {
-        "header_layout": "header-4",
-        "use_top_bar": true,
+        "header_layout": "header-1",
+        "use_top_bar": false,
         "top_bar_message": "MID-SEASON SALE UP TO 70% OFF. USE CODE: “SALE70”. SHOP NOW",
         "header_social_enable": true,
-        "logo": "shopify:\/\/shop_images\/logo.png",
-        "logo_padding": "34px 0px 34px 0px",
+        "logo": "shopify://shop_images/SAFE-blanco.svg",
+        "logo_padding": "25px 50px 25px 50px",
         "header_menu_1": "main-menu",
-        "header_menu_ver": "ver-nav",
+        "header_menu_ver": "",
         "header_menu_ver_links": 9
       }
     }
