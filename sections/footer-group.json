@@ -17,8 +17,8 @@
         "top_footer_ypm9dN": {
           "type": "top_footer",
           "settings": {
-            "footer_message_box": "<h3>We Have <b>Recommendations</b> for You</h3>\n<p>Take 30% off when you spend $150 or more with code Autima11</p>",
-            "link_text": "Discover Now",
+            "footer_message_box": "<h3>\n<b>Síguenos</b> en nuestras redes sociales</h3>\n<p>Y sé el primero en enterarte de nuestras promociones</p>",
+            "link_text": "",
             "link": "shopify://collections/all",
             "footer_social_enable": true
           }
@@ -26,7 +26,8 @@
         "contact_information_Lr3LaV": {
           "type": "contact_information",
           "settings": {
-            "footer_about_us": "We are a team of designers and developers who creates high quality premium Shopify themes."
+            "image": "shopify://shop_images/SAFE-negro.svg",
+            "footer_about_us": "Somos una empresa con más de 15 años de experiencia en la distribución de refacciones para autos premium."
           }
         },
         "menu_VhTWnH": {
@@ -44,9 +45,9 @@
         "contact_information2_HxQrgk": {
           "type": "contact_information2",
           "settings": {
-            "footer_address": "No 40 Baria Sreet 133/2, NewYork, USA.",
-            "footer_phone": "(012) 800 456 789",
-            "footer_email": "support@masstechnologist"
+            "footer_address": "Campo Polo, Av. Adolfo López Mateos Sur #1431, Chapalita, 44500 Guadalajara, Jalisco, México.",
+            "footer_phone": "(33) 31134017 Opción 1",
+            "footer_email": "atencionaclientes@saferefacciones.com"
           }
         },
         "bottom_footer_CpQK87": {
@@ -63,6 +64,16 @@
         "menu_7DXi3w",
         "contact_information2_HxQrgk",
         "bottom_footer_CpQK87"
+      ],
+      "custom_css": [
+        "img {width: 200px;}",
+        "ul.link-follow li a {background: #292929; color: #fefffa; border: 0px;}",
+        "ul.link-follow li a:hover {background: #fefffa; color: #292929; border: 0px;}",
+        ".static-bottom-autima1 a {background: #292929; color: #fefffa;}",
+        ".static-bottom-autima1 a:hover {background: #fefffa; color: #292929;}",
+        "#frm_subscribe-normal .btn {background: #292929;}",
+        "#frm_subscribe-normal .btn:hover {background: #fce200; color: #292929;}",
+        ".footer-contact li p span {color: #292929;}"
       ],
       "settings": {
         "footer_layout": "footer-1",
