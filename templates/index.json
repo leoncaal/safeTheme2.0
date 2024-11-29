@@ -510,10 +510,10 @@
           "settings": {
             "image": "shopify://shop_images/MINI.png",
             "heading_text": "MINI",
-            "heading_link": "",
+            "heading_link": "shopify://collections",
             "category": "",
             "link_text": "Ver más",
-            "link": ""
+            "link": "shopify://collections"
           }
         },
         "1554475665002": {
