@@ -453,62 +453,133 @@
         "1554475534495-0": {
           "type": "category",
           "settings": {
-            "heading_text": "Body Parts",
+            "image": "shopify://shop_images/VOLKSWAGEN.png",
+            "heading_text": "Volkswagen",
             "heading_link": "shopify://collections/all",
-            "category": "main-menu",
-            "link_text": "shop now",
+            "category": "",
+            "link_text": "Ver más",
             "link": "shopify://collections/all"
           }
         },
         "1554475534495-1": {
           "type": "category",
           "settings": {
-            "heading_text": "Lighting",
+            "image": "shopify://shop_images/BMW.png",
+            "heading_text": "BMW",
             "heading_link": "shopify://collections/all",
-            "category": "main-menu",
-            "link_text": "shop now",
+            "category": "",
+            "link_text": "Ver más",
             "link": "shopify://collections/all"
           }
         },
         "1554475604232": {
           "type": "category",
           "settings": {
-            "heading_text": "Turbo Systems",
+            "image": "shopify://shop_images/PORSCHE.png",
+            "heading_text": "Porsche",
             "heading_link": "shopify://collections/all",
-            "category": "main-menu",
-            "link_text": "shop now",
+            "category": "",
+            "link_text": "Ver más",
             "link": "shopify://collections/all"
           }
         },
         "1554475624170": {
           "type": "category",
           "settings": {
-            "image": "shopify://shop_images/f-cate1-150x150.jpg",
-            "heading_text": "Brake Parts",
+            "image": "shopify://shop_images/AUDI.png",
+            "heading_text": "Audi",
             "heading_link": "shopify://collections/all",
-            "category": "main-menu",
-            "link_text": "shop now",
+            "category": "",
+            "link_text": "Ver más",
             "link": "shopify://collections/all"
           }
         },
         "1554475652754": {
           "type": "category",
           "settings": {
-            "heading_text": "Moto Oil",
+            "image": "shopify://shop_images/MB.png",
+            "heading_text": "Mercedes Benz",
             "heading_link": "shopify://collections/all",
-            "category": "main-menu",
-            "link_text": "shop now",
+            "category": "",
+            "link_text": "Ver más",
             "link": "shopify://collections/all"
+          }
+        },
+        "category_CJNMdk": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/MINI.png",
+            "heading_text": "MINI",
+            "heading_link": "",
+            "category": "",
+            "link_text": "Ver más",
+            "link": ""
           }
         },
         "1554475665002": {
           "type": "category",
           "settings": {
-            "heading_text": "Wheels & Tires",
+            "image": "shopify://shop_images/VOLVO.png",
+            "heading_text": "Volvo",
             "heading_link": "shopify://collections/all",
-            "category": "main-menu",
-            "link_text": "shop now",
+            "category": "",
+            "link_text": "Ver más",
             "link": "shopify://collections/all"
+          }
+        },
+        "category_y8DdLp": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/JAGUAR.png",
+            "heading_text": "Jaguar",
+            "heading_link": "",
+            "category": "",
+            "link_text": "Ver más",
+            "link": ""
+          }
+        },
+        "category_4JAYmd": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/LAND-ROVER.png",
+            "heading_text": "Land Rover",
+            "heading_link": "",
+            "category": "",
+            "link_text": "Ver más",
+            "link": ""
+          }
+        },
+        "category_DUjtMK": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/SMART_1.png",
+            "heading_text": "Smart",
+            "heading_link": "",
+            "category": "",
+            "link_text": "Ver más",
+            "link": ""
+          }
+        },
+        "category_i746be": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/SEAT_1.png",
+            "heading_text": "Seat",
+            "heading_link": "",
+            "category": "",
+            "link_text": "Ver más",
+            "link": ""
+          }
+        },
+        "category_Kad4BT": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/CUPRA_1.png",
+            "heading_text": "Cupra",
+            "heading_link": "",
+            "category": "",
+            "link_text": "Ver más",
+            "link": ""
           }
         }
       },
@@ -518,11 +589,24 @@
         "1554475604232",
         "1554475624170",
         "1554475652754",
-        "1554475665002"
+        "category_CJNMdk",
+        "1554475665002",
+        "category_y8DdLp",
+        "category_4JAYmd",
+        "category_DUjtMK",
+        "category_i746be",
+        "category_Kad4BT"
+      ],
+      "custom_css": [
+        ".fcategory-content .image img:hover {transform: scale(1.1);}",
+        ".featured-categories-container .content-thumb .name a {color: #292929;}",
+        ".featured-categories-container .content-thumb .name a:hover {color: #fce200;}",
+        ".module-nav2 .owl-carousel.owl-theme .owl-nav {background: #292929;}",
+        ".owl-carousel.owl-theme .owl-nav div {background: #292929;}"
       ],
       "settings": {
         "layout": "categories-section",
-        "heading": "Featured Categories",
+        "heading": "Somos Especialistas",
         "fullwidth": false,
         "background": true,
         "top_margin": false
@@ -530,13 +614,20 @@
     },
     "1544630300721": {
       "type": "collection",
+      "custom_css": [
+        ".module-nav2 .owl-carousel.owl-theme .owl-nav {background: #292929;}",
+        ".owl-carousel.owl-theme .owl-nav div {background: #292929;}",
+        ".product-name a:hover {color: #fce200;}",
+        ".price-box .price {color: #292929;}",
+        ".grid-style .item-inner button.btn-cart {color: #292929;}"
+      ],
       "settings": {
-        "collection_layout": "feature-carousal3",
-        "heading": "Engine Parts",
-        "collection": "engine-system",
+        "collection_layout": "feature-carousal",
+        "heading": "Productos Originales BMW-MINI",
+        "collection": "",
         "listing_rows": 1,
-        "no_of_products": 3,
-        "products_tab_count": 6,
+        "no_of_products": 4,
+        "products_tab_count": 10,
         "fullwidth": false,
         "product_grid_img_carousel": false,
         "background": false,
