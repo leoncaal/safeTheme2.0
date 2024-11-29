@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -5,6 +14,7 @@
       "blocks": {
         "tags_HKTpzT": {
           "type": "tags",
+          "disabled": true,
           "settings": {
             "mt": "-0"
           }
@@ -13,6 +23,12 @@
           "type": "title",
           "settings": {
             "mt": "-2"
+          }
+        },
+        "vendor_HdaaW4": {
+          "type": "vendor",
+          "settings": {
+            "mt": "-1"
           }
         },
         "reviews_zz8343": {
@@ -26,12 +42,6 @@
           "settings": {
             "text_size": "fs-3",
             "mt": "-0"
-          }
-        },
-        "vendor_HdaaW4": {
-          "type": "vendor",
-          "settings": {
-            "mt": "-1"
           }
         },
         "availability_9gaRM9": {
@@ -48,6 +58,7 @@
         },
         "barcode_AcMaYp": {
           "type": "barcode",
+          "disabled": true,
           "settings": {
             "mt": "-1"
           }
@@ -61,12 +72,13 @@
         },
         "collapse_block_CegrXF": {
           "type": "collapse_block",
+          "disabled": true,
           "settings": {
             "collapse_title": "Product Details",
             "collapse_show_title": false,
             "collapse_open": true,
             "collapse_type": "description",
-            "collapse_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non maximus erat, et bibendum leo. Duis ut massa ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed pulvinar rhoncus risus vestibulum luctus. Nunc pretium, mauris id maximus interdum, odio magna vulputate urna, sed fringilla dui sem vitae tortor.<\/p>",
+            "collapse_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non maximus erat, et bibendum leo. Duis ut massa ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed pulvinar rhoncus risus vestibulum luctus. Nunc pretium, mauris id maximus interdum, odio magna vulputate urna, sed fringilla dui sem vitae tortor.</p>",
             "mt": "-0"
           }
         },
@@ -88,12 +100,14 @@
         },
         "deal_ihx9qL": {
           "type": "deal",
+          "disabled": true,
           "settings": {
             "mt": "-0"
           }
         },
         "product_variants_pGfFzp": {
           "type": "product-variants",
+          "disabled": true,
           "settings": {
             "show_variant_swatches": "false",
             "variant_title_display": "",
@@ -119,9 +133,9 @@
       "block_order": [
         "tags_HKTpzT",
         "title_NgmD4h",
+        "vendor_HdaaW4",
         "reviews_zz8343",
         "price_kFnBNq",
-        "vendor_HdaaW4",
         "availability_9gaRM9",
         "sku_HwTMyh",
         "barcode_AcMaYp",
@@ -133,12 +147,22 @@
         "product_variants_pGfFzp",
         "form_buy_maECtx"
       ],
+      "custom_css": [
+        ".product-name a {color: #292929;}",
+        ".product-name a:hover {color: #fce200;}",
+        ".product-info-main .product-name {color: #292929;}",
+        ".product-info-main .button-cart {background: #292929;}",
+        ".product-info-main .button-cart:hover {background: #fce200; color: #292929;}",
+        ".price-box .price {color: #292929;}",
+        ".grid-style .item-inner button.btn-cart {color: #292929;}",
+        ".product-info-main ul.list-unstyled li a {color: #292929;}"
+      ],
       "settings": {
         "product_page_layout": "horizontal_thumbs",
         "show_zoom": true,
         "enable_preload": true,
         "product_grid_img_carousel": false,
-        "product_sticky_cart": true,
+        "product_sticky_cart": false,
         "top_margin": false,
         "top_padding": false,
         "bottom_padding": false,
@@ -154,11 +178,11 @@
         "show_reviews_tab": true,
         "show_third_tab": true,
         "third_tab_title": "Custom Tab",
-        "third_tab_text": "<p>Add text, HTML, images, and videos to this tab via product settings<\/p>",
+        "third_tab_text": "<p>Add text, HTML, images, and videos to this tab via product settings</p>",
         "show_fourth_tab": false,
         "fourth_tab_title": "Custom Tab 2",
-        "fourth_tab_text": "<p>You can incorporate text, HTML, images, and videos into this tab using the product settings.<\/p>",
-        "show_tags_tab": true,
+        "fourth_tab_text": "<p>You can incorporate text, HTML, images, and videos into this tab using the product settings.</p>",
+        "show_tags_tab": false,
         "custom_tab_title": "Additional Information",
         "top_margin": false,
         "top_padding": false,
