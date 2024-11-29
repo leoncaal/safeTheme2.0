@@ -192,7 +192,7 @@
       {% endif %}
 
       <script>
-        var moneyFormat = '{{ shop.money_format }}';
+        var moneyFormat = '{{ shop.money_with_currency_format }}';
       </script>
 
       {% if template contains 'product' %}
@@ -213,7 +213,7 @@
               toggleCartButton: '.cart-toggle',
               useCartTemplate: true,
               btnClass: 'btn',
-              moneyFormat: {{ shop.money_format | json }},
+              moneyFormat: {{ shop.money_with_currency | json }},
               disableAjaxCart: false,
               enableQtySelectors: true
             });
@@ -238,5 +238,93 @@
       {% if settings.show_gdpr_msg %}{% include 'cookie-consent' %} {% endif %}
       {% include 'currencies' %}
     </div>
+    <div id="botonBMW" style="position: relative; cursor: pointer;">
+      <div class="background-div"></div>
+      <div
+        class="fixed-divMINI"
+      >
+        <a style="color: #0166B1; text-decoration: solid;" href="https://saferefacciones.shop/pages/refacciones-genuinas-mini">
+          <span style="background-color: #0166B1; font-weight: normal; border-radius: 4px;" class="badge text-bg-secondary">MINI</span>
+          <img width="66" src="https://cdn.shopify.com/s/files/1/0841/2666/2935/files/frontMINI.png?v=1724173477" />
+        </a>
+      </div>
+      <div
+        class="fixed-divBMW"
+      >
+        <a style="color: #0166B1; text-decoration: solid;" href="https://saferefacciones.shop/pages/refacciones-genuinas-bmw">
+          <span style="background-color: #0166B1; font-weight: normal; border-radius: 4px;" class="badge text-bg-secondary">BMW</span>
+          <img width="64" src="https://cdn.shopify.com/s/files/1/0841/2666/2935/files/frontBMW.png?v=1724173477" />
+        </a>
+      </div>
+      <div class="fixed-div" data-original-title="Compra partes originales BMW">
+        <img src="https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icono-flotante.png?v=1730316404" width="80">
+        <div class="custom-tooltip">Compra refacciones genuinas BMW & MINI</div>
+      </div>
+    </div>
+                
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+        const botonBMW = document.getElementById("botonBMW");
+        const fixedDiv = document.querySelector(".fixed-div");
+        const customTooltip = fixedDiv.querySelector(".custom-tooltip");
+        const fixedDivBMW = document.querySelector(".fixed-divBMW");
+        const fixedDivMINI = document.querySelector(".fixed-divMINI");
+
+        if (
+          window.location.href ===
+          "https://saferefacciones.shop/pages/refacciones-genuinas-bmw" || window.location.href ===
+          "https://saferefacciones.shop/pages/refacciones-genuinas-mini"
+        ) {
+          botonBMW.style.display = "none";
+        } else {
+          botonBMW.style.display = "flex";
+        }
+
+        fixedDiv.addEventListener("click", function () {
+          if (
+            fixedDivBMW.classList.contains("showCar") &&
+            fixedDivMINI.classList.contains("showCar")
+          ) {
+            setTimeout(() => {
+              fixedDivBMW.classList.remove("showCar");
+            }, 100);
+            fixedDivMINI.classList.remove("showCar");
+            setTimeout(() => {
+              fixedDivBMW.style.display = "none";
+              fixedDivMINI.style.display = "none";
+            }, 300);
+          } else {
+            fixedDivBMW.style.display = "flex";
+            fixedDivMINI.style.display = "flex";
+            setTimeout(() => {
+              fixedDivMINI.classList.add("showCar");
+            }, 100);
+            setTimeout(() => {
+              fixedDivBMW.classList.add("showCar");
+            }, 1);
+          }
+        });
+
+        function showTooltip() {
+          customTooltip.style.opacity = "1";
+
+          setTimeout(() => {
+            customTooltip.style.opacity = "0";
+          }, 4000);
+        }
+
+        /*setTimeout(() => {
+          showTooltip();
+          setInterval(showTooltip, 10000);
+        }, 3000);*/
+        fixedDiv.addEventListener("mouseenter", function () {
+          customTooltip.style.opacity = "1";
+        });
+
+        fixedDiv.addEventListener("mouseleave", function () {
+          customTooltip.style.opacity = "0";
+        });
+      });
+</script>
   </body>
 </html>
