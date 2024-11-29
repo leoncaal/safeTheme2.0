@@ -230,9 +230,11 @@
       "send": "Send",
       "post_success": "Thanks for contacting us. We'll get back to you as soon as possible.",
       "page_heading": "Contact info",
+      "ticket_msg": "Enter ticket information",
       "leave_msg": "Leave a Message",
       "telephone_heading": "Phone",
-      "location": "Our Location"
+      "location": "Our Location",
+      "reason": "Reason"
     }
   },
   "customer": {
