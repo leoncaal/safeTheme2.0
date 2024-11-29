@@ -1,1 +1,37 @@
-{"sections":{"main":{"type":"cart-page","settings":{}}},"order":["main"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "cart-page",
+      "custom_css": [
+        "a.btn {background: #292929;}",
+        "a.btn:hover {background: #fce200; color: #292929;}",
+        ".button {background: #292929;}",
+        ".button:hover {background: #fce200; color: #292929;}"
+      ],
+      "settings": {
+        "cart_notes_enable": false,
+        "cart_promo_enable": false,
+        "ajax_cart_method": "page",
+        "shipping_calculator": "Disabled",
+        "shipping_calculator_heading": "Obtener tarifas de envío estimadas",
+        "shipping_calculator_default_country": "México",
+        "shipping_calculator_submit_button_label": "Calcular envío",
+        "shipping_calculator_submit_button_label_disabled": "Calculando...",
+        "cart_terms_c_enable": true,
+        "cart_terms_c_page": ""
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
