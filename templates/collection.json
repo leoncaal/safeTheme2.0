@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -5,6 +14,7 @@
       "blocks": {
         "multi_level_filter_YqjyMy": {
           "type": "multi_level_filter",
+          "disabled": true,
           "settings": {
             "heading": "Filter By Year, Make, Model",
             "filter_type": "default",
@@ -20,8 +30,7 @@
         },
         "filters_eqEppx": {
           "type": "filters",
-          "settings": {
-          }
+          "settings": {}
         },
         "categories_h7bQyf": {
           "type": "categories",
@@ -48,7 +57,6 @@
           "type": "image",
           "disabled": true,
           "settings": {
-            "collection_side_image": "shopify:\/\/shop_images\/img-sidebar.jpg",
             "collection_side_link": ""
           }
         },
@@ -70,11 +78,22 @@
         "image_ERbbfC",
         "listing_Mi9dEw"
       ],
+      "custom_css": [
+        ".button {padding: 0px;}",
+        ".quick-add-to-cart .single_add_to_cart_button {background: #292929;}",
+        ".quick-add-to-cart .single_add_to_cart_button:hover {background: #fce200; color: #292929;}",
+        ".grid-style .item-inner button.btn-cart {color: #292929;}",
+        ".product-list .item-inner button.btn-cart {background: #292929; color: #fefffa;}",
+        ".product-list .item-inner button.btn-cart:hover {color: #292929; background: #fce200;}",
+        ".price-box .price {color: #292929;}",
+        ".product-name a {color: #292929;}",
+        ".product-name a:hover {color: #fce200;}"
+      ],
       "settings": {
-        "collection_top": "shopify:\/\/shop_images\/category-image-825x220.jpg",
+        "collection_top": "shopify://shop_images/825-x-150.png",
         "show_collection_title": true,
         "show_collection_description": true,
-        "product_count_per_page": "9",
+        "product_count_per_page": "12",
         "show_top_filters": true,
         "show_active_filter_tags": true,
         "collection_view_default": "3",
