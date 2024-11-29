@@ -1,1 +1,29 @@
-{"sections":{"main":{"type":"404-page","settings":{"image":"shopify:\/\/shop_images\/not-found.png","link":"\/"}}},"order":["main"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "404-page",
+      "custom_css": [
+        "h1 {color: #545454; font-weight: bold;}",
+        "a.btn {background: #292929;}",
+        "a.btn:hover {background: #fce200; color: #292929;}",
+        "@media only screen and (max-width: 768px) {.main {flex-direction: column; }}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/404-SAFI.png",
+        "link": "/"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
