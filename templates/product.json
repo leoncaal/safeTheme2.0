@@ -155,7 +155,8 @@
         ".product-info-main .button-cart:hover {background: #fce200; color: #292929;}",
         ".price-box .price {color: #292929;}",
         ".grid-style .item-inner button.btn-cart {color: #292929;}",
-        ".product-info-main ul.list-unstyled li a {color: #292929;}"
+        ".product-info-main ul.list-unstyled li a {color: #292929;}",
+        ".shopify-payment-button__button--unbranded:hover {background: #fce200 !important;}"
       ],
       "settings": {
         "product_page_layout": "horizontal_thumbs",
