@@ -234,7 +234,7 @@
             "slide_link_text": "",
             "slide_link": "",
             "link_bg": "#f03368",
-            "link_color": "#fff",
+            "link_color": "#ffffff",
             "image_clickable": false,
             "top": "50%",
             "right": "0%",
@@ -260,7 +260,7 @@
             "slide_link_text": "",
             "slide_link": "",
             "link_bg": "#f03368",
-            "link_color": "#fff",
+            "link_color": "#ffffff",
             "image_clickable": false,
             "top": "50%",
             "right": "0%",
@@ -634,8 +634,31 @@
         "top_margin": false
       }
     },
+    "1552653275118": {
+      "type": "collection",
+      "custom_css": [
+        ".module-nav2 .owl-carousel.owl-theme .owl-nav {background: #292929;}",
+        ".owl-carousel.owl-theme .owl-nav div {background: #292929;}",
+        ".product-name a:hover {color: #fce200;}",
+        ".price-box .price {color: #292929;}",
+        ".grid-style .item-inner button.btn-cart {color: #292929;}"
+      ],
+      "settings": {
+        "collection_layout": "feature-carousal",
+        "heading": "Lubricantes Químicos",
+        "collection": "",
+        "listing_rows": 1,
+        "no_of_products": 4,
+        "products_tab_count": 6,
+        "fullwidth": false,
+        "product_grid_img_carousel": false,
+        "background": false,
+        "top_margin": false
+      }
+    },
     "1543060429425": {
       "type": "collection-tab",
+      "disabled": true,
       "settings": {
         "products_tab_layout": "products-tab1",
         "heading": "Our Products",
@@ -695,28 +718,15 @@
         "1537796717812-0",
         "1537796717812-1"
       ],
+      "disabled": true,
       "settings": {
         "feature_advert_design": "feature-advert2",
         "fullwidth": false
       }
     },
-    "1552653275118": {
-      "type": "collection",
-      "settings": {
-        "collection_layout": "feature-carousal",
-        "heading": "Special Offers",
-        "collection": "wheels-tires",
-        "listing_rows": 1,
-        "no_of_products": 4,
-        "products_tab_count": 8,
-        "fullwidth": false,
-        "product_grid_img_carousel": false,
-        "background": false,
-        "top_margin": false
-      }
-    },
     "1554828875484": {
       "type": "collection-tab",
+      "disabled": true,
       "settings": {
         "products_tab_layout": "products-tab2",
         "heading": "Featured collection",
@@ -736,6 +746,7 @@
     },
     "1556106017051": {
       "type": "videobox",
+      "disabled": true,
       "settings": {
         "video_type": "youtube",
         "video_src": "PSLroLJEI9M",
@@ -745,6 +756,7 @@
     },
     "1556104932280": {
       "type": "instagram-feed",
+      "disabled": true,
       "settings": {
         "layout": "instafeed",
         "fetch_mode": "insta",
@@ -757,6 +769,7 @@
     },
     "1556106484441": {
       "type": "blog",
+      "disabled": true,
       "settings": {
         "layout": "blog-1",
         "heading": "Latest Blogs",
@@ -798,6 +811,7 @@
         "1556106554969-1",
         "1556106811344"
       ],
+      "disabled": true,
       "settings": {
         "layout": "testimonials",
         "heading": "WHAT OUR CLIENTS SAY",
@@ -880,9 +894,9 @@
     "1544501819548",
     "1554475534495",
     "1544630300721",
+    "1552653275118",
     "1543060429425",
     "1537796717812",
-    "1552653275118",
     "1554828875484",
     "1556106017051",
     "1556104932280",
