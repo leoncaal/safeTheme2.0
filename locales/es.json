@@ -1,16 +1,5 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin language editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
-  "date_formats": {
-    "month_day_year": "%d/%b/%Y"
-  },
+  "date_formats": { "month_day_year": "%d/%b/%Y" },
   "general": {
     "meta": {
       "tags": "Tagged \"{{ tags }}\"",
@@ -23,7 +12,7 @@
     },
     "password_page": {
       "opening_soon": "Próxima apertura",
-      "spread_the_word": "Spread the word:",
+      "spread_the_word": "Corre la voz:",
       "login_form_heading": "Ingresar a la tienda con contraseña:",
       "login_form_password_label": "Contraseña",
       "login_form_password_placeholder": "Su contraseña",
@@ -57,9 +46,7 @@
       "no_results_found": "No se han encontrado resultados.",
       "title": "¿NO ENCONTRASTE LA REFACCIÓN QUE BUSCABAS?"
     },
-    "header": {
-      "currency": "Moneda"
-    },
+    "header": { "currency": "Moneda" },
     "social": {
       "share_on_facebook": "Compartir",
       "share_on_twitter": "Tweet",
@@ -187,7 +174,9 @@
         "zero": "0 productos",
         "one": "1 producto",
         "other": "{{ count }} productos"
-      }
+      },
+      "clear": "Limpiar todo",
+      "view_all": "Ver todo"
     },
     "sidebar": {
       "filters": "Filtros",
@@ -220,7 +209,7 @@
       "date_ascending": "Fecha, nuevo a antiguo"
     }
   },
-  "bill": {
+  "contact": {
     "form": {
       "bill_msg": "Ingresar los datos de facturación",
       "name": "Nombre o razon social",
@@ -238,23 +227,10 @@
       "page_heading": "Facturación",
       "ticket_msg": "Ingresar información del ticket",
       "telephone_heading": "Phone",
-      "location": "Our Location",
-      "phone": ""
-    }
-  },
-  "contact": {
-    "form": {
-      "name": "Nombre",
-      "email": "Email",
+      "location": "Nuestra ubicación",
       "phone": "Teléfono",
       "reason": "Motivo",
-      "message": "Mensaje",
-      "send": "Enviar",
-      "post_success": "Gracias por contactarnos. Nos pondremos en contacto lo antes posible.",
-      "page_heading": "Información de contacto",
       "leave_msg": "Dejar un mensaje",
-      "telephone_heading": "Telefono",
-      "location": "Nuestra ubicación"
     }
   },
   "customer": {
@@ -400,17 +376,11 @@
       "collapse": "Ocultar categorías",
       "contact": "Contacto"
     },
-    "popup": {
-      "do_not_show": "No mostrar esta ventana emergente otra vez"
-    },
-    "brands": {
-      "heading": "Marcas y clientes"
-    }
+    "popup": { "do_not_show": "No mostrar esta ventana emergente otra vez" },
+    "brands": { "heading": "Marcas y clientes" }
   },
   "layout": {
-    "cart": {
-      "cart": "Carrito"
-    },
+    "cart": { "cart": "Carrito" },
     "customer": {
       "view_account": "Ver cuenta",
       "logged_in_as_html": "Conectado como {{ first_name }}",
@@ -419,10 +389,7 @@
       "create_account": "Registrate",
       "or": "o"
     },
-    "navigation": {
-      "more": "Mas",
-      "mobile_menu": "Menu"
-    },
+    "navigation": { "more": "Mas", "mobile_menu": "Menu" },
     "search_bar": {
       "placeholder": "Buscar por Descripción, No de parte OE o Proveedor",
       "placeholder_blog": "Buscar todo los articulos...",
@@ -500,12 +467,16 @@
       "brand": "Marca",
       "see_all_features": "Ver todas las características",
       "share_this_product": "Compartir este producto",
-      "sku": "SKU"
+      "sku": "SKU",
+      "barcode": "Código de barras",
+      "size_chart": "Tabla de tallas",
+      "collections": "Colecciones"
     },
     "pagination": {
       "showing": "Mostrando",
       "to": "a",
       "of": "de",
+      "load_more": "Cargar más productos",
       "items": "productos"
     }
   },
@@ -529,18 +500,10 @@
         "address2_label": "Colonia",
         "optional_address2_label": "Referencias adicionales"
       },
-      "shipping": {
-        "address2_add_label": "Colonia"
-      },
-      "field_errors": {
-        "address_address2_blank": "Introduce tu colonia"
-      },
+      "shipping": { "address2_add_label": "Colonia" },
+      "field_errors": { "address_address2_blank": "Introduce tu colonia" },
       "wallets": {
-        "errors": {
-          "missing": {
-            "address2": "Introduce tu colonia"
-          }
-        }
+        "errors": { "missing": { "address2": "Introduce tu colonia" } }
       },
       "stock": {
         "unshippable_product": {

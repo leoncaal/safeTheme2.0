@@ -215,6 +215,14 @@
   },
   "contact": {
     "form": {
+      "bill_msg": "Enter billing information",
+      "rfc": "RFC",
+      "cfdi": "CFDI",
+      "regimen": "Tax regime",
+      "cp": "Zip code",
+      "verify_email": "Confirm Email",
+      "ticket_number": "# ticket",
+      "amount": "Total amount",
       "name": "Name",
       "email": "Email",
       "phone": "Phone",
@@ -394,6 +402,12 @@
       "mobile_menu": "Menu"
     },
     "search_bar": {
+      "placeholder": "Search entire store here...",
+      "placeholder_blog": "Search all articles...",
+      "submit": "Search",
+      "title": "Search"
+    },
+    "search_bar_2": {
       "placeholder": "Search entire store here...",
       "placeholder_blog": "Search all articles...",
       "submit": "Search",
