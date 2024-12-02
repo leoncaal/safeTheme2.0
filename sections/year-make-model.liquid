@@ -2,16 +2,61 @@
   <div class="container">
     <div class="row {% if section.settings.bottom_padding %} padding-bottom{% endif %}">
       {% if section.settings.heading != blank %}
-        <div class="title ymk">
+        <div class="title ymk" style="text-shadow: 0px 3px 7px rgb(102 102 102) !important;">
           <h1>{{ section.settings.heading }}</h1>
         </div>
       {% endif %}
       <div class="booking-form">
-        <form>
+        <div class="row">
+          <div class="col-sm-4">
+            <br>
+            <span class="form-label" style="text-shadow: 1px 1px 2px rgba(50 50 50) !important;"
+              ><i class="fas fa-barcode"></i> Búsqueda por numero de serie (VIN)</span
+            >
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <input
+                type="text"
+                id="inputVIN"
+                name="VIN"
+                class="form-control"
+                placeholder="Ingresar VIN"
+                autocorrect="off"
+                value=""
+                style="text-transform: uppercase;"
+              >
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="form-group">
+              <div class="form-btn">
+                <a href="javascript:(busquedaVIN());">
+                  <button type="button" id="buttonVIN" class="submit-btn" onclick="">BUSCAR</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form action="buildUrl()">
+          <div class="row">
+            <div class="col-sm-3">
+              <br>
+              <span class="form-label" style="text-shadow: 1px 1px 2px rgba(50 50 50) !important;"
+                ><i class="fas fa-car"></i> Búsqueda por vehículo</span
+              >
+            </div>
+          </div>
           <div class="row">
             <div class="col-sm-3">
               <div class="form-group">
-                <span class="form-label">{{ 'general.year_make_model.make' | t }}</span>
+                <span class="form-label" style="text-shadow: 1px 1px 2px rgba(50 50 50) !important;">
+                  {{- 'general.year_make_model.make' | t -}}
+                </span>
                 <select
                   name="optone"
                   id="makeSel"
@@ -26,7 +71,9 @@
             </div>
             <div class="col-sm-3">
               <div class="form-group">
-                <span class="form-label">{{ 'general.year_make_model.model' | t }}</span>
+                <span class="form-label" style="text-shadow: 1px 1px 2px rgba(50 50 50) !important;">
+                  {{- 'general.year_make_model.model' | t -}}
+                </span>
                 <select
                   name="opttwo"
                   id="modelSel"
@@ -41,7 +88,9 @@
             </div>
             <div class="col-sm-3">
               <div class="form-group">
-                <span class="form-label">{{ 'general.year_make_model.year' | t }}</span>
+                <span class="form-label" style="text-shadow: 2px 2px 3px rgba(0, 0, 0, 1) !important;">
+                  {{- 'general.year_make_model.year' | t -}}
+                </span>
                 <select
                   name="optthree"
                   id="yearSel"
@@ -72,6 +121,94 @@
     </div>
   </div>
 </div>
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="modalResCars"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="myModalLabel"
+  data-backdrop="static"
+>
+  <div class="vertical-alignment-helperL">
+    <div class="vertical-align-centerL">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header" style="background-color: #101415;">
+            <button
+              id="btnClose1"
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+              style="opacity: 1"
+            >
+              <span aria-hidden="true" style="color: white;">&times;</span>
+            </button>
+            <h4 class="modal-title" id="myModalLabel" style="color: white"></h4>
+          </div>
+          <div
+            class="modal-bodyVIN"
+            style="margin-top: 20px; margin-bottom: 20px; padding-left: 30px; padding-right: 30px;"
+          >
+            <div id="resCars" class="row"></div>
+          </div>
+          <div class="modal-footer">
+            <button
+              id="btnClose2"
+              type="button"
+              class="btn btn-cars"
+              data-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fin modal -->
+<style>
+  .form-group {
+    margin-bottom: 15px;
+  }
+  .form-group .car-item {
+    display: flex;
+    flex-direction: row;
+    border: 9px solid #fce200;
+    padding: 10px;
+    box-shadow: 0 5px 14px -5px #0000004d;
+    align-items: center;
+    margin-bottom: 10px;
+    height: 100px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.1) -17%, rgba(252, 252, 252) 49%);
+    border-left: 0px;
+    border-top: 0px;
+    border-bottom: 0px;
+  }
+  .form-group .car-item i {
+    opacity: 0.8;
+    font-size: xx-large;
+    padding-right: 10px;
+  }
+  .btn-cars {
+    color: white;
+    background-color: #101415;
+    border-color: #101415;
+  }
+  .btn-cars:hover {
+    color: #101415;
+    background-color: #fce200;
+    border-color: #fce200;
+  }
+  .car-item {
+    transition: transform 0.3s ease;
+  }
+  .car-item:hover {
+    transform: scale(1.1);
+  }
+</style>
 {% schema %}
 {
   "name": "Year Make Model",
@@ -150,6 +287,7 @@
     padding: 80px 0;
     background-position: center;
     background-image: url('{{ section.settings.bg-image | img_url: 'master' }}');
+    background-size: cover;
       }
   {% elsif section.settings.background_color != settings.section_bg_color -%}
   #shopify-section-{{section.id }} .layer-background {
@@ -164,45 +302,302 @@
 </style>
 {{ 'makeObject.js' | asset_url | script_tag }}
 <script type="text/javascript">
-  // This section creates the dynamic dropdowns
+  // Función para inicializar los dropdowns cuando makeObject esté disponible
+  function initializeDropdowns() {
+    var makeSel = document.getElementById("makeSel"),
+        modelSel = document.getElementById("modelSel"),
+        yearSel = document.getElementById("yearSel");
 
-  window.onload = function () {
-    var makeSel = document.getElementById('makeSel'),
-      modelSel = document.getElementById('modelSel'),
-      yearSel = document.getElementById('yearSel');
+    // Verifica que makeObject tenga datos
+    if (!makeObject || Object.keys(makeObject).length === 0) {
+      console.warn("makeObject aún no está disponible.");
+      return;
+    }
+
+    // Llenado del primer dropdown
     for (var make in makeObject) {
       makeSel.options[makeSel.options.length] = new Option(make, make);
     }
-    makeSel.onchange = function () {
-      modelSel.length = 1; // remove all options bar first
-      yearSel.length = 1; // remove all options bar first
-      if (this.selectedIndex < 1) return; // done
+
+    // Configuración de eventos para actualizar los demás dropdowns
+    makeSel.onchange = function() {
+      modelSel.length = 1; // Limpia las opciones previas
+      yearSel.length = 1;
+      if (this.selectedIndex < 1) return;
+
       for (var model in makeObject[this.value]) {
         modelSel.options[modelSel.options.length] = new Option(model, model);
       }
     };
-    makeSel.onchange(); // reset in case page is reloaded
-    modelSel.onchange = function () {
-      yearSel.length = 1; // remove all options bar first
-      if (this.selectedIndex < 1) return; // done
+    
+    makeSel.onchange(); // Llama al evento para inicializar en caso de recarga
+
+    modelSel.onchange = function() {
+      yearSel.length = 1; // Limpia las opciones previas
+      if (this.selectedIndex < 1) return;
+
       var years = makeObject[makeSel.value][this.value];
       for (var i = 0; i < years.length; i++) {
         yearSel.options[yearSel.options.length] = new Option(years[i], years[i]);
       }
     };
-  };
+  }
+
+  // Espera a que el DOM esté completamente cargado y verifica makeObject
+  document.addEventListener("DOMContentLoaded", function() {
+    // Verifica la disponibilidad de makeObject cada 100ms hasta que esté listo
+    const checkMakeObject = setInterval(() => {
+      if (typeof makeObject !== "undefined") {
+        clearInterval(checkMakeObject);
+        initializeDropdowns();
+      }
+    }, 100);
+  });
+</script>
+<script
+  type="text/javascript"
+>
+  // This section creates the dynamic dropdowns
+
+
 
   // The buildUrl function creates the query string on the values of the IDs in the HTML below
 
-  function buildUrl() {
-    var url = ''; // Change this line to your home page URL
-    var make = document.querySelector('#makeSel').value;
-    var model = document.querySelector('#modelSel').value;
-    var year = document.querySelector('#yearSel').value;
-    var qs = encodeURIComponent(make + ' ' + model + ' ' + year);
-    if (qs.length > 0) {
-      url = url + '/collections/all?constraint=' + qs;
-    }
+function buildUrl() {
+  var url = "https://saferefacciones.shop/search?type=product&idCar=";  // Cambia esta línea a tu URL de inicio
+  var make = document.querySelector('#makeSel').value;
+  var model = document.querySelector('#modelSel').value;
+  var year = document.querySelector('#yearSel').value;
+  
+  // Usar una expresión regular para encontrar el texto después de "Vehículo:"
+  var vehicleMatch = year.match(/Vehículo:\s*(.+)/);
+  var vehicleText = vehicleMatch ? vehicleMatch[1].trim() : ""; // Extraer el texto después de "Vehículo:"
+
+  var qs = encodeURIComponent(make + ' ' + model + ' ' + year);
+  if (vehicleText.length > 0) {
+    url = url + encodeURIComponent(vehicleText);
+  }
+  
+  return url;
+}
+
+  var vinValue = "";
+  var preVinValue = null;
+  
+  function buildUrlVIN(dataCar) {
+    $("#modalResCars").modal("hide");
+    var url = "https://saferefacciones.shop/search?type=product&q=";  // Change this line to your home page URL
+    var model = dataCar.modelo_name;
+    url = url + model + "&idCar=" + dataCar.id_version;
+
     return url;
   }
+  function buildUrlVIN2(dataVersion, dataModelo ) {
+    $("#modalResCars").modal("hide");
+    var url = "https://saferefacciones.shop/search?type=product&q=";  // Change this line to your home page URL
+    url = url + dataModelo + "&idCar=" + dataVersion;
+
+    return url;
+  }
+
+
+
+function checkInputLength() {
+    var input = document.getElementById('inputVIN');
+    var button = document.getElementById('buttonVIN');
+
+    function validateInput() {
+        // Elimina todos los espacios en blanco de `input.value` y asigna el resultado a `vinValue`
+        var vinValue = input.value.replace(/\s+/g, ''); 
+        var regex = /^[a-zA-Z0-9]*$/; // Expresión regular para permitir solo letras y números
+
+        if (vinValue.length === 0) {
+            alert('Ingresa un número VIN.');
+            return false;
+        } else if (vinValue.length >= 10 && vinValue.length <= 20 && regex.test(vinValue)) {
+            window.vinValue = vinValue; // Asigna `vinValue` sin espacios a la variable global
+            return true; // La validación es exitosa
+        } else {
+            alert('Revisa el VIN, debe tener entre 10 y 18 caracteres y solo contener letras y números.');
+            return false; // La validación falla
+        }
+    }
+
+    button.addEventListener('click', function(event) {
+        event.preventDefault(); // Evita que el botón ejecute su acción por defecto
+        if (validateInput()) {
+            busquedaVIN(); // Solo ejecutar la búsqueda si la validación es exitosa
+        }
+    });
+}
+
+checkInputLength();
+
+
+
+  function openModal(resCars) {
+    
+    var bodyCars = document.getElementById("resCars");
+    bodyCars.innerHTML = ""; // Limpiar contenido previo
+    if (resCars.hasOwnProperty('bodyMessage_Double')) {
+       var flexDiv = document.createElement('div');
+       flexDiv.style.display = 'flex';
+       flexDiv.style.flexDirection = 'column';
+       flexDiv.style.alignItems = 'center';
+       var icon = document.createElement('i');
+       icon.className = 'fa-solid fa-triangle-exclamation';
+       icon.style.paddingRight = '12px';
+       icon.style.fontSize = 'xxx-large';
+       var headText = document.getElementById("myModalLabel");
+       var h3 = document.createElement('h3');
+       h3.textContent = `${resCars.bodyMessage_Double}`;
+       h3.style.textAlign = 'center';
+       h3.style.paddingTop = '40px';
+       headText.textContent = `${resCars.headMessage}`
+       flexDiv.appendChild(icon);
+       flexDiv.appendChild(h3);
+       bodyCars.appendChild(flexDiv);
+      $("#modalResCars").modal("show");
+    } else {
+      if (resCars.hasOwnProperty('headMessage')) {
+       var headText = document.getElementById("myModalLabel");
+       var h3 = document.createElement('h3');
+       var loader = document.createElement('span');
+       loader.className = 'loaderVIN';
+       h3.textContent = `${resCars.bodyMessage}`;
+       h3.style.textAlign = 'center';
+       h3.style.paddingTop = '30px';
+       headText.textContent = `${resCars.headMessage}`
+       bodyCars.appendChild(loader);
+       bodyCars.appendChild(h3);
+      $("#modalResCars").modal("show");
+    }
+    if (resCars.hasOwnProperty('error')) {
+    var headText = document.getElementById("myModalLabel");
+
+    // Crear el nuevo div con estilo flex-direction column
+    var flexDiv = document.createElement('div');
+    flexDiv.style.display = 'flex';
+    flexDiv.style.flexDirection = 'column';
+    flexDiv.style.alignItems = 'center';
+
+    var icon = document.createElement('i');
+    icon.className = 'fa-solid fa-triangle-exclamation';
+    icon.style.paddingRight = '12px';
+    icon.style.fontSize = 'xxx-large';
+
+    var h3 = document.createElement('h3');
+    h3.textContent = "Te recomendamos utilizar la búsqueda por vehículo";
+    h3.style.textAlign = 'center';
+    h3.style.paddingTop = '30px';
+    //flexDiv.appendChild(icon);
+    flexDiv.appendChild(h3);
+    headText.textContent = "No se encontraron coincidencias.";
+
+    bodyCars.appendChild(flexDiv);
+
+    $("#modalResCars").modal("show");
+}
+    if (resCars.length > 1){
+      var headText = document.getElementById("myModalLabel");
+      const textOpcion = document.createElement('h3');
+      //headText.textContent = "Selecciona la versión de tu vehículo"
+      headText.textContent = `Búsqueda con varias coincidencias.`;
+      textOpcion.textContent = `Se encontraron ${resCars.length} coincidencias para tu vehículo. Por favor utiliza la búsqueda manual por vehículo.`;
+      textOpcion.style.textAlign = "center";
+      //let imagen = document.createElement("img");
+      //imagen.style.display = "block";
+      //imagen.style.margin = "auto";
+      //imagen.src = `${resCars[0].vehicle_image}`
+      //imagen.width = 250;
+      //bodyCars.appendChild(imagen);
+      bodyCars.appendChild(textOpcion);
+      /*
+      for (let i = 0; i < resCars.length; i += 2) {
+        const formGroup = document.createElement('div');
+        formGroup.className = 'form-group';
+
+        const carItem1 = createCarItem(resCars[i]);
+        formGroup.appendChild(carItem1);
+
+        if (i + 1 < resCars.length) {
+             const carItem2 = createCarItem(resCars[i + 1]);
+             formGroup.appendChild(carItem2);
+           }
+
+         bodyCars.appendChild(formGroup);
+        }*/
+
+    $("#modalResCars").modal("show");
+   }
+    }
+    }
+    
+    
+  
+  function createCarItem(car) {
+            const carItem = document.createElement('div');
+            carItem.className = 'col-sm-6';
+
+            const carLink = document.createElement('a');
+            carLink.href = `javascript:window.location.assign(buildUrlVIN2(${car.id_version}, "${car.modelo_name} / ${car.hp} HP / ${car.description}" ))`;
+
+            const carDiv = document.createElement('div');
+            carDiv.className = 'car-item';
+
+            const carIcon = document.createElement('i');
+            carIcon.className = 'fas fa-car';
+
+            const carText = document.createElement('div');
+            carText.innerHTML = `${car.marca} ${car.modelo_name} <br/> ${car.hp} HP ${car.description}`;
+
+            carDiv.appendChild(carIcon);
+            carDiv.appendChild(carText);
+            carLink.appendChild(carDiv);
+            carItem.appendChild(carLink);
+
+            return carItem;
+        }
+ 
+  async function busquedaVIN () {
+    
+        var dataSearch = {
+      "headMessage": "Espera un momento.",
+      "bodyMessage": "Buscando tu automóvil en nuestro catálogo."
+    }
+    openModal(dataSearch);
+  try {
+    var url = 'https://www.saferefacciones.com/TecDoc/API/vin.php?vin=' + vinValue;
+    const response = await fetch(url);
+    
+    if (!response.ok) {
+      throw new Error(`Error en la solicitud: ${response.status} ${response.statusText}`);
+    }
+
+    const data = await response.json();
+    console.log(data);
+    setTimeout(() => {
+  if (data.results_count > 1) {
+      openModal(data.results);
+    } else {
+      if (data.results_count === 1) {
+        $("#modalResCars").modal("hide");
+        window.location.assign(buildUrlVIN(data.results[0]));
+      } else {
+        
+        openModal(data);
+      }
+    }
+}, "500");
+    
+  } catch (error) {
+    var dataSearch = {
+      "headMessage": "Error inesperado",
+      "bodyMessage": "Parece que tu red es inestable. Si el problema persiste, prueba el utilizar una red más estable o utilizar nuestro buscador por Vehículo."
+    }
+    openModal(dataSearch);
+    console.error('Error al obtener los datos:', error);
+  }
+    
+}
 </script>
