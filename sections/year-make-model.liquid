@@ -304,13 +304,13 @@
 <script type="text/javascript">
   // Función para inicializar los dropdowns cuando makeObject esté disponible
   function initializeDropdowns() {
-    var makeSel = document.getElementById("makeSel"),
-        modelSel = document.getElementById("modelSel"),
-        yearSel = document.getElementById("yearSel");
+    var makeSel = document.getElementById('makeSel'),
+      modelSel = document.getElementById('modelSel'),
+      yearSel = document.getElementById('yearSel');
 
     // Verifica que makeObject tenga datos
     if (!makeObject || Object.keys(makeObject).length === 0) {
-      console.warn("makeObject aún no está disponible.");
+      console.warn('makeObject aún no está disponible.');
       return;
     }
 
@@ -320,7 +320,7 @@
     }
 
     // Configuración de eventos para actualizar los demás dropdowns
-    makeSel.onchange = function() {
+    makeSel.onchange = function () {
       modelSel.length = 1; // Limpia las opciones previas
       yearSel.length = 1;
       if (this.selectedIndex < 1) return;
@@ -329,10 +329,10 @@
         modelSel.options[modelSel.options.length] = new Option(model, model);
       }
     };
-    
+
     makeSel.onchange(); // Llama al evento para inicializar en caso de recarga
 
-    modelSel.onchange = function() {
+    modelSel.onchange = function () {
       yearSel.length = 1; // Limpia las opciones previas
       if (this.selectedIndex < 1) return;
 
@@ -344,10 +344,10 @@
   }
 
   // Espera a que el DOM esté completamente cargado y verifica makeObject
-  document.addEventListener("DOMContentLoaded", function() {
+  document.addEventListener('DOMContentLoaded', function () {
     // Verifica la disponibilidad de makeObject cada 100ms hasta que esté listo
     const checkMakeObject = setInterval(() => {
-      if (typeof makeObject !== "undefined") {
+      if (typeof makeObject !== 'undefined') {
         clearInterval(checkMakeObject);
         initializeDropdowns();
       }
@@ -359,160 +359,153 @@
 >
   // This section creates the dynamic dropdowns
 
-
-
   // The buildUrl function creates the query string on the values of the IDs in the HTML below
 
-function buildUrl() {
-  var url = "https://saferefacciones.shop/search?type=product&idCar=";  // Cambia esta línea a tu URL de inicio
-  var make = document.querySelector('#makeSel').value;
-  var model = document.querySelector('#modelSel').value;
-  var year = document.querySelector('#yearSel').value;
-  
-  // Usar una expresión regular para encontrar el texto después de "Vehículo:"
-  var vehicleMatch = year.match(/Vehículo:\s*(.+)/);
-  var vehicleText = vehicleMatch ? vehicleMatch[1].trim() : ""; // Extraer el texto después de "Vehículo:"
+  function buildUrl() {
+    var url = 'https://saferefacciones.shop/search?type=product&idCar='; // Cambia esta línea a tu URL de inicio
+    var make = document.querySelector('#makeSel').value;
+    var model = document.querySelector('#modelSel').value;
+    var year = document.querySelector('#yearSel').value;
 
-  var qs = encodeURIComponent(make + ' ' + model + ' ' + year);
-  if (vehicleText.length > 0) {
-    url = url + encodeURIComponent(vehicleText);
+    // Usar una expresión regular para encontrar el texto después de "Vehículo:"
+    var vehicleMatch = year.match(/Vehículo:\s*(.+)/);
+    var vehicleText = vehicleMatch ? vehicleMatch[1].trim() : ''; // Extraer el texto después de "Vehículo:"
+
+    var qs = encodeURIComponent(make + ' ' + model + ' ' + year);
+    if (vehicleText.length > 0) {
+      url = url + encodeURIComponent(vehicleText);
+    }
+
+    return url;
   }
-  
-  return url;
-}
 
-  var vinValue = "";
+  var vinValue = '';
   var preVinValue = null;
-  
+
   function buildUrlVIN(dataCar) {
-    $("#modalResCars").modal("hide");
-    var url = "https://saferefacciones.shop/search?type=product&q=";  // Change this line to your home page URL
+    $('#modalResCars').modal('hide');
+    var url = 'https://saferefacciones.shop/search?type=product&q='; // Change this line to your home page URL
     var model = dataCar.modelo_name;
-    url = url + model + "&idCar=" + dataCar.id_version;
+    url = url + model + '&idCar=' + dataCar.id_version;
 
     return url;
   }
-  function buildUrlVIN2(dataVersion, dataModelo ) {
-    $("#modalResCars").modal("hide");
-    var url = "https://saferefacciones.shop/search?type=product&q=";  // Change this line to your home page URL
-    url = url + dataModelo + "&idCar=" + dataVersion;
+  function buildUrlVIN2(dataVersion, dataModelo) {
+    $('#modalResCars').modal('hide');
+    var url = 'https://saferefacciones.shop/search?type=product&q='; // Change this line to your home page URL
+    url = url + dataModelo + '&idCar=' + dataVersion;
 
     return url;
   }
 
-
-
-function checkInputLength() {
+  function checkInputLength() {
     var input = document.getElementById('inputVIN');
     var button = document.getElementById('buttonVIN');
 
     function validateInput() {
-        // Elimina todos los espacios en blanco de `input.value` y asigna el resultado a `vinValue`
-        var vinValue = input.value.replace(/\s+/g, ''); 
-        var regex = /^[a-zA-Z0-9]*$/; // Expresión regular para permitir solo letras y números
+      // Elimina todos los espacios en blanco de `input.value` y asigna el resultado a `vinValue`
+      var vinValue = input.value.replace(/\s+/g, '');
+      var regex = /^[a-zA-Z0-9]*$/; // Expresión regular para permitir solo letras y números
 
-        if (vinValue.length === 0) {
-            alert('Ingresa un número VIN.');
-            return false;
-        } else if (vinValue.length >= 10 && vinValue.length <= 20 && regex.test(vinValue)) {
-            window.vinValue = vinValue; // Asigna `vinValue` sin espacios a la variable global
-            return true; // La validación es exitosa
-        } else {
-            alert('Revisa el VIN, debe tener entre 10 y 18 caracteres y solo contener letras y números.');
-            return false; // La validación falla
-        }
+      if (vinValue.length === 0) {
+        alert('Ingresa un número VIN.');
+        return false;
+      } else if (vinValue.length >= 10 && vinValue.length <= 20 && regex.test(vinValue)) {
+        window.vinValue = vinValue; // Asigna `vinValue` sin espacios a la variable global
+        return true; // La validación es exitosa
+      } else {
+        alert('Revisa el VIN, debe tener entre 10 y 18 caracteres y solo contener letras y números.');
+        return false; // La validación falla
+      }
     }
 
-    button.addEventListener('click', function(event) {
-        event.preventDefault(); // Evita que el botón ejecute su acción por defecto
-        if (validateInput()) {
-            busquedaVIN(); // Solo ejecutar la búsqueda si la validación es exitosa
-        }
+    button.addEventListener('click', function (event) {
+      event.preventDefault(); // Evita que el botón ejecute su acción por defecto
+      if (validateInput()) {
+        busquedaVIN(); // Solo ejecutar la búsqueda si la validación es exitosa
+      }
     });
-}
+  }
 
-checkInputLength();
-
-
+  checkInputLength();
 
   function openModal(resCars) {
-    
-    var bodyCars = document.getElementById("resCars");
-    bodyCars.innerHTML = ""; // Limpiar contenido previo
+    var bodyCars = document.getElementById('resCars');
+    bodyCars.innerHTML = ''; // Limpiar contenido previo
     if (resCars.hasOwnProperty('bodyMessage_Double')) {
-       var flexDiv = document.createElement('div');
-       flexDiv.style.display = 'flex';
-       flexDiv.style.flexDirection = 'column';
-       flexDiv.style.alignItems = 'center';
-       var icon = document.createElement('i');
-       icon.className = 'fa-solid fa-triangle-exclamation';
-       icon.style.paddingRight = '12px';
-       icon.style.fontSize = 'xxx-large';
-       var headText = document.getElementById("myModalLabel");
-       var h3 = document.createElement('h3');
-       h3.textContent = `${resCars.bodyMessage_Double}`;
-       h3.style.textAlign = 'center';
-       h3.style.paddingTop = '40px';
-       headText.textContent = `${resCars.headMessage}`
-       flexDiv.appendChild(icon);
-       flexDiv.appendChild(h3);
-       bodyCars.appendChild(flexDiv);
-      $("#modalResCars").modal("show");
+      var flexDiv = document.createElement('div');
+      flexDiv.style.display = 'flex';
+      flexDiv.style.flexDirection = 'column';
+      flexDiv.style.alignItems = 'center';
+      var icon = document.createElement('i');
+      icon.className = 'fa-solid fa-triangle-exclamation';
+      icon.style.paddingRight = '12px';
+      icon.style.fontSize = 'xxx-large';
+      var headText = document.getElementById('myModalLabel');
+      var h3 = document.createElement('h3');
+      h3.textContent = `${resCars.bodyMessage_Double}`;
+      h3.style.textAlign = 'center';
+      h3.style.paddingTop = '40px';
+      headText.textContent = `${resCars.headMessage}`;
+      flexDiv.appendChild(icon);
+      flexDiv.appendChild(h3);
+      bodyCars.appendChild(flexDiv);
+      $('#modalResCars').modal('show');
     } else {
       if (resCars.hasOwnProperty('headMessage')) {
-       var headText = document.getElementById("myModalLabel");
-       var h3 = document.createElement('h3');
-       var loader = document.createElement('span');
-       loader.className = 'loaderVIN';
-       h3.textContent = `${resCars.bodyMessage}`;
-       h3.style.textAlign = 'center';
-       h3.style.paddingTop = '30px';
-       headText.textContent = `${resCars.headMessage}`
-       bodyCars.appendChild(loader);
-       bodyCars.appendChild(h3);
-      $("#modalResCars").modal("show");
-    }
-    if (resCars.hasOwnProperty('error')) {
-    var headText = document.getElementById("myModalLabel");
+        var headText = document.getElementById('myModalLabel');
+        var h3 = document.createElement('h3');
+        var loader = document.createElement('span');
+        loader.className = 'loaderVIN';
+        h3.textContent = `${resCars.bodyMessage}`;
+        h3.style.textAlign = 'center';
+        h3.style.paddingTop = '30px';
+        headText.textContent = `${resCars.headMessage}`;
+        bodyCars.appendChild(loader);
+        bodyCars.appendChild(h3);
+        $('#modalResCars').modal('show');
+      }
+      if (resCars.hasOwnProperty('error')) {
+        var headText = document.getElementById('myModalLabel');
 
-    // Crear el nuevo div con estilo flex-direction column
-    var flexDiv = document.createElement('div');
-    flexDiv.style.display = 'flex';
-    flexDiv.style.flexDirection = 'column';
-    flexDiv.style.alignItems = 'center';
+        // Crear el nuevo div con estilo flex-direction column
+        var flexDiv = document.createElement('div');
+        flexDiv.style.display = 'flex';
+        flexDiv.style.flexDirection = 'column';
+        flexDiv.style.alignItems = 'center';
 
-    var icon = document.createElement('i');
-    icon.className = 'fa-solid fa-triangle-exclamation';
-    icon.style.paddingRight = '12px';
-    icon.style.fontSize = 'xxx-large';
+        var icon = document.createElement('i');
+        icon.className = 'fa-solid fa-triangle-exclamation';
+        icon.style.paddingRight = '12px';
+        icon.style.fontSize = 'xxx-large';
 
-    var h3 = document.createElement('h3');
-    h3.textContent = "Te recomendamos utilizar la búsqueda por vehículo";
-    h3.style.textAlign = 'center';
-    h3.style.paddingTop = '30px';
-    //flexDiv.appendChild(icon);
-    flexDiv.appendChild(h3);
-    headText.textContent = "No se encontraron coincidencias.";
+        var h3 = document.createElement('h3');
+        h3.textContent = 'Te recomendamos utilizar la búsqueda por vehículo';
+        h3.style.textAlign = 'center';
+        h3.style.paddingTop = '30px';
+        //flexDiv.appendChild(icon);
+        flexDiv.appendChild(h3);
+        headText.textContent = 'No se encontraron coincidencias.';
 
-    bodyCars.appendChild(flexDiv);
+        bodyCars.appendChild(flexDiv);
 
-    $("#modalResCars").modal("show");
-}
-    if (resCars.length > 1){
-      var headText = document.getElementById("myModalLabel");
-      const textOpcion = document.createElement('h3');
-      //headText.textContent = "Selecciona la versión de tu vehículo"
-      headText.textContent = `Búsqueda con varias coincidencias.`;
-      textOpcion.textContent = `Se encontraron ${resCars.length} coincidencias para tu vehículo. Por favor utiliza la búsqueda manual por vehículo.`;
-      textOpcion.style.textAlign = "center";
-      //let imagen = document.createElement("img");
-      //imagen.style.display = "block";
-      //imagen.style.margin = "auto";
-      //imagen.src = `${resCars[0].vehicle_image}`
-      //imagen.width = 250;
-      //bodyCars.appendChild(imagen);
-      bodyCars.appendChild(textOpcion);
-      /*
+        $('#modalResCars').modal('show');
+      }
+      if (resCars.length > 1) {
+        var headText = document.getElementById('myModalLabel');
+        const textOpcion = document.createElement('h3');
+        //headText.textContent = "Selecciona la versión de tu vehículo"
+        headText.textContent = `Búsqueda con varias coincidencias.`;
+        textOpcion.textContent = `Se encontraron ${resCars.length} coincidencias para tu vehículo. Por favor utiliza la búsqueda manual por vehículo.`;
+        textOpcion.style.textAlign = 'center';
+        //let imagen = document.createElement("img");
+        //imagen.style.display = "block";
+        //imagen.style.margin = "auto";
+        //imagen.src = `${resCars[0].vehicle_image}`
+        //imagen.width = 250;
+        //bodyCars.appendChild(imagen);
+        bodyCars.appendChild(textOpcion);
+        /*
       for (let i = 0; i < resCars.length; i += 2) {
         const formGroup = document.createElement('div');
         formGroup.className = 'form-group';
@@ -528,76 +521,71 @@ checkInputLength();
          bodyCars.appendChild(formGroup);
         }*/
 
-    $("#modalResCars").modal("show");
-   }
-    }
-    }
-    
-    
-  
-  function createCarItem(car) {
-            const carItem = document.createElement('div');
-            carItem.className = 'col-sm-6';
-
-            const carLink = document.createElement('a');
-            carLink.href = `javascript:window.location.assign(buildUrlVIN2(${car.id_version}, "${car.modelo_name} / ${car.hp} HP / ${car.description}" ))`;
-
-            const carDiv = document.createElement('div');
-            carDiv.className = 'car-item';
-
-            const carIcon = document.createElement('i');
-            carIcon.className = 'fas fa-car';
-
-            const carText = document.createElement('div');
-            carText.innerHTML = `${car.marca} ${car.modelo_name} <br/> ${car.hp} HP ${car.description}`;
-
-            carDiv.appendChild(carIcon);
-            carDiv.appendChild(carText);
-            carLink.appendChild(carDiv);
-            carItem.appendChild(carLink);
-
-            return carItem;
-        }
- 
-  async function busquedaVIN () {
-    
-        var dataSearch = {
-      "headMessage": "Espera un momento.",
-      "bodyMessage": "Buscando tu automóvil en nuestro catálogo."
-    }
-    openModal(dataSearch);
-  try {
-    var url = 'https://www.saferefacciones.com/TecDoc/API/vin.php?vin=' + vinValue;
-    const response = await fetch(url);
-    
-    if (!response.ok) {
-      throw new Error(`Error en la solicitud: ${response.status} ${response.statusText}`);
-    }
-
-    const data = await response.json();
-    console.log(data);
-    setTimeout(() => {
-  if (data.results_count > 1) {
-      openModal(data.results);
-    } else {
-      if (data.results_count === 1) {
-        $("#modalResCars").modal("hide");
-        window.location.assign(buildUrlVIN(data.results[0]));
-      } else {
-        
-        openModal(data);
+        $('#modalResCars').modal('show');
       }
     }
-}, "500");
-    
-  } catch (error) {
-    var dataSearch = {
-      "headMessage": "Error inesperado",
-      "bodyMessage": "Parece que tu red es inestable. Si el problema persiste, prueba el utilizar una red más estable o utilizar nuestro buscador por Vehículo."
-    }
-    openModal(dataSearch);
-    console.error('Error al obtener los datos:', error);
   }
-    
-}
+
+  function createCarItem(car) {
+    const carItem = document.createElement('div');
+    carItem.className = 'col-sm-6';
+
+    const carLink = document.createElement('a');
+    carLink.href = `javascript:window.location.assign(buildUrlVIN2(${car.id_version}, "${car.modelo_name} / ${car.hp} HP / ${car.description}" ))`;
+
+    const carDiv = document.createElement('div');
+    carDiv.className = 'car-item';
+
+    const carIcon = document.createElement('i');
+    carIcon.className = 'fas fa-car';
+
+    const carText = document.createElement('div');
+    carText.innerHTML = `${car.marca} ${car.modelo_name} <br/> ${car.hp} HP ${car.description}`;
+
+    carDiv.appendChild(carIcon);
+    carDiv.appendChild(carText);
+    carLink.appendChild(carDiv);
+    carItem.appendChild(carLink);
+
+    return carItem;
+  }
+
+  async function busquedaVIN() {
+    var dataSearch = {
+      headMessage: 'Espera un momento.',
+      bodyMessage: 'Buscando tu automóvil en nuestro catálogo.',
+    };
+    openModal(dataSearch);
+    try {
+      var url = 'https://www.saferefacciones.com/TecDoc/API/vin.php?vin=' + vinValue;
+      const response = await fetch(url);
+
+      if (!response.ok) {
+        throw new Error(`Error en la solicitud: ${response.status} ${response.statusText}`);
+      }
+
+      const data = await response.json();
+      console.log(data);
+      setTimeout(() => {
+        if (data.results_count > 1) {
+          openModal(data.results);
+        } else {
+          if (data.results_count === 1) {
+            $('#modalResCars').modal('hide');
+            window.location.assign(buildUrlVIN(data.results[0]));
+          } else {
+            openModal(data);
+          }
+        }
+      }, '500');
+    } catch (error) {
+      var dataSearch = {
+        headMessage: 'Error inesperado',
+        bodyMessage:
+          'Parece que tu red es inestable. Si el problema persiste, prueba el utilizar una red más estable o utilizar nuestro buscador por Vehículo.',
+      };
+      openModal(dataSearch);
+      console.error('Error al obtener los datos:', error);
+    }
+  }
 </script>
