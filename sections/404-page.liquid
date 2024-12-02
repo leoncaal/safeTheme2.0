@@ -4,26 +4,53 @@
   <div class="row">
     <div id="content" class="col-lg-12 col-md-12 col-sm-12">
       <div class="error-text">
-        {% if section.settings.image != blank %}
-          <img
-            {% if settings.lazyloading_enable %}
-              data-
-            {% endif -%}
-            src="{{ section.settings.image | img_url: 'master' }}"
-            alt=""
-            class="{% if settings.lazyloading_enable %}lazyload{% endif %} img-responsive"
-          >
-        {% endif %}
-        <h1>{{ 'general.404.title' | t }}</h1>
-        <div class="btn" style="display:block;">
-          {% if section.settings.link != blank %}
-            <a href="{{ section.settings.link }}" class="btn">{{ 'general.404.button' | t }}</a>
-          {% endif %}
+        <div class="main">
+          <div class="imgDiv">
+            {% if section.settings.image != blank %}
+              <img
+                {% if settings.lazyloading_enable %}
+                  data-
+                {% endif -%}
+                src="{{ section.settings.image | img_url: 'master' }}"
+                alt=""
+                class="{% if settings.lazyloading_enable %}lazyload{% endif %} img-responsive"
+              >
+            {% endif %}
+          </div>
+          <div class="textDiv">
+            <h1 class="text">{{ 'general.404.title' | t }}</h1>
+            {% if section.settings.error_message != blank %}
+              <h3>{{ section.settings.error_message }}</h3>
+            {% endif %}
+            <div class="btn" style="display:block;">
+              {% if section.settings.link != blank %}
+                <a href="{{ section.settings.link }}" class="btn">{{ 'general.404.button' | t }}</a>
+              {% endif %}
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+<style>
+  .main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .textDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+  }
+  .text {
+    text-align: center;
+  }
+</style>
 <!-- End of Error Text Area -->
 {% schema %}
 {
@@ -34,6 +61,11 @@
       "id": "image",
       "label": "Image",
       "info": "404 image"
+    },
+    {
+      "type": "textarea",
+      "id": "error_message",
+      "label": "Error message"
     },
     {
       "type": "paragraph",
