@@ -424,6 +424,13 @@
             "image": "shopify://shop_images/LOGO_CONTINENTAL_8cc012c6-f015-4de4-adca-d24723b95abf.png",
             "link": ""
           }
+        },
+        "image_b7k7eR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/LOGO_FREMAX_93a268eb-5130-4b83-b6ab-9028a944b228.png",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -434,7 +441,8 @@
         "image_n3KPrg",
         "image_Be3B7V",
         "image_V4A6Vt",
-        "image_c8ikfj"
+        "image_c8ikfj",
+        "image_b7k7eR"
       ],
       "custom_css": [
         ".swiper-wrapper {align-items: center;}",
