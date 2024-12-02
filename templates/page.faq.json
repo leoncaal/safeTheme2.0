@@ -1,1 +1,96 @@
-{"sections":{"main":{"type":"faq-page","blocks":{"1569081560761":{"type":"faq","settings":{"question":"How do i signup?","answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi cupiditate et laudantium esse adipisci consequatur modi possimus accusantium vero atque excepturi nobis in doloremque repudiandae soluta non minus dolore voluptatem enim reiciendis officia voluptates, fuga ullam? Voluptas reiciendis cumque molestiae unde numquam similique quas doloremque non, perferendis doloribus necessitatibus itaque dolorem quam officia atque perspiciatis dolore laudantium dolor voluptatem eligendi? Aliquam nulla unde voluptatum molestiae, eos fugit ullam, consequuntur, saepe voluptas quaerat deleniti. Repellendus magni sint temporibus, accusantium rem commodi."}},"1569081562706":{"type":"faq","settings":{"question":"Do you offer refunds?","answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi cupiditate et laudantium esse adipisci consequatur modi possimus accusantium vero atque excepturi nobis in doloremque repudiandae soluta non minus dolore voluptatem enim reiciendis officia voluptates, fuga ullam? Voluptas reiciendis cumque molestiae unde numquam similique quas doloremque non, perferendis doloribus necessitatibus itaque dolorem quam officia atque perspiciatis dolore laudantium dolor voluptatem eligendi? Aliquam nulla unde voluptatum molestiae, eos fugit ullam, consequuntur, saepe voluptas quaerat deleniti. Repellendus magni sint temporibus, accusantium rem commodi."}},"1569081572253":{"type":"faq","settings":{"question":"What are your shipping rates?","answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi cupiditate et laudantium esse adipisci consequatur modi possimus accusantium vero atque excepturi nobis in doloremque repudiandae soluta non minus dolore voluptatem enim reiciendis officia voluptates, fuga ullam? Voluptas reiciendis cumque molestiae unde numquam similique quas doloremque non, perferendis doloribus necessitatibus itaque dolorem quam officia atque perspiciatis dolore laudantium dolor voluptatem eligendi? Aliquam nulla unde voluptatum molestiae, eos fugit ullam, consequuntur, saepe voluptas quaerat deleniti. Repellendus magni sint temporibus, accusantium rem commodi."}}},"block_order":["1569081560761","1569081562706","1569081572253"],"settings":{}}},"order":["main"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "faq-page",
+      "blocks": {
+        "1569081560761": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Cómo hago un pedido?",
+            "answer": "Busca el producto que necesitas, si conoces el número de parte, ingrésalo en el buscado para obtener resultados más precisos.\nAgrega el producto a tu carrito de compra y sigue comprando.\nCuando tengas todos los productos en el carrito, la clic en \"Pagar\".\nLlena los campos con tu información. Puedes registrarte para que tu información se queden guardada para las siguientes compras, o iniciar sesión si ya tienes cuenta.\nElige el método de envío y de pago que más te convenga.\nTermina tu compra dando clic en \"Pagar ahora\"."
+          }
+        },
+        "1569081562706": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Cuáles son las opciones de pago disponibles?",
+            "answer": "<b>Aceptamos todas las tarjetas de crédito</b> excepto American Express, a través de la plataforma <b>Openpay.</b>\n<br>\nTambién aceptamos <b>transferencias bancarias</b>\nRealiza tu pago directamente en nuestra cuenta bancaria. \n<br>\nPor favor usa tu <b>número de pedido como la referencia de pago</b>. Envía tu comprobante de pago al correo auxventadigital@saferefacciones.com o por medio de whatsapp al teléfono 3335032569."
+          }
+        },
+        "1569081572253": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Cuáles son las opciones de envío y plazos de entrega?",
+            "answer": "Nuestro servicio de envíos se encuentra disponible únicamente en México. <b>Por ningún motivo se realizan envíos internacionales.</b>\n<br>\nEl precio <b>estándar de envío a todo México es de $335 MXN</b> y envíos gratis en compras mayores a $1,399 MXN. No aplica en tambos de 60L y baterías.\n<br>\n<b>El tiempo de entrega será de 3 a 5 días hábiles,</b> contados a partir de que se ha recibido el importe completo de la compra."
+          }
+        },
+        "faq_zYHppw": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Puedo rastrear mi pedido?",
+            "answer": "Todas las órdenes de compra realizadas a través del sitio de internet <b>serán entregadas por empresas de paquetería y mensajería ajenas a SAFE REFACCIONES.</b>\nEn un plazo máximo de 24 horas siguientes a tu compra en línea, <b>recibirás un correo con el número de guía</b> para que puedas rastrear el producto. Esta política no aplica para días de puente, asuetos, buen fin y demás días no laborables."
+          }
+        },
+        "faq_Hd66yB": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Cómo devuelvo o cambio un producto?",
+            "answer": "<b>Conserva tu ticket de compra y el empaque original ya que serán requeridos para hacer válida la garantía.</b>\nLlena el formulario en la sección de <a href=\"https://af6939-4.myshopify.com/pages/garantias\"><span style=\"font-weight: bold;\">Garantía</span></a> en tu perfil de la página.\nEspera a que uno de nuestros asesores se comunique contigo en un plazo máximo de 24 horas para darle seguimiento.\nSi tienes dudas adicionales, consulta nuestra <a href=\"https://af6939-4.myshopify.com/policies/refund-policy\"><span style=\"font-weight: bold;\">Política de devolución y reembolso.</span></a>"
+          }
+        },
+        "faq_CLxyF6": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Cómo contacto al servicio al cliente?",
+            "answer": "Puedes comunicarte a nuestro call center al número 3331134017 o al 3317643803, de lunes a viernes de 9am a 5pm, y sábados de 9am a 1pm."
+          }
+        },
+        "faq_GDHN9t": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Cómo puedo suscribirme o cancelar la suscripción a boletines?",
+            "answer": "Para suscribirte a nuestro boletin y enterarte de nuestras promociones antes que nadie debes dirigirte al final de la página e ingresar tu correo en la sección <b>Únete a nuestro boletín ahora</b> y dar clic en <b>Suscribirse</b> y finalmente responde el Captcha. Dirígete a tu bandeja de entrada para verificar tu correo.\nPuedes darte de baja en cualquier momento, al final del correo de promociones dar clic en <b>Darse de baja</b>, o mandar un correo a auxventadigital@saferefacciones.com."
+          }
+        },
+        "faq_6BUMPG": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Puedo cambiar la información de mi cuenta?",
+            "answer": "Para actualizar la información de tu perfil es necesario <b>Iniciar sesión o Generar una cuenta</b>. En la sección de <b>Perfil</b> puedes editar o agregar información personal, cambiar tu contraseña, agregar o actualizar la dirección para entrega del producto."
+          }
+        },
+        "faq_QApaxP": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Qué medidas de seguridad tienen para proteger mis datos personales?",
+            "answer": "La información obtenida en esta página la manejamos de acuerdo con la Ley Federal de Protección de Datos Personales en Posesión de los Particulares y puedes conocer más sobre el tema en nuestra sección <a href=\"https://af6939-4.myshopify.com/policies/privacy-policy\"><span style=\"font-weight: bold;\">Políticas de Privacidad</span></a>."
+          }
+        }
+      },
+      "block_order": [
+        "1569081560761",
+        "1569081562706",
+        "1569081572253",
+        "faq_zYHppw",
+        "faq_Hd66yB",
+        "faq_CLxyF6",
+        "faq_GDHN9t",
+        "faq_6BUMPG",
+        "faq_QApaxP"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
