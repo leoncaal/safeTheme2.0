@@ -220,7 +220,7 @@
       "email": "Correo electrónico",
       "verify_email": "Confirmar correo electrónico",
       "message": "Message",
-      "send": "Generar factura",
+      "send": "Enviar",
       "ticket_number": "Numero de ticket",
       "amount": "Monto total",
       "post_success": "Thanks for contacting us. We'll get back to you as soon as possible.",
