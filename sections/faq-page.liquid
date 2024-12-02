@@ -10,13 +10,157 @@
             <li class="cd-faq-title"></li>
             {% if section.blocks.size > 0 %}
               {% for block in section.blocks %}
-                <li>
-                  <a class="cd-faq-trigger" href="#0">{{ block.settings.question }}</a>
-                  <div class="cd-faq-content">
-                    <p>{{ block.settings.answer }}</p>
-                  </div>
-                  <!-- cd-faq-content -->
-                </li>
+                {% if forloop.index0 == 0 %}
+                  <li>
+                    <a class="cd-faq-trigger" href="#0">{{ block.settings.question }}</a>
+                    <div class="cd-faq-content">
+                      <div
+                        class="flex-container"
+                        style="display: flex; flex-direction: col; justify-content: space-between"
+                      >
+                        <div
+                          style="
+                            flex: 1;
+                            border: 0px solid #292929;
+                            border-radius: 10px;
+                            padding: 10px;
+                            margin: 10px;
+                          "
+                        >
+                          <div
+                            style="
+                              display: flex;
+                              flex-direction: column;
+                              justify-content: center;
+                              align-items: center;
+                              margin-top: 10px;
+                            "
+                          >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 24 24">
+                              <g fill="none" stroke="#fce200" stroke-linecap="round" stroke-width="1.5"><path d="M13 21H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v9"/><path stroke-linejoin="round" d="M2 7h20M5 5.01l.01-.011M8 5.01l.01-.011M11 5.01l.01-.011m9.114 15.12a3 3 0 1 0-4.248-4.237a3 3 0 0 0 4.248 4.237m0 0L22 22"/></g>
+                            </svg>
+                            <h3 style="text-align: center;">1. Búsca la Refacción</h3>
+                          </div>
+                          <div>
+                            <ol style="list-style-type: disc">
+                              <li>Ingresa el número de parte o la información de tu carro en el buscador.</li>
+                              <li>Haz clic en el <b>Producto</b> para obtener más información.</li>
+                              <li>Asegúrarte de que sea el <b>Producto</b> correcto.</li>
+                            </ol>
+                          </div>
+                        </div>
+                        <div
+                          style="
+                            flex: 1;
+                            border: 0px solid #292929;
+                            border-radius: 10px;
+                            padding: 10px;
+                            margin: 10px;
+                          "
+                        >
+                          <div
+                            style="
+                              display: flex;
+                              flex-direction: column;
+                              justify-content: center;
+                              align-items: center;
+                              margin-top: 10px;
+                            "
+                          >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 256 256">
+                              <g fill="none" stroke="#fce200" stroke-linecap="round" stroke-width="2"><path fill="#fce200" d="M220.61 60.16A6 6 0 0 0 216 58H53l-5.17-28.5A14 14 0 0 0 34.05 18H16a6 6 0 0 0 0 12h18a2 2 0 0 1 2 1.64l25.51 140.3a21.93 21.93 0 0 0 6.24 11.77a26 26 0 1 0 38.14 6.29h52.22A26 26 0 1 0 180 178H83.17a10 10 0 0 1-9.84-8.21L69.73 150H188.1a22 22 0 0 0 21.65-18.06l12.15-66.87a6 6 0 0 0-1.29-4.91M98 204a14 14 0 1 1-14-14a14 14 0 0 1 14 14m96 0a14 14 0 1 1-14-14a14 14 0 0 1 14 14m3.94-74.21a10 10 0 0 1-9.84 8.21H67.55L55.19 70h153.62Z"/>
+                            </svg>
+                            <h3 style="text-align: center">2. Añadir al Carrito</h3>
+                          </div>
+                          <div>
+                            <ol style="list-style-type: disc">
+                              <li>Haz clic en el botón <b>Añadir al carrito</b>.</li>
+                              <li>Revisa los productos en tu carrito y ajusta las cantidades si es necesario.</li>
+                              <li>Acepta los términos y condiciones.</li>
+                              <li>Haz clic en <b>Pagar</b> para iniciar el proceso de pago.</li>
+                            </ol>
+                          </div>
+                        </div>
+                        <div
+                          style="
+                            flex: 1;
+                            border: 0px solid #292929;
+                            border-radius: 10px;
+                            padding: 10px;
+                            margin: 10px;
+                          "
+                        >
+                          <div
+                            style="
+                              display: flex;
+                              flex-direction: column;
+                              justify-content: center;
+                              align-items: center;
+                              margin-top: 10px;
+                            "
+                          >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 16 16">
+                              <path fill="#fce200" d="M10.5 10a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zM1 5.5A2.5 2.5 0 0 1 3.5 3h9A2.5 2.5 0 0 1 15 5.5v5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 10.5zM14 6v-.5A1.5 1.5 0 0 0 12.5 4h-9A1.5 1.5 0 0 0 2 5.5V6zM2 7v3.5A1.5 1.5 0 0 0 3.5 12h9a1.5 1.5 0 0 0 1.5-1.5V7z"/>
+                            </svg>
+                            <h3 style="text-align: center">3. Envío y pago</h3>
+                          </div>
+                          <div>
+                            <ol style="list-style-type: disc">
+                              <li>Proporciona la dirección a donde llegarán tus refacciones.</li>
+                              <li>Selecciona el <b>Método de envío</b> preferido.</li>
+                              <li>Elige las <b>Opciones de pago</b> de tu preferencia.</li>
+                            </ol>
+                          </div>
+                        </div>
+                        <div
+                          style="
+                            flex: 1;
+                            border: 0px solid #292929;
+                            border-radius: 10px;
+                            padding: 10px;
+                            margin: 10px;
+                          "
+                        >
+                          <div
+                            style="
+                              display: flex;
+                              flex-direction: column;
+                              justify-content: center;
+                              align-items: center;
+                              margin-top: 10px;
+                            "
+                          >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 512 512">
+                              <path fill="none" stroke="#fce200" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="m320 264l-89.6 112l-38.4-44.88"/><path fill="none" stroke="#fce200" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M80 176a16 16 0 0 0-16 16v216c0 30.24 25.76 56 56 56h272c30.24 0 56-24.51 56-54.75V192a16 16 0 0 0-16-16Zm80 0v-32a96 96 0 0 1 96-96h0a96 96 0 0 1 96 96v32"/>
+                            </svg>
+                            <h3 style="text-align: center">4. Finalizar compra</h3>
+                          </div>
+                          <div>
+                            <ol style="list-style-type: disc">
+                              <li><b>Revisa</b> toda la información proporcionada.</li>
+                              <li>Confirma la compra haciendo clic en <b>Pagar ahora</b>.</li>
+                              <li>
+                                Recibirás una confirmación de la compra y los detalles del pedido por correo
+                                electrónico.
+                              </li>
+                            </ol>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- cd-faq-content -->
+                  </li>
+                {% else %}
+                  <!-- Aquí va tu lógica para el segundo elemento en adelante -->
+                  <!-- Por ejemplo, puedes omitir el primer elemento o aplicar otra lógica diferente -->
+                  <li>
+                    <a class="cd-faq-trigger" href="#0">{{ block.settings.question }}</a>
+                    <div class="cd-faq-content">
+                      <p>{{ block.settings.answer }}</p>
+                    </div>
+                    <!-- cd-faq-content -->
+                  </li>
+                {% endif %}
               {% endfor %}
             {% endif %}
           </ul>
