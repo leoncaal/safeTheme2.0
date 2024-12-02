@@ -19,6 +19,7 @@
       ],
       "settings": {
         "image": "shopify://shop_images/404-SAFI.png",
+        "error_message": "No pudimos encontrar la página que buscas, estamos trabajando para mejorar la experiencia. Te invitamos a regresar a la página principal y descubrir nuestras increíbles ofertas.",
         "link": "/"
       }
     }
