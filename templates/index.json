@@ -431,6 +431,48 @@
             "image": "shopify://shop_images/LOGO_FREMAX_93a268eb-5130-4b83-b6ab-9028a944b228.png",
             "link": ""
           }
+        },
+        "image_NdwDhH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/LOGO_CORTECO_565047b7-8831-452c-810c-3792610cef11.png",
+            "link": ""
+          }
+        },
+        "image_xQxGBT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/LOGO_DELPHI_89b08c0a-aa71-4690-8b89-5b4c22f55f37.png",
+            "link": ""
+          }
+        },
+        "image_APKLhW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/LOGO_KOLBENSCHMIDT_png.png",
+            "link": ""
+          }
+        },
+        "image_aRfRg4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/LOGO_MAYLE.svg",
+            "link": ""
+          }
+        },
+        "image_wABLUN": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/LOGO_TEXTAR.png",
+            "link": ""
+          }
+        },
+        "image_gMK7V6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/pierburg-vector-logo.svg",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -442,7 +484,13 @@
         "image_Be3B7V",
         "image_V4A6Vt",
         "image_c8ikfj",
-        "image_b7k7eR"
+        "image_b7k7eR",
+        "image_NdwDhH",
+        "image_xQxGBT",
+        "image_APKLhW",
+        "image_aRfRg4",
+        "image_wABLUN",
+        "image_gMK7V6"
       ],
       "custom_css": [
         ".swiper-wrapper {align-items: center;}",
