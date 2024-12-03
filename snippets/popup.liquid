@@ -1,4 +1,4 @@
-<!--Newsletter Popup Start-->
+<!--
 <div id="newsletter-popup-conatiner" style="display:none">
   <div id="newsletter-pop-up" {% if settings.show_pupup_image %} style="background:url({{ 'popup_img.png' | asset_url }})" {% else %}style="background:#fff;text-align:center;" {% endif %}>
     <span class="hide-popup">X</span>
@@ -8,9 +8,12 @@
       </div>
       <div id="newsletter-form" class="content-subscribe">
         <div class="form-subscribe-header">
-          <label>{{ settings.popup_description }}..</label>
+          <i class="fa fa-truck"></i>
+          <label>{{ settings.popup_description }}</label>
         </div>
+        {% comment %}
         {% include 'newsletter-form-popup' %}
+        {% endcomment %}
       </div>
       <div class="subscribe-bottom">
         <input type="checkbox" id="dont_show" name="dont_show">
@@ -19,5 +22,25 @@
     </div>
   </div>
 </div>
-<!--End of Newsletter Popup-->
+-->
+
+<div id="newsletter-popup-conatiner" style="display:none">
+  <div id="newsletter-pop-up">
+    {% if settings.show_pupup_url %}
+      <a href="{{ settings.popup_url_link }}">
+        <img src="{{ 'popup_img.png' | asset_url }}" style="position: absolute;" />
+      </a>
+    {% else %}
+        <img src="{{ 'popup_img.png' | asset_url }}" style="position: absolute;" />
+    {% endif %}
+    <span class="hide-popup">X</span>
+    <div class="subscribe-pop-up" style="margin: 100% 0px 0px 0px; position: relative;">
+      <div class="subscribe-bottom" style ="background: white; padding-left: 5px;">
+        <input type="checkbox" id="dont_show" name="dont_show">
+        <label for="dont_show"><b>{{ settings.popup_no_link_text }}</b></label>
+      </div>
+    </div>
+  </div>
+</div>
+
 {{ '//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js' | script_tag }}  
