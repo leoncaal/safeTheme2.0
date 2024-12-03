@@ -110,5 +110,17 @@
         </a>
       </li>
     {% endif %}
+    {% if settings.social_tiktok_link != blank %}
+      <li>
+        <a class="fa-brands fa-tiktok" data-toggle="tooltip" data-placement="bottom"  href="{{ settings.social_tiktok_link }}" title="{{ 'layout.footer.store_on_social_network' | t: store_name: shop.name, social_network: 'TikTok' | escape }}" target="_blank">
+        </a>
+      </li>
+      {% endif %}
+      {% if settings.social_linkedin_link != blank %}
+      <li>
+        <a class="fa-brands fa-linkedin-in" data-toggle="tooltip" data-placement="bottom"  href="{{ settings.social_linkedin_link }}" title="{{ 'layout.footer.store_on_social_network' | t: store_name: shop.name, social_network: 'LinkedIn' | escape }}" target="_blank">
+        </a>
+      </li>
+      {% endif %}
   </ul>
 </div>
