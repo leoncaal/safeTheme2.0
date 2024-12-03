@@ -1,6 +1,10 @@
 {{ '//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js'  | script_tag }}
 {{ '//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css' | stylesheet_tag }}
-
+<style>
+  .cc-link {
+    display: none;
+  }
+</style>
 <script>
   window.addEventListener("load", function(){
     window.cookieconsent.initialise({
@@ -16,8 +20,18 @@
         }
       },
       "content": {
-        "href": "{{ settings.cookie_constent_url }}",
-        "message": "Your custom message"
+        "href": "#",
+        "message": "Nuestro sitio web utiliza cookies para mejorar tu experiencia. Al continuar navegando, aceptas su uso."
       }
     })});
+  window.addEventListener("load", function(){
+    // Selecciona el elemento con la clase cc-btn
+    var cookieConsentButton = document.querySelector('.cc-btn');
+
+    // Verifica si el botón de consentimiento de cookies existe
+    if (cookieConsentButton) {
+      // Cambia el texto del botón
+      cookieConsentButton.textContent = "Aceptar"; // Cambia este texto según tu necesidad
+    }
+  });
 </script>
