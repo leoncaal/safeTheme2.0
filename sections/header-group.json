@@ -46,13 +46,14 @@
             "mega_menu_ll_col_4": "main-menu",
             "mega_menu_collection_col_4": "",
             "mega_menu_product_col_4": "",
-            "mega_menu_image_link_col_4": "shopify://collections/all"
+            "mega_menu_image_link_col_4": "shopify://collections/all",
+            "bottom_image_link": ""
           }
         },
         "1522697402496": {
           "type": "megamenu",
           "settings": {
-            "mega_menu": "",
+            "mega_menu": "categorias",
             "menu_items_count": 6,
             "mega_menu_col_1": "product",
             "mega_menu_title_col_1": "",
@@ -81,7 +82,8 @@
             "mega_menu_ll_col_4": "",
             "mega_menu_collection_col_4": "",
             "mega_menu_product_col_4": "nopo-designs-woolrich-klettersack",
-            "mega_menu_image_link_col_4": ""
+            "mega_menu_image_link_col_4": "",
+            "bottom_image_link": ""
           }
         }
       },
