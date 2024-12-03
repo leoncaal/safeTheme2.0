@@ -289,6 +289,10 @@ $(document).ready(function() {
     $(this).addClass('active');
   });
 
+  if ($(".hd1").length) {
+    $('.slider-group .col1hd1:first').addClass('hd1slider');
+  }
+
   // product video 
   $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
     type: 'iframe',
@@ -382,6 +386,7 @@ $(document).on('mfpClose', function () {
           $('.text-danger').parent().addClass('has-error');
         }
 
+        toastr.success('{{ 'cart.general.item_added' | t }}');
         
         $.getJSON('/cart.js', function(cart) {
           load(cart);
@@ -441,6 +446,8 @@ $(document).on('mfpClose', function () {
           // Highlight any found errors
           $('.text-danger').parent().addClass('has-error');
         }
+
+        toastr.success('{{ 'cart.general.item_added' | t }}');
 
         $.getJSON('/cart.js', function(cart) {
           load(cart);
@@ -549,6 +556,9 @@ $(document).on('mfpClose', function () {
     var headerH = $('header').height();
     var scrollP = $(window).scrollTop();
     var winInnW = window.innerWidth;
+    var linkP = document.getElementById("linkM3");
+    var linkSuc = document.getElementById("linkM3");
+    //var backPing = document.getElementById("backPing");
 
     if(scrollP != currentP){
       //Sticky header
@@ -557,20 +567,43 @@ $(document).on('mfpClose', function () {
         //if (sticky_menu==1){
           if(scrollP >= stickyOffset){
             $('.fix').addClass('fix-header');
+            $('.top-search-2').addClass('fix-newSearch');
+            $('.box-cart-2').addClass('fix-newSearch');
+            $('.colorT').addClass('newColor');
+          $('.ion-ios-arrow-down').addClass('newColor');
             // $('.headerSpace').removeClass('unvisible');
             // if (($(".hd3").length == 0 ) || ($(".hd4").length == 0)) {
             //   if (($(".bottom-menu").length == 0)) {
             //     $('.headerSpace').addClass('show');
             //   }
             // }
+            if( winInnW > 0 ){
+              $('.fix2').addClass('fix-header2');
+              //backPing.style.background="#FCE200";
+              //linkP.innerHTML = 'BMW';
+              linkSuc.style.display="none";
+            }
           } else {
-            $('.fix').removeClass('fix-header');
             $('.headerSpace').addClass('unvisible');
             // if (($(".hd3").length == 0 ) || ($(".hd4").length == 0)) {
             //   if (($(".bottom-menu").length == 0)) {
             //     $('.headerSpace').removeClass('show');
             //   }
             // }
+            if( winInnW > 991 ){
+              $('.fix').removeClass('fix-header');
+              $('.top-search-2').removeClass('fix-newSearch');
+              $('.box-cart-2').removeClass('fix-newSearch');
+              $('.colorT').removeClass('newColor');
+              $('.ion-ios-arrow-down').removeClass('newColor');
+                        
+              //backPing.style.background="#0166B1";
+              //linkP.innerHTML = 'BMW';
+              linkSuc.style.display="block";
+            }
+            if( winInnW > 0 ){
+              $('.fix2').removeClass('fix-header2');
+            }
           }
         //}
       }
@@ -620,19 +653,52 @@ $(document).on('mfpClose', function () {
   /* Search */
   $('#btn-search-category').click(function () {
     var url = '/search';
-    var value = $('header #search-by-category input[name=\'q\']').val();
-    if(value == "Search all products..." || value ==""){
-      jQuery('#search-by-category input[name=\'q\']').focus();
-      return false;
-    }else {
-      url += '?type=product&q=' + encodeURIComponent(value);
-    }
-    location = url;
-  });
+    // Obtén el valor del campo de búsqueda y elimina espacios en blanco extra
+  var value = $('header #search-by-category input[name="q"]').val();
+  // Validar el valor
+  if (value === "Buscarpornumerodeparte,OEModescripción..." || value === "") {
+    jQuery('#search-by-category input[name="q"]').focus();
+    return false;
+  } else {
+    // Genera la URL para la búsqueda
+    //$('#overlay').css('display', 'flex');
+    url += '?type=product&q=' + encodeURIComponent(value);
+  }
+  // Redirige a la URL generada
+  location = url;
+});
+
+$('#text-search').on('keydown', function(e) {
+  // Verifica si se presionó Enter (código 13)
+  if (e.keyCode === 13) {
+    $('#btn-search-category').trigger('click');
+  }
+});
+
 
   $('#text-search').on('keydown', function(e) {
     if (e.keyCode == 13) {
       $('#btn-search-category').trigger('click');
+    }
+  });
+
+  /* Search 2 */
+  $('#btn-search-category-2').click(function () {
+    var url = '/search';
+    var value = $('header #search-by-category-2 input[name=\'q\']').val();
+    if(value == "Buscar por numero de parte, OEM o descripción..." || value ==""){
+      jQuery('#search-by-category-2 input[name=\'q\']').focus();
+      return false;
+    }else {
+      //$('#overlay').css('display', 'flex');
+      url += '?type=product&q=' + encodeURIComponent(value);
+    }
+        location = url;
+  });
+
+  $('#text-search-2').on('keydown', function(e) {
+    if (e.keyCode == 13) {
+      $('#btn-search-category-2').trigger('click');
     }
   });
 
@@ -660,6 +726,7 @@ $(document).on('mfpClose', function () {
       $(this).find('.price-box').appendTo(caption_top);
       $(this).find('.btn-cart').appendTo(caption_top);
       $(this).find('.action-links').appendTo(caption_top);
+      $(this).find('.manufacture-product').prependTo(caption_inner);
       $(this).find('.product-name').prependTo(caption_inner);
     });
 
@@ -689,6 +756,7 @@ $(document).on('mfpClose', function () {
       $(this).find('.action-links').appendTo(images_container);
       $(this).find('.price-box').appendTo(caption_inner);
       $(this).find('.btn-cart').appendTo(caption_inner);
+      $(this).find('.manufacture-product').prependTo(caption_top);
       $(this).find('.product-name').prependTo(caption_top);
     });
 
@@ -758,6 +826,7 @@ $(document).on('mfpClose', function () {
           if (json['redirect']) {
             location = json['redirect'];
           }
+          toastr.success('{{ 'cart.general.item_added' | t }}');
 
         $.getJSON('/cart.js', function(cart) {
             if(redirect) {
@@ -795,7 +864,9 @@ $(document).on('mfpClose', function () {
             location = '/cart';
           } else {
             setTimeout(function () {
-              load(json);
+              $.getJSON('/cart.js', function(cart) {
+                load(cart);
+                   });
             }, 5);       
           }
         },
@@ -833,6 +904,7 @@ $(document).on('mfpClose', function () {
     $('#cart > button #cart-total .txt_number').html(cart.item_count);
     $('#cart > button .total-price').html('<span class=money>'+Shopify.formatMoney(cart.total_price, moneyFormat)+'<i class="fas fa-chevron-down"></i></span>');
     $('#cart-subtotal').html('<span class=money>'+Shopify.formatMoney(cart.total_price, moneyFormat)+'</span>');
+    $('#cart-subtotal2').html('<span class=money>'+Shopify.formatMoney(cart.total_price, moneyFormat)+'</span>');
     {% if settings.show_multiple_currencies %}
     if (Currency.cookie.read() != null) {
       Currency.convertAll(shopCurrency, Currency.cookie.read());
