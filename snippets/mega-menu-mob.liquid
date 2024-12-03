@@ -20,14 +20,14 @@
       {% capture menu_title %}mega_menu_title_col_{{ i }}{% endcapture %}
       {% capture menu_link %}mega_menu_link_col_{{ i }}{% endcapture %}
       {% capture menu %}mega_menu_ll_col_{{ i }}{% endcapture %}
-      <li class="li-second-items">
+      <!--<li class="li-second-items">
         <a href="{{ block.settings[menu_link] }}" class="a-second-link a-item">
           <span class="a-second-title">{{ block.settings[menu_title] }}</span>
         </a>
         <span class="second-click-show a-click-show">
           <i class="fas fa-chevron-down" aria-hidden="true"></i>
           <i class="fas fa-chevron-up" aria-hidden="true"></i>
-        </span>
+        </span>-->
         <div class="flyout-third-items">
           <ul class="ul-third-items">
             {% for link in linklists[block.settings[menu]].links limit:block.settings.menu_items_count %}
