@@ -24,11 +24,13 @@
       <div class="item">
         <div class="item-inner">
           <div class="caption-top">
+            {% comment %}
             {% if settings.grid_vendor_enable %}
               <p class="manufacture-product">
                 {{ item.vendor | link_to_vendor }}
               </p>
             {% endif %}
+            {% endcomment %}
             <h4 class="product-name">
               <a href="{{ item.url | within: collection }}">
                 {% if settings.limit_title_words == true -%}
@@ -38,6 +40,30 @@
                 {%- endif %}
               </a>
             </h4>
+            {% if settings.grid_vendor_enable %}
+              <p class="manufacture-product">
+
+
+                {% assign vendor_link = item.vendor | link_to_vendor %}
+              {% assign sku = item.variants.first.sku %}
+              {% assign modified_vendor_link = vendor_link | split: '>' %}
+              {% assign link_start = modified_vendor_link[0] | append: '>' %}
+              {% assign link_end = modified_vendor_link[1] | split: '</a>' %}
+              {% capture vendor_link_with_sku %}
+              {{ link_start }}
+              {% if item.metafields.custom.calidad %}
+                {{ item.metafields.custom.calidad | append: " - " | append: sku }}
+                {% else %}
+                {{ sku }}
+              {% endif %}
+              
+              {{ "</a>" }}
+            {% endcapture %}
+              {{ vendor_link_with_sku }}
+
+             
+              </p>
+            {% endif %}
           </div>
           <div class="image images-container">
             {% if section.settings.product_grid_img_carousel == true %}
@@ -105,7 +131,7 @@
                 {% endif %}
               {% endif %}
             {% endif %}
-            <div class="box-label">{% include 'product-label' %}</div>
+            <!--<div class="box-label">{% include 'product-label' %}</div>-->
             <div class="action-links">
               {% if settings.hide_quick_view == false %}
                 <button
@@ -131,6 +157,49 @@
                 <span>{{ 'products.product.view_details' | t }}</span>
               </button>
             </div>
+
+            {% include 'urls-brands' %}
+                {% assign vendormay = item.vendor | upcase %}
+                {% if vendormay == "LEMFÖRDER" %}
+                    <div style="position: absolute;z-index: 3;right: 10px;top: 5px;">
+                      <img style="height:25px;" src="https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-LEMFORDER.png?v=1727208348" />
+                    </div>
+                  {% elsif vendormay == "URO" %}
+                    <div style="position: absolute;z-index: 3;right: 10px;top: 5px;">
+                      <img style="height:30px;" src="https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-URO.png?v=1726606840" />
+                    </div>
+                    {% elsif vendormay == "NE" %}
+                  <div style="position: absolute;z-index: 3;right: 10px;top: 5px;">
+                      <img style="height:40px;" src="https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-NPR.png?v=1727209765" />
+                    </div>
+                    {% elsif vendormay == "BMW&MINI-GENUINA" %}
+                  <div style="position: absolute;z-index: 3;right: 10px;top: 5px;">
+                      <img style="height:35px;" src="https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-BMW_MINI-GENUINA.png?v=1729264144" />
+                    </div>
+                    {% elsif vendormay == "MINI-GENUINA" %}
+                  <div style="position: absolute;z-index: 3;right: 10px;top: 5px;">
+                      <img style="height:35px;" src="https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-MINI-GENUINA.png?v=1729263662" />
+                  </div>
+                    {% elsif vendormay == "INA" %}
+                  <div style="position: absolute;z-index: 3;right: 10px;top: 5px;">
+                      <img style="height:40px;" src="https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-INA.png?v=1727208078" />
+                    </div>
+                  {% elsif vendormay == "CONTI" %}
+                  <div style="position: absolute;z-index: 3;right: 10px;top: 5px;">
+                      <img style="height:20px;" src="https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-CONTINENTAL.png?v=1727200909" />
+                    </div>
+                    {% else %}
+                 {% for url in urls_brands %}
+                  {% if url contains vendormay %}
+                    {%- assign parts = url | split: "height" -%}
+                    {%- assign urlpart = parts[0] -%}
+                    {%- assign heightpart = "height" | append: parts[1] -%}
+                    <div style="position: absolute;z-index: 3;right: 10px;top: 5px;">
+                      <img style={{ heightpart }} src={{ urlpart }} />
+                    </div>
+                  {% endif %}
+                {% endfor %}
+                  {% endif %}
           </div>
           <!-- image -->
           <div class="caption">
@@ -142,17 +211,18 @@
                   </div>
                 </div>
               {% endif %}
+              <div class="box-label">{% include 'product-label' %}</div>
               <div class="price-box">
                 {% if item.compare_at_price > item.price %}
                   <p class="special-price">
-                    <span class="price">{{ item.price | money }}</span>
+                    <span class="price">{{ item.price | money_with_currency }}</span>
                   </p>
                   <p class="old-price">
-                    <span class="price">{{ item.compare_at_price_max | money }}</span>
+                    <span class="price">{{ item.compare_at_price_max | money_with_currency }}</span>
                   </p>
                 {% else %}
                   <p class="regular-price">
-                    <span class="price">{{ item.price | money }}</span>
+                    <span class="price">{{ item.price | money_with_currency }}</span>
                   </p>
                 {% endif %}
               </div>
