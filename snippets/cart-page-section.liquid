@@ -5,6 +5,16 @@
     <div id="content" class="col-sm-12">
       <h1>{{ 'cart.general.title' | t }}</h1>
       {% if cart.item_count > 0 %}
+        <h4 style="border: 1px solid #F1F122; background-color: #fff898; padding: 10px; margin-bottom: 18px;">
+          <div style="display:flex; flex-direction: row; align-items: center;">
+            <i class="fas fa-triangle-exclamation" style="padding-right: 12px; font-size: xx-large;"></i>
+            <div>
+              <b>Recibirás el número de guía de tu pedido por correo electrónico</b>. Ten en cuenta que, por cuestiones
+              logísticas, <b>los pedidos realizados después de las 2:00 p.m (Hora centro).</b> serán procesados al día
+              siguiente.
+            </div>
+          </div>
+        </h4>
         <form action="/cart" method="post" id="cart_form">
           <div class="table-responsive">
             <table class="table table-bordered">
@@ -155,7 +165,24 @@
               </div>
             {% endif %}
           </div>
-          <br>
+          <h4
+            id="alert-envioPage"
+            style="border: 1px solid #F1F122; background-color: #fff898; padding: 10px; margin-bottom: 18px; display:none"
+          >
+            <div style="display:flex; flex-direction: row; align-items: center;">
+              <i class="fa-solid fa-truck" style="padding-right: 12px; font-size: xx-large;"></i>
+              <div id="textShipPage"></div>
+            </div>
+          </h4>
+          <h4
+            id="alert-envioOkPage"
+            style="border: 1px solid #3EF122; background-color: #A1FF98; padding: 10px; margin-bottom: 18px; display:none"
+          >
+            <div style="display:flex; flex-direction: row; align-items: center;">
+              <i class="fa-solid fa-truck-fast" style="padding-right: 12px; font-size: xx-large;"></i>
+              <div id="textShipOkPage"></div>
+            </div>
+          </h4>
           <div class="">
             <div class="col-m-4 col-m-offset-8">
               <table class="table table-bordered">
@@ -182,6 +209,14 @@
                   <td class="text-right">
                     <span class="total-price">{{ cart.total_price | money }}</span>
                   </td>
+                </tr>
+                <tr>
+                  <td class="text-right"><strong>Envío:</strong></td>
+                  <td class="text-right"><span id="envio_cartPage"></span></td>
+                </tr>
+                <tr>
+                  <td class="text-right"><strong>Total:</strong></td>
+                  <td class="text-right"><span id="total_cartPage"></span></td>
                 </tr>
                 {% if section.settings.cart_terms_c_enable %}
                   <tr>
@@ -261,5 +296,37 @@
         }
       });
     });
+  </script>
+  <script>
+    var total = {{cart.total_price | money_without_currency | replace: ',', ''}};
+    var envio = 1399;
+    var divText = document.getElementById("textShipPage");
+    var divTextOk = document.getElementById("textShipOkPage");
+    var faltante = envio - total;
+    var money = formatMoney(faltante);
+    var divEnvio = document.getElementById("envio_cartPage");
+    var divTotal = document.getElementById("total_cartPage");
+    var costoEnvio = 0.00;
+    
+    if (total < 1399){
+      divText.innerHTML =`Te faltan <b>$${(money)} MXN</b> para obtener envío gratis.`;
+      divEnvio.textContent = "$ 335.00 MXN";
+      divTotal.innerHTML = `<b>$ ${formatMoney(total + 335.00)} MXN</b>`;
+      document.getElementById("alert-envioPage").style.display = "flex";
+      document.getElementById("alert-envioOkPage").style.display = "none";
+    } else {
+      divTextOk.innerHTML =`¡Felicidades! obtuviste envío gratis para este pedido.`;
+      divEnvio.innerHTML = `<b>Gratis</b>`;
+      divTotal.innerHTML = `<b>$ ${formatMoney(parseFloat(total))} MXN</b>`;
+      document.getElementById("alert-envioPage").style.display = "none";
+      document.getElementById("alert-envioOkPage").style.display = "flex";
+    }
+    if (total == 0) {
+      document.getElementById("alert-envioPage").style.display = "none";
+      document.getElementById("alert-envioOkPage").style.display = "none";
+    }
+    function formatMoney(amount) {
+      return amount.toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
   </script>
 {% endif %}
