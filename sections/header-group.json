@@ -17,12 +17,12 @@
         "1534685882068": {
           "type": "megamenu",
           "settings": {
-            "mega_menu": "",
+            "mega_menu": "categorias",
             "menu_items_count": 5,
             "mega_menu_col_1": "menu",
             "mega_menu_title_col_1": "Mobile Phones",
             "mega_menu_link_col_1": "",
-            "mega_menu_ll_col_1": "main-menu",
+            "mega_menu_ll_col_1": "men-columna",
             "mega_menu_collection_col_1": "",
             "mega_menu_product_col_1": "",
             "mega_menu_image_link_col_1": "",
@@ -49,47 +49,10 @@
             "mega_menu_image_link_col_4": "shopify://collections/all",
             "bottom_image_link": ""
           }
-        },
-        "1522697402496": {
-          "type": "megamenu",
-          "settings": {
-            "mega_menu": "categorias",
-            "menu_items_count": 6,
-            "mega_menu_col_1": "product",
-            "mega_menu_title_col_1": "",
-            "mega_menu_link_col_1": "",
-            "mega_menu_ll_col_1": "",
-            "mega_menu_collection_col_1": "",
-            "mega_menu_product_col_1": "gopo-designs-woolrich-klettersack",
-            "mega_menu_image_link_col_1": "",
-            "mega_menu_col_2": "product",
-            "mega_menu_title_col_2": "",
-            "mega_menu_link_col_2": "",
-            "mega_menu_ll_col_2": "",
-            "mega_menu_collection_col_2": "",
-            "mega_menu_product_col_2": "iopo-designs-woolrich-klettersack",
-            "mega_menu_image_link_col_2": "",
-            "mega_menu_col_3": "product",
-            "mega_menu_title_col_3": "",
-            "mega_menu_link_col_3": "",
-            "mega_menu_ll_col_3": "",
-            "mega_menu_collection_col_3": "",
-            "mega_menu_product_col_3": "jopo-designs-woolrich-klettersack",
-            "mega_menu_image_link_col_3": "",
-            "mega_menu_col_4": "product",
-            "mega_menu_title_col_4": "",
-            "mega_menu_link_col_4": "",
-            "mega_menu_ll_col_4": "",
-            "mega_menu_collection_col_4": "",
-            "mega_menu_product_col_4": "nopo-designs-woolrich-klettersack",
-            "mega_menu_image_link_col_4": "",
-            "bottom_image_link": ""
-          }
         }
       },
       "block_order": [
-        "1534685882068",
-        "1522697402496"
+        "1534685882068"
       ],
       "custom_css": [
         ".img-responsive,.thumbnail > img,.thumbnail a > img,.carousel-inner > .item > img,.carousel-inner > .item > a > img {width: 12rem;}",
