@@ -18,7 +18,14 @@
                   <a href="{{ block.settings.link }}" {{ block.shopify_attributes }}>
                     {% endif %}
                     {% if block.settings.image != blank %}
-                    <img class="" src="{{ block.settings.image | img_url: '150x150' }}" alt="" class=""/>
+                      <div class="hovering">
+                        <img class="imgP" src="{{ block.settings.image | img_url: '150x150' }}" alt="" class=""/>
+                        {% if block.settings.imageHover != blank %}
+                          <div class="background-overlay">
+                            <img class="" src="{{ block.settings.imageHover | img_url: '150x150' }}" alt="">
+                          </div>
+                        {% endif %}
+                      </div>
                     {% endif %}
                     {% if block.settings.link != blank %}          
                   </a>
