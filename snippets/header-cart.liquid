@@ -36,11 +36,33 @@
         </tbody>
       </table>
     </li>
+    <li>
+      <h4 id="alert-envio" style="border: 1px solid #F1F122; background-color: #fff898; padding: 10px; margin-bottom: 18px; display:none">
+            <div style="display:flex; flex-direction: row; align-items: center;">
+              <i class="fa-solid fa-truck" style="padding-right: 12px; font-size: xx-large;"></i><div id=textShip></div>
+            </div>
+        </h4>
+    </li>
+    <li>
+      <h4 id="alert-envioOk" style="border: 1px solid #3EF122; background-color: #A1FF98; padding: 10px; margin-bottom: 18px; display:none">
+            <div style="display:flex; flex-direction: row; align-items: center;">
+              <i class="fa-solid fa-truck-fast" style="padding-right: 12px; font-size: xx-large;"></i><div id=textShipOk></div>
+            </div>
+        </h4>
+    </li>
     <li {% if cart.item_count < 1 %} class="hide"{% endif %}>
       <table class="table">
         <tr>
           <td class="text-left">{{ 'cart.general.subtotal' | t }} :</td>
           <td class="text-right" id="cart-subtotal">{{ cart.total_price | money }}</td>
+        </tr>
+        <tr id="fila_envio">
+          <td class="text-left">Envío :</td>
+          <td class="text-right" id="envio_cart"></td>
+        </tr>
+        <tr id="fila_total">
+          <td class="text-left">Total :</td>
+          <td class="text-right" id="total_cart"></td>
         </tr>
       </table>
       <p class="text-center cart-button">
@@ -50,3 +72,133 @@
     </li>
   </ul>
 </div>
+<script>
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    var total = {{cart.total_price | money_without_currency | replace: ',', ''}};
+  var envio = 1399;
+  var divText = document.getElementById("textShip");
+  var divTextOk = document.getElementById("textShipOk");
+  var divText2 = document.getElementById("textShip2");
+  var divTextOk2 = document.getElementById("textShipOk2");
+  var faltante = envio - total;
+  var money = formatMoney(faltante);
+  var divEnvio = document.getElementById("envio_cart");
+  var divTotal = document.getElementById("total_cart");
+  var divEnvio2 = document.getElementById("envio_cart2");
+  var divTotal2 = document.getElementById("total_cart2");
+  var costoEnvio = 0.00;
+  
+  if (total < envio){
+    divText.innerHTML =`Te faltan <b>$${(money)} MXN</b> para obtener envío gratis.`;
+    divEnvio.textContent = "$ 335.00";
+    divTotal.textContent = `$ ${formatMoney(total + 335.00)} MXN `;
+    document.getElementById("alert-envio").style.display = "flex";
+    document.getElementById("alert-envioOk").style.display = "none";
+
+    divText2.innerHTML =`Te faltan <b>$${(money)} MXN</b> para obtener envío gratis.`;
+    divEnvio2.textContent = "$ 335.00";
+    divTotal2.textContent = `$ ${formatMoney(total + 335.00)} MXN `;
+    document.getElementById("alert-envio2").style.display = "flex";
+    document.getElementById("alert-envioOk2").style.display = "none";
+  } else {
+    divTextOk.innerHTML =`¡Felicidades! obtuviste envío gratis para este pedido.`;
+    divEnvio.textContent = "Gratis";
+    divTotal.textContent = `$ ${formatMoney(parseFloat(total))} MXN `;
+    document.getElementById("alert-envio").style.display = "none";
+    document.getElementById("alert-envioOk").style.display = "flex";
+    divTextOk2.innerHTML =`¡Felicidades! obtuviste envío gratis para este pedido.`;
+    divEnvio2.textContent = "Gratis";
+    divTotal2.textContent = `$ ${formatMoney(parseFloat(total))} MXN `;
+    document.getElementById("alert-envio2").style.display = "none";
+    document.getElementById("alert-envioOk2").style.display = "flex";
+  }
+  if (total == 0) {
+    document.getElementById("alert-envio").style.display = "none";
+    document.getElementById("alert-envioOk").style.display = "none";
+    document.getElementById("alert-envio2").style.display = "none";
+    document.getElementById("alert-envioOk2").style.display = "none";
+  }
+  function formatMoney(amount) {
+    return amount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+  });
+
+  
+  //Seleccionar el elemento que quieres observar
+const targetNode = document.getElementById('cart-subtotal');
+
+// Configuración del observer (qué cambios observar)
+const config = { childList: true, subtree: true };
+
+// Callback que se ejecuta cuando hay cambios
+const callback = function(mutationsList, observer) {
+  for (let mutation of mutationsList) {
+    if (mutation.type === 'childList') {
+      console.log('El texto ha cambiado a:', targetNode.textContent);
+        var cartTotalText = targetNode.textContent.trim().replace(/[$,]/g, '');
+        total = parseFloat(cartTotalText);
+      tuFuncion();
+    }
+  }
+};
+
+// Crear una instancia de MutationObserver con el callback
+const observer = new MutationObserver(callback);
+
+// Empezar a observar el nodo objetivo con la configuración dada
+observer.observe(targetNode, config);
+
+// Función que deseas ejecutar cuando el texto cambie
+function tuFuncion() {
+  var envio = 1399;
+  var divText = document.getElementById("textShip");
+  var divTextOk = document.getElementById("textShipOk");
+  var divText2 = document.getElementById("textShip2");
+  var divTextOk2 = document.getElementById("textShipOk2");
+  var faltante = envio - total;
+  var money = formatMoney(faltante);
+  var divEnvio = document.getElementById("envio_cart");
+  var divTotal = document.getElementById("total_cart");
+  var divEnvio2 = document.getElementById("envio_cart2");
+  var divTotal2 = document.getElementById("total_cart2");
+  var costoEnvio = 0.00;
+  
+  if (total < envio){
+    divText.innerHTML =`Te faltan <b>$${(money)} MXN</b> para obtener envío gratis.`;
+    divEnvio.textContent = "$ 335.00";
+    divTotal.textContent = `$ ${formatMoney(total + 335.00)} MXN `;
+    document.getElementById("alert-envio").style.display = "flex";
+    document.getElementById("alert-envioOk").style.display = "none";
+
+    divText2.innerHTML =`Te faltan <b>$${(money)} MXN</b> para obtener envío gratis.`;
+    divEnvio2.textContent = "$ 335.00";
+    divTotal2.textContent = `$ ${formatMoney(total + 335.00)} MXN `;
+    document.getElementById("alert-envio2").style.display = "flex";
+    document.getElementById("alert-envioOk2").style.display = "none";
+  } else {
+    divTextOk.innerHTML =`¡Felicidades! obtuviste envío gratis para este pedido.`;
+    divEnvio.textContent = "Gratis";
+    divTotal.textContent = `$ ${formatMoney(parseFloat(total))} MXN `;
+    document.getElementById("alert-envio").style.display = "none";
+    document.getElementById("alert-envioOk").style.display = "flex";
+
+    divTextOk2.innerHTML =`¡Felicidades! obtuviste envío gratis para este pedido.`;
+    divEnvio2.textContent = "Gratis";
+    divTotal2.textContent = `$ ${formatMoney(parseFloat(total))} MXN `;
+    document.getElementById("alert-envio2").style.display = "none";
+    document.getElementById("alert-envioOk2").style.display = "flex";
+  }
+  if (total == 0) {
+    document.getElementById("alert-envio").style.display = "none";
+    document.getElementById("alert-envioOk").style.display = "none";
+    document.getElementById("alert-envio2").style.display = "none";
+    document.getElementById("alert-envioOk2").style.display = "none";
+  }
+  function formatMoney(amount) {
+    return amount.toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+}
+
+  
+</script>

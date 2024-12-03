@@ -9,10 +9,11 @@
         </div>
       </div>
       <div class="box box-right">
+        <a style="padding: 0px 11px; font-size: 13px; color: #fefffa; line-height: 45px;" onmouseover="this.style.opacity='0.7'; this.style.fontWeight='normal';" onmouseout="this.style.opacity='1'; this.style.fontWeight='normal';" href="https://saferefacciones.biz/"><i class="fa-solid fa-briefcase" style="padding-right:4px"></i><span>Socios B2B</span></a>
         <div class="setting">
           <div class="btn-group">
             <button class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-              <span class="ion-android-person"></span><span class="hidden-xs">{{ 'homepage.navigation.my_account' | t }}</span><i class="ion-ios-arrow-down"></i></button>
+              <span class="ion-android-person"></span><span>{% if customer %} {{ customer.first_name }} {% else %} {{ 'homepage.navigation.my_account' | t }} {% endif %}</span><i class="ion-ios-arrow-down"></i></button>
             <div class="dropdown-menu" >
               <div id="top-links">
                 <ul class="ul-account list-unstyled">
@@ -100,7 +101,7 @@
                 #oc-menu-m{{section.id}} .ul-second-items .li-second-items .a-second-link {
                   color: {{ hd_menu_color }};
                   font-size: 14px;
-                  text-transform: capitalize;
+                  /*text-transform: capitalize;*/
                   font-weight: 600;
                 }
                 #oc-menu-m{{section.id}} .ul-second-items .li-second-items:hover .a-second-link, #oc-menu-m{{section.id}} .ul-second-items .li-second-items.active .a-second-link {
@@ -116,7 +117,7 @@
                 #oc-menu-m{{section.id}} .ul-third-items .li-third-items .a-third-link {
                   color: #757575;
                   font-size: 14px;
-                  text-transform: capitalize;
+                  /*text-transform: capitalize;*/
                   font-weight: 400;
                 }
                 #oc-menu-m{{section.id}} .ul-third-items .li-third-items:hover .a-third-link, #oc-menu-m{{section.id}} .ul-third-items .li-third-items.active .a-third-link {
@@ -166,7 +167,7 @@
               font-size: 14px;
               line-height: 24px;
               text-transform: uppercase;
-              font-weight: 700;
+              font-weight: 800;
             }
             #oc-menu-{{section.id}} .ul-top-items .li-top-item:hover, #oc-menu-{{section.id}} .ul-top-items .li-top-item.active {
               background: #FFFFFF;
@@ -174,7 +175,7 @@
             }
             #oc-menu-{{section.id}} .ul-top-items .li-top-item:hover .a-top-link, #oc-menu-{{section.id}} .ul-top-items .li-top-item.active .a-top-link{
               color: {{ color_skin }};
-              font-weight: 700;
+              font-weight: 800;
             }
             #oc-menu-{{section.id}} .mega-menu-container {
               width: 100%;
@@ -214,7 +215,7 @@
             #oc-menu-{{section.id}} .ul-third-items .li-third-items .a-third-link {
               color: #757575;
               font-size: 14px;
-              text-transform: capitalize;
+              /*text-transform: capitalize;*/
               font-weight: 400;
             }
             #oc-menu-{{section.id}} .ul-third-items .li-third-items:hover .a-third-link, #oc-menu-{{section.id}} .ul-third-items .li-third-items.active .a-third-link {
@@ -223,6 +224,14 @@
             }
           </style>
           {% include 'main-menu', c:false %}
+          {% include 'header-search-2' %}
+        <div class="box-cart-2">
+              {% if settings.hide_wishlist == false %}
+              <div class="wishlist">
+                <a href="/pages/wishlist" id="wishlist-total"><span class="count">0</span></a></div>
+              {% endif %}
+              {% include 'header-cart-2'%}
+            </div>
         </div>
       </div>
     </div>
@@ -250,7 +259,7 @@
       color: {{ hd_menu_color }};
       font-size: 14px;
       line-height: 24px;
-      text-transform: capitalize;
+      /*text-transform: capitalize;*/
       font-weight: 400;
     }
     #oc-menu-v{{section.id}} .ul-top-items .li-top-item:hover, #oc-menu-v{{section.id}} .ul-top-items .li-top-item.active {
@@ -283,7 +292,7 @@
     #oc-menu-v{{section.id}} .ul-second-items .li-second-items .a-second-link {
       color: {{ hd_menu_color }};
       font-size: 14px;
-      text-transform: capitalize;
+      /*text-transform: capitalize;*/
       font-weight: 600;
     }
     #oc-menu-v{{section.id}} .ul-second-items .li-second-items:hover .a-second-link, #oc-menu-v{{section.id}} .ul-second-items .li-second-items.active .a-second-link {
@@ -299,7 +308,7 @@
     #oc-menu-v{{section.id}} .ul-third-items .li-third-items .a-third-link {
       color: #757575;
       font-size: 14px;
-      text-transform: capitalize;
+      /*text-transform: capitalize;*/
       font-weight: 400;
     }
     #oc-menu-v{{section.id}} .ul-third-items .li-third-items:hover .a-third-link, #oc-menu-v{{section.id}} .ul-third-items .li-third-items.active .a-third-link {
