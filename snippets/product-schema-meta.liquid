@@ -10,5 +10,5 @@
   <link itemprop="url" href="{{ shop.url }}{{ product.url }}" />
   <meta itemprop="availability" content="https://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}" />
   <meta itemprop="priceCurrency" content="{{ shop.currency }}" />
-  <meta itemprop="price" content="{{ product.selected_or_first_available_variant.price | money_without_currency }}" />
+  <meta itemprop="price" content="{{ product.selected_or_first_available_variant.price | money_without_currency | strip_html | escape | replace: ',', '' }}" />
 </div>

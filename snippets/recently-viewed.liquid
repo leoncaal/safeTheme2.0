@@ -1,6 +1,93 @@
 <!-- Begin Recently Viewed Products -->
 <script src="//ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
-<script src="{{ 'jquery.products.min.js' | asset_url }}"></script>
+<script src="{{ 'jquery.products.min.js' | asset_url | script_tag }}"></script>
+
+<script>
+
+  var foundQuality = false;
+  
+  var urlsBrands = [{url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-BORSEHUNG.png?v=1726607243', height:'20px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-URO.png?v=1726606840', height:'30px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-BILSTEIN.png?v=1726606840', height:'20px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-ALKO.png?v=1726614619', height:'20px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-ARNOTT.png?v=1726617214', height:'30px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-ATE.png?v=1726617487', height:'30px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-BAPMIC.png?v=1726617801', height:'25px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-BBR-AUTOMOTIVE.png?v=1726618076', height:'30px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-BENDIX.png?v=1727199896', height:'30px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-BREMI.png?v=1727199751', height:'30px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-BGA.png?v=1727200124', height:'40px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-BOGAP.png?v=1727200485', height:'20px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-BOSCH.png?v=1727200629', height:'25px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-BREMBO.png?v=1727200770', height:'25px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-CONTINENTAL.png?v=1727200909', height:'20px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-CORTECO.png?v=1727201158', height:'30px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-CRP.png?v=1727201158', height:'30px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-DAYCO.png?v=1727201405', height:'15px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-DELPHI.png?v=1727201405', height:'25px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-DPA.png?v=1727201405', height:'30px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-ELRING.png?v=1727201652', height:'40px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-ENI.png?v=1727201651', height:'40px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-ENERGIT.png?v=1727201651', height:'35px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-FAG.png?v=1727202134', height:'35px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-FAE.png?v=1727202134', height:'30px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-EUROSPARE.png?v=1727202134', height:'20px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-FRAP.png?v=1727206910', height:'25px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-FREMAX.png?v=1727206910', height:'15px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-GALFER.png?v=1727206910', height:'35px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-GRAF.png?v=1727207422', height:'20px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-GSP.png?v=1727207422', height:'20px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-HELLA.png?v=1727207422', height:'35px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-HIPPER-FREIOS.png?v=1727207716', height:'20px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-HUTCHINSON.png?v=1727207716', height:'30px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-ICER-BRAKES.png?v=1727207716', height:'25px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-INA.png?v=1727208078', height:'40px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-KOLBENSCHMIDT.png?v=1727208077', height:'30px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-KONI.png?v=1727208077', height:'25px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-LEMFORDER.png?v=1727208348', height:'25px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-LUK.png?v=1727208348', height:'30px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-MAHLE.png?v=1727208348', height:'20px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-MANN-FILTER.png?v=1727208348', height:'30px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-MEISTERSATZ.png?v=1727209311', height:'25px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-METELLI.png?v=1727209311', height:'25px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-METZGER.png?v=1727209311', height:'25px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-MEYLE.png?v=1727209765', height:'20px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-MULLER-FILTER.png?v=1727209765', height:'40px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-NISSENS.png?v=1727209765', height:'30px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-NPR.png?v=1727209765', height:'40px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-NRF.png?v=1727209765', height:'40px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-OPTIMAL.png?v=1727210336', height:'40px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-OSSCA.png?v=1727210335', height:'30px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-PENTOSIN.png?v=1727210336', height:'35px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-PIERBURG.png?v=1727210335', height:'30px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-PROFESSIONAL.png?v=1727210698', height:'25px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-REIN-AUTOMOTIVE.png?v=1727210698', height:'30px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-RUVILLE.png?v=1727210698', height:'30px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-SACHS.png?v=1727210698', height:'35px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-SALERI.png?v=1727211210', height:'25px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-SEA-FOAM.png?v=1727211210', height:'35px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-SENFINECO.png?v=1727211210', height:'40px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-SIDEM.png?v=1727211210', height:'30px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-SORTECH.png?v=1727218384', height:'25px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-STABILIUS.png?v=1727218384', height:'10px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-TEKNOROT.png?v=1727218384', height:'40px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-TEXTAR.png?v=1729793948', height:'35px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-TOPRAN.png?v=1727218384', height:'30px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-TRW.png?v=1727218861', height:'20px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-UFI.png?v=1727218862', height:'40px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-VALEO.png?v=1727218862', height:'30px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-VDO.png?v=1727218862', height:'20px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-VEMO.png?v=1727218862', height:'30px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-VERMO.png?v=1727219569', height:'25px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-VICTOR-REINZ.png?v=1729110179', height:'30px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-VIKA.png?v=1727219569', height:'35px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-WALKER.png?v=1727219569', height:'20px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-BMW-GENUINA.png?v=1730307848', height:'35px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-MINI-GENUINA.png?v=1730308163', height:'35px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-BMW_MINI-GENUINA.png?v=1730308300', height:'35px'},
+                    {url:'https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-METRIX.png?v=1729703775', height:'35px'}
+                   ];
+</script>
 
 {% if template contains 'product' %}
   <script>
@@ -29,7 +116,19 @@
   			</a>
           </h4>
           <p class="manufacture-product">
-          <a href="/collections/vendors?q=${vendor}">${vendor}</a>                
+          {{if tags.length}}
+            {{each tags}}
+              {{if $value.indexOf("calidad_") === 0}}
+                <a href="/collections/vendors?q=${vendor}">${$value.substring(8)} - ${variants[0].sku}</a>   
+              {{/if}}
+            {{/each}}
+            {{if tags.some(tag => tag.indexOf("calidad_") === 0)}}
+              {{else}}
+                <a href="/collections/vendors?q=${vendor}">${variants[0].sku}</a> 
+              {{/if}}
+            {{else}}
+              <a href="/collections/vendors?q=${vendor}">${variants[0].sku}</a>   
+          {{/if}}            
           </p>
         </div>
         <div class="image images-container">
@@ -39,6 +138,41 @@
           <div class="box-label"></div>
           <div class="action-links">
           </div>
+
+          {{if vendor === "LEMFÖRDER"}}
+                <div style="position: absolute; z-index: 3; right: 10px; top: 5px;">
+                  <img style="height:25px;" src="https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-LEMFORDER.png?v=1727208348" />
+                </div>
+              {{/if}}
+              {{if vendor === "URO"}}
+                <div style="position: absolute; z-index: 3; right: 10px; top: 5px;">
+                  <img style="height:30px;" src="https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-URO.png?v=1726606840" />
+                </div>
+              {{/if}}
+              {{if vendor === "NE"}}
+                <div style="position: absolute; z-index: 3; right: 10px; top: 5px;">
+                  <img style="height:40px;" src="https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-NPR.png?v=1727209765" />
+                </div>
+              {{/if}}
+              {{if vendor === "BMW&MINI-GENUINA"}}
+                <div style="position: absolute; z-index: 3; right: 10px; top: 5px;">
+                  <img style="height:35px;" src="https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-BMW_MINI-GENUINA.png?v=1729264144" />
+                </div>
+              {{/if}}
+              {{if vendor === "MINI-GENUINA"}}
+                <div style="position: absolute; z-index: 3; right: 10px; top: 5px;">
+                  <img style="height:35px;" src="https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-MINI-GENUINA.png?v=1729263662" />
+                </div>
+              {{/if}}
+              {{if vendor !== "LEMFÖRDER" && vendor !== "URO" && vendor !== "NE" && vendor !== "BMW&MINI-GENUINA" && vendor !== "MINI-GENUINA"}}
+                {{each urlsBrands}}
+                {{if url.includes(vendor)}}
+                  <div style="position: absolute; z-index: 3; right: 10px; top: 5px;">
+                    <img src="${url}" style="height:${height};"  />
+                  </div>
+                {{/if}}
+              {{/each}}
+              {{/if}}
         </div>
         <!-- image -->
         <div class="caption">
@@ -49,7 +183,7 @@
             </div>
           </div>
           <div class="price-box">
-            <p class="special-price"><span class="price">{{html Shopify.formatMoney(price_min)}}</span></p>
+            <p class="special-price"><span class="price">{{html Shopify.formatMoney(price_min) + " MXN"}}</span></p>
             {{if compare_at_price_min > price_min}} 
             <p class="old-price"><span class="price">{{html Shopify.formatMoney(compare_at_price_min)}}</span></p>
             {{/if}}
