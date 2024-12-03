@@ -26,8 +26,8 @@
     </div>
     <!-- navigation buttons -->
 
-    <div id="js-prev1" class="swiper-button-prev"></div>
-    <div id="js-next1" class="swiper-button-next"></div>
+    <!--<div id="js-prev1" class="swiper-button-prev"></div>
+    <div id="js-next1" class="swiper-button-next"></div>-->
   </div>
   {% endif %}
 </div>
@@ -36,9 +36,10 @@
     $('#banner{{section.id}}').swiper({
       slidesPerView: 5,
       spaceBetween: 10,
-      autoplay: false,
-      loop: false,
-      autoplayDisableOnInteraction: false,
+      autoplay: true,
+      loop: true,
+      speed: 2000,
+      autoplayDisableOnInteraction: true,
       // navigation arrows
       nextButton: '#js-next1',
       prevButton: '#js-prev1',
