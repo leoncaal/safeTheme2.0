@@ -3,6 +3,7 @@
   This is mainly for advanced tagging, but will also help us strip
   out any tag categories from our tags (E.g. remove BRAND_ from BRAND_tag)
 {% endcomment %}
+{% comment %}
 {% if template contains 'collection' and collection.all_tags.size > 0 %}
   {% assign categories = '' %}
   {% for tag in collection.all_tags %}
@@ -11,4 +12,26 @@
     {% endif %}
   {% endfor %}
   {% assign cat_array = categories | split: '|' | uniq %}
+{% endif %}
+{% endcomment %}
+{% if template contains 'collection' and collection.all_tags.size > 0 %}
+  {% assign categories = '' %}
+  {% for tag in collection.all_tags %}
+    {% if tag contains '_' %}
+      {% capture categories %}{% unless categories == blank  %}{{ categories }}|{% endunless %}{{ tag | split: '_' | first }}{% endcapture %}
+    {% endif %}
+  {% endfor %}
+  {% assign cat_array = categories | split: '|' | uniq %}
+
+  {% assign desired_order = 'categorías,subcategorías,marcas,auto,modelo,calidad' | split: ',' %}
+  {% assign ordered_cat_array = '' %}
+
+  {% for item in desired_order %}
+    {% if cat_array contains item %}
+      {% assign ordered_cat_array = ordered_cat_array | append: item | append: '|' %}
+    {% endif %}
+  {% endfor %}
+  
+  {% assign cat_array = ordered_cat_array | split: '|' | uniq %}
+  
 {% endif %}
