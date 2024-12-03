@@ -13,6 +13,15 @@
 {% if sold_out %}
 <div class="label-product label_sale l_sold"><span>{{ 'products.product.sold_out' | t }}</span></div>
 {% endif %}
+{% if sold_out == false %}
+  {% assign texto = "" %}
+  {% if item.variants.first.inventory_quantity > 1 %}
+    {% assign texto = "Disponibles" %}
+    {% else %}
+    {% assign texto = "Disponible" %}
+    {% endif %}
+<div class="label-product label_new"><span>{{ item.variants.first.inventory_quantity }} {{ texto }}</span></div>
+{% endif %}
 {% else %}
 {% assign product_created_at = product.created_at | date: '%s' %}
 {% assign time_ago = 'now' | date: '%s' | minus: product_created_at | divided_by: 86400 %}
@@ -27,5 +36,14 @@
 {% endif %}
 {% if sold_out %}
 <div class="label-product label_sale l_sold"><span>{{ 'products.product.sold_out' | t }}</span></div>
+{% endif %}
+{% if sold_out == false %}
+  {% assign textoC = "" %}
+  {% if product.variants.first.inventory_quantity > 1 %}
+    {% assign textoC = "Disponibles" %}
+    {% else %}
+    {% assign textoC = "Disponible" %}
+    {% endif %}
+<div class="label-product label_new"><span>{{ product.variants.first.inventory_quantity }} {{ textoC }}</span></div>
 {% endif %}
 {% endif %}

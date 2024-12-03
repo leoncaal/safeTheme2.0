@@ -98,13 +98,14 @@
           {% endif %}
         {% endif %}
       {% endif %}
-      <div class="box-label">{% include 'product-label' %}</div>
+      <!--<div class="box-label">{% include 'product-label' %}</div>-->
       {% include 'deal' %}
     </div>
     <!-- image -->
     <div class="caption">
       <div class="inner {% if settings.grid_color_swatches != 'false' and section.settings.product_grid_img_carousel != true %} swtch{% endif %}">
         {% include 'review' %}
+        <div class="box-label">{% include 'product-label' %}</div>
         {% include 'price' %}
         <!-- price-container -->
         <div class="quantity-progress">
