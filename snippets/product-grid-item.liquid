@@ -28,9 +28,27 @@
               {%- endif %}
             </a>
           </h4>
+          <!-- Tydal Reviews Stars Begin -->
+ <div class="tydal-reviews-star-rating" data-product-id="{{ product.id }}" data-rating="{{ product.metafields.ba_rev.review_data.stars }}" data-count="{{ product.metafields.ba_rev.review_data.reviews_count }}"> <div class="tydal-reviews-rating-count"></div></div>
+ <!-- Tydal Reviews Stars End -->
           {% if settings.grid_vendor_enable %}
             <p class="manufacture-product">
-              {{ product.vendor | link_to_vendor }}
+              {% assign vendor_link = product.vendor | link_to_vendor %}
+              {% assign sku = product.selected_or_first_available_variant.sku %}
+              {% assign modified_vendor_link = vendor_link | split: '>' %}
+              {% assign link_start = modified_vendor_link[0] | append: '>' %}
+              {% assign link_end = modified_vendor_link[1] | split: '</a>' %}
+              {% capture vendor_link_with_sku %}
+              {{ link_start }}
+              {% if product.metafields.custom.calidad %}
+                {{ product.metafields.custom.calidad | append: " - " | append: sku }}
+                {% else %}
+                {{ sku }}
+              {% endif %}
+              
+              {{ "</a>" }}
+            {% endcapture %}
+              {{ vendor_link_with_sku }}
             </p>
           {% endif %}
         </div>
@@ -102,7 +120,7 @@
               {% endif %}
             {% endif %}
           {% endif %}
-          <div class="box-label">{% include 'product-label' %}</div>
+          <!--<div class="box-label">{% include 'product-label' %}</div>-->
           <div class="action-links">
             {% if settings.hide_quick_view == false %}
               <button
@@ -129,11 +147,50 @@
             </button>
           </div>
           {% include 'deal' %}
+          {% include 'urls-brands' %}
+                {% assign vendormay = product.vendor | upcase %}
+                {% if vendormay == "LEMFÖRDER" %}
+                    <div style="position: absolute;z-index: 3;right: 10px;top: 5px;">
+                      <img style="height:25px;" src="https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-LEMFORDER.png?v=1727208348" />
+                    </div>
+                  {% elsif vendormay == "URO" %}
+                    <div style="position: absolute;z-index: 3;right: 10px;top: 5px;">
+                      <img style="height:30px;" src="https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-URO.png?v=1726606840" />
+                    </div>
+                    {% elsif vendormay == "NE" %}
+                  <div style="position: absolute;z-index: 3;right: 10px;top: 5px;">
+                      <img style="height:40px;" src="https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-NPR.png?v=1727209765" />
+                    </div>
+                    {% elsif vendormay == "BMW&MINI-GENUINA" %}
+                  <div style="position: absolute;z-index: 3;right: 10px;top: 5px;">
+                      <img style="height:35px;" src="https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-BMW_MINI-GENUINA.png?v=1730308300" />
+                    </div>
+                    {% elsif vendormay == "MINI-GENUINA" %}
+                  <div style="position: absolute;z-index: 3;right: 10px;top: 5px;">
+                      <img style="height:35px;" src="https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-MINI-GENUINA.png?v=1730308163" />
+                    </div>
+                    {% elsif vendormay == "INA" %}
+                  <div style="position: absolute;z-index: 3;right: 10px;top: 5px;">
+                      <img style="height:40px;" src="https://cdn.shopify.com/s/files/1/0841/2666/2935/files/icon-INA.png?v=1727208078" />
+                    </div>
+                    {% else %}
+                 {% for url in urls_brands %}
+                  {% if url contains vendormay %}
+                    {%- assign parts = url | split: "height" -%}
+                    {%- assign urlpart = parts[0] -%}
+                    {%- assign heightpart = "height" | append: parts[1] -%}
+                    <div style="position: absolute;z-index: 3;right: 10px;top: 5px;">
+                      <img style={{ heightpart }} src={{ urlpart }} />
+                    </div>
+                  {% endif %}
+                {% endfor %}
+                  {% endif %}
         </div>
         <!-- image -->
         <div class="caption">
           <div class="inner {% if settings.grid_color_swatches != 'false' and section.settings.product_grid_img_carousel != true %} swtch{% endif %}">
             {% include 'review' %}
+            <div class="box-label">{% include 'product-label' %}</div>
             {% include 'price' %}
             <!-- price-container -->
             <button
