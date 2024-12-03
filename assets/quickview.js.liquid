@@ -54,7 +54,26 @@ $(document).ready(function () {
 
     modal_title.html(product_info['title']);
 
-    var desc = product_info['description'];
+    var texto = product_info['description'];
+
+// Buscar el índice de inicio y fin de las etiquetas
+var inicioIndice = texto.indexOf('[summary]');
+var finIndice = texto.indexOf('[/summary]');
+
+// Definir la variable para el resumen
+var resumen;
+
+// Verificar si se encontraron ambas etiquetas
+if (inicioIndice !== -1 && finIndice !== -1) {
+    // Extraer el texto entre las etiquetas
+    resumen = texto.substring(inicioIndice + '[summary]'.length, finIndice);
+    resumen = resumen.trim(); // Eliminar espacios en blanco al inicio y al final del texto
+} else {
+    // Si no se encontraron ambas etiquetas, asignar un string vacío
+    resumen = "";
+}
+
+    var desc = resumen
     var res = desc.trim();
     modal_desc.html(res.substring(0, 250));
     rating.append('<span class="shopify-product-reviews-badge" data-id="'+ product_info["id"] +'"></span>');
@@ -71,7 +90,7 @@ $(document).ready(function () {
         if (typeof Currency !== 'undefined') {
           price.append('<span class="new-price">'+ Currency.moneyFormats[shopCurrency].money_format.substring(0,1) +product_info["price"]/100+'</span>');
         } else {
-          price.append('<span class="new-price">'+ moneyFormat.replace("\{\{amount\}\}", "") + product_info["price"]/100+'</span>');
+          price.append('<span class="new-price">'+ moneyFormat.replace("\{\{amount\}\}", `${(product_info["price"] / 100).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`) +'</span>');
         }
       }
     }
