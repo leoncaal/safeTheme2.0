@@ -1,377 +1,2896 @@
 var makeObject = {
-  "Acura": {
-    "ILX": ["2015", "2014", "2013"],
-    "Integra": ["2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994"],
-    "RL": ["2008", "2007", "2006", "2005"],
-    "RSX": ["2006", "2005", "2004", "2003", "2002"],
-    "TL": ["2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999"],
-    "TLX": ["2016", "2015"],
-    "TSX": ["2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003"]
-  },
-  "Audi": {
-    "A4": ["2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002"],
-    "A6": ["2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996"]
+  "AUDI": {
+      "100 C3 Avant (445, 446) 1982-1990": [
+          "Modelo: 2.2 | Potencia:115HP | ID Veh\u00edculo:1422",
+          "Modelo: 2.3 | Potencia:132HP | ID Veh\u00edculo:105970",
+          "Modelo: 2.4 D | Potencia:82HP | ID Veh\u00edculo:5007"
+      ],
+      "100 C3 Sed\u00e1n (443, 444) 1982-1991": [
+          "Modelo: 2.2 E Turbo quattro | Potencia:165HP | ID Veh\u00edculo:1334",
+          "Modelo: 2.2 Turbo | Potencia:165HP | ID Veh\u00edculo:1318",
+          "Modelo: 2.2 | Potencia:115HP | ID Veh\u00edculo:1315",
+          "Modelo: 2.3 quattro | Potencia:132HP | ID Veh\u00edculo:105972"
+      ],
+      "80 B1 Sed\u00e1n (80, 82) 1972-1978": [
+          "Modelo: 1.5 | Potencia:75HP | ID Veh\u00edculo:1048",
+          "Modelo: 1.6 | Potencia:83HP | ID Veh\u00edculo:127145"
+      ],
+      "80 B3 Sed\u00e1n (893, 894, 8A2) 1986-1991": [
+          "Modelo: 2.0 E | Potencia:113HP | ID Veh\u00edculo:1119",
+          "Modelo: 2.3 quattro | Potencia:133HP | ID Veh\u00edculo:27633"
+      ],
+      "90 B3 (893, 894, 8A2) 1987-1991": [
+          "Modelo: 2.0 | Potencia:115HP | ID Veh\u00edculo:1479",
+          "Modelo: 2.3 E 20V quattro | Potencia:170HP | ID Veh\u00edculo:1501",
+          "Modelo: 2.3 E 20V | Potencia:167HP | ID Veh\u00edculo:1492"
+      ],
+      "A1 (8X1, 8XK) 2010-2018": [
+          "Modelo: 1.4 TFSI | Potencia:122HP | ID Veh\u00edculo:33305",
+          "Modelo: 1.4 TFSI | Potencia:125HP | ID Veh\u00edculo:108155",
+          "Modelo: 1.4 TFSI | Potencia:185HP | ID Veh\u00edculo:9304",
+          "Modelo: 1.8 TFSI | Potencia:192HP | ID Veh\u00edculo:109412"
+      ],
+      "A1 Sportback (8XA, 8XF) 2011-2018": [
+          "Modelo: 1.4 TFSI | Potencia:122HP | ID Veh\u00edculo:11783",
+          "Modelo: 1.4 TFSI | Potencia:185HP | ID Veh\u00edculo:11785",
+          "Modelo: 1.8 TFSI | Potencia:192HP | ID Veh\u00edculo:109413"
+      ],
+      "A1 Sportback (GBA) 2018": [
+          "Modelo: 30 TFSI | Potencia:116HP | ID Veh\u00edculo:132856",
+          "Modelo: 35 TFSI | Potencia:150HP | ID Veh\u00edculo:135144",
+          "Modelo: 40 TFSI | Potencia:200HP | ID Veh\u00edculo:135145"
+      ],
+      "A3 (8L1) 1996-2006": [
+          "Modelo: 1.8 T quattro | Potencia:150HP | ID Veh\u00edculo:11339",
+          "Modelo: 1.8 T quattro | Potencia:180HP | ID Veh\u00edculo:10465",
+          "Modelo: 1.8 T | Potencia:150HP | ID Veh\u00edculo:5602",
+          "Modelo: 1.8 T | Potencia:180HP | ID Veh\u00edculo:11340",
+          "Modelo: S3 quattro | Potencia:210HP | ID Veh\u00edculo:11268",
+          "Modelo: S3 quattro | Potencia:224HP | ID Veh\u00edculo:16314"
+      ],
+      "A3 (8P1) 2003-2013": [
+          "Modelo: 1.4 TFSI | Potencia:125HP | ID Veh\u00edculo:26581",
+          "Modelo: 1.6 | Potencia:102HP | ID Veh\u00edculo:17172",
+          "Modelo: 1.8 TFSI | Potencia:160HP | ID Veh\u00edculo:20864",
+          "Modelo: 1.9 TDI | Potencia:105HP | ID Veh\u00edculo:17398",
+          "Modelo: 2.0 FSI | Potencia:150HP | ID Veh\u00edculo:17009",
+          "Modelo: 2.0 TFSI quattro | Potencia:200HP | ID Veh\u00edculo:18359",
+          "Modelo: 2.0 TFSI | Potencia:200HP | ID Veh\u00edculo:18358",
+          "Modelo: 3.2 V6 quattro | Potencia:250HP | ID Veh\u00edculo:17577",
+          "Modelo: S3 quattro | Potencia:256HP | ID Veh\u00edculo:28169",
+          "Modelo: S3 quattro | Potencia:265HP | ID Veh\u00edculo:19914"
+      ],
+      "A3 (8V1, 8VK) 2012-2020": [
+          "Modelo: 1.4 TFSI | Potencia:122HP | ID Veh\u00edculo:55092",
+          "Modelo: 1.4 TFSI | Potencia:125HP | ID Veh\u00edculo:106367",
+          "Modelo: 1.4 TSI | Potencia:150HP | ID Veh\u00edculo:106369",
+          "Modelo: 1.8 TFSI | Potencia:180HP | ID Veh\u00edculo:55093",
+          "Modelo: 2.0 TFSI | Potencia:190HP | ID Veh\u00edculo:120627",
+          "Modelo: S3 quattro | Potencia:286HP | ID Veh\u00edculo:106371",
+          "Modelo: S3 quattro | Potencia:290HP | ID Veh\u00edculo:121601"
+      ],
+      "A3 Descapotable (8P7) 2008-2013": [
+          "Modelo: 1.8 TFSI | Potencia:160HP | ID Veh\u00edculo:24493",
+          "Modelo: 2.0 TFSI | Potencia:200HP | ID Veh\u00edculo:24494"
+      ],
+      "A3 Descapotable (8V7, 8VE) 2013-2020": [
+          "Modelo: 1.4 TSI | Potencia:150HP | ID Veh\u00edculo:106225",
+          "Modelo: 1.8 TFSI | Potencia:180HP | ID Veh\u00edculo:100043",
+          "Modelo: 2.0 TFSI quattro | Potencia:190HP | ID Veh\u00edculo:120620",
+          "Modelo: 2.0 TFSI | Potencia:186HP | ID Veh\u00edculo:130790",
+          "Modelo: 2.0 TFSI | Potencia:190HP | ID Veh\u00edculo:120633"
+      ],
+      "A3 Limousine (8VS, 8VM) 2013-2021": [
+          "Modelo: 1.4 TSI | Potencia:150HP | ID Veh\u00edculo:106374",
+          "Modelo: 1.8 TFSI | Potencia:180HP | ID Veh\u00edculo:59617",
+          "Modelo: 2.0 TFSI | Potencia:186HP | ID Veh\u00edculo:130789",
+          "Modelo: 2.0 TFSI | Potencia:190HP | ID Veh\u00edculo:120632",
+          "Modelo: RS3 quattro | Potencia:400HP | ID Veh\u00edculo:126876",
+          "Modelo: S3 quattro | Potencia:280HP | ID Veh\u00edculo:54775",
+          "Modelo: S3 quattro | Potencia:286HP | ID Veh\u00edculo:106376",
+          "Modelo: S3 quattro | Potencia:290HP | ID Veh\u00edculo:121604"
+      ],
+      "A3 Limousine (8YS) 2020": [
+          "Modelo: 35 TFSi | Potencia:150HP | ID Veh\u00edculo:146890",
+          "Modelo: 40 TFSI quattro | Potencia:190HP | ID Veh\u00edculo:144929",
+          "Modelo: 40 TFSI | Potencia:190HP | ID Veh\u00edculo:145396",
+          "Modelo: A3 Limousine (8YS, 8YM) | Potencia:0HP | ID Veh\u00edculo:40796",
+          "Modelo: RS3 quattro | Potencia:400HP | ID Veh\u00edculo:145088",
+          "Modelo: S3 quattro | Potencia:290HP | ID Veh\u00edculo:147426"
+      ],
+      "A3 Sportback (8PA) 2004-2015": [
+          "Modelo: 1.4 TFSI | Potencia:125HP | ID Veh\u00edculo:26582",
+          "Modelo: 1.8 TFSI quattro | Potencia:160HP | ID Veh\u00edculo:30739",
+          "Modelo: 1.8 TFSI | Potencia:160HP | ID Veh\u00edculo:20898",
+          "Modelo: 2.0 TFSI quattro | Potencia:200HP | ID Veh\u00edculo:18083",
+          "Modelo: 3.2 V6 quattro | Potencia:250HP | ID Veh\u00edculo:18070"
+      ],
+      "A3 Sportback (8VA, 8VF) 2012-2020": [
+          "Modelo: 1.4 TFSI | Potencia:122HP | ID Veh\u00edculo:55596"
+      ],
+      "A4 B5 (8D2) 1994-2001": [
+          "Modelo: 1.8 T quattro | Potencia:150HP | ID Veh\u00edculo:4620",
+          "Modelo: 1.8 T quattro | Potencia:180HP | ID Veh\u00edculo:11348",
+          "Modelo: 1.8 T | Potencia:150HP | ID Veh\u00edculo:4615",
+          "Modelo: 1.8 T | Potencia:180HP | ID Veh\u00edculo:11349",
+          "Modelo: 2.8 quattro | Potencia:174HP | ID Veh\u00edculo:4622",
+          "Modelo: 2.8 quattro | Potencia:190HP | ID Veh\u00edculo:20895",
+          "Modelo: 2.8 quattro | Potencia:193HP | ID Veh\u00edculo:5413",
+          "Modelo: 2.8 | Potencia:174HP | ID Veh\u00edculo:4617",
+          "Modelo: 911 Descapotable (997) | Potencia:193HP | ID Veh\u00edculo:5411",
+          "Modelo: S4 quattro | Potencia:265HP | ID Veh\u00edculo:8885"
+      ],
+      "A4 B5 Avant (8D5) 1994-2002": [
+          "Modelo: 1.8 T quattro | Potencia:150HP | ID Veh\u00edculo:5314",
+          "Modelo: 1.8 T quattro | Potencia:180HP | ID Veh\u00edculo:11347",
+          "Modelo: 1.8 T | Potencia:150HP | ID Veh\u00edculo:5307",
+          "Modelo: 2.8 quattro | Potencia:193HP | ID Veh\u00edculo:5414",
+          "Modelo: 2.8 | Potencia:193HP | ID Veh\u00edculo:5412",
+          "Modelo: RS4 quattro | Potencia:380HP | ID Veh\u00edculo:13361",
+          "Modelo: S4 quattro | Potencia:265HP | ID Veh\u00edculo:8892"
+      ],
+      "A4 B6 (8E2) 2000-2005": [
+          "Modelo: 1.8 T quattro | Potencia:150HP | ID Veh\u00edculo:15508",
+          "Modelo: 1.8 T quattro | Potencia:170HP | ID Veh\u00edculo:18363",
+          "Modelo: 1.8 T quattro | Potencia:190HP | ID Veh\u00edculo:17147",
+          "Modelo: 1.8 T | Potencia:150HP | ID Veh\u00edculo:15506",
+          "Modelo: 1.8 T | Potencia:170HP | ID Veh\u00edculo:18362",
+          "Modelo: 1.8 T | Potencia:173HP | ID Veh\u00edculo:127153",
+          "Modelo: 1.8 T | Potencia:190HP | ID Veh\u00edculo:17146",
+          "Modelo: 3.0 quattro | Potencia:220HP | ID Veh\u00edculo:15510",
+          "Modelo: 3.0 | Potencia:220HP | ID Veh\u00edculo:15509",
+          "Modelo: S4 quattro | Potencia:344HP | ID Veh\u00edculo:17145"
+      ],
+      "A4 B6 Avant (8E5) 2000-2005": [
+          "Modelo: 1.8 T quattro | Potencia:150HP | ID Veh\u00edculo:16464",
+          "Modelo: 1.8 T quattro | Potencia:170HP | ID Veh\u00edculo:18364",
+          "Modelo: 1.8 T quattro | Potencia:190HP | ID Veh\u00edculo:17149",
+          "Modelo: 1.8 T | Potencia:150HP | ID Veh\u00edculo:16046",
+          "Modelo: 1.8 T | Potencia:190HP | ID Veh\u00edculo:17148",
+          "Modelo: S4 quattro | Potencia:344HP | ID Veh\u00edculo:17156"
+      ],
+      "A4 B6 Descapotable (8H7) 2002-2009": [
+          "Modelo: 1.8 T | Potencia:163HP | ID Veh\u00edculo:17142",
+          "Modelo: 1.8 T | Potencia:170HP | ID Veh\u00edculo:27315",
+          "Modelo: 3.0 | Potencia:220HP | ID Veh\u00edculo:16324",
+          "Modelo: S4 quattro | Potencia:344HP | ID Veh\u00edculo:17617"
+      ],
+      "A4 B7 (8EC) 2004-2008": [
+          "Modelo: 1.8 T quattro | Potencia:163HP | ID Veh\u00edculo:18397",
+          "Modelo: 1.8 T | Potencia:163HP | ID Veh\u00edculo:18396",
+          "Modelo: 2.0 TFSI quattro | Potencia:200HP | ID Veh\u00edculo:18372",
+          "Modelo: 2.0 TFSI | Potencia:170HP | ID Veh\u00edculo:20910",
+          "Modelo: 2.0 TFSI | Potencia:200HP | ID Veh\u00edculo:18371",
+          "Modelo: 3.0 quattro | Potencia:218HP | ID Veh\u00edculo:23735",
+          "Modelo: 3.2 FSI quattro | Potencia:255HP | ID Veh\u00edculo:18374",
+          "Modelo: 3.2 FSI | Potencia:255HP | ID Veh\u00edculo:18373",
+          "Modelo: RS4 quattro | Potencia:420HP | ID Veh\u00edculo:18524"
+      ],
+      "A4 B7 Avant (8ED) 2004-2008": [
+          "Modelo: 2.0 TFSI | Potencia:170HP | ID Veh\u00edculo:20911",
+          "Modelo: 2.0 TFSI | Potencia:200HP | ID Veh\u00edculo:18407",
+          "Modelo: RS4 quattro | Potencia:420HP | ID Veh\u00edculo:19490",
+          "Modelo: S4 quattro | Potencia:344HP | ID Veh\u00edculo:19740"
+      ],
+      "A4 B7 Descapotable (8HE) 2002-2009": [
+          "Modelo: 1.8 T | Potencia:163HP | ID Veh\u00edculo:143095",
+          "Modelo: 2.0 TFSI 16V | Potencia:200HP | ID Veh\u00edculo:19487",
+          "Modelo: RS4 quattro | Potencia:420HP | ID Veh\u00edculo:19489",
+          "Modelo: S4 quattro | Potencia:344HP | ID Veh\u00edculo:143097"
+      ],
+      "A4 B8 (8K2) 2007-2016": [
+          "Modelo: 1.8 TFSI quattro | Potencia:170HP | ID Veh\u00edculo:16041",
+          "Modelo: 1.8 TFSI | Potencia:160HP | ID Veh\u00edculo:23299",
+          "Modelo: 1.8 TFSI | Potencia:170HP | ID Veh\u00edculo:16040",
+          "Modelo: 2.0 TDI | Potencia:177HP | ID Veh\u00edculo:16045",
+          "Modelo: 2.0 TFSI quattro | Potencia:211HP | ID Veh\u00edculo:26913",
+          "Modelo: 2.0 TFSI quattro | Potencia:224HP | ID Veh\u00edculo:59248",
+          "Modelo: 2.0 TFSI | Potencia:211HP | ID Veh\u00edculo:26912",
+          "Modelo: 2.0 TFSI | Potencia:224HP | ID Veh\u00edculo:59249",
+          "Modelo: 3.0 TFSI quattro | Potencia:272HP | ID Veh\u00edculo:16042",
+          "Modelo: 3.2 FSI quattro | Potencia:265HP | ID Veh\u00edculo:23300",
+          "Modelo: S4 quattro | Potencia:333HP | ID Veh\u00edculo:30001"
+      ],
+      "A4 B8 Avant (8K5) 2007-2015": [
+          "Modelo: 1.8 TFSI | Potencia:120HP | ID Veh\u00edculo:26916"
+      ],
+      "A4 B9 (8W2, 8WC) 2015": [
+          "Modelo: 2.0 TFSI Mild Hybrid quattro | Potencia:252HP | ID Veh\u00edculo:133649",
+          "Modelo: 2.0 TFSI quattro | Potencia:252HP | ID Veh\u00edculo:117080",
+          "Modelo: 2.0 TFSI | Potencia:190HP | ID Veh\u00edculo:117078",
+          "Modelo: 2.0 TFSI | Potencia:252HP | ID Veh\u00edculo:117079",
+          "Modelo: 40 TFSI Mild Hybrid | Potencia:190HP | ID Veh\u00edculo:133645",
+          "Modelo: S4 quattro | Potencia:354HP | ID Veh\u00edculo:120900"
+      ],
+      "A5 (8T3) 2007-2017": [
+          "Modelo: 1.8 TFSI | Potencia:170HP | ID Veh\u00edculo:22547",
+          "Modelo: 2.0 TFSI quattro | Potencia:211HP | ID Veh\u00edculo:29975",
+          "Modelo: 2.0 TFSI quattro | Potencia:224HP | ID Veh\u00edculo:59646",
+          "Modelo: 2.0 TFSI | Potencia:211HP | ID Veh\u00edculo:29974",
+          "Modelo: 2.0 TFSI | Potencia:224HP | ID Veh\u00edculo:59645",
+          "Modelo: 3.0 TFSI quattro | Potencia:272HP | ID Veh\u00edculo:22836",
+          "Modelo: 3.2 FSI quattro | Potencia:265HP | ID Veh\u00edculo:26644",
+          "Modelo: 3.2 FSI | Potencia:265HP | ID Veh\u00edculo:22548",
+          "Modelo: RS5 quattro | Potencia:450HP | ID Veh\u00edculo:9307",
+          "Modelo: S5 quattro | Potencia:333HP | ID Veh\u00edculo:11997",
+          "Modelo: S5 quattro | Potencia:354HP | ID Veh\u00edculo:22549"
+      ],
+      "A5 (F53, F5P) 2016": [
+          "Modelo: 2.0 TFSI quattro | Potencia:252HP | ID Veh\u00edculo:121416",
+          "Modelo: 2.0 TFSI | Potencia:190HP | ID Veh\u00edculo:123100",
+          "Modelo: 2.0 TFSI | Potencia:252HP | ID Veh\u00edculo:123095",
+          "Modelo: 40 TFSI Mild Hybrid | Potencia:190HP | ID Veh\u00edculo:133652",
+          "Modelo: 45 TFSI Mild Hybrid quattro | Potencia:245HP | ID Veh\u00edculo:135174",
+          "Modelo: 45 TFSI Mild Hybrid quattro | Potencia:249HP | ID Veh\u00edculo:144251",
+          "Modelo: RS5 quattro | Potencia:450HP | ID Veh\u00edculo:126881",
+          "Modelo: S5 quattro | Potencia:354HP | ID Veh\u00edculo:121493"
+      ],
+      "A5 Descapotable (8F7) 2009-2017": [
+          "Modelo: 1.8 TFSI | Potencia:170HP | ID Veh\u00edculo:11996",
+          "Modelo: 2.0 TFSI quattro | Potencia:211HP | ID Veh\u00edculo:30981",
+          "Modelo: 2.0 TFSI | Potencia:211HP | ID Veh\u00edculo:30980",
+          "Modelo: 2.0 TFSI | Potencia:224HP | ID Veh\u00edculo:59634",
+          "Modelo: 3.2 FSI quattro | Potencia:265HP | ID Veh\u00edculo:30983",
+          "Modelo: 3.2 FSI | Potencia:265HP | ID Veh\u00edculo:30982"
+      ],
+      "A5 Sportback (8TA) 2007-2017": [
+          "Modelo: 1.8 TFSI | Potencia:170HP | ID Veh\u00edculo:11995",
+          "Modelo: 2.0 TFSI quattro | Potencia:211HP | ID Veh\u00edculo:31570",
+          "Modelo: 2.0 TFSI quattro | Potencia:224HP | ID Veh\u00edculo:59638",
+          "Modelo: 2.0 TFSI | Potencia:180HP | ID Veh\u00edculo:31569",
+          "Modelo: 2.0 TFSI | Potencia:211HP | ID Veh\u00edculo:33410",
+          "Modelo: 2.0 TFSI | Potencia:224HP | ID Veh\u00edculo:59637",
+          "Modelo: 3.0 TFSI quattro | Potencia:272HP | ID Veh\u00edculo:15677",
+          "Modelo: 3.2 FSI quattro | Potencia:265HP | ID Veh\u00edculo:31571",
+          "Modelo: S5 quattro | Potencia:333HP | ID Veh\u00edculo:33411"
+      ],
+      "A5 Sportback (F5A, F5F) 2016": [
+          "Modelo: 2.0 TFSI Mild Hybrid quattro | Potencia:252HP | ID Veh\u00edculo:133657",
+          "Modelo: 2.0 TFSI Mild Hybrid | Potencia:252HP | ID Veh\u00edculo:133656",
+          "Modelo: 2.0 TFSI quattro | Potencia:252HP | ID Veh\u00edculo:123112",
+          "Modelo: 2.0 TFSI | Potencia:190HP | ID Veh\u00edculo:126165",
+          "Modelo: 2.0 TFSI | Potencia:252HP | ID Veh\u00edculo:123111",
+          "Modelo: 40 TFSI Mild Hybrid | Potencia:190HP | ID Veh\u00edculo:133655",
+          "Modelo: 45 TFSI Mild Hybrid quattro | Potencia:245HP | ID Veh\u00edculo:135657",
+          "Modelo: RS5 quattro | Potencia:450HP | ID Veh\u00edculo:135352",
+          "Modelo: S5 quattro | Potencia:354HP | ID Veh\u00edculo:123113"
+      ],
+      "A6 Allroad C6 (4FH) 2006-2011": [
+          "Modelo: 4.2 FSI quattro | Potencia:350HP | ID Veh\u00edculo:19473"
+      ],
+      "A6 C4 (4A2) 1994-1997": [
+          "Modelo: 2.8 | Potencia:193HP | ID Veh\u00edculo:5322"
+      ],
+      "A6 C5 (4B2) 1997-2005": [
+          "Modelo: 2.7 T quattro | Potencia:230HP | ID Veh\u00edculo:8968",
+          "Modelo: 2.7 T quattro | Potencia:250HP | ID Veh\u00edculo:16009",
+          "Modelo: 2.7 T | Potencia:230HP | ID Veh\u00edculo:8967",
+          "Modelo: 2.7 quattro | Potencia:265HP | ID Veh\u00edculo:26780",
+          "Modelo: 2.7 | Potencia:254HP | ID Veh\u00edculo:26778",
+          "Modelo: 2.8 quattro | Potencia:180HP | ID Veh\u00edculo:28326",
+          "Modelo: 2.8 | Potencia:180HP | ID Veh\u00edculo:15661",
+          "Modelo: 2.8 | Potencia:190HP | ID Veh\u00edculo:15662",
+          "Modelo: 2.8 | Potencia:193HP | ID Veh\u00edculo:8320",
+          "Modelo: 3.0 | Potencia:218HP | ID Veh\u00edculo:56013",
+          "Modelo: 3.0 | Potencia:220HP | ID Veh\u00edculo:16004",
+          "Modelo: 4.2 quattro | Potencia:299HP | ID Veh\u00edculo:10941",
+          "Modelo: RS6 quattro | Potencia:450HP | ID Veh\u00edculo:16627",
+          "Modelo: S6 quattro | Potencia:340HP | ID Veh\u00edculo:13168"
+      ],
+      "A6 C5 Avant (4B5) 1997-2005": [
+          "Modelo: 2.7 T quattro | Potencia:230HP | ID Veh\u00edculo:8966",
+          "Modelo: 2.7 T quattro | Potencia:250HP | ID Veh\u00edculo:16015",
+          "Modelo: 2.7 T | Potencia:230HP | ID Veh\u00edculo:8965",
+          "Modelo: 2.8 | Potencia:193HP | ID Veh\u00edculo:8944",
+          "Modelo: 3.0 | Potencia:218HP | ID Veh\u00edculo:57275",
+          "Modelo: 3.0 | Potencia:220HP | ID Veh\u00edculo:16016",
+          "Modelo: 4.2 quattro | Potencia:299HP | ID Veh\u00edculo:11362",
+          "Modelo: RS6 plus quattro | Potencia:480HP | ID Veh\u00edculo:18033",
+          "Modelo: RS6 quattro | Potencia:450HP | ID Veh\u00edculo:16628"
+      ],
+      "A6 C6 (4F2) 2004-2011": [
+          "Modelo: 2.8 FSI quattro | Potencia:210HP | ID Veh\u00edculo:23187",
+          "Modelo: 2.8 FSI quattro | Potencia:220HP | ID Veh\u00edculo:30366",
+          "Modelo: 2.8 FSI | Potencia:210HP | ID Veh\u00edculo:20109",
+          "Modelo: 2.8 FSI | Potencia:220HP | ID Veh\u00edculo:30367",
+          "Modelo: 3.0 TFSI quattro | Potencia:290HP | ID Veh\u00edculo:30370",
+          "Modelo: 3.0 TFSI quattro | Potencia:299HP | ID Veh\u00edculo:12238",
+          "Modelo: 3.0 quattro | Potencia:218HP | ID Veh\u00edculo:21318",
+          "Modelo: 3.2 FSI | Potencia:255HP | ID Veh\u00edculo:17894",
+          "Modelo: 4.2 FSI quattro | Potencia:350HP | ID Veh\u00edculo:19476",
+          "Modelo: RS6 quattro | Potencia:580HP | ID Veh\u00edculo:28576",
+          "Modelo: S6 quattro | Potencia:435HP | ID Veh\u00edculo:19456"
+      ],
+      "A6 C6 Avant (4F5) 2004-2011": [
+          "Modelo: 3.0 | Potencia:218HP | ID Veh\u00edculo:31514",
+          "Modelo: 3.2 FSI quattro | Potencia:255HP | ID Veh\u00edculo:18422",
+          "Modelo: 3.2 FSI | Potencia:255HP | ID Veh\u00edculo:18421",
+          "Modelo: RS6 quattro | Potencia:580HP | ID Veh\u00edculo:24497"
+      ],
+      "A6 C7 (4G2, 4GC) 2010-2018": [
+          "Modelo: 1.8 TFSI | Potencia:190HP | ID Veh\u00edculo:108430",
+          "Modelo: 2.0 TFSI | Potencia:180HP | ID Veh\u00edculo:9309",
+          "Modelo: 2.0 TFSI | Potencia:252HP | ID Veh\u00edculo:108432",
+          "Modelo: 2.8 FSI | Potencia:204HP | ID Veh\u00edculo:7923",
+          "Modelo: 3.0 TDI quattro | Potencia:204HP | ID Veh\u00edculo:7944",
+          "Modelo: 3.0 TDI quattro | Potencia:245HP | ID Veh\u00edculo:7960",
+          "Modelo: 3.0 TFSI quattro | Potencia:300HP | ID Veh\u00edculo:7930",
+          "Modelo: 3.0 TFSI quattro | Potencia:310HP | ID Veh\u00edculo:12075",
+          "Modelo: 3.0 TFSI quattro | Potencia:333HP | ID Veh\u00edculo:108443",
+          "Modelo: S6 quattro | Potencia:420HP | ID Veh\u00edculo:11717",
+          "Modelo: S6 quattro | Potencia:450HP | ID Veh\u00edculo:108559"
+      ],
+      "A6 C8 (4A2) 2018": [
+          "Modelo: 40 TFSI Mild Hybrid | Potencia:190HP | ID Veh\u00edculo:139946",
+          "Modelo: 45 TFSI Mild Hybrid quattro | Potencia:245HP | ID Veh\u00edculo:135106",
+          "Modelo: 55 TFSi Mild Hybrid quattro | Potencia:340HP | ID Veh\u00edculo:132323",
+          "Modelo: S6 TFSI Mild Hybrid quattro | Potencia:450HP | ID Veh\u00edculo:140677"
+      ],
+      "A6 C8 Avant (4A5) 2018": [
+          "Modelo: 40 TFSI Mild Hybrid | Potencia:190HP | ID Veh\u00edculo:139941"
+      ],
+      "A7 Sportback (4GA, 4GF) 2010-2018": [
+          "Modelo: 2.0 TFSI quattro | Potencia:252HP | ID Veh\u00edculo:115196",
+          "Modelo: 2.0 TFSI | Potencia:252HP | ID Veh\u00edculo:107858",
+          "Modelo: 2.8 FSI quattro | Potencia:204HP | ID Veh\u00edculo:34939",
+          "Modelo: 2.8 FSI | Potencia:204HP | ID Veh\u00edculo:9333",
+          "Modelo: 3.0 TFSI quattro | Potencia:300HP | ID Veh\u00edculo:34940",
+          "Modelo: 3.0 TFSI quattro | Potencia:310HP | ID Veh\u00edculo:9335",
+          "Modelo: 3.0 TFSI quattro | Potencia:333HP | ID Veh\u00edculo:107349",
+          "Modelo: RS7 performance quattro | Potencia:605HP | ID Veh\u00edculo:117768",
+          "Modelo: RS7 quattro | Potencia:560HP | ID Veh\u00edculo:59683",
+          "Modelo: S7 quattro | Potencia:420HP | ID Veh\u00edculo:11789"
+      ],
+      "A7 Sportback (4KA) 2017": [
+          "Modelo: 45 TFSI Mild hybrid quattro | Potencia:245HP | ID Veh\u00edculo:134988",
+          "Modelo: 55 TFSI Mild Hybrid quattro | Potencia:340HP | ID Veh\u00edculo:130188",
+          "Modelo: RS7 Mild Hybrid quattro | Potencia:630HP | ID Veh\u00edculo:151530",
+          "Modelo: S7 TFSI Mild Hybrid quattro | Potencia:450HP | ID Veh\u00edculo:140679"
+      ],
+      "A8 D2 (4D2, 4D8) 1994-2005": [
+          "Modelo: 3.7 quattro | Potencia:230HP | ID Veh\u00edculo:5129",
+          "Modelo: 3.7 quattro | Potencia:260HP | ID Veh\u00edculo:10468",
+          "Modelo: 3.7 | Potencia:230HP | ID Veh\u00edculo:5128",
+          "Modelo: 3.7 | Potencia:260HP | ID Veh\u00edculo:11341",
+          "Modelo: 4.2 quattro | Potencia:238HP | ID Veh\u00edculo:14557",
+          "Modelo: 4.2 quattro | Potencia:299HP | ID Veh\u00edculo:3881",
+          "Modelo: 4.2 quattro | Potencia:310HP | ID Veh\u00edculo:10467",
+          "Modelo: S8 quattro | Potencia:360HP | ID Veh\u00edculo:12259"
+      ],
+      "A8 D3 (4E2, 4E8) 2002-2010": [
+          "Modelo: 4.2 FSI quattro | Potencia:350HP | ID Veh\u00edculo:19622",
+          "Modelo: 4.2 quattro | Potencia:335HP | ID Veh\u00edculo:16888",
+          "Modelo: 6.0 W12 quattro | Potencia:450HP | ID Veh\u00edculo:17799",
+          "Modelo: S8 quattro | Potencia:450HP | ID Veh\u00edculo:19460"
+      ],
+      "A8 D4 (4H2, 4H8, 4HC, 4HL) 2009-2018": [
+          "Modelo: 3.0 TFSI quattro | Potencia:290HP | ID Veh\u00edculo:33429",
+          "Modelo: 3.0 TFSI quattro | Potencia:310HP | ID Veh\u00edculo:12029",
+          "Modelo: 4.0 TFSI quattro | Potencia:420HP | ID Veh\u00edculo:12027",
+          "Modelo: 4.0 TFSI quattro | Potencia:435HP | ID Veh\u00edculo:53316",
+          "Modelo: 4.2 FSI quattro | Potencia:371HP | ID Veh\u00edculo:33430",
+          "Modelo: 6.3 W12 quattro | Potencia:500HP | ID Veh\u00edculo:9318",
+          "Modelo: S8 quattro | Potencia:520HP | ID Veh\u00edculo:11831"
+      ],
+      "A8 D5 (4N2, 4N8, 4NC, 4NL) 2017": [
+          "Modelo: 55 TFSI Mild Hybrid quattro | Potencia:340HP | ID Veh\u00edculo:128644",
+          "Modelo: 60 TFSI Mild Hybrid quattro | Potencia:460HP | ID Veh\u00edculo:135979",
+          "Modelo: 60 TFSI e quattro | Potencia:449HP | ID Veh\u00edculo:138230",
+          "Modelo: S8 Mild Hybrid quattro | Potencia:571HP | ID Veh\u00edculo:138873"
+      ],
+      "CABRIOLET B3 (8G7) 1991-2000": [
+          "Modelo: 2.8 | Potencia:174HP | ID Veh\u00edculo:1511"
+      ],
+      "E-TRON (GEN) 2018": [
+          "Modelo: 55 quattro | Potencia:408HP | ID Veh\u00edculo:134328"
+      ],
+      "E-TRON GT Sed\u00e1n (F83) 2020": [
+          "Modelo: RS quattro | Potencia:646HP | ID Veh\u00edculo:145419"
+      ],
+      "E-TRON Sportback (GEA) 2019": [
+          "Modelo: 55 quattro | Potencia:408HP | ID Veh\u00edculo:138500",
+          "Modelo: S quattro | Potencia:503HP | ID Veh\u00edculo:143011"
+      ],
+      "Q2 (GAB, GAG) 2016": [
+          "Modelo: 1.4 TFSI | Potencia:150HP | ID Veh\u00edculo:119960",
+          "Modelo: 2.0 TDI quattro | Potencia:150HP | ID Veh\u00edculo:119966",
+          "Modelo: 40 TFSI quattro | Potencia:190HP | ID Veh\u00edculo:134844"
+      ],
+      "Q3 (8UB, 8UG) 2011-2020": [
+          "Modelo: 1.4 TSI | Potencia:150HP | ID Veh\u00edculo:100035",
+          "Modelo: 2.0 TDI quattro | Potencia:163HP | ID Veh\u00edculo:12036",
+          "Modelo: 2.0 TDI quattro | Potencia:177HP | ID Veh\u00edculo:11791",
+          "Modelo: 2.0 TDI quattro | Potencia:184HP | ID Veh\u00edculo:109422",
+          "Modelo: 2.0 TDI | Potencia:177HP | ID Veh\u00edculo:59273",
+          "Modelo: 2.0 TDI | Potencia:184HP | ID Veh\u00edculo:113346",
+          "Modelo: 2.0 TFSI quattro | Potencia:170HP | ID Veh\u00edculo:11794",
+          "Modelo: 2.0 TFSI quattro | Potencia:180HP | ID Veh\u00edculo:110615",
+          "Modelo: 2.0 TFSI quattro | Potencia:211HP | ID Veh\u00edculo:11792",
+          "Modelo: 2.0 TFSI quattro | Potencia:220HP | ID Veh\u00edculo:109423",
+          "Modelo: 2.0 TFSI | Potencia:180HP | ID Veh\u00edculo:113345",
+          "Modelo: RS performance 2.5 quattro | Potencia:367HP | ID Veh\u00edculo:119111"
+      ],
+      "Q3 (F3B) 2018": [
+          "Modelo: 35 TFSI | Potencia:150HP | ID Veh\u00edculo:137830",
+          "Modelo: 40 TFSI quattro | Potencia:180HP | ID Veh\u00edculo:143510"
+      ],
+      "Q3 Sportback (F3N) 2019": [
+          "Modelo: 2.5 RS quattro | Potencia:400HP | ID Veh\u00edculo:138452",
+          "Modelo: 35 TFSI | Potencia:150HP | ID Veh\u00edculo:139956",
+          "Modelo: 40 TFSI quattro | Potencia:179HP | ID Veh\u00edculo:141284"
+      ],
+      "Q5 (8RB) 2008-2017": [
+          "Modelo: 2.0 TFSI quattro | Potencia:211HP | ID Veh\u00edculo:27563",
+          "Modelo: 2.0 TFSI quattro | Potencia:224HP | ID Veh\u00edculo:56112",
+          "Modelo: 2.0 TFSI quattro | Potencia:230HP | ID Veh\u00edculo:116058",
+          "Modelo: 3.0 TDI quattro | Potencia:240HP | ID Veh\u00edculo:27565",
+          "Modelo: 3.0 TDI quattro | Potencia:245HP | ID Veh\u00edculo:56107",
+          "Modelo: 3.0 TFSI quattro | Potencia:272HP | ID Veh\u00edculo:56113",
+          "Modelo: 3.2 FSI quattro | Potencia:270HP | ID Veh\u00edculo:30740",
+          "Modelo: SQ5 TFSI quattro | Potencia:354HP | ID Veh\u00edculo:100066"
+      ],
+      "Q5 (FYB, FYG) 2016": [
+          "Modelo: 2.0 TFSI quattro | Potencia:252HP | ID Veh\u00edculo:123400",
+          "Modelo: 45 TFSI Mild Hybrid quattro | Potencia:249HP | ID Veh\u00edculo:146532",
+          "Modelo: SQ5 TFSI quattro | Potencia:354HP | ID Veh\u00edculo:125184"
+      ],
+      "Q5 Sportback (FYT) 2020": [
+          "Modelo: 45 TFSI Mild Hybrid quattro | Potencia:249HP | ID Veh\u00edculo:146533",
+          "Modelo: SQ5 TFSI quattro | Potencia:354HP | ID Veh\u00edculo:147714"
+      ],
+      "Q7 (4LB) 2006-2016": [
+          "Modelo: 3.0 TDI quattro | Potencia:204HP | ID Veh\u00edculo:34967",
+          "Modelo: 3.0 TDI quattro | Potencia:240HP | ID Veh\u00edculo:26563",
+          "Modelo: 3.0 TDI quattro | Potencia:245HP | ID Veh\u00edculo:10442",
+          "Modelo: 3.0 TFSI quattro | Potencia:272HP | ID Veh\u00edculo:34965",
+          "Modelo: 3.0 TFSI quattro | Potencia:333HP | ID Veh\u00edculo:34966",
+          "Modelo: 3.6 FSI quattro | Potencia:280HP | ID Veh\u00edculo:19803",
+          "Modelo: 4.2 FSI quattro | Potencia:350HP | ID Veh\u00edculo:19012",
+          "Modelo: 4.2 TDI quattro | Potencia:326HP | ID Veh\u00edculo:22558",
+          "Modelo: 4.2 TDI quattro | Potencia:340HP | ID Veh\u00edculo:31430",
+          "Modelo: 6.0 TDI quattro | Potencia:500HP | ID Veh\u00edculo:30693"
+      ],
+      "Q7 (4MB, 4MG) 2015": [
+          "Modelo: 2.0 TFSI quattro | Potencia:252HP | ID Veh\u00edculo:116623",
+          "Modelo: 3.0 TDI quattro | Potencia:249HP | ID Veh\u00edculo:113404",
+          "Modelo: 3.0 TDI quattro | Potencia:258HP | ID Veh\u00edculo:117857",
+          "Modelo: 3.0 TFSI quattro | Potencia:333HP | ID Veh\u00edculo:113152",
+          "Modelo: 55 TFSI Mild Hybrid quattro | Potencia:340HP | ID Veh\u00edculo:138273"
+      ],
+      "Q8 (4MN, 4MT) 2018": [
+          "Modelo: 55 TFSI Mild Hybrid quattro | Potencia:340HP | ID Veh\u00edculo:132302",
+          "Modelo: RS Mild Hybrid quattro | Potencia:600HP | ID Veh\u00edculo:138832"
+      ],
+      "R8 (422, 423) 2007-2015": [
+          "Modelo: 4.2 FSI quattro | Potencia:430HP | ID Veh\u00edculo:33658",
+          "Modelo: 5.2 FSI quattro | Potencia:525HP | ID Veh\u00edculo:32060",
+          "Modelo: 5.2 FSI quattro | Potencia:549HP | ID Veh\u00edculo:14762"
+      ],
+      "R8 (4S3, 4SP) 2015": [
+          "Modelo: 5.2 FSI quattro | Potencia:540HP | ID Veh\u00edculo:115738",
+          "Modelo: 5.2 FSI quattro | Potencia:620HP | ID Veh\u00edculo:135347"
+      ],
+      "R8 Spyder (427, 429) 2010-2015": [
+          "Modelo: 5.2 FSI quattro | Potencia:525HP | ID Veh\u00edculo:32062"
+      ],
+      "R8 Spyder (4S9, 4SR) 2016": [
+          "Modelo: 5.2 FSI quattro | Potencia:540HP | ID Veh\u00edculo:120716",
+          "Modelo: 5.2 FSI quattro | Potencia:620HP | ID Veh\u00edculo:135340"
+      ],
+      "TT (8J3) 2006-2015": [
+          "Modelo: 1 Coup\u00e9 (E82) | Potencia:211HP | ID Veh\u00edculo:6441",
+          "Modelo: 1.8 TFSI | Potencia:160HP | ID Veh\u00edculo:28278",
+          "Modelo: 2.0 TFSI | Potencia:200HP | ID Veh\u00edculo:19453",
+          "Modelo: 2.0 TTS quattro | Potencia:265HP | ID Veh\u00edculo:28404",
+          "Modelo: 2.0 TTS quattro | Potencia:272HP | ID Veh\u00edculo:24472",
+          "Modelo: 2.5 RS quattro | Potencia:340HP | ID Veh\u00edculo:31438",
+          "Modelo: 3.2 V6 quattro | Potencia:250HP | ID Veh\u00edculo:19454"
+      ],
+      "TT (8N3) 1998-2006": [
+          "Modelo: 1.8 T quattro | Potencia:180HP | ID Veh\u00edculo:9902",
+          "Modelo: 1.8 T quattro | Potencia:224HP | ID Veh\u00edculo:9903",
+          "Modelo: 1.8 T | Potencia:150HP | ID Veh\u00edculo:17143",
+          "Modelo: 1.8 T | Potencia:163HP | ID Veh\u00edculo:18942",
+          "Modelo: 1.8 T | Potencia:180HP | ID Veh\u00edculo:9901",
+          "Modelo: 1.8 T | Potencia:190HP | ID Veh\u00edculo:18944",
+          "Modelo: 3.2 VR6 quattro | Potencia:250HP | ID Veh\u00edculo:17144"
+      ],
+      "TT (FV3, FVP) 2014": [
+          "Modelo: 1.8 TFSI | Potencia:180HP | ID Veh\u00edculo:115102",
+          "Modelo: 2.0 TFSI quattro | Potencia:230HP | ID Veh\u00edculo:106597",
+          "Modelo: 2.0 TTS quattro | Potencia:286HP | ID Veh\u00edculo:115137",
+          "Modelo: 2.5 RS quattro | Potencia:400HP | ID Veh\u00edculo:121956"
+      ],
+      "TT Roadster (8J9) 2007-2014": [
+          "Modelo: 2.0 TFSI quattro | Potencia:200HP | ID Veh\u00edculo:31071",
+          "Modelo: 2.0 TFSI | Potencia:200HP | ID Veh\u00edculo:19806",
+          "Modelo: 2.0 TFSI | Potencia:211HP | ID Veh\u00edculo:6625",
+          "Modelo: 2.5 RS quattro | Potencia:340HP | ID Veh\u00edculo:31439",
+          "Modelo: 3.2 V6 quattro | Potencia:250HP | ID Veh\u00edculo:19807"
+      ],
+      "TT Roadster (8N9) 1999-2006": [
+          "Modelo: 1.8 T quattro | Potencia:180HP | ID Veh\u00edculo:11343",
+          "Modelo: 1.8 T quattro | Potencia:224HP | ID Veh\u00edculo:11344",
+          "Modelo: 1.8 T | Potencia:150HP | ID Veh\u00edculo:15656",
+          "Modelo: 1.8 T | Potencia:163HP | ID Veh\u00edculo:19239",
+          "Modelo: 1.8 T | Potencia:180HP | ID Veh\u00edculo:11342",
+          "Modelo: 1.8 T | Potencia:190HP | ID Veh\u00edculo:18945",
+          "Modelo: 3.2 VR6 quattro | Potencia:250HP | ID Veh\u00edculo:17472"
+      ],
+      "V8 (441, 442, 4C2, 4C8) 1988-1994": [
+          "Modelo: 3.6 quattro | Potencia:250HP | ID Veh\u00edculo:1348",
+          "Modelo: 4.2 quattro | Potencia:280HP | ID Veh\u00edculo:1349"
+      ]
   },
   "BMW": {
-    "3-Series 2DR": ["2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000"],
-    "3-Series 4DR": ["2011", "2010", "2009", "2008", "2007", "2006"],
-    "318TI": ["1998", "1997", "1996", "1995"],
-    "5-Series": ["2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999"],
-    "Z4": ["2008", "2007", "2006", "2005", "2004", "2003", "2002"]
+      "1 (E81) 2006-2012": [
+          "Modelo: 120 i | Potencia:156HP | ID Veh\u00edculo:30506",
+          "Modelo: 130 i | Potencia:258HP | ID Veh\u00edculo:31673",
+          "Modelo: 130 i | Potencia:265HP | ID Veh\u00edculo:18560"
+      ],
+      "1 (E87) 2003-2013": [
+          "Modelo: 118 i | Potencia:129HP | ID Veh\u00edculo:58185",
+          "Modelo: 120 i | Potencia:156HP | ID Veh\u00edculo:58218",
+          "Modelo: 130 i | Potencia:258HP | ID Veh\u00edculo:58233",
+          "Modelo: 130 i | Potencia:265HP | ID Veh\u00edculo:58238"
+      ],
+      "1 (F20) 2011-2019": [
+          "Modelo: 118 i | Potencia:136HP | ID Veh\u00edculo:115121",
+          "Modelo: 118 i | Potencia:170HP | ID Veh\u00edculo:10312",
+          "Modelo: 120 i | Potencia:177HP | ID Veh\u00edculo:110062"
+      ],
+      "1 (F21) 2011-2019": [
+          "Modelo: 118 i | Potencia:136HP | ID Veh\u00edculo:115122",
+          "Modelo: 118 i | Potencia:170HP | ID Veh\u00edculo:58355",
+          "Modelo: M 140 i | Potencia:340HP | ID Veh\u00edculo:120235"
+      ],
+      "1 (F40) 2019": [
+          "Modelo: 118 i | Potencia:140HP | ID Veh\u00edculo:136290",
+          "Modelo: 128 ti | Potencia:245HP | ID Veh\u00edculo:142173",
+          "Modelo: M 135 i xDrive | Potencia:306HP | ID Veh\u00edculo:136291"
+      ],
+      "1 (F52) 2017": [
+          "Modelo: 118 i | Potencia:136HP | ID Veh\u00edculo:131717",
+          "Modelo: 120 i | Potencia:192HP | ID Veh\u00edculo:131718"
+      ],
+      "1 Coup\u00e9 (E82) 2006-2013": [
+          "Modelo: 125 i | Potencia:218HP | ID Veh\u00edculo:25442",
+          "Modelo: 135 i | Potencia:306HP | ID Veh\u00edculo:23429",
+          "Modelo: M | Potencia:340HP | ID Veh\u00edculo:9877"
+      ],
+      "2 Coup\u00e9 (F22, F87) 2012-2021": [
+          "Modelo: 220 i | Potencia:184HP | ID Veh\u00edculo:58291",
+          "Modelo: M 235 i | Potencia:326HP | ID Veh\u00edculo:58294",
+          "Modelo: M 240 i | Potencia:340HP | ID Veh\u00edculo:120248",
+          "Modelo: M2 CS | Potencia:450HP | ID Veh\u00edculo:138130",
+          "Modelo: M2 Competition | Potencia:411HP | ID Veh\u00edculo:130898",
+          "Modelo: M2 | Potencia:370HP | ID Veh\u00edculo:117272"
+      ],
+      "2 Coup\u00e9 (G42, G87) 2021": [
+          "Modelo: 220 i | Potencia:184HP | ID Veh\u00edculo:144697",
+          "Modelo: M2 | Potencia:460HP | ID Veh\u00edculo:151467",
+          "Modelo: M240 i | Potencia:387HP | ID Veh\u00edculo:150858"
+      ],
+      "2 Descapotable (F23) 2014-2021": [
+          "Modelo: 220 i | Potencia:184HP | ID Veh\u00edculo:120250",
+          "Modelo: M 240 i | Potencia:340HP | ID Veh\u00edculo:120252"
+      ],
+      "2 Gran Coupe (F44) 2019": [
+          "Modelo: 220 i | Potencia:192HP | ID Veh\u00edculo:141726",
+          "Modelo: M 235 i xDrive | Potencia:306HP | ID Veh\u00edculo:137172"
+      ],
+      "2 Gran Tourer (F46) 2014": [
+          "Modelo: 220 i | Potencia:192HP | ID Veh\u00edculo:111074"
+      ],
+      "3 (E36) 1990-1998": [
+          "Modelo: 323 i | Potencia:170HP | ID Veh\u00edculo:4628",
+          "Modelo: 325 i | Potencia:192HP | ID Veh\u00edculo:59",
+          "Modelo: 328 i | Potencia:193HP | ID Veh\u00edculo:4627",
+          "Modelo: M3 3.2 | Potencia:321HP | ID Veh\u00edculo:5112"
+      ],
+      "3 (E46) 1997-2005": [
+          "Modelo: 320 i | Potencia:170HP | ID Veh\u00edculo:15452",
+          "Modelo: 323 ti | Potencia:170HP | ID Veh\u00edculo:9091",
+          "Modelo: 325 i | Potencia:192HP | ID Veh\u00edculo:15454",
+          "Modelo: 325 xi | Potencia:186HP | ID Veh\u00edculo:35677",
+          "Modelo: 328 i | Potencia:193HP | ID Veh\u00edculo:8964",
+          "Modelo: 330 xi | Potencia:231HP | ID Veh\u00edculo:14802"
+      ],
+      "3 (E90) 2004-2012": [
+          "Modelo: 320 i | Potencia:150HP | ID Veh\u00edculo:18449",
+          "Modelo: 323 i | Potencia:177HP | ID Veh\u00edculo:28018",
+          "Modelo: 325 i xDrive | Potencia:218HP | ID Veh\u00edculo:31028",
+          "Modelo: 325 i | Potencia:190HP | ID Veh\u00edculo:55937",
+          "Modelo: 325 i | Potencia:218HP | ID Veh\u00edculo:18450",
+          "Modelo: 325 xi | Potencia:218HP | ID Veh\u00edculo:19101",
+          "Modelo: 335 i xDrive | Potencia:306HP | ID Veh\u00edculo:31030",
+          "Modelo: 335 i | Potencia:305HP | ID Veh\u00edculo:28389",
+          "Modelo: 335 i | Potencia:306HP | ID Veh\u00edculo:19833",
+          "Modelo: 335 xi | Potencia:305HP | ID Veh\u00edculo:105987"
+      ],
+      "3 (F30, F80) 2011-2018": [
+          "Modelo: 318 i | Potencia:136HP | ID Veh\u00edculo:113405",
+          "Modelo: 320 i | Potencia:184HP | ID Veh\u00edculo:116010",
+          "Modelo: 320 i | Potencia:184HP | ID Veh\u00edculo:27670",
+          "Modelo: 328 i ActiveFlex | Potencia:245HP | ID Veh\u00edculo:107830",
+          "Modelo: 328 i | Potencia:245HP | ID Veh\u00edculo:12470",
+          "Modelo: 328i | Potencia:305HP | ID Veh\u00edculo:127077",
+          "Modelo: 330 e | Potencia:252HP | ID Veh\u00edculo:117341",
+          "Modelo: 330 i | Potencia:252HP | ID Veh\u00edculo:113407",
+          "Modelo: 335 i | Potencia:306HP | ID Veh\u00edculo:12471",
+          "Modelo: 340 i | Potencia:326HP | ID Veh\u00edculo:113409",
+          "Modelo: M3 | Potencia:431HP | ID Veh\u00edculo:100819"
+      ],
+      "3 (G20, G80, G28) 2018": [
+          "Modelo: 320 i | Potencia:184HP | ID Veh\u00edculo:135053",
+          "Modelo: 330 e Plug-in-Hybrid | Potencia:292HP | ID Veh\u00edculo:140967",
+          "Modelo: 330 i | Potencia:258HP | ID Veh\u00edculo:133248",
+          "Modelo: M3 CS xDrive | Potencia:551HP | ID Veh\u00edculo:152065",
+          "Modelo: M3 Competition | Potencia:510HP | ID Veh\u00edculo:141794"
+      ],
+      "3 Compact (E36) 1994-2000": [
+          "Modelo: 323 ti | Potencia:170HP | ID Veh\u00edculo:8784"
+      ],
+      "3 Compact (E46) 2001-2005": [
+          "Modelo: 325 ti | Potencia:192HP | ID Veh\u00edculo:15925"
+      ],
+      "3 Coup\u00e9 (E36) 1991-1999": [
+          "Modelo: 325 i | Potencia:192HP | ID Veh\u00edculo:61",
+          "Modelo: M3 3.0 | Potencia:286HP | ID Veh\u00edculo:3842",
+          "Modelo: M3 3.0 | Potencia:295HP | ID Veh\u00edculo:4733",
+          "Modelo: M3 3.2 | Potencia:321HP | ID Veh\u00edculo:5113"
+      ],
+      "3 Coup\u00e9 (E46) 1998-2006": [
+          "Modelo: 325 Ci | Potencia:192HP | ID Veh\u00edculo:15449",
+          "Modelo: 328 Ci | Potencia:193HP | ID Veh\u00edculo:10503",
+          "Modelo: 330 Ci | Potencia:231HP | ID Veh\u00edculo:30325",
+          "Modelo: M3 CSL | Potencia:360HP | ID Veh\u00edculo:17440",
+          "Modelo: M3 | Potencia:343HP | ID Veh\u00edculo:14776"
+      ],
+      "3 Coup\u00e9 (E92) 2005-2013": [
+          "Modelo: 325 i | Potencia:218HP | ID Veh\u00edculo:19919",
+          "Modelo: 325 i | Potencia:218HP | ID Veh\u00edculo:25483",
+          "Modelo: 325 xi | Potencia:218HP | ID Veh\u00edculo:19930",
+          "Modelo: 330 i xDrive | Potencia:272HP | ID Veh\u00edculo:31037",
+          "Modelo: 330 xi | Potencia:258HP | ID Veh\u00edculo:20684",
+          "Modelo: 335 i | Potencia:306HP | ID Veh\u00edculo:19567",
+          "Modelo: M3 | Potencia:420HP | ID Veh\u00edculo:22939"
+      ],
+      "3 Descapotable (E36) 1993-1999": [
+          "Modelo: 325 i | Potencia:192HP | ID Veh\u00edculo:303",
+          "Modelo: 328 i | Potencia:193HP | ID Veh\u00edculo:4630",
+          "Modelo: M3 3.0 | Potencia:286HP | ID Veh\u00edculo:3845"
+      ],
+      "3 Descapotable (E46) 2000-2007": [
+          "Modelo: 325 Ci | Potencia:192HP | ID Veh\u00edculo:15451",
+          "Modelo: 330 Ci | Potencia:231HP | ID Veh\u00edculo:14926",
+          "Modelo: M3 | Potencia:343HP | ID Veh\u00edculo:15635"
+      ],
+      "3 Descapotable (E93) 2006-2013": [
+          "Modelo: 325 i | Potencia:218HP | ID Veh\u00edculo:22536",
+          "Modelo: 325 i | Potencia:218HP | ID Veh\u00edculo:22957",
+          "Modelo: 335 i | Potencia:305HP | ID Veh\u00edculo:126971",
+          "Modelo: 335 i | Potencia:306HP | ID Veh\u00edculo:22538",
+          "Modelo: M3 | Potencia:420HP | ID Veh\u00edculo:26590"
+      ],
+      "3 Touring (E46) 1999-2005": [
+          "Modelo: 320 i | Potencia:170HP | ID Veh\u00edculo:15453"
+      ],
+      "4 Coup\u00e9 (F32, F82) 2013-2020": [
+          "Modelo: 420 i | Potencia:184HP | ID Veh\u00edculo:49226",
+          "Modelo: 428 i | Potencia:245HP | ID Veh\u00edculo:59805",
+          "Modelo: 430 i | Potencia:252HP | ID Veh\u00edculo:118079",
+          "Modelo: 435 d xDrive | Potencia:313HP | ID Veh\u00edculo:52003",
+          "Modelo: 435 i | Potencia:306HP | ID Veh\u00edculo:59807",
+          "Modelo: 440 i | Potencia:326HP | ID Veh\u00edculo:118082",
+          "Modelo: M4 CS | Potencia:460HP | ID Veh\u00edculo:127860",
+          "Modelo: M4 | Potencia:431HP | ID Veh\u00edculo:100821"
+      ],
+      "4 Coup\u00e9 (G22, G82) 2020": [
+          "Modelo: 430 i | Potencia:258HP | ID Veh\u00edculo:140443",
+          "Modelo: M 440 i Mild-Hybrid xDrive | Potencia:387HP | ID Veh\u00edculo:140440",
+          "Modelo: M4 Competition | Potencia:510HP | ID Veh\u00edculo:141796"
+      ],
+      "4 Descapotable (F33, F83) 2013-2020": [
+          "Modelo: 428 i | Potencia:245HP | ID Veh\u00edculo:58299",
+          "Modelo: 430 i | Potencia:252HP | ID Veh\u00edculo:118179",
+          "Modelo: 435 i | Potencia:306HP | ID Veh\u00edculo:58292",
+          "Modelo: 440 i xDrive | Potencia:326HP | ID Veh\u00edculo:118182",
+          "Modelo: 440 i | Potencia:326HP | ID Veh\u00edculo:118181",
+          "Modelo: M4 Competition | Potencia:450HP | ID Veh\u00edculo:118193",
+          "Modelo: M4 | Potencia:431HP | ID Veh\u00edculo:105899"
+      ],
+      "4 Descapotable (G23, G83) 2020": [
+          "Modelo: 430 i | Potencia:258HP | ID Veh\u00edculo:142118",
+          "Modelo: M 440 i Mild-Hybrid xDrive | Potencia:387HP | ID Veh\u00edculo:142119"
+      ],
+      "4 Gran Coupe (F36) 2014-2021": [
+          "Modelo: 420 i | Potencia:184HP | ID Veh\u00edculo:100851",
+          "Modelo: 428 i | Potencia:245HP | ID Veh\u00edculo:100852",
+          "Modelo: 430 i | Potencia:252HP | ID Veh\u00edculo:118184",
+          "Modelo: 435 i | Potencia:306HP | ID Veh\u00edculo:100843",
+          "Modelo: 440 i | Potencia:326HP | ID Veh\u00edculo:118186"
+      ],
+      "4 Gran Coupe (G26) 2021": [
+          "Modelo: M440 i Mild-Hybrid xDrive | Potencia:387HP | ID Veh\u00edculo:145349"
+      ],
+      "5 (E34) 1987-1995": [
+          "Modelo: 540 i V8 | Potencia:286HP | ID Veh\u00edculo:250"
+      ],
+      "5 (E39) 1995-2003": [
+          "Modelo: 523 i | Potencia:170HP | ID Veh\u00edculo:5093",
+          "Modelo: 525 i | Potencia:192HP | ID Veh\u00edculo:15270",
+          "Modelo: 528 i | Potencia:193HP | ID Veh\u00edculo:5094",
+          "Modelo: 530 i | Potencia:231HP | ID Veh\u00edculo:15271",
+          "Modelo: 540 i | Potencia:286HP | ID Veh\u00edculo:5404"
+      ],
+      "5 (E60) 2001-2010": [
+          "Modelo: 523 i | Potencia:177HP | ID Veh\u00edculo:19013",
+          "Modelo: 525 i | Potencia:186HP | ID Veh\u00edculo:16022",
+          "Modelo: 525 i | Potencia:192HP | ID Veh\u00edculo:17293",
+          "Modelo: 525 i | Potencia:218HP | ID Veh\u00edculo:139265",
+          "Modelo: 525 i | Potencia:218HP | ID Veh\u00edculo:19018",
+          "Modelo: 525 i | Potencia:218HP | ID Veh\u00edculo:22657",
+          "Modelo: 530 i | Potencia:258HP | ID Veh\u00edculo:19007",
+          "Modelo: 530 xi | Potencia:258HP | ID Veh\u00edculo:19096",
+          "Modelo: 530 xi | Potencia:272HP | ID Veh\u00edculo:129618",
+          "Modelo: 530 xi | Potencia:272HP | ID Veh\u00edculo:22664",
+          "Modelo: 535 i | Potencia:306HP | ID Veh\u00edculo:25092",
+          "Modelo: 545 i | Potencia:333HP | ID Veh\u00edculo:17294",
+          "Modelo: 550 i | Potencia:367HP | ID Veh\u00edculo:19021",
+          "Modelo: M5 | Potencia:507HP | ID Veh\u00edculo:18252"
+      ],
+      "5 (F10) 2009-2016": [
+          "Modelo: 520 i | Potencia:184HP | ID Veh\u00edculo:11832",
+          "Modelo: 523 i | Potencia:204HP | ID Veh\u00edculo:14030",
+          "Modelo: 528 i | Potencia:245HP | ID Veh\u00edculo:11833",
+          "Modelo: 528 i | Potencia:258HP | ID Veh\u00edculo:33007",
+          "Modelo: 535 i | Potencia:305HP | ID Veh\u00edculo:53673",
+          "Modelo: 535 i | Potencia:306HP | ID Veh\u00edculo:33008",
+          "Modelo: 550 i | Potencia:408HP | ID Veh\u00edculo:33009",
+          "Modelo: 550 i | Potencia:449HP | ID Veh\u00edculo:59756",
+          "Modelo: ActiveHybrid | Potencia:340HP | ID Veh\u00edculo:11856",
+          "Modelo: M5 Competition | Potencia:575HP | ID Veh\u00edculo:100907",
+          "Modelo: M5 | Potencia:560HP | ID Veh\u00edculo:12689"
+      ],
+      "5 (G30, F90) 2016": [
+          "Modelo: 520 i | Potencia:184HP | ID Veh\u00edculo:128091",
+          "Modelo: 530 e Plug-in-Hybrid | Potencia:292HP | ID Veh\u00edculo:141450",
+          "Modelo: 530 i | Potencia:252HP | ID Veh\u00edculo:123333",
+          "Modelo: 540 i | Potencia:340HP | ID Veh\u00edculo:123340",
+          "Modelo: M 550 i xDrive | Potencia:462HP | ID Veh\u00edculo:123344",
+          "Modelo: M 550 i xDrive | Potencia:530HP | ID Veh\u00edculo:136305",
+          "Modelo: M5 CS | Potencia:635HP | ID Veh\u00edculo:143416",
+          "Modelo: M5 Competition | Potencia:625HP | ID Veh\u00edculo:131130",
+          "Modelo: M5 | Potencia:600HP | ID Veh\u00edculo:128183"
+      ],
+      "5 (G60) 2023": [
+          "Modelo: i5 M60 xDrive | Potencia:601HP | ID Veh\u00edculo:154719",
+          "Modelo: i5 eDrive40 | Potencia:340HP | ID Veh\u00edculo:154718"
+      ],
+      "5 Gran Turismo (F07) 2009-2017": [
+          "Modelo: 535 i | Potencia:306HP | ID Veh\u00edculo:32106",
+          "Modelo: 550 i | Potencia:408HP | ID Veh\u00edculo:32107"
+      ],
+      "5 Touring (E34) 1991-1996": [
+          "Modelo: 540 i | Potencia:286HP | ID Veh\u00edculo:3727"
+      ],
+      "6 (E63) 2003-2010": [
+          "Modelo: 645 Ci | Potencia:333HP | ID Veh\u00edculo:17814",
+          "Modelo: 650 Ci | Potencia:367HP | ID Veh\u00edculo:18999",
+          "Modelo: M | Potencia:507HP | ID Veh\u00edculo:19201"
+      ],
+      "6 Coup\u00e9 (F13) 2011-2017": [
+          "Modelo: 640 i | Potencia:320HP | ID Veh\u00edculo:8272",
+          "Modelo: 650 i | Potencia:408HP | ID Veh\u00edculo:8284",
+          "Modelo: 650 i | Potencia:452HP | ID Veh\u00edculo:107063",
+          "Modelo: M6 Competition | Potencia:575HP | ID Veh\u00edculo:100910"
+      ],
+      "6 Descapotable (E64) 2004-2010": [
+          "Modelo: 645 Ci | Potencia:333HP | ID Veh\u00edculo:17815",
+          "Modelo: 650 Ci | Potencia:367HP | ID Veh\u00edculo:18997",
+          "Modelo: M6 | Potencia:507HP | ID Veh\u00edculo:19910"
+      ],
+      "6 Descapotable (F12) 2010-2018": [
+          "Modelo: 650 i | Potencia:408HP | ID Veh\u00edculo:8268",
+          "Modelo: 650 i | Potencia:452HP | ID Veh\u00edculo:107062"
+      ],
+      "6 Gran Coupe (F06) 2012-2018": [
+          "Modelo: 650 i | Potencia:449HP | ID Veh\u00edculo:58439",
+          "Modelo: 650 i | Potencia:452HP | ID Veh\u00edculo:107061",
+          "Modelo: M6 Competition | Potencia:575HP | ID Veh\u00edculo:100912",
+          "Modelo: M6 Competition | Potencia:600HP | ID Veh\u00edculo:113739",
+          "Modelo: M6 | Potencia:560HP | ID Veh\u00edculo:59231"
+      ],
+      "7 (E32) 1985-1994": [
+          "Modelo: 740 i, iL V8 | Potencia:286HP | ID Veh\u00edculo:290",
+          "Modelo: 750 i, iL V12 | Potencia:300HP | ID Veh\u00edculo:291"
+      ],
+      "7 (E38) 1994-2001": [
+          "Modelo: 740 i, iL | Potencia:286HP | ID Veh\u00edculo:3814",
+          "Modelo: 740 i, iL | Potencia:286HP | ID Veh\u00edculo:5104",
+          "Modelo: 750 i, iL | Potencia:326HP | ID Veh\u00edculo:3815"
+      ],
+      "7 (E65, E66, E67) 2001-2009": [
+          "Modelo: 745 i, Li | Potencia:333HP | ID Veh\u00edculo:16179",
+          "Modelo: 750 i, Li | Potencia:367HP | ID Veh\u00edculo:18984",
+          "Modelo: 760 i, Li | Potencia:445HP | ID Veh\u00edculo:17151"
+      ],
+      "7 (F01, F02, F03, F04) 2008-2015": [
+          "Modelo: 740 i, Li | Potencia:320HP | ID Veh\u00edculo:55352",
+          "Modelo: 740 i, Li | Potencia:326HP | ID Veh\u00edculo:29945",
+          "Modelo: 750 Li | Potencia:405HP | ID Veh\u00edculo:56610",
+          "Modelo: 750 i, Li | Potencia:408HP | ID Veh\u00edculo:29946",
+          "Modelo: 760 i, Li | Potencia:544HP | ID Veh\u00edculo:32104"
+      ],
+      "7 (G11, G12) 2015-2022": [
+          "Modelo: 740 e, Le | Potencia:326HP | ID Veh\u00edculo:119083",
+          "Modelo: 740 i, Li | Potencia:326HP | ID Veh\u00edculo:114061",
+          "Modelo: 745 e, Le Plug-in-Hybrid | Potencia:394HP | ID Veh\u00edculo:135026",
+          "Modelo: 750 i, Li xDrive | Potencia:530HP | ID Veh\u00edculo:135033",
+          "Modelo: 750 i, Li | Potencia:449HP | ID Veh\u00edculo:116785",
+          "Modelo: M 760 i, Li xDrive | Potencia:610HP | ID Veh\u00edculo:120288"
+      ],
+      "7 (G70) 2022": [
+          "Modelo: 750e Plug-in Hybrid xDrive | Potencia:489HP | ID Veh\u00edculo:147487",
+          "Modelo: M760i xDrive | Potencia:544HP | ID Veh\u00edculo:149410",
+          "Modelo: i7 M70 xDrive | Potencia:659HP | ID Veh\u00edculo:154577",
+          "Modelo: i7 eDrive50, L | Potencia:455HP | ID Veh\u00edculo:153523"
+      ],
+      "8 (E31) 1990-1999": [
+          "Modelo: 850 CSi | Potencia:380HP | ID Veh\u00edculo:3843",
+          "Modelo: 850 Ci | Potencia:326HP | ID Veh\u00edculo:3816",
+          "Modelo: 850 i, Ci | Potencia:300HP | ID Veh\u00edculo:292"
+      ],
+      "8 Coup\u00e9 (G15, F92) 2018": [
+          "Modelo: M 850 i xDrive | Potencia:530HP | ID Veh\u00edculo:131615",
+          "Modelo: M8 Competition | Potencia:625HP | ID Veh\u00edculo:136370"
+      ],
+      "8 Descapotable (G14, F91) 2018": [
+          "Modelo: M 850 i xDrive | Potencia:530HP | ID Veh\u00edculo:133296"
+      ],
+      "8 Gran Coupe (G16, F93) 2019": [
+          "Modelo: M 850 i xDrive | Potencia:530HP | ID Veh\u00edculo:136519",
+          "Modelo: M8 Competition | Potencia:625HP | ID Veh\u00edculo:137799"
+      ],
+      "X1 (E84) 2009-2015": [
+          "Modelo: sDrive 20 i | Potencia:184HP | ID Veh\u00edculo:11952",
+          "Modelo: xDrive 20 i | Potencia:184HP | ID Veh\u00edculo:11953",
+          "Modelo: xDrive 25 i | Potencia:218HP | ID Veh\u00edculo:34993",
+          "Modelo: xDrive 28 i Flex | Potencia:245HP | ID Veh\u00edculo:119106",
+          "Modelo: xDrive 28 i | Potencia:245HP | ID Veh\u00edculo:10030",
+          "Modelo: xDrive 28 i | Potencia:258HP | ID Veh\u00edculo:32112"
+      ],
+      "X1 (F48) 2014-2022": [
+          "Modelo: sDrive 18 i | Potencia:136HP | ID Veh\u00edculo:116109",
+          "Modelo: sDrive 20 i | Potencia:192HP | ID Veh\u00edculo:116632",
+          "Modelo: xDrive 20 i | Potencia:192HP | ID Veh\u00edculo:115200"
+      ],
+      "X1 (U11) 2022": [
+          "Modelo: iX1 xDrive 30 | Potencia:272HP | ID Veh\u00edculo:155591",
+          "Modelo: sDrive 18 i | Potencia:156HP | ID Veh\u00edculo:148058",
+          "Modelo: sDrive 20 i Mild-Hybrid | Potencia:170HP | ID Veh\u00edculo:150698",
+          "Modelo: xDrive 25 e Plug-in-Hybrid | Potencia:245HP | ID Veh\u00edculo:148062"
+      ],
+      "X2 (F39) 2017-2023": [
+          "Modelo: M35 i | Potencia:306HP | ID Veh\u00edculo:133261",
+          "Modelo: sDrive 18 i | Potencia:140HP | ID Veh\u00edculo:130087",
+          "Modelo: sDrive 20 i | Potencia:192HP | ID Veh\u00edculo:129032"
+      ],
+      "X3 SAV (E83) 2003-2011": [
+          "Modelo: 2.5 i | Potencia:192HP | ID Veh\u00edculo:17812",
+          "Modelo: 2.5 si | Potencia:218HP | ID Veh\u00edculo:19828",
+          "Modelo: 3.0 si | Potencia:272HP | ID Veh\u00edculo:19827",
+          "Modelo: xDrive 20 i | Potencia:150HP | ID Veh\u00edculo:31008",
+          "Modelo: xDrive 25 i | Potencia:218HP | ID Veh\u00edculo:31009",
+          "Modelo: xDrive 30 i | Potencia:218HP | ID Veh\u00edculo:16469",
+          "Modelo: xDrive 30 i | Potencia:272HP | ID Veh\u00edculo:31010"
+      ],
+      "X3 SAV (F25) 2010-2017": [
+          "Modelo: xDrive 20 i | Potencia:184HP | ID Veh\u00edculo:11954",
+          "Modelo: xDrive 28 i | Potencia:245HP | ID Veh\u00edculo:55252",
+          "Modelo: xDrive 28 i | Potencia:258HP | ID Veh\u00edculo:10031",
+          "Modelo: xDrive28i | Potencia:306HP | ID Veh\u00edculo:33777"
+      ],
+      "X3 SAV (G01, F97) 2017": [
+          "Modelo: M Competition | Potencia:510HP | ID Veh\u00edculo:135354",
+          "Modelo: M | Potencia:480HP | ID Veh\u00edculo:135353",
+          "Modelo: xDrive 20 i Mild Hybrid | Potencia:184HP | ID Veh\u00edculo:145623",
+          "Modelo: xDrive 20 i | Potencia:184HP | ID Veh\u00edculo:127857",
+          "Modelo: xDrive 30 e Plug-in-Hybrid | Potencia:292HP | ID Veh\u00edculo:135708",
+          "Modelo: xDrive 30 i Mild Hybrid | Potencia:245HP | ID Veh\u00edculo:145622",
+          "Modelo: xDrive 30 i | Potencia:252HP | ID Veh\u00edculo:127856",
+          "Modelo: xDrive M40 i | Potencia:360HP | ID Veh\u00edculo:127852",
+          "Modelo: xDrive M40 i | Potencia:387HP | ID Veh\u00edculo:139649"
+      ],
+      "X4 (F26) 2013-2018": [
+          "Modelo: M 40 i | Potencia:360HP | ID Veh\u00edculo:117711",
+          "Modelo: xDrive 28 i | Potencia:245HP | ID Veh\u00edculo:101047",
+          "Modelo: xDrive 35 i | Potencia:306HP | ID Veh\u00edculo:101048"
+      ],
+      "X4 (G02, F98) 2018": [
+          "Modelo: M Competition | Potencia:510HP | ID Veh\u00edculo:135356",
+          "Modelo: M | Potencia:480HP | ID Veh\u00edculo:135355",
+          "Modelo: xDrive 30 i Mild Hybrid | Potencia:245HP | ID Veh\u00edculo:145800",
+          "Modelo: xDrive 30 i | Potencia:252HP | ID Veh\u00edculo:130244",
+          "Modelo: xDrive M40 i | Potencia:360HP | ID Veh\u00edculo:135107",
+          "Modelo: xDrive M40 i | Potencia:387HP | ID Veh\u00edculo:141802"
+      ],
+      "X5 SAV (E53) 2000-2006": [
+          "Modelo: 3.0 i | Potencia:231HP | ID Veh\u00edculo:17176",
+          "Modelo: 4.4 i | Potencia:286HP | ID Veh\u00edculo:13042",
+          "Modelo: 4.8 is | Potencia:360HP | ID Veh\u00edculo:18044"
+      ],
+      "X5 SAV (E70) 2006-2013": [
+          "Modelo: 3.0 si | Potencia:272HP | ID Veh\u00edculo:23280",
+          "Modelo: 4.8 i xDrive | Potencia:355HP | ID Veh\u00edculo:23281",
+          "Modelo: M | Potencia:555HP | ID Veh\u00edculo:31960",
+          "Modelo: xDrive 30 i | Potencia:272HP | ID Veh\u00edculo:30906",
+          "Modelo: xDrive 30 i | Potencia:306HP | ID Veh\u00edculo:1103",
+          "Modelo: xDrive 40 i | Potencia:306HP | ID Veh\u00edculo:120501",
+          "Modelo: xDrive 48 i | Potencia:355HP | ID Veh\u00edculo:30907",
+          "Modelo: xDrive 50 i | Potencia:408HP | ID Veh\u00edculo:8292"
+      ],
+      "X5 SAV (F15, F85) 2013-2018": [
+          "Modelo: M | Potencia:575HP | ID Veh\u00edculo:108622",
+          "Modelo: xDrive 35 i | Potencia:306HP | ID Veh\u00edculo:100268",
+          "Modelo: xDrive 40e | Potencia:313HP | ID Veh\u00edculo:113842",
+          "Modelo: xDrive 50 i | Potencia:449HP | ID Veh\u00edculo:20743",
+          "Modelo: xDrive 50 i | Potencia:452HP | ID Veh\u00edculo:107069"
+      ],
+      "X5 SAV (G05, F95) 2018": [
+          "Modelo: 50 e Plug-in-Hybrid xDrive | Potencia:489HP | ID Veh\u00edculo:152808",
+          "Modelo: M Competition | Potencia:625HP | ID Veh\u00edculo:137787",
+          "Modelo: xDrive 40 i | Potencia:340HP | ID Veh\u00edculo:131416",
+          "Modelo: xDrive 45 e Plug-in-Hybrid | Potencia:394HP | ID Veh\u00edculo:133260",
+          "Modelo: xDrive 50 i | Potencia:462HP | ID Veh\u00edculo:131417",
+          "Modelo: xDrive M50 i | Potencia:530HP | ID Veh\u00edculo:136647"
+      ],
+      "X6 SAC (E71, E72) 2007-2015": [
+          "Modelo: M | Potencia:449HP | ID Veh\u00edculo:52831",
+          "Modelo: M | Potencia:555HP | ID Veh\u00edculo:31961",
+          "Modelo: xDrive 35 i | Potencia:306HP | ID Veh\u00edculo:31004",
+          "Modelo: xDrive 35 i | Potencia:320HP | ID Veh\u00edculo:55254",
+          "Modelo: xDrive 50 i | Potencia:408HP | ID Veh\u00edculo:31005"
+      ],
+      "X6 SAC (F16, F86) 2014-2019": [
+          "Modelo: M | Potencia:575HP | ID Veh\u00edculo:108623",
+          "Modelo: xDrive 35 i | Potencia:306HP | ID Veh\u00edculo:108002",
+          "Modelo: xDrive 50 i | Potencia:449HP | ID Veh\u00edculo:106409"
+      ],
+      "X6 SAC (G06, F96) 2019": [
+          "Modelo: M Competition | Potencia:625HP | ID Veh\u00edculo:137789",
+          "Modelo: xDrive 40 i | Potencia:340HP | ID Veh\u00edculo:136645",
+          "Modelo: xDrive M50 i A las 4 ruedas | Potencia:530HP | ID Veh\u00edculo:136646"
+      ],
+      "X7 (G07) 2019": [
+          "Modelo: xDrive 40 i Mild-Hybrid | Potencia:381HP | ID Veh\u00edculo:148360",
+          "Modelo: xDrive 40 i | Potencia:340HP | ID Veh\u00edculo:133483",
+          "Modelo: xDrive 50 i | Potencia:462HP | ID Veh\u00edculo:133484"
+      ],
+      "XM (G09) 2022": [
+          "Modelo: XM A las 4 ruedas | Potencia:653HP | ID Veh\u00edculo:151349"
+      ],
+      "Z3 Coup\u00e9 (E36) 1997-2003": [
+          "Modelo: 2.8 i | Potencia:193HP | ID Veh\u00edculo:8829",
+          "Modelo: M 3.2 | Potencia:239HP | ID Veh\u00edculo:35801"
+      ],
+      "Z3 Roadster (E36) 1995-2003": [
+          "Modelo: 2.0 i | Potencia:150HP | ID Veh\u00edculo:11299",
+          "Modelo: 2.2 i | Potencia:170HP | ID Veh\u00edculo:15167",
+          "Modelo: 2.8 i | Potencia:193HP | ID Veh\u00edculo:7746",
+          "Modelo: 3.0 i | Potencia:231HP | ID Veh\u00edculo:14924",
+          "Modelo: SLK (R171) | Potencia:140HP | ID Veh\u00edculo:5109"
+      ],
+      "Z4 Coup\u00e9 (E86) 2006-2009": [
+          "Modelo: M | Potencia:343HP | ID Veh\u00edculo:19909"
+      ],
+      "Z4 Roadster (E85) 2002-2009": [
+          "Modelo: 2.5 i | Potencia:192HP | ID Veh\u00edculo:16829",
+          "Modelo: 2.5 si | Potencia:218HP | ID Veh\u00edculo:19259",
+          "Modelo: 3.0 i | Potencia:231HP | ID Veh\u00edculo:16828",
+          "Modelo: M | Potencia:343HP | ID Veh\u00edculo:19908"
+      ],
+      "Z4 Roadster (E89) 2009-2016": [
+          "Modelo: sDrive 18 i | Potencia:156HP | ID Veh\u00edculo:58751",
+          "Modelo: sDrive 20 i | Potencia:184HP | ID Veh\u00edculo:11889",
+          "Modelo: sDrive 23 i | Potencia:204HP | ID Veh\u00edculo:31016",
+          "Modelo: sDrive 35 is | Potencia:340HP | ID Veh\u00edculo:34986"
+      ],
+      "Z4 Roadster (G29) 2018": [
+          "Modelo: M40 i | Potencia:340HP | ID Veh\u00edculo:133253",
+          "Modelo: sDrive 20 i | Potencia:197HP | ID Veh\u00edculo:133251"
+      ],
+      "Z8 Roadster (E52) 2000-2003": [
+          "Modelo: 4.9 | Potencia:400HP | ID Veh\u00edculo:12755"
+      ],
+      "i3 (I01) 2013": [
+          "Modelo: Electric | Potencia:170HP | ID Veh\u00edculo:108045",
+          "Modelo: Range Extender | Potencia:170HP | ID Veh\u00edculo:108046",
+          "Modelo: s Electric | Potencia:184HP | ID Veh\u00edculo:128458",
+          "Modelo: s Range Extender | Potencia:184HP | ID Veh\u00edculo:128459"
+      ],
+      "i4 (G26) 2021": [
+          "Modelo: M50 A las 4 ruedas | Potencia:544HP | ID Veh\u00edculo:144689",
+          "Modelo: eDrive40 | Potencia:340HP | ID Veh\u00edculo:144688"
+      ],
+      "i8 (I12) 2014-2020": [
+          "Modelo: hybrid | Potencia:362HP | ID Veh\u00edculo:109678",
+          "Modelo: hybrid | Potencia:374HP | ID Veh\u00edculo:129466"
+      ],
+      "i8 Roadster (I15) 2018-2020": [
+          "Modelo: hybrid | Potencia:374HP | ID Veh\u00edculo:129467"
+      ],
+      "iX (I20) 2021": [
+          "Modelo: xDrive 40 | Potencia:326HP | ID Veh\u00edculo:144686",
+          "Modelo: xDrive 50 | Potencia:523HP | ID Veh\u00edculo:144687",
+          "Modelo: xDrive M60 | Potencia:619HP | ID Veh\u00edculo:146387"
+      ],
+      "iX3 (G08) 2020": [
+          "Modelo: Electric | Potencia:109HP | ID Veh\u00edculo:141226",
+          "Modelo: Electric | Potencia:286HP | ID Veh\u00edculo:141225"
+      ]
   },
-  "Buick": {
-    "Century": ["2004", "2003", "2002", "2001", "2000", "1999", "1998"],
-    "Lacrosse": ["2013", "2012", "2011", "2010"],
-    "Lucerne": ["2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006"],
-    "Regal": ["2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997"]
+  "CUPRA": {
+      "ATECA (KH7, KHP, KBP) 2018": [
+          "Modelo: 2.0 TSI 4Drive | Potencia:300HP | ID Veh\u00edculo:133290"
+      ],
+      "FORMENTOR (KM7) 2020": [
+          "Modelo: 2.0 TSI 4Drive | Potencia:190HP | ID Veh\u00edculo:143544",
+          "Modelo: 2.0 TSI 4Drive | Potencia:310HP | ID Veh\u00edculo:142277",
+          "Modelo: 2.0 TSI | Potencia:190HP | ID Veh\u00edculo:146317"
+      ],
+      "LEON (KL1, KU1) 2020": [
+          "Modelo: 2.0 TSI | Potencia:190HP | ID Veh\u00edculo:150590",
+          "Modelo: 2.0 TSI | Potencia:245HP | ID Veh\u00edculo:145008",
+          "Modelo: 2.0 TSI | Potencia:300HP | ID Veh\u00edculo:145009"
+      ]
   },
-  "Cadillac": {
-    "ATS": ["2015", "2014", "2013"],
-    "CTS Coupe": ["2015", "2014", "2013", "2012", "2011","2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003"],
-    "CTS Sedan": ["2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003"],
-    "Catera": ["2002", "2001", "2000", "1999", "1998", "1997"],
-    "Deville DTS": ["2011", "2010", "2009", "2008", "2007", "2006"],
-    "El Dorado": ["2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994", "1993", "1992"],
-    "Escalade": ["2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2004", "2003", "2002"],
-    "STS": ["2011","2010", "2009", "2008", "2007", "2006", "2005"]
+  "JAGUAR": {
+      "E-PACE (X540) 2017": [
+          "Modelo: 1.5 P300e Plug-in Hybrid AWD | Potencia:309HP | ID Veh\u00edculo:142723",
+          "Modelo: 2.0 AWD | Potencia:300HP | ID Veh\u00edculo:127974",
+          "Modelo: 2.0 P200 AWD | Potencia:249HP | ID Veh\u00edculo:127973",
+          "Modelo: 2.0 P250 MHEV AWD | Potencia:250HP | ID Veh\u00edculo:142720",
+          "Modelo: 2.0 P300 MHEV AWD | Potencia:300HP | ID Veh\u00edculo:142721"
+      ],
+      "F-PACE SUV (X761) 2015": [
+          "Modelo: 2.0 P400e Plug-in Hybrid | Potencia:404HP | ID Veh\u00edculo:142711",
+          "Modelo: 2.0 Ti4 AWD | Potencia:250HP | ID Veh\u00edculo:126022",
+          "Modelo: 2.0 Ti4 AWD | Potencia:300HP | ID Veh\u00edculo:127990",
+          "Modelo: 3.0 SCV6 AWD | Potencia:340HP | ID Veh\u00edculo:117712",
+          "Modelo: 3.0 SCV6 AWD | Potencia:380HP | ID Veh\u00edculo:117713",
+          "Modelo: 5.0 SCV8 SVR AWD | Potencia:551HP | ID Veh\u00edculo:132598"
+      ],
+      "F-TYPE Coup\u00e9 (X152) 2013": [
+          "Modelo: 2.0 Ti4 | Potencia:300HP | ID Veh\u00edculo:126887",
+          "Modelo: 3.0 SCV6 | Potencia:340HP | ID Veh\u00edculo:100686",
+          "Modelo: 5.0 SCV8 R | Potencia:551HP | ID Veh\u00edculo:100688",
+          "Modelo: 5.0 SCV8 S | Potencia:495HP | ID Veh\u00edculo:105616",
+          "Modelo: 5.0 SCV8 SVR \/ SCV8 P575 R | Potencia:575HP | ID Veh\u00edculo:118546"
+      ],
+      "F-TYPE Descapotable (X152) 2012": [
+          "Modelo: 2.0 Ti4 | Potencia:300HP | ID Veh\u00edculo:126888",
+          "Modelo: 3.0 SCV6 | Potencia:340HP | ID Veh\u00edculo:57131",
+          "Modelo: 5.0 SCV8 S | Potencia:495HP | ID Veh\u00edculo:57134",
+          "Modelo: 5.0 SCV8 SVR \/ SCV8 P575 R AWD | Potencia:575HP | ID Veh\u00edculo:117709"
+      ],
+      "I-PACE (X590) 2018": [
+          "Modelo: EV400 AWD | Potencia:400HP | ID Veh\u00edculo:130530"
+      ],
+      "Mk X MK I 1961-1970": [
+          "Modelo: 3.8 | Potencia:268HP | ID Veh\u00edculo:28522"
+      ],
+      "S-TYPE II (X200) 1998-2008": [
+          "Modelo: 3.0 V6 | Potencia:238HP | ID Veh\u00edculo:10279",
+          "Modelo: 4.0 V8 | Potencia:276HP | ID Veh\u00edculo:10280",
+          "Modelo: 4.2 V8 | Potencia:298HP | ID Veh\u00edculo:16697",
+          "Modelo: 4.2 V8 | Potencia:305HP | ID Veh\u00edculo:105793",
+          "Modelo: R 4,2 V8 | Potencia:396HP | ID Veh\u00edculo:16698"
+      ],
+      "VANDEN PLAS Sed\u00e1n 1981-2009": [
+          "Modelo: 4.0 | Potencia:294HP | ID Veh\u00edculo:44755",
+          "Modelo: 4.2 | Potencia:296HP | ID Veh\u00edculo:44756"
+      ],
+      "X-TYPE I (X400) 2001-2009": [
+          "Modelo: 3.0 V6 A las 4 ruedas | Potencia:230HP | ID Veh\u00edculo:15608"
+      ],
+      "X-TYPE I Station Wagon (X400) 2003-2009": [
+          "Modelo: 2.5 | Potencia:196HP | ID Veh\u00edculo:17880",
+          "Modelo: 3.0 | Potencia:230HP | ID Veh\u00edculo:17881"
+      ],
+      "XE (X760) 2015": [
+          "Modelo: 2.0 | Potencia:250HP | ID Veh\u00edculo:126746",
+          "Modelo: 2.0 | Potencia:300HP | ID Veh\u00edculo:128638",
+          "Modelo: 3.0 S | Potencia:381HP | ID Veh\u00edculo:126748"
+      ],
+      "XF I (X250) 2008-2015": [
+          "Modelo: 2.0 | Potencia:241HP | ID Veh\u00edculo:56754",
+          "Modelo: 3.0 | Potencia:238HP | ID Veh\u00edculo:24474",
+          "Modelo: 3.0 | Potencia:345HP | ID Veh\u00edculo:133187",
+          "Modelo: 4.2 Kompressor | Potencia:416HP | ID Veh\u00edculo:24476",
+          "Modelo: 4.2 | Potencia:298HP | ID Veh\u00edculo:24475",
+          "Modelo: 5.0 Kompressor | Potencia:510HP | ID Veh\u00edculo:31363",
+          "Modelo: 5.0 | Potencia:385HP | ID Veh\u00edculo:31362"
+      ],
+      "XF II (X260) 2015": [
+          "Modelo: 2.0 | Potencia:241HP | ID Veh\u00edculo:115131",
+          "Modelo: 2.0 | Potencia:300HP | ID Veh\u00edculo:128315",
+          "Modelo: 3.0 | Potencia:340HP | ID Veh\u00edculo:115125",
+          "Modelo: 3.0 | Potencia:380HP | ID Veh\u00edculo:115130"
+      ],
+      "XJ (X308) 1996-2003": [
+          "Modelo: 4.0 | Potencia:294HP | ID Veh\u00edculo:59793",
+          "Modelo: 4.0 | Potencia:375HP | ID Veh\u00edculo:44780"
+      ],
+      "XJ (X350, X358) 2003-2009": [
+          "Modelo: 4.2 | Potencia:298HP | ID Veh\u00edculo:17227",
+          "Modelo: R 4.2 | Potencia:395HP | ID Veh\u00edculo:17228"
+      ],
+      "XJ (X351) 2009": [
+          "Modelo: 3.0 SCV6 | Potencia:340HP | ID Veh\u00edculo:56001",
+          "Modelo: 5.0 SCV8 | Potencia:471HP | ID Veh\u00edculo:1029"
+      ],
+      "XK 8 Convertible (X100) 1996-2006": [
+          "Modelo: 4.0 | Potencia:284HP | ID Veh\u00edculo:5902",
+          "Modelo: 4.0 | Potencia:294HP | ID Veh\u00edculo:30053",
+          "Modelo: 4.2 | Potencia:298HP | ID Veh\u00edculo:16988",
+          "Modelo: R 4.2 | Potencia:396HP | ID Veh\u00edculo:16990"
+      ],
+      "XK 8 Coup\u00e9 (X100) 1996-2006": [
+          "Modelo: 4.0 | Potencia:284HP | ID Veh\u00edculo:5900",
+          "Modelo: 4.0 | Potencia:294HP | ID Veh\u00edculo:30052",
+          "Modelo: 4.2 | Potencia:298HP | ID Veh\u00edculo:16987",
+          "Modelo: R 4.2 | Potencia:396HP | ID Veh\u00edculo:16989"
+      ],
+      "XK II Coup\u00e9 (X150) 2006-2014": [
+          "Modelo: 4.2 XK8 | Potencia:298HP | ID Veh\u00edculo:19165",
+          "Modelo: 4.2 XKR | Potencia:396HP | ID Veh\u00edculo:19166",
+          "Modelo: 4.2 XKR | Potencia:416HP | ID Veh\u00edculo:19717",
+          "Modelo: 4.2 XKR | Potencia:426HP | ID Veh\u00edculo:11947",
+          "Modelo: 5.0 V8 | Potencia:385HP | ID Veh\u00edculo:34772",
+          "Modelo: 5.0 XKR | Potencia:510HP | ID Veh\u00edculo:31403",
+          "Modelo: 5.0 XKR | Potencia:530HP | ID Veh\u00edculo:9336"
+      ],
+      "XK II Descapotable (X150) 2006-2014": [
+          "Modelo: 4.2 XK8 | Potencia:298HP | ID Veh\u00edculo:19173",
+          "Modelo: 4.2 XKR | Potencia:416HP | ID Veh\u00edculo:19718",
+          "Modelo: 4.2 XKR | Potencia:426HP | ID Veh\u00edculo:11948",
+          "Modelo: 4.2 | Potencia:396HP | ID Veh\u00edculo:51724",
+          "Modelo: 5.0 V8 | Potencia:385HP | ID Veh\u00edculo:34773",
+          "Modelo: 5.0 XKR | Potencia:510HP | ID Veh\u00edculo:31401"
+      ]
   },
-  "Chevrolet": {
-    "Aveo": ["2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004"],
-    "Beretta": ["1995", "1994", "1993", "1992", "1991", "1990", "1989"],
-    "C1500": ["2006", "2005", "2004", "2003"],
-    "Camaro": ["2016", "2015", "2014","2013", "2012", "2011", "2010", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994", "1993"],
-    "Camaro Z28": ["2016", "2015", "2014", "2013", "2012", "2011", "2010"],
-    "Cavalier Z24": ["2002", "2001", "2000"],
-    "Cobalt 2DR": ["2010", "2009", "2008", "2007", "2006", "2005"],
-    "Cobalt 4DR": ["2010", "2009", "2008", "2007", "2006", "2005"],
-    "Corvette C5": ["2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997"],
-    "Corvette C6": ["2013", "2012", "2011","2010", "2009", "2008", "2007", "2006", "2005"],
-    "Corvette C7": ["2016", "2015", "2014"],
-    "Cruze": ["2015", "2014", "2013", "2012", "2011"],
-    "Equinox": ["2013", "2012", "2011", "2010"],
-    "HHR": ["2011", "2010", "2009", "2008", "2007", "2006"],
-    "Impala": ["2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000"],
-    "Malibu": ["2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004"],
-    "Malibu Maxx": ["2007", "2006", "2005", "2004"],
-    "Prizm": ["2002", "2001", "2000", "1999", "1998"],
-    "SSR": ["2006", "2005", "2004"],
-    "Silverado": ["2013", "2012", "2011", "2010", "2009", "2008", "2007"],
-    "Suburban": ["2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "1999", "1998", "1997", "1996", "1995", "1994"],
-    "Tahoe": ["2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007"],
-    "Trailblazer": ["2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002"]
+  "LAND_ROVER": {
+      "DEFENDER SUV (L316) 1990-2016": [
+          "Modelo: 2.2 Td4 4x4 (L316) | Potencia:122HP | ID Veh\u00edculo:13971",
+          "Modelo: 3.9 4x4 (L316) | Potencia:182HP | ID Veh\u00edculo:24617",
+          "Modelo: 3.9 V8 4x4 (L316) | Potencia:185HP | ID Veh\u00edculo:11244"
+      ],
+      "DEFENDER Station Wagon (L663) 2019": [
+          "Modelo: P300 Si4 4x4 | Potencia:300HP | ID Veh\u00edculo:137996",
+          "Modelo: P400 I6 MHEV 4x4 | Potencia:400HP | ID Veh\u00edculo:137997",
+          "Modelo: P525 4x4 | Potencia:525HP | ID Veh\u00edculo:144996"
+      ],
+      "DISCOVERY II (L318) 1998-2004": [
+          "Modelo: 4.6 4x4 | Potencia:220HP | ID Veh\u00edculo:45168"
+      ],
+      "DISCOVERY SPORT (L550) 2014": [
+          "Modelo: 1.5 P300e Hybrid 4x4 | Potencia:309HP | ID Veh\u00edculo:139678",
+          "Modelo: 2.0 4x4 | Potencia:240HP | ID Veh\u00edculo:126334",
+          "Modelo: 2.0 4x4 | Potencia:241HP | ID Veh\u00edculo:107643",
+          "Modelo: 2.0 4x4 | Potencia:290HP | ID Veh\u00edculo:127384",
+          "Modelo: 2.0 P200 MHEV 4x4 | Potencia:200HP | ID Veh\u00edculo:137113",
+          "Modelo: 2.0 P250 MHEV 4x4 | Potencia:250HP | ID Veh\u00edculo:137114"
+      ],
+      "DISCOVERY V (L462) 2016": [
+          "Modelo: 2.0 Si4 4x4 | Potencia:300HP | ID Veh\u00edculo:129632",
+          "Modelo: 3.0 SCV6 4x4 | Potencia:340HP | ID Veh\u00edculo:123323"
+      ],
+      "FREELANDER I SUV (L314) 1998-2006": [
+          "Modelo: 1.8 16V 4x4 | Potencia:117HP | ID Veh\u00edculo:15591",
+          "Modelo: 2.5 V6 4x4 | Potencia:177HP | ID Veh\u00edculo:132008",
+          "Modelo: 2.5 V6 4x4 | Potencia:177HP | ID Veh\u00edculo:15428"
+      ],
+      "LR2 SUV (L359) 2006-2015": [
+          "Modelo: 2.0 Si4 4x4 | Potencia:241HP | ID Veh\u00edculo:15945",
+          "Modelo: 3.2 4x4 | Potencia:233HP | ID Veh\u00edculo:19755"
+      ],
+      "LR3 III SUV (L319) 2004-2009": [
+          "Modelo: 4.0 4x4 | Potencia:218HP | ID Veh\u00edculo:11153",
+          "Modelo: 4.4 4x4 | Potencia:299HP | ID Veh\u00edculo:18238"
+      ],
+      "LR4 IV SUV (L319) 2009-2018": [
+          "Modelo: 3.0 4x4 | Potencia:340HP | ID Veh\u00edculo:9312",
+          "Modelo: 5.0 V8 4x4 | Potencia:375HP | ID Veh\u00edculo:2940"
+      ],
+      "RANGE ROVER EVOQUE (L538) 2011-2019": [
+          "Modelo: 2.0 4x4 | Potencia:241HP | ID Veh\u00edculo:9824"
+      ],
+      "RANGE ROVER EVOQUE (L551) 2018": [
+          "Modelo: 1.5 P300e Hybrid 4x4 | Potencia:309HP | ID Veh\u00edculo:139607",
+          "Modelo: 2.0 D150 | Potencia:150HP | ID Veh\u00edculo:135975",
+          "Modelo: 2.0 P200 FLEX MHEV 4x4 | Potencia:200HP | ID Veh\u00edculo:141965",
+          "Modelo: 2.0 P250 4x4 | Potencia:250HP | ID Veh\u00edculo:134358",
+          "Modelo: 2.0 P250 MHEV 4x4 | Potencia:249HP | ID Veh\u00edculo:134346"
+      ],
+      "RANGE ROVER II SUV (P38A) 1994-2002": [
+          "Modelo: 4.6 4x4 | Potencia:218HP | ID Veh\u00edculo:11628",
+          "Modelo: 4.6 4x4 | Potencia:224HP | ID Veh\u00edculo:4086"
+      ],
+      "RANGE ROVER III SUV (L322) 2002-2012": [
+          "Modelo: 5.0 4x4 | Potencia:375HP | ID Veh\u00edculo:2534",
+          "Modelo: 5.0 4x4 | Potencia:510HP | ID Veh\u00edculo:32051"
+      ],
+      "RANGE ROVER IV (L405) 2012": [
+          "Modelo: 3.0 SCV6 4x4 | Potencia:340HP | ID Veh\u00edculo:100015",
+          "Modelo: 5.0 SCV8 4x4 | Potencia:510HP | ID Veh\u00edculo:57067"
+      ],
+      "RANGE ROVER SPORT I (L320) 2005-2013": [
+          "Modelo: 4.2 4x4 | Potencia:390HP | ID Veh\u00edculo:18802",
+          "Modelo: 4.4 4x4 | Potencia:299HP | ID Veh\u00edculo:18803",
+          "Modelo: 5.0 4x4 | Potencia:375HP | ID Veh\u00edculo:3113",
+          "Modelo: 5.0 4x4 | Potencia:510HP | ID Veh\u00edculo:32052"
+      ],
+      "RANGE ROVER SPORT II (L494) 2013": [
+          "Modelo: 3.0 P360 MHEV 4x4 | Potencia:360HP | ID Veh\u00edculo:139460",
+          "Modelo: 3.0 SCV6 4x4 | Potencia:340HP | ID Veh\u00edculo:58991",
+          "Modelo: 5.0 SCV8 4x4 | Potencia:510HP | ID Veh\u00edculo:58987",
+          "Modelo: 5.0 SCV8 4x4 | Potencia:550HP | ID Veh\u00edculo:108805"
+      ],
+      "RANGE ROVER VELAR SUV (L560) 2017": [
+          "Modelo: 2.0 P250 Si4 4x4 | Potencia:250HP | ID Veh\u00edculo:126262",
+          "Modelo: 2.0 P300 Si4 4x4 | Potencia:300HP | ID Veh\u00edculo:127995",
+          "Modelo: 2.0 P400 Hybrid 4x4 | Potencia:404HP | ID Veh\u00edculo:141978",
+          "Modelo: 3.0 P340 SCV6 4x4 | Potencia:340HP | ID Veh\u00edculo:134441",
+          "Modelo: 3.0 P380 SCV6 4x4 | Potencia:380HP | ID Veh\u00edculo:126261"
+      ]
   },
-  "Chrysler": {
-    "200": ["2016", "2015", "2014", "2013", "2012", "2011"],
-    "300": ["2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005"],
-    "300M": ["2004", "2003", "2002", "2001", "2000", "1999"],
-    "Aspen": ["2009", "2008", "2007", "2006"],
-    "Concorde": ["1997", "1996", "1995", "1994", "1993"],
-    "PT Cruiser": ["2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001"],
-    "Sebring": ["2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995"],
-    "Town and Country": ["2007", "2006", "2005", "2004", "2003", "2002", "2001"]
+  "MERCEDES-BENZ": {
+      "124 Sed\u00e1n (W124) 1984-1993": [
+          "Modelo: 230 E (124.023) | Potencia:136HP | ID Veh\u00edculo:440"
+      ],
+      "A-CLASS (W168) 1997-2005": [
+          "Modelo: A 140 (168.031, 168.131) | Potencia:82HP | ID Veh\u00edculo:16134",
+          "Modelo: A 140 (168.031, 168.131) | Potencia:82HP | ID Veh\u00edculo:8386",
+          "Modelo: A 160 (168.033, 168.133) | Potencia:102HP | ID Veh\u00edculo:8387",
+          "Modelo: A 190 (168.032, 168.132) | Potencia:125HP | ID Veh\u00edculo:11980",
+          "Modelo: A 210 (168.035, 168.135) | Potencia:140HP | ID Veh\u00edculo:16592",
+          "Modelo: A 38 AMG Twin Engine (168.032) | Potencia:250HP | ID Veh\u00edculo:20541"
+      ],
+      "A-CLASS (W169) 2004-2012": [
+          "Modelo: A 150 (169.031, 169.331) | Potencia:95HP | ID Veh\u00edculo:18261",
+          "Modelo: A 170 (169.032, 169.332) | Potencia:116HP | ID Veh\u00edculo:18260",
+          "Modelo: A 200 (169.033, 169.333) | Potencia:136HP | ID Veh\u00edculo:18262",
+          "Modelo: A 200 TURBO (169.034, 169.334) | Potencia:193HP | ID Veh\u00edculo:19734"
+      ],
+      "A-CLASS (W176) 2012-2018": [
+          "Modelo: A 180 (176.042) | Potencia:122HP | ID Veh\u00edculo:55332",
+          "Modelo: A 250 (176.044) | Potencia:211HP | ID Veh\u00edculo:55334",
+          "Modelo: A 250 (176.050) | Potencia:218HP | ID Veh\u00edculo:114947",
+          "Modelo: A 45 AMG 4-matic (176.052) | Potencia:360HP | ID Veh\u00edculo:59167",
+          "Modelo: AMG A 45 4-matic (176.052) | Potencia:381HP | ID Veh\u00edculo:114960"
+      ],
+      "A-CLASS (W177) 2018": [
+          "Modelo: A 200 (177.087) | Potencia:163HP | ID Veh\u00edculo:130594",
+          "Modelo: A 250 (177.046) | Potencia:224HP | ID Veh\u00edculo:130595",
+          "Modelo: AMG A 35 4-matic (177.051) | Potencia:306HP | ID Veh\u00edculo:132864",
+          "Modelo: AMG A 45 S 4-matic+ (177.054) | Potencia:421HP | ID Veh\u00edculo:136671"
+      ],
+      "A-CLASS Sed\u00e1n (V177) 2018": [
+          "Modelo: A 200 (177.187) | Potencia:163HP | ID Veh\u00edculo:132445",
+          "Modelo: AMG A 35 4-matic (177.151) | Potencia:306HP | ID Veh\u00edculo:135945"
+      ],
+      "AMG GT (C190) 2014-2021": [
+          "Modelo: GT (190.377) | Potencia:462HP | ID Veh\u00edculo:108073",
+          "Modelo: GT (190.377) | Potencia:476HP | ID Veh\u00edculo:126755",
+          "Modelo: GT R (190.379) | Potencia:585HP | ID Veh\u00edculo:123743",
+          "Modelo: GT S (190.378) | Potencia:510HP | ID Veh\u00edculo:108074",
+          "Modelo: GT S (190.378) | Potencia:522HP | ID Veh\u00edculo:126756"
+      ],
+      "AMG GT (X290) 2018": [
+          "Modelo: 4.0 63 S E Performance 4-matic+ (290.679) | Potencia:843HP | ID Veh\u00edculo:146626",
+          "Modelo: 53 EQ Boost 4-matic+ (290.661) | Potencia:435HP | ID Veh\u00edculo:132844",
+          "Modelo: 63 4-matic+ (290.688) | Potencia:585HP | ID Veh\u00edculo:132178",
+          "Modelo: 63 S 4-matic+ (290.689) | Potencia:639HP | ID Veh\u00edculo:132180"
+      ],
+      "AMG GT Roadster (R190) 2016-2022": [
+          "Modelo: GT C (190.480) | Potencia:557HP | ID Veh\u00edculo:123747"
+      ],
+      "B-CLASS Sports Tourer (W245) 2005-2011": [
+          "Modelo: B 200 (245.233) | Potencia:136HP | ID Veh\u00edculo:18511",
+          "Modelo: B 200 TURBO (245.234) | Potencia:193HP | ID Veh\u00edculo:18512"
+      ],
+      "B-CLASS Sports Tourer (W246, W242) 2011-2018": [
+          "Modelo: B 180 (246.242) | Potencia:122HP | ID Veh\u00edculo:12171"
+      ],
+      "C-CLASS (W202) 1993-2000": [
+          "Modelo: C 220 (202.022) | Potencia:150HP | ID Veh\u00edculo:967",
+          "Modelo: C 230 (202.023) | Potencia:150HP | ID Veh\u00edculo:5934",
+          "Modelo: C 280 (202.028) | Potencia:193HP | ID Veh\u00edculo:968",
+          "Modelo: C 280 (202.029) | Potencia:197HP | ID Veh\u00edculo:8385",
+          "Modelo: C 36 AMG (202.028) | Potencia:272HP | ID Veh\u00edculo:45826",
+          "Modelo: C 36 AMG (202.028) | Potencia:280HP | ID Veh\u00edculo:3950",
+          "Modelo: C 43 AMG (202.033) | Potencia:306HP | ID Veh\u00edculo:8846"
+      ],
+      "C-CLASS (W203) 2000-2007": [
+          "Modelo: C 230 Kompressor (203.040) | Potencia:192HP | ID Veh\u00edculo:17861",
+          "Modelo: C 240 (203.061) | Potencia:170HP | ID Veh\u00edculo:14816",
+          "Modelo: C 280 (203.054) | Potencia:231HP | ID Veh\u00edculo:18712",
+          "Modelo: C 32 AMG Kompressor (203.065) | Potencia:354HP | ID Veh\u00edculo:15108",
+          "Modelo: C 320 (203.064) | Potencia:218HP | ID Veh\u00edculo:14817",
+          "Modelo: C 55 AMG (203.076) | Potencia:367HP | ID Veh\u00edculo:17866"
+      ],
+      "C-CLASS (W204) 2007-2015": [
+          "Modelo: C 200 (204.048) | Potencia:186HP | ID Veh\u00edculo:14024",
+          "Modelo: C 250 CGI (204.047) | Potencia:204HP | ID Veh\u00edculo:31501",
+          "Modelo: C 280 (204.054) | Potencia:231HP | ID Veh\u00edculo:22700",
+          "Modelo: C 300 (204.054) | Potencia:231HP | ID Veh\u00edculo:31502",
+          "Modelo: C 350 (204.056) | Potencia:272HP | ID Veh\u00edculo:22701",
+          "Modelo: C 63 AMG (204.077) | Potencia:507HP | ID Veh\u00edculo:59084"
+      ],
+      "C-CLASS (W205) 2013-2023": [
+          "Modelo: AMG C 43 4-matic (205.064) | Potencia:390HP | ID Veh\u00edculo:131370",
+          "Modelo: AMG C 63 (205.086) | Potencia:476HP | ID Veh\u00edculo:108004",
+          "Modelo: C 180 (205.040, 205.140) | Potencia:156HP | ID Veh\u00edculo:100750",
+          "Modelo: C 180 Flex (205.040) | Potencia:156HP | ID Veh\u00edculo:128809",
+          "Modelo: C 200 (205.042) | Potencia:184HP | ID Veh\u00edculo:100551",
+          "Modelo: C 200 (205.080) | Potencia:204HP | ID Veh\u00edculo:137963",
+          "Modelo: C 200 EQ Boost (205.077) | Potencia:184HP | ID Veh\u00edculo:131300",
+          "Modelo: C 250 (205.045) | Potencia:211HP | ID Veh\u00edculo:100903",
+          "Modelo: C 300 (205.083) | Potencia:258HP | ID Veh\u00edculo:131404",
+          "Modelo: C 450 AMG 4-matic (205.064) | Potencia:367HP | ID Veh\u00edculo:112360"
+      ],
+      "C-CLASS (W206) 2021": [
+          "Modelo: C 200 (206.042) | Potencia:204HP | ID Veh\u00edculo:143578"
+      ],
+      "C-CLASS Coup\u00e9 (C204) 2011": [
+          "Modelo: C 250 (204.347) | Potencia:204HP | ID Veh\u00edculo:10334",
+          "Modelo: C 350 (204.357) | Potencia:306HP | ID Veh\u00edculo:10335",
+          "Modelo: C 63 AMG (204.377) | Potencia:457HP | ID Veh\u00edculo:10336",
+          "Modelo: C 63 AMG (204.377) | Potencia:507HP | ID Veh\u00edculo:53232",
+          "Modelo: C 63 AMG (204.377) | Potencia:517HP | ID Veh\u00edculo:8903"
+      ],
+      "C-CLASS Coup\u00e9 (C205) 2015-2023": [
+          "Modelo: AMG C 43 4-matic (205.364) | Potencia:390HP | ID Veh\u00edculo:131400",
+          "Modelo: AMG C 63 (205.386) | Potencia:476HP | ID Veh\u00edculo:116942",
+          "Modelo: C 180 (205.340) | Potencia:156HP | ID Veh\u00edculo:116938",
+          "Modelo: C 200 (205.342) | Potencia:184HP | ID Veh\u00edculo:116939",
+          "Modelo: C 200 (205.380) | Potencia:204HP | ID Veh\u00edculo:137964",
+          "Modelo: C 200 EQ Boost (205.377) | Potencia:184HP | ID Veh\u00edculo:131307",
+          "Modelo: C 250 (205.345) | Potencia:211HP | ID Veh\u00edculo:116940",
+          "Modelo: C 300 (205.383) | Potencia:258HP | ID Veh\u00edculo:131407"
+      ],
+      "C-CLASS Coup\u00e9 (CL203) 2001-2011": [
+          "Modelo: C 230 Kompressor (203.740) | Potencia:192HP | ID Veh\u00edculo:16720",
+          "Modelo: C 230 Kompressor (203.747) | Potencia:197HP | ID Veh\u00edculo:15265"
+      ],
+      "C-CLASS Descapotable (A205) 2016-2023": [
+          "Modelo: AMG C 43 4-matic (205.464) | Potencia:390HP | ID Veh\u00edculo:131401",
+          "Modelo: AMG C 63 (205.486) | Potencia:476HP | ID Veh\u00edculo:120128",
+          "Modelo: C 200 (205.442) | Potencia:184HP | ID Veh\u00edculo:120122",
+          "Modelo: C 200 (205.480) | Potencia:204HP | ID Veh\u00edculo:137965",
+          "Modelo: C 200 EQ Boost (205.477) | Potencia:184HP | ID Veh\u00edculo:131310",
+          "Modelo: C 250 (205.445) | Potencia:211HP | ID Veh\u00edculo:120124",
+          "Modelo: C 300 (205.483) | Potencia:258HP | ID Veh\u00edculo:131408"
+      ],
+      "C-CLASS T-Model (S202) 1996-2001": [
+          "Modelo: C 280 T (202.089) | Potencia:197HP | ID Veh\u00edculo:8382"
+      ],
+      "C-CLASS T-Model (S204) 2007-2014": [
+          "Modelo: C 280 (204.254) | Potencia:231HP | ID Veh\u00edculo:23402"
+      ],
+      "CLA (C118) 2019": [
+          "Modelo: AMG CLA 35 4-matic (118.351) | Potencia:306HP | ID Veh\u00edculo:135946",
+          "Modelo: AMG CLA 45 S 4-matic+ (118.354) | Potencia:421HP | ID Veh\u00edculo:136676",
+          "Modelo: CLA 200 (118.387) | Potencia:163HP | ID Veh\u00edculo:135693",
+          "Modelo: CLA 250 (118.346) | Potencia:224HP | ID Veh\u00edculo:135696"
+      ],
+      "CLA Coup\u00e9 (C117) 2013-2019": [
+          "Modelo: AMG CLA 45 4-matic (117.352) | Potencia:381HP | ID Veh\u00edculo:115000",
+          "Modelo: CLA 180 (117.342) | Potencia:122HP | ID Veh\u00edculo:58477",
+          "Modelo: CLA 200 (117.343) | Potencia:156HP | ID Veh\u00edculo:58479",
+          "Modelo: CLA 250 (117.344) | Potencia:211HP | ID Veh\u00edculo:58480",
+          "Modelo: CLA 45 AMG 4-matic (117.352) | Potencia:360HP | ID Veh\u00edculo:26787"
+      ],
+      "CLK (C208) 1997-2003": [
+          "Modelo: CLK 320 (208.365) | Potencia:218HP | ID Veh\u00edculo:8379",
+          "Modelo: CLK 430 (208.370) | Potencia:279HP | ID Veh\u00edculo:9340",
+          "Modelo: CLK 55 AMG (208.374) | Potencia:347HP | ID Veh\u00edculo:13111"
+      ],
+      "CLK (C209) 2002-2010": [
+          "Modelo: CLK 280 (209.354) | Potencia:231HP | ID Veh\u00edculo:18706",
+          "Modelo: CLK 320 (209.365) | Potencia:218HP | ID Veh\u00edculo:16629",
+          "Modelo: CLK 350 (209.356) | Potencia:272HP | ID Veh\u00edculo:18705",
+          "Modelo: CLK 500 (209.375) | Potencia:306HP | ID Veh\u00edculo:16630",
+          "Modelo: CLK 55 AMG (209.376) | Potencia:367HP | ID Veh\u00edculo:16815",
+          "Modelo: CLK 63 AMG (209.377) | Potencia:481HP | ID Veh\u00edculo:19775",
+          "Modelo: CLK DTM AMG (209.376) | Potencia:582HP | ID Veh\u00edculo:18234"
+      ],
+      "CLK Descapotable (A208) 1998-2002": [
+          "Modelo: CLK 320 (208.465) | Potencia:218HP | ID Veh\u00edculo:9502"
+      ],
+      "CLK Descapotable (A209) 2002-2010": [
+          "Modelo: CLK 280 (209.454) | Potencia:231HP | ID Veh\u00edculo:18704",
+          "Modelo: CLK 320 (209.465) | Potencia:218HP | ID Veh\u00edculo:17190",
+          "Modelo: CLK 350 (209.456) | Potencia:272HP | ID Veh\u00edculo:18703",
+          "Modelo: CLK 500 (209.475) | Potencia:306HP | ID Veh\u00edculo:17191",
+          "Modelo: CLK 63 AMG (209.477) | Potencia:481HP | ID Veh\u00edculo:19776",
+          "Modelo: CLK AMG DTM (209.476) | Potencia:582HP | ID Veh\u00edculo:33488"
+      ],
+      "CLS (C218) 2011-2017": [
+          "Modelo: CLS 350 (218.359) | Potencia:306HP | ID Veh\u00edculo:3251",
+          "Modelo: CLS 400 (218.365) | Potencia:333HP | ID Veh\u00edculo:106298",
+          "Modelo: CLS 500 (218.373) | Potencia:408HP | ID Veh\u00edculo:7478",
+          "Modelo: CLS 63 AMG (218.374) | Potencia:525HP | ID Veh\u00edculo:7475",
+          "Modelo: CLS 63 AMG 4-matic (218.392) | Potencia:558HP | ID Veh\u00edculo:59017"
+      ],
+      "CLS (C219) 2004-2011": [
+          "Modelo: CLS 350 (219.356) | Potencia:272HP | ID Veh\u00edculo:17965",
+          "Modelo: CLS 350 (219.357) | Potencia:292HP | ID Veh\u00edculo:19719",
+          "Modelo: CLS 500 (219.372) | Potencia:388HP | ID Veh\u00edculo:19720",
+          "Modelo: CLS 55 AMG (219.376) | Potencia:476HP | ID Veh\u00edculo:18233",
+          "Modelo: CLS 63 AMG (219.377) | Potencia:514HP | ID Veh\u00edculo:19721"
+      ],
+      "CLS (C257) 2017": [
+          "Modelo: AMG CLS 53 EQ Boost 4-matic+ (257.361) | Potencia:435HP | ID Veh\u00edculo:131617",
+          "Modelo: CLS 350 EQ Boost (257.350) | Potencia:299HP | ID Veh\u00edculo:132277",
+          "Modelo: CLS 450 EQ Boost 4-matic (257.359) | Potencia:367HP | ID Veh\u00edculo:129627"
+      ],
+      "E-CLASS (W210) 1995-2003": [
+          "Modelo: E 200 (210.035) | Potencia:136HP | ID Veh\u00edculo:4691",
+          "Modelo: E 200 Kompressor (210.045) | Potencia:186HP | ID Veh\u00edculo:8692",
+          "Modelo: E 200 Kompressor (210.048) | Potencia:163HP | ID Veh\u00edculo:15061",
+          "Modelo: E 230 (210.037) | Potencia:150HP | ID Veh\u00edculo:4693",
+          "Modelo: E 240 (210.061) | Potencia:170HP | ID Veh\u00edculo:8687",
+          "Modelo: E 280 (210.063) | Potencia:204HP | ID Veh\u00edculo:7832",
+          "Modelo: E 320 (210.065) | Potencia:224HP | ID Veh\u00edculo:7834",
+          "Modelo: E 420 (210.072) | Potencia:279HP | ID Veh\u00edculo:5374",
+          "Modelo: E 430 (210.070) | Potencia:279HP | ID Veh\u00edculo:8688",
+          "Modelo: E 430 4-matic (210.083) | Potencia:279HP | ID Veh\u00edculo:13189",
+          "Modelo: E 50 AMG (210.072) | Potencia:347HP | ID Veh\u00edculo:5375",
+          "Modelo: E 55 AMG (210.074) | Potencia:354HP | ID Veh\u00edculo:8833",
+          "Modelo: E 55 AMG | Potencia:347HP | ID Veh\u00edculo:45890"
+      ],
+      "E-CLASS (W211) 2002-2009": [
+          "Modelo: 3.8 Turbo | Potencia:0HP | ID Veh\u00edculo:4874",
+          "Modelo: E 200 Kompressor (211.041) | Potencia:184HP | ID Veh\u00edculo:19789",
+          "Modelo: E 200 Kompressor (211.042) | Potencia:163HP | ID Veh\u00edculo:17128",
+          "Modelo: E 300 (211.054) | Potencia:231HP | ID Veh\u00edculo:18630",
+          "Modelo: E 320 (211.065) | Potencia:224HP | ID Veh\u00edculo:16564",
+          "Modelo: E 350 (211.056) | Potencia:272HP | ID Veh\u00edculo:18631",
+          "Modelo: E 350 CGI (211.057) | Potencia:292HP | ID Veh\u00edculo:23473",
+          "Modelo: E 500 (211.070) | Potencia:306HP | ID Veh\u00edculo:16565",
+          "Modelo: E 500 (211.072) | Potencia:388HP | ID Veh\u00edculo:19795",
+          "Modelo: E 500 4-matic (211.083) | Potencia:306HP | ID Veh\u00edculo:17399",
+          "Modelo: E 55 AMG Kompressor (211.076) | Potencia:476HP | ID Veh\u00edculo:17000"
+      ],
+      "E-CLASS (W212) 2009-2016": [
+          "Modelo: E 200 (212.034) | Potencia:184HP | ID Veh\u00edculo:29269",
+          "Modelo: E 200 CGI (212.048, 212.148) | Potencia:184HP | ID Veh\u00edculo:32162",
+          "Modelo: E 250 (212.036) | Potencia:211HP | ID Veh\u00edculo:33590",
+          "Modelo: E 250 CGI (212.047, 212.147) | Potencia:204HP | ID Veh\u00edculo:31042",
+          "Modelo: E 350 CGI (212.057) | Potencia:292HP | ID Veh\u00edculo:31044",
+          "Modelo: E 400 (212.065) | Potencia:333HP | ID Veh\u00edculo:59435",
+          "Modelo: E 500 (212.072) | Potencia:388HP | ID Veh\u00edculo:31046",
+          "Modelo: E 500 (212.073) | Potencia:408HP | ID Veh\u00edculo:11380",
+          "Modelo: E 63 AMG (212.074) | Potencia:558HP | ID Veh\u00edculo:58568",
+          "Modelo: E 63 AMG (212.077) | Potencia:525HP | ID Veh\u00edculo:32945"
+      ],
+      "E-CLASS (W213) 2016": [
+          "Modelo: AMG E 43 4-matic (213.064) | Potencia:401HP | ID Veh\u00edculo:120741",
+          "Modelo: AMG E 53 EQ Boost 4-matic+ (213.061) | Potencia:435HP | ID Veh\u00edculo:130976",
+          "Modelo: AMG E 63 S 4-matic+ (213.089) | Potencia:612HP | ID Veh\u00edculo:125170",
+          "Modelo: E 200 (213.080) | Potencia:197HP | ID Veh\u00edculo:134280",
+          "Modelo: E 300 (213.045) | Potencia:211HP | ID Veh\u00edculo:120727",
+          "Modelo: E 300 (213.048) | Potencia:245HP | ID Veh\u00edculo:120730",
+          "Modelo: E 300 e (213.053) | Potencia:320HP | ID Veh\u00edculo:139285",
+          "Modelo: E 350 e (213.050) | Potencia:286HP | ID Veh\u00edculo:120738",
+          "Modelo: E 400 4-matic (213.066) | Potencia:333HP | ID Veh\u00edculo:121726",
+          "Modelo: E 450 4-matic (213.068) | Potencia:367HP | ID Veh\u00edculo:132316"
+      ],
+      "E-CLASS Coup\u00e9 (C207) 2009-2016": [
+          "Modelo: E 250 (207.336) | Potencia:211HP | ID Veh\u00edculo:59046",
+          "Modelo: E 250 CGI (207.347) | Potencia:204HP | ID Veh\u00edculo:31053",
+          "Modelo: E 350 CGI (207.357) | Potencia:292HP | ID Veh\u00edculo:31054",
+          "Modelo: E 400 (207.365) | Potencia:333HP | ID Veh\u00edculo:59045",
+          "Modelo: E 500 (207.372) | Potencia:388HP | ID Veh\u00edculo:31055",
+          "Modelo: E 500 (207.373) | Potencia:408HP | ID Veh\u00edculo:11322"
+      ],
+      "E-CLASS Coup\u00e9 (C238) 2016": [
+          "Modelo: AMG E 53 EQ Boost 4-matic+ (238.361) | Potencia:435HP | ID Veh\u00edculo:131639",
+          "Modelo: E 300 (238.348) | Potencia:245HP | ID Veh\u00edculo:124821",
+          "Modelo: E 300 (238.383) | Potencia:258HP | ID Veh\u00edculo:139027",
+          "Modelo: E 450 4-matic (238.368) | Potencia:367HP | ID Veh\u00edculo:132377"
+      ],
+      "E-CLASS Descapotable (A207) 2010-2016": [
+          "Modelo: E 250 (207.436) | Potencia:211HP | ID Veh\u00edculo:59038",
+          "Modelo: E 350 (207.456) | Potencia:272HP | ID Veh\u00edculo:14026",
+          "Modelo: E 400 (207.465) | Potencia:333HP | ID Veh\u00edculo:59039",
+          "Modelo: E 500 (207.472) | Potencia:388HP | ID Veh\u00edculo:32952",
+          "Modelo: E 500 (207.473) | Potencia:408HP | ID Veh\u00edculo:11378"
+      ],
+      "E-CLASS Descapotable (A238) 2017": [
+          "Modelo: AMG E53 EQ Boost 4-matic+ (238.461) | Potencia:435HP | ID Veh\u00edculo:132083",
+          "Modelo: E 300 (238.448) | Potencia:245HP | ID Veh\u00edculo:127636",
+          "Modelo: E 450 4-matic (238.468) | Potencia:367HP | ID Veh\u00edculo:132378"
+      ],
+      "E-CLASS T-Model (S210) 1996-2003": [
+          "Modelo: E 420 T (210.272) | Potencia:279HP | ID Veh\u00edculo:5542"
+      ],
+      "E-CLASS T-Model (S211) 2003-2009": [
+          "Modelo: 350 CGI (211.257) | Potencia:292HP | ID Veh\u00edculo:28374",
+          "Modelo: E 230 T (211.252) | Potencia:204HP | ID Veh\u00edculo:30399",
+          "Modelo: E 350 T (211.256) | Potencia:272HP | ID Veh\u00edculo:18637",
+          "Modelo: E 350 T 4-matic (211.287) | Potencia:272HP | ID Veh\u00edculo:19292",
+          "Modelo: E 63 AMG (211.277) | Potencia:514HP | ID Veh\u00edculo:20071"
+      ],
+      "EQA (H243) 2021": [
+          "Modelo: EQA 300 4-matic (243.708, 243.709) | Potencia:228HP | ID Veh\u00edculo:144139"
+      ],
+      "EQB (X243) 2021": [
+          "Modelo: EQB 300 4-matic (243.608, 243.609) | Potencia:228HP | ID Veh\u00edculo:145522"
+      ],
+      "EQC (N293) 2019-2023": [
+          "Modelo: EQC 400 4-matic (293.890) | Potencia:408HP | ID Veh\u00edculo:136178"
+      ],
+      "EQE (V295) 2022": [
+          "Modelo: EQE 350+ (295.121) | Potencia:292HP | ID Veh\u00edculo:145523",
+          "Modelo: EQE 43 AMG 4-matic (295.132) | Potencia:476HP | ID Veh\u00edculo:147037",
+          "Modelo: EQE 53 AMG 4-matic+ (295.153) | Potencia:625HP | ID Veh\u00edculo:148194"
+      ],
+      "EQS (V297) 2021": [
+          "Modelo: EQS 450+ (297.123) | Potencia:333HP | ID Veh\u00edculo:145121",
+          "Modelo: EQS 53 AMG 4-matic+ (297.155) | Potencia:658HP | ID Veh\u00edculo:146623"
+      ],
+      "G-CLASS SUV (W463) 1989-2018": [
+          "Modelo: AMG G 63 (463.272) | Potencia:571HP | ID Veh\u00edculo:114589",
+          "Modelo: AMG G 65 (463.274, 463.275) | Potencia:630HP | ID Veh\u00edculo:114590",
+          "Modelo: G 500 (463) | Potencia:296HP | ID Veh\u00edculo:10143",
+          "Modelo: G 500 (463.234) | Potencia:422HP | ID Veh\u00edculo:114588",
+          "Modelo: G 500 (463.247, 463.248, 463.249, 463.240, 463.241,... | Potencia:296HP | ID Veh\u00edculo:10142",
+          "Modelo: G 500 \/ G 550 (463.222, 463.236, 463.237, 463.242) | Potencia:388HP | ID Veh\u00edculo:59473",
+          "Modelo: G 55 AMG (463.270, 463.271) | Potencia:476HP | ID Veh\u00edculo:18100",
+          "Modelo: G 55 AMG (463.270, 463.271) | Potencia:500HP | ID Veh\u00edculo:27063",
+          "Modelo: G 55 AMG (463.270, 463.271) | Potencia:507HP | ID Veh\u00edculo:4349",
+          "Modelo: G 63 AMG (463.273) | Potencia:544HP | ID Veh\u00edculo:55394",
+          "Modelo: G 63 AMG 6x6 | Potencia:544HP | ID Veh\u00edculo:109310",
+          "Modelo: G 65 AMG | Potencia:612HP | ID Veh\u00edculo:59474"
+      ],
+      "G-CLASS SUV (W463) 2018": [
+          "Modelo: AMG G 63 (463.276, 463.277) | Potencia:585HP | ID Veh\u00edculo:130978",
+          "Modelo: G 500 (463.260, 463.261) | Potencia:422HP | ID Veh\u00edculo:129868"
+      ],
+      "GL-CLASS (X164) 2006-2012": [
+          "Modelo: GL 450 4-matic (164.871) | Potencia:340HP | ID Veh\u00edculo:19344",
+          "Modelo: GL 500 4-matic (164.886) | Potencia:388HP | ID Veh\u00edculo:19345"
+      ],
+      "GL-CLASS (X166) 2012-2015": [
+          "Modelo: GL 63 AMG 4-matic (166.874) | Potencia:558HP | ID Veh\u00edculo:58743"
+      ],
+      "GLA (H247) 2020": [
+          "Modelo: GLA 200 (247.787) | Potencia:163HP | ID Veh\u00edculo:139652",
+          "Modelo: GLA 200 4-matic (247.788) | Potencia:163HP | ID Veh\u00edculo:142497"
+      ],
+      "GLA-CLASS (X156) 2013-2022": [
+          "Modelo: AMG GLA 45 4-matic (156.952) | Potencia:381HP | ID Veh\u00edculo:115054",
+          "Modelo: GLA 180 (156.942) | Potencia:122HP | ID Veh\u00edculo:110035",
+          "Modelo: GLA 180 (156.943) | Potencia:156HP | ID Veh\u00edculo:100449",
+          "Modelo: GLA 250 4-matic (156.946) | Potencia:211HP | ID Veh\u00edculo:100478",
+          "Modelo: GLA 45 AMG 4-matic (156.952) | Potencia:360HP | ID Veh\u00edculo:100830"
+      ],
+      "GLB (X247) 2019": [
+          "Modelo: AMG GLB 35 4-matic (247.651) | Potencia:306HP | ID Veh\u00edculo:137605",
+          "Modelo: GLB 200 (247.687) | Potencia:163HP | ID Veh\u00edculo:137603",
+          "Modelo: GLB 250 (247.646) | Potencia:224HP | ID Veh\u00edculo:138760",
+          "Modelo: GLB 250 4-matic (247.647) | Potencia:224HP | ID Veh\u00edculo:137604"
+      ],
+      "GLC (X253) 2015-2022": [
+          "Modelo: 250 4-matic (253.946) | Potencia:211HP | ID Veh\u00edculo:114490",
+          "Modelo: 300 4-matic (253.949) | Potencia:245HP | ID Veh\u00edculo:116950",
+          "Modelo: 300 e 4-matic (253.953) | Potencia:320HP | ID Veh\u00edculo:140891",
+          "Modelo: AMG 43 4-matic (253.964) | Potencia:367HP | ID Veh\u00edculo:119509",
+          "Modelo: AMG 43 4-matic (253.964) | Potencia:390HP | ID Veh\u00edculo:137008"
+      ],
+      "GLC (X254) 2022": [
+          "Modelo: 300 4-matic (254.647) | Potencia:258HP | ID Veh\u00edculo:148213",
+          "Modelo: 300e 4-matic (254.656) | Potencia:313HP | ID Veh\u00edculo:150606"
+      ],
+      "GLC Coupe (C253) 2016-2023": [
+          "Modelo: 300 4-matic (253.384) | Potencia:258HP | ID Veh\u00edculo:138888",
+          "Modelo: 300 d 4-matic (253.319) | Potencia:245HP | ID Veh\u00edculo:136181",
+          "Modelo: 300 e 4-matic (253.353) | Potencia:320HP | ID Veh\u00edculo:145177",
+          "Modelo: AMG 43 4-matic (253.364) | Potencia:367HP | ID Veh\u00edculo:122833",
+          "Modelo: AMG 43 4-matic (253.364) | Potencia:390HP | ID Veh\u00edculo:137009"
+      ],
+      "GLE (V167) 2018": [
+          "Modelo: AMG GLE 53 EQ Boost 4-matic+ (167.161) | Potencia:435HP | ID Veh\u00edculo:135943",
+          "Modelo: AMG GLE 63 S EQ Boost 4-matic+ (167.189) | Potencia:612HP | ID Veh\u00edculo:138597",
+          "Modelo: GLE 450 EQ Boost 4-matic (167.159) | Potencia:367HP | ID Veh\u00edculo:133935"
+      ],
+      "GLE Coupe (C167) 2019": [
+          "Modelo: AMG GLE 53 EQ Boost 4-matic+ (167.361) | Potencia:435HP | ID Veh\u00edculo:138510",
+          "Modelo: AMG GLE 63 EQ Boost 4-matic+ (167.388) | Potencia:571HP | ID Veh\u00edculo:140713",
+          "Modelo: AMG GLE 63 EQ Boost 4-matic+ (167.389) | Potencia:612HP | ID Veh\u00edculo:140714",
+          "Modelo: GLE 450 EQ Boost 4-matic (167.359) | Potencia:367HP | ID Veh\u00edculo:141719"
+      ],
+      "GLE Coupe (C292) 2015-2019": [
+          "Modelo: 450 AMG 4-matic (292.364) | Potencia:367HP | ID Veh\u00edculo:111166",
+          "Modelo: AMG 43 4-matic (292.364) | Potencia:367HP | ID Veh\u00edculo:119939",
+          "Modelo: AMG 43 4-matic (292.364) | Potencia:390HP | ID Veh\u00edculo:127693",
+          "Modelo: AMG 63 4-matic (292.374) | Potencia:557HP | ID Veh\u00edculo:111167"
+      ],
+      "GLE SUV (W166) 2015-2018": [
+          "Modelo: 350 (166.058) | Potencia:306HP | ID Veh\u00edculo:117589",
+          "Modelo: 400 4-matic (166.056) | Potencia:333HP | ID Veh\u00edculo:112228",
+          "Modelo: 500 4-matic (166.073) | Potencia:435HP | ID Veh\u00edculo:112225",
+          "Modelo: 500 4-matic (166.073) | Potencia:456HP | ID Veh\u00edculo:117309",
+          "Modelo: 500 e 4-matic (166.063) | Potencia:442HP | ID Veh\u00edculo:112230",
+          "Modelo: AMG 63 4-matic (166.074) | Potencia:557HP | ID Veh\u00edculo:112231"
+      ],
+      "GLK-CLASS (X204) 2008-2015": [
+          "Modelo: 280 4-matic (204.981) | Potencia:231HP | ID Veh\u00edculo:28208",
+          "Modelo: 300 4-matic (204.981) | Potencia:231HP | ID Veh\u00edculo:32837",
+          "Modelo: 300 4-matic (204.990) | Potencia:252HP | ID Veh\u00edculo:116216",
+          "Modelo: 350 4-matic (204.987) | Potencia:272HP | ID Veh\u00edculo:28209"
+      ],
+      "GLS (X166) 2015-2019": [
+          "Modelo: 550 4-matic (166.873) | Potencia:456HP | ID Veh\u00edculo:117402",
+          "Modelo: AMG 63 4-matic (166.875) | Potencia:585HP | ID Veh\u00edculo:117404"
+      ],
+      "GLS (X167) 2019": [
+          "Modelo: 450 EQ Boost 4-matic (167.959) | Potencia:367HP | ID Veh\u00edculo:137876",
+          "Modelo: Maybach 600 EQ Boost 4-matic (167.987) | Potencia:557HP | ID Veh\u00edculo:138595"
+      ],
+      "M-CLASS (W164) 2005-2012": [
+          "Modelo: ML 350 4-matic (164.186) | Potencia:272HP | ID Veh\u00edculo:18591",
+          "Modelo: ML 500 4-matic (164.172) | Potencia:388HP | ID Veh\u00edculo:26573",
+          "Modelo: ML 500 4-matic (164.175) | Potencia:306HP | ID Veh\u00edculo:18592",
+          "Modelo: ML 63 AMG 4-matic (164.177) | Potencia:510HP | ID Veh\u00edculo:19294"
+      ],
+      "M-CLASS (W166) 2011-2015": [
+          "Modelo: ML 350 4-matic (166.057) | Potencia:306HP | ID Veh\u00edculo:12311",
+          "Modelo: ML 500 4-matic (166.073) | Potencia:408HP | ID Veh\u00edculo:7459",
+          "Modelo: ML 63 AMG 4-matic (166.074) | Potencia:525HP | ID Veh\u00edculo:18370"
+      ],
+      "M-CLASS SUV (W163) 1998-2005": [
+          "Modelo: ML 320 (163.154) | Potencia:218HP | ID Veh\u00edculo:9037",
+          "Modelo: ML 350 (163.157) | Potencia:245HP | ID Veh\u00edculo:17108",
+          "Modelo: ML 350 | Potencia:235HP | ID Veh\u00edculo:17274",
+          "Modelo: ML 430 (163.172) | Potencia:272HP | ID Veh\u00edculo:10504",
+          "Modelo: ML 500 (163.175) | Potencia:292HP | ID Veh\u00edculo:16150",
+          "Modelo: ML 55 AMG (163.174) | Potencia:347HP | ID Veh\u00edculo:13164"
+      ],
+      "R-CLASS (W251, V251) 2005-2017": [
+          "Modelo: R 350 4-matic (251.065, 251.165) | Potencia:272HP | ID Veh\u00edculo:19054",
+          "Modelo: R 500 4-matic (251.075, 251.175) | Potencia:306HP | ID Veh\u00edculo:19055"
+      ],
+      "S-CLASS (W126) 1979-1991": [
+          "Modelo: 500 SE, SEL (126.036) | Potencia:223HP | ID Veh\u00edculo:698",
+          "Modelo: 500 SE, SEL (126.036) | Potencia:231HP | ID Veh\u00edculo:699",
+          "Modelo: 500 SE, SEL (126.036) | Potencia:241HP | ID Veh\u00edculo:700",
+          "Modelo: 500 SE, SEL (126.036) | Potencia:245HP | ID Veh\u00edculo:701",
+          "Modelo: 500 SE, SEL Cat | Potencia:252HP | ID Veh\u00edculo:716",
+          "Modelo: 500 SE, SEL | Potencia:252HP | ID Veh\u00edculo:702",
+          "Modelo: 500 SE, SEL | Potencia:265HP | ID Veh\u00edculo:703",
+          "Modelo: 560 SE, SEL (126.038, 126.039) | Potencia:242HP | ID Veh\u00edculo:705"
+      ],
+      "S-CLASS (W140) 1991-1998": [
+          "Modelo: 300 SE 2.8 (140.028) | Potencia:197HP | ID Veh\u00edculo:951",
+          "Modelo: 300 SE, SEL\/S320 (140.032, 140.033) | Potencia:231HP | ID Veh\u00edculo:952",
+          "Modelo: 400 SE, SEL\/S420 (140.042, 140.043) | Potencia:286HP | ID Veh\u00edculo:954",
+          "Modelo: 500 SE, SEL (140.050, 140.051) | Potencia:326HP | ID Veh\u00edculo:956",
+          "Modelo: S 420 (140.042, 140.043) | Potencia:279HP | ID Veh\u00edculo:953",
+          "Modelo: S 500 (140.050, 140.051) | Potencia:320HP | ID Veh\u00edculo:955",
+          "Modelo: S 600 (140.056, 140.057) | Potencia:394HP | ID Veh\u00edculo:957"
+      ],
+      "S-CLASS (W220) 1998-2005": [
+          "Modelo: S 430 (220.070, 220.170) | Potencia:279HP | ID Veh\u00edculo:9600",
+          "Modelo: S 430 4-matic (220.083, 220.183) | Potencia:279HP | ID Veh\u00edculo:16964",
+          "Modelo: S 500 (220.075, 220.175, 220.875) | Potencia:306HP | ID Veh\u00edculo:9601",
+          "Modelo: S 500 4-matic (220.084, 220.184) | Potencia:306HP | ID Veh\u00edculo:16976",
+          "Modelo: S 55 AMG Kompressor (220.074, 220.174) | Potencia:500HP | ID Veh\u00edculo:16963",
+          "Modelo: S 600 (220.176) | Potencia:500HP | ID Veh\u00edculo:16960",
+          "Modelo: S 600 (220.878, 220.178) | Potencia:367HP | ID Veh\u00edculo:14579"
+      ],
+      "S-CLASS (W221) 2005-2013": [
+          "Modelo: S 350 CGI (221.057, 221.157) | Potencia:306HP | ID Veh\u00edculo:9872",
+          "Modelo: S 500 (221.071, 221.171) | Potencia:388HP | ID Veh\u00edculo:18961",
+          "Modelo: S 500 4-matic (221.086, 221.186) | Potencia:388HP | ID Veh\u00edculo:19854",
+          "Modelo: S 500 CGI (221.073, 221.173) | Potencia:435HP | ID Veh\u00edculo:9874",
+          "Modelo: S 600 (221.176) | Potencia:517HP | ID Veh\u00edculo:19712",
+          "Modelo: S 63 AMG (221.077, 221.177) | Potencia:525HP | ID Veh\u00edculo:20015",
+          "Modelo: S 65 AMG (221.179) | Potencia:612HP | ID Veh\u00edculo:19713"
+      ],
+      "S-CLASS (W222, V222, X222) 2013-2020": [
+          "Modelo: AMG S 63 (222.187) | Potencia:612HP | ID Veh\u00edculo:130207",
+          "Modelo: S 400 (222.165) | Potencia:333HP | ID Veh\u00edculo:116218",
+          "Modelo: S 450 (222.066, 222.166) | Potencia:367HP | ID Veh\u00edculo:127739",
+          "Modelo: S 500 (222.082, 222.182) | Potencia:455HP | ID Veh\u00edculo:59010",
+          "Modelo: S 560 (222.083, 222.183) | Potencia:469HP | ID Veh\u00edculo:128089",
+          "Modelo: S 560 e (222.173) | Potencia:476HP | ID Veh\u00edculo:139287",
+          "Modelo: S 600 (222.176) | Potencia:530HP | ID Veh\u00edculo:100755",
+          "Modelo: S 63 AMG 4-matic (222.178) | Potencia:585HP | ID Veh\u00edculo:11106",
+          "Modelo: S 650 Maybach (222.980) | Potencia:630HP | ID Veh\u00edculo:128014"
+      ],
+      "S-CLASS (W223) 2020": [
+          "Modelo: S 450 EQ Boost 4-matic (223.061) | Potencia:367HP | ID Veh\u00edculo:141776"
+      ],
+      "S-CLASS Coup\u00e9 (C140) 1992-1999": [
+          "Modelo: 500 SEC \/ CL 500 (140.070) | Potencia:320HP | ID Veh\u00edculo:959",
+          "Modelo: SEC\/CL 600 (140.076) | Potencia:394HP | ID Veh\u00edculo:960"
+      ],
+      "S-CLASS Coup\u00e9 (C215) 1999-2006": [
+          "Modelo: CL 500 (215.375) | Potencia:306HP | ID Veh\u00edculo:11459",
+          "Modelo: CL 55 AMG (215.373) | Potencia:360HP | ID Veh\u00edculo:14596",
+          "Modelo: CL 55 AMG Kompressor (215.374) | Potencia:500HP | ID Veh\u00edculo:16977",
+          "Modelo: CL 600 (215.376) | Potencia:500HP | ID Veh\u00edculo:16961",
+          "Modelo: CL 600 (215.378) | Potencia:367HP | ID Veh\u00edculo:11460",
+          "Modelo: CL 65 AMG (215.379) | Potencia:612HP | ID Veh\u00edculo:17390"
+      ],
+      "S-CLASS Coup\u00e9 (C216) 2006-2013": [
+          "Modelo: CL 500 (216.371) | Potencia:388HP | ID Veh\u00edculo:19728",
+          "Modelo: CL 500 (216.373) | Potencia:435HP | ID Veh\u00edculo:8545",
+          "Modelo: CL 500 4-matic (216.394) | Potencia:435HP | ID Veh\u00edculo:8588",
+          "Modelo: CL 600 (216.376) | Potencia:517HP | ID Veh\u00edculo:19729",
+          "Modelo: CL 63 AMG (216.374) | Potencia:544HP | ID Veh\u00edculo:8610",
+          "Modelo: CL 63 AMG (216.377) | Potencia:525HP | ID Veh\u00edculo:20016",
+          "Modelo: CL 65 AMG (216.379) | Potencia:612HP | ID Veh\u00edculo:20017"
+      ],
+      "S-CLASS Coup\u00e9 (C217) 2014-2020": [
+          "Modelo: S 450 4-matic (217.364) | Potencia:367HP | ID Veh\u00edculo:129009",
+          "Modelo: S 500 4-matic (217.385) | Potencia:455HP | ID Veh\u00edculo:101052",
+          "Modelo: S 560 4-matic (217.386) | Potencia:469HP | ID Veh\u00edculo:129010",
+          "Modelo: S 63 AMG 4-matic (217.378) | Potencia:585HP | ID Veh\u00edculo:101059",
+          "Modelo: S 65 AMG (217.379) | Potencia:630HP | ID Veh\u00edculo:107477"
+      ],
+      "S-CLASS Descapotable (A217) 2015-2020": [
+          "Modelo: AMG S 63 4-matic (217.478) | Potencia:585HP | ID Veh\u00edculo:117886",
+          "Modelo: AMG S 65 (217.479) | Potencia:630HP | ID Veh\u00edculo:119042",
+          "Modelo: S 560 (217.482) | Potencia:456HP | ID Veh\u00edculo:117885",
+          "Modelo: S 560 (217.483) | Potencia:469HP | ID Veh\u00edculo:129012",
+          "Modelo: S 650 Maybach (217.479) | Potencia:630HP | ID Veh\u00edculo:128772"
+      ],
+      "SL (R129) 1989-2004": [
+          "Modelo: 500 (129.067) | Potencia:320HP | ID Veh\u00edculo:933",
+          "Modelo: 500 (129.068) | Potencia:306HP | ID Veh\u00edculo:9433",
+          "Modelo: 55 AMG | Potencia:354HP | ID Veh\u00edculo:14941",
+          "Modelo: 55 AMG | Potencia:476HP | ID Veh\u00edculo:30012",
+          "Modelo: 60 AMG (129.067) | Potencia:381HP | ID Veh\u00edculo:8383",
+          "Modelo: 600 (129.076) | Potencia:394HP | ID Veh\u00edculo:935",
+          "Modelo: SL 320 (129.063) | Potencia:220HP | ID Veh\u00edculo:59194",
+          "Modelo: SL 600 (129.076) | Potencia:408HP | ID Veh\u00edculo:20131"
+      ],
+      "SL (R230) 2001-2012": [
+          "Modelo: 350 (230.467) | Potencia:245HP | ID Veh\u00edculo:17091",
+          "Modelo: 500 (230.471) | Potencia:388HP | ID Veh\u00edculo:19390",
+          "Modelo: 500 (230.475) | Potencia:306HP | ID Veh\u00edculo:16129",
+          "Modelo: 55 AMG (230.472) | Potencia:517HP | ID Veh\u00edculo:19392",
+          "Modelo: 55 AMG (230.474) | Potencia:476HP | ID Veh\u00edculo:16258",
+          "Modelo: 55 AMG Kompressor (230.474) | Potencia:500HP | ID Veh\u00edculo:16876",
+          "Modelo: 600 (230.476) | Potencia:500HP | ID Veh\u00edculo:17193",
+          "Modelo: 600 (230.477) | Potencia:517HP | ID Veh\u00edculo:19391",
+          "Modelo: 63 AMG (230.470) | Potencia:525HP | ID Veh\u00edculo:26579",
+          "Modelo: 65 AMG (230.479) | Potencia:612HP | ID Veh\u00edculo:17391",
+          "Modelo: 65 AMG Black Series (230.479) | Potencia:670HP | ID Veh\u00edculo:31408"
+      ],
+      "SL (R231) 2011-2020": [
+          "Modelo: 500 (231.473) | Potencia:435HP | ID Veh\u00edculo:9351",
+          "Modelo: 500 (231.473) | Potencia:455HP | ID Veh\u00edculo:112346",
+          "Modelo: 500 | Potencia:441HP | ID Veh\u00edculo:54992",
+          "Modelo: 63 AMG (231.474) | Potencia:537HP | ID Veh\u00edculo:9349",
+          "Modelo: 63 AMG (231.474) | Potencia:585HP | ID Veh\u00edculo:101064",
+          "Modelo: 65 AMG (231.479) | Potencia:630HP | ID Veh\u00edculo:59082"
+      ],
+      "SLC (R172) 2016": [
+          "Modelo: 180 (172.431) | Potencia:156HP | ID Veh\u00edculo:118113",
+          "Modelo: 200 (172.434) | Potencia:184HP | ID Veh\u00edculo:118114",
+          "Modelo: 300 (172.438) | Potencia:245HP | ID Veh\u00edculo:118115",
+          "Modelo: AMG SLC 43 (172.466) | Potencia:367HP | ID Veh\u00edculo:118116",
+          "Modelo: AMG SLC 43 (172.466) | Potencia:390HP | ID Veh\u00edculo:131987"
+      ],
+      "SLK (R170) 1996-2004": [
+          "Modelo: 200 (170.435) | Potencia:136HP | ID Veh\u00edculo:5973",
+          "Modelo: 200 Kompressor (170.444) | Potencia:163HP | ID Veh\u00edculo:14623",
+          "Modelo: 200 Kompressor (170.445) | Potencia:192HP | ID Veh\u00edculo:5976",
+          "Modelo: 230 Kompressor (170.447) | Potencia:193HP | ID Veh\u00edculo:5974",
+          "Modelo: 230 Kompressor (170.449) | Potencia:197HP | ID Veh\u00edculo:14624",
+          "Modelo: 32 AMG Kompressor (170.466) | Potencia:354HP | ID Veh\u00edculo:15615",
+          "Modelo: 320 (170.465) | Potencia:218HP | ID Veh\u00edculo:14625"
+      ],
+      "SLK (R171) 2004-2011": [
+          "Modelo: 200 Kompressor (171.442) | Potencia:163HP | ID Veh\u00edculo:17884",
+          "Modelo: 200 Kompressor (171.445) | Potencia:184HP | ID Veh\u00edculo:26663",
+          "Modelo: 350 (171.456) | Potencia:272HP | ID Veh\u00edculo:17885",
+          "Modelo: 350 (171.458) | Potencia:305HP | ID Veh\u00edculo:26662",
+          "Modelo: 55 AMG (171.473) | Potencia:360HP | ID Veh\u00edculo:142045",
+          "Modelo: 55 AMG (171.473) | Potencia:360HP | ID Veh\u00edculo:17886"
+      ],
+      "SLK (R172) 2011": [
+          "Modelo: 200 (172.448) | Potencia:184HP | ID Veh\u00edculo:9288",
+          "Modelo: 350 (172.457) | Potencia:306HP | ID Veh\u00edculo:9289",
+          "Modelo: 55 AMG (172.475) | Potencia:422HP | ID Veh\u00edculo:13822"
+      ],
+      "SLS AMG (C197) 2010": [
+          "Modelo: 6.2 (197.377) | Potencia:571HP | ID Veh\u00edculo:32991"
+      ]
   },
-  "Dodge": {
-    "Avenger": ["2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "1996", "1995"],
-    "Caliber": ["2011", "2010", "2009", "2008", "2007", "2006"],
-    "Caravan": ["2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001"],
-    "Challenger": ["2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008"],
-    "Charger": ["2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006"],
-    "Charger 500": ["2010", "2009", "2008", "2007", "2006"],
-    "Charger Daytona": ["2010", "2009", "2008", "2007", "2006"],
-    "Dart": ["2015", "2014", "2013"],
-    "Durango": ["2010", "2009", "2008", "2007", "2006", "2005", "2004"],
-    "Intrepid": ["2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994", "1993"],
-    "Neon": ["2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994"],
-    "Nitro": ["2011", "2010", "2009", "2008", "2007"],
-    "Ram": ["2015", "2014", "2008", "2007", "2006", "2005", "2004", "2003", "2002"],
-    "Stratus": ["2005", "2004", "2003", "2002", "2001"]
+  "MINI": {
+      "MINI (F55) 2013": [
+          "Modelo: Cooper S | Potencia:192HP | ID Veh\u00edculo:106497",
+          "Modelo: Cooper | Potencia:136HP | ID Veh\u00edculo:106490"
+      ],
+      "MINI (F56) 2013": [
+          "Modelo: Cooper S | Potencia:192HP | ID Veh\u00edculo:100573",
+          "Modelo: Cooper SE \/ Electric | Potencia:184HP | ID Veh\u00edculo:136727",
+          "Modelo: Cooper | Potencia:136HP | ID Veh\u00edculo:100572",
+          "Modelo: John Cooper Works GP | Potencia:306HP | ID Veh\u00edculo:137845",
+          "Modelo: John Cooper Works | Potencia:231HP | ID Veh\u00edculo:111113"
+      ],
+      "MINI (R50, R53) 2001-2006": [
+          "Modelo: Cooper S | Potencia:163HP | ID Veh\u00edculo:16600",
+          "Modelo: Cooper S | Potencia:170HP | ID Veh\u00edculo:18307",
+          "Modelo: Cooper | Potencia:116HP | ID Veh\u00edculo:15890",
+          "Modelo: S Works | Potencia:203HP | ID Veh\u00edculo:25139",
+          "Modelo: Works | Potencia:210HP | ID Veh\u00edculo:17793"
+      ],
+      "MINI (R56) 2005-2014": [
+          "Modelo: Cooper S | Potencia:184HP | ID Veh\u00edculo:33054",
+          "Modelo: Cooper | Potencia:115HP | ID Veh\u00edculo:5373",
+          "Modelo: Cooper | Potencia:120HP | ID Veh\u00edculo:19859",
+          "Modelo: John Cooper Works GP | Potencia:218HP | ID Veh\u00edculo:57564",
+          "Modelo: John Cooper Works | Potencia:211HP | ID Veh\u00edculo:32009"
+      ],
+      "MINI CLUBMAN (F54) 2014": [
+          "Modelo: Cooper S | Potencia:192HP | ID Veh\u00edculo:115116",
+          "Modelo: Cooper | Potencia:136HP | ID Veh\u00edculo:115115",
+          "Modelo: John Cooper Works | Potencia:306HP | ID Veh\u00edculo:136257"
+      ],
+      "MINI CLUBMAN (R55) 2006-2015": [
+          "Modelo: Cooper S | Potencia:174HP | ID Veh\u00edculo:23445",
+          "Modelo: Cooper S | Potencia:184HP | ID Veh\u00edculo:33076"
+      ],
+      "MINI COUNTRYMAN (F60) 2016": [
+          "Modelo: Cooper S | Potencia:192HP | ID Veh\u00edculo:123357",
+          "Modelo: Cooper SE ALL4 | Potencia:224HP | ID Veh\u00edculo:125347",
+          "Modelo: Cooper | Potencia:136HP | ID Veh\u00edculo:123350",
+          "Modelo: John Cooper Works ALL4 | Potencia:231HP | ID Veh\u00edculo:125348",
+          "Modelo: John Cooper Works ALL4 | Potencia:306HP | ID Veh\u00edculo:136258"
+      ],
+      "MINI COUNTRYMAN (R60) 2010-2016": [
+          "Modelo: Cooper S ALL4 | Potencia:184HP | ID Veh\u00edculo:34927",
+          "Modelo: Cooper S | Potencia:184HP | ID Veh\u00edculo:34925",
+          "Modelo: John Cooper Works ALL4 | Potencia:218HP | ID Veh\u00edculo:56172"
+      ],
+      "MINI Coup\u00e9 (R58) 2010-2015": [
+          "Modelo: John Cooper Works | Potencia:211HP | ID Veh\u00edculo:11701"
+      ],
+      "MINI Descapotable (F57) 2014": [
+          "Modelo: Cooper S | Potencia:192HP | ID Veh\u00edculo:117579",
+          "Modelo: Cooper | Potencia:136HP | ID Veh\u00edculo:117578",
+          "Modelo: John Cooper Works | Potencia:231HP | ID Veh\u00edculo:118110"
+      ],
+      "MINI Descapotable (R52) 2004-2008": [
+          "Modelo: Cooper S | Potencia:163HP | ID Veh\u00edculo:21092",
+          "Modelo: Cooper S | Potencia:170HP | ID Veh\u00edculo:17818",
+          "Modelo: John Cooper Works | Potencia:210HP | ID Veh\u00edculo:19303"
+      ],
+      "MINI Descapotable (R57) 2007-2015": [
+          "Modelo: Cooper S | Potencia:184HP | ID Veh\u00edculo:33079",
+          "Modelo: Cooper | Potencia:120HP | ID Veh\u00edculo:31140",
+          "Modelo: John Cooper Works | Potencia:211HP | ID Veh\u00edculo:32010"
+      ],
+      "MINI PACEMAN (R61) 2012-2016": [
+          "Modelo: Cooper S ALL4 | Potencia:184HP | ID Veh\u00edculo:58872",
+          "Modelo: Cooper S ALL4 | Potencia:190HP | ID Veh\u00edculo:106285",
+          "Modelo: Cooper S | Potencia:184HP | ID Veh\u00edculo:58870",
+          "Modelo: Cooper S | Potencia:190HP | ID Veh\u00edculo:106284",
+          "Modelo: John Cooper Works ALL4 | Potencia:218HP | ID Veh\u00edculo:58887"
+      ],
+      "MINI Roadster (R59) 2011-2015": [
+          "Modelo: John Cooper Works | Potencia:211HP | ID Veh\u00edculo:15287"
+      ]
   },
-  "Fiat": {
-    "500": ["2015", "2014", "2013", "2012"]
+  "PORSCHE": {
+      "718 BOXSTER (982) 2016": [
+          "Modelo: 2.0 T (982320, 982321, 982350, 982351) | Potencia:300HP | ID Veh\u00edculo:118752",
+          "Modelo: 2.5 GTS (982340, 982341, 982380) | Potencia:365HP | ID Veh\u00edculo:128977",
+          "Modelo: 2.5 S (982330, 982331) | Potencia:350HP | ID Veh\u00edculo:118753",
+          "Modelo: GTS 4.0 (982360, 982361) | Potencia:400HP | ID Veh\u00edculo:139725"
+      ],
+      "718 BOXSTER Spyder (982) 2019": [
+          "Modelo: 4.0 (982510, 982511) | Potencia:420HP | ID Veh\u00edculo:137133"
+      ],
+      "718 CAYMAN (982) 2016": [
+          "Modelo: 2.0 (982120, 982121, 982150, 982151) | Potencia:300HP | ID Veh\u00edculo:119928",
+          "Modelo: 2.5 GTS (982140, 982141) | Potencia:365HP | ID Veh\u00edculo:128976",
+          "Modelo: 4.0 GT4 (982810, 982811) | Potencia:420HP | ID Veh\u00edculo:137060",
+          "Modelo: 4.0 GT4 RS (982850, 982851) | Potencia:500HP | ID Veh\u00edculo:145902",
+          "Modelo: GTS 4.0 (982160, 982161) | Potencia:400HP | ID Veh\u00edculo:139717",
+          "Modelo: S 2.5 (982130, 982131) | Potencia:350HP | ID Veh\u00edculo:119929"
+      ],
+      "911 (991) 2011-2020": [
+          "Modelo: 3.0 Carrera GTS | Potencia:450HP | ID Veh\u00edculo:125932",
+          "Modelo: 3.0 Carrera | Potencia:370HP | ID Veh\u00edculo:117749",
+          "Modelo: 3.4 Carrera | Potencia:350HP | ID Veh\u00edculo:11568",
+          "Modelo: 3.8 Carrera S | Potencia:400HP | ID Veh\u00edculo:11570",
+          "Modelo: 3.8 GT2 RS | Potencia:700HP | ID Veh\u00edculo:129180",
+          "Modelo: 3.8 GT3 | Potencia:475HP | ID Veh\u00edculo:59140",
+          "Modelo: 3.8 Turbo S | Potencia:580HP | ID Veh\u00edculo:118036",
+          "Modelo: 3.8 Turbo S | Potencia:607HP | ID Veh\u00edculo:128457",
+          "Modelo: 3.8 Turbo | Potencia:520HP | ID Veh\u00edculo:59141",
+          "Modelo: 4.0 GT3 RS | Potencia:520HP | ID Veh\u00edculo:130600",
+          "Modelo: 4.0 GT3 | Potencia:500HP | ID Veh\u00edculo:130599"
+      ],
+      "911 (992) 2018": [
+          "Modelo: 3.0 Carrera (992110) | Potencia:385HP | ID Veh\u00edculo:137161",
+          "Modelo: 3.0 Carrera 4 GTS (992440) | Potencia:480HP | ID Veh\u00edculo:145115",
+          "Modelo: 3.0 Carrera 4 S (992420) | Potencia:450HP | ID Veh\u00edculo:135165",
+          "Modelo: 3.0 Carrera GTS (992140) | Potencia:480HP | ID Veh\u00edculo:145116",
+          "Modelo: 3.0 Carrera S (992120) | Potencia:450HP | ID Veh\u00edculo:135162",
+          "Modelo: 3.8 Sport Classic (992130) | Potencia:551HP | ID Veh\u00edculo:147921",
+          "Modelo: GT3 (992810) | Potencia:510HP | ID Veh\u00edculo:144198"
+      ],
+      "911 (996) 1997-2005": [
+          "Modelo: 3.4 Carrera 4 | Potencia:301HP | ID Veh\u00edculo:10104",
+          "Modelo: 3.4 Carrera | Potencia:301HP | ID Veh\u00edculo:8696",
+          "Modelo: 3.6 Carrera 4 | Potencia:320HP | ID Veh\u00edculo:16461",
+          "Modelo: 3.6 GT2 | Potencia:462HP | ID Veh\u00edculo:15976",
+          "Modelo: 3.6 GT2 | Potencia:483HP | ID Veh\u00edculo:17597",
+          "Modelo: 3.6 GT3 | Potencia:381HP | ID Veh\u00edculo:17233",
+          "Modelo: 3.6 Turbo 4 | Potencia:420HP | ID Veh\u00edculo:14400"
+      ],
+      "911 (997) 2004-2013": [
+          "Modelo: 3.6 Carrera 4 | Potencia:325HP | ID Veh\u00edculo:18857",
+          "Modelo: 3.6 Carrera | Potencia:325HP | ID Veh\u00edculo:18060",
+          "Modelo: 3.6 GT 2 | Potencia:530HP | ID Veh\u00edculo:23184",
+          "Modelo: 3.6 GT3 | Potencia:415HP | ID Veh\u00edculo:19545",
+          "Modelo: 3.6 Turbo | Potencia:480HP | ID Veh\u00edculo:19452",
+          "Modelo: 3.8 Carrera 4S \/ 4 GTS | Potencia:408HP | ID Veh\u00edculo:4846",
+          "Modelo: 3.8 Carrera 4S | Potencia:355HP | ID Veh\u00edculo:18858",
+          "Modelo: 3.8 Carrera 4S | Potencia:381HP | ID Veh\u00edculo:20897",
+          "Modelo: 3.8 Carrera S \/ GTS | Potencia:408HP | ID Veh\u00edculo:4833",
+          "Modelo: 3.8 Carrera S | Potencia:355HP | ID Veh\u00edculo:18061",
+          "Modelo: 3.8 Carrera S | Potencia:381HP | ID Veh\u00edculo:20896",
+          "Modelo: 3.8 Turbo S | Potencia:530HP | ID Veh\u00edculo:11795",
+          "Modelo: 3.8 Turbo | Potencia:500HP | ID Veh\u00edculo:4828",
+          "Modelo: 4.0 GT3 RS | Potencia:500HP | ID Veh\u00edculo:11571"
+      ],
+      "911 Descapotable (991) 2012-2020": [
+          "Modelo: 3.0 Carrera 4 | Potencia:370HP | ID Veh\u00edculo:117751",
+          "Modelo: 3.0 Carrera GTS | Potencia:450HP | ID Veh\u00edculo:125934",
+          "Modelo: 3.0 Carrera | Potencia:370HP | ID Veh\u00edculo:117750",
+          "Modelo: 3.4 Carrera | Potencia:350HP | ID Veh\u00edculo:15982",
+          "Modelo: 3.8 Carrera S | Potencia:400HP | ID Veh\u00edculo:15988",
+          "Modelo: 3.8 Turbo S | Potencia:580HP | ID Veh\u00edculo:118038",
+          "Modelo: 3.8 Turbo | Potencia:520HP | ID Veh\u00edculo:100633",
+          "Modelo: 3.8 Turbo | Potencia:540HP | ID Veh\u00edculo:118037"
+      ],
+      "911 Descapotable (992) 2019": [
+          "Modelo: 3.0 Carrera 4 S (992620) | Potencia:450HP | ID Veh\u00edculo:135167",
+          "Modelo: 3.0 Carrera S (992320) | Potencia:450HP | ID Veh\u00edculo:135166"
+      ],
+      "911 Descapotable (996) 1997-2005": [
+          "Modelo: 3.4 Carrera 4 | Potencia:301HP | ID Veh\u00edculo:17954",
+          "Modelo: 3.4 Carrera | Potencia:301HP | ID Veh\u00edculo:9419",
+          "Modelo: 3.6 Carrera 4 | Potencia:320HP | ID Veh\u00edculo:16463",
+          "Modelo: 3.6 Turbo 4 | Potencia:420HP | ID Veh\u00edculo:17618"
+      ],
+      "911 Descapotable (997) 2005-2013": [
+          "Modelo: 3.6 Carrera 4 | Potencia:325HP | ID Veh\u00edculo:19158",
+          "Modelo: 3.6 Carrera 4 | Potencia:345HP | ID Veh\u00edculo:30425",
+          "Modelo: 3.6 Carrera | Potencia:325HP | ID Veh\u00edculo:18551",
+          "Modelo: 3.6 Carrera | Potencia:345HP | ID Veh\u00edculo:28242",
+          "Modelo: 3.6 Turbo | Potencia:480HP | ID Veh\u00edculo:23174",
+          "Modelo: 3.8 Carrera 4S \/ 4 GTS | Potencia:408HP | ID Veh\u00edculo:4952",
+          "Modelo: 3.8 Carrera 4S | Potencia:355HP | ID Veh\u00edculo:19159",
+          "Modelo: 3.8 Carrera 4S | Potencia:381HP | ID Veh\u00edculo:20170",
+          "Modelo: 3.8 Carrera S \/ GTS | Potencia:408HP | ID Veh\u00edculo:4882",
+          "Modelo: 3.8 Carrera S | Potencia:355HP | ID Veh\u00edculo:18552",
+          "Modelo: 3.8 Carrera S | Potencia:381HP | ID Veh\u00edculo:20506",
+          "Modelo: 3.8 Carrera S | Potencia:385HP | ID Veh\u00edculo:28243",
+          "Modelo: 3.8 Turbo S | Potencia:530HP | ID Veh\u00edculo:11796"
+      ],
+      "911 Speedster (997) 2010-2011": [
+          "Modelo: 3.8 Carrera GTS (997.720, 997.721) | Potencia:408HP | ID Veh\u00edculo:139321"
+      ],
+      "911 Targa (991) 2014-2019": [
+          "Modelo: 3.0 Carrera 4 GTS | Potencia:450HP | ID Veh\u00edculo:125936",
+          "Modelo: 3.0 Carrera 4 | Potencia:370HP | ID Veh\u00edculo:117753",
+          "Modelo: 3.0 Carrera 4S | Potencia:420HP | ID Veh\u00edculo:117758",
+          "Modelo: 3.8 Carrera 4S \/ 4 GTS | Potencia:430HP | ID Veh\u00edculo:105757"
+      ],
+      "911 Targa (992) 2020": [
+          "Modelo: 4 GTS (992540) | Potencia:480HP | ID Veh\u00edculo:145108"
+      ],
+      "911 Targa (997) 2006-2012": [
+          "Modelo: 3.6 Carrera 4 | Potencia:325HP | ID Veh\u00edculo:30427",
+          "Modelo: 3.8 Carrera 4S | Potencia:355HP | ID Veh\u00edculo:30428",
+          "Modelo: 3.8 Carrera 4S | Potencia:381HP | ID Veh\u00edculo:139305"
+      ],
+      "928 1977-1995": [
+          "Modelo: 5.0 S4 | Potencia:300HP | ID Veh\u00edculo:58756"
+      ],
+      "BOXSTER (981) 2012-2016": [
+          "Modelo: 2.7 | Potencia:265HP | ID Veh\u00edculo:15978",
+          "Modelo: GTS 3.4 | Potencia:330HP | ID Veh\u00edculo:101141",
+          "Modelo: S 3.4 | Potencia:315HP | ID Veh\u00edculo:15979"
+      ],
+      "BOXSTER (986) 1996-2004": [
+          "Modelo: 2.5 | Potencia:204HP | ID Veh\u00edculo:5633",
+          "Modelo: 2.7 | Potencia:220HP | ID Veh\u00edculo:11522",
+          "Modelo: S 3.2 | Potencia:252HP | ID Veh\u00edculo:11523",
+          "Modelo: S 3.2 | Potencia:266HP | ID Veh\u00edculo:17996"
+      ],
+      "BOXSTER (987) 2004-2013": [
+          "Modelo: 2.7 | Potencia:240HP | ID Veh\u00edculo:18289",
+          "Modelo: 2.7 | Potencia:245HP | ID Veh\u00edculo:22541",
+          "Modelo: 2.9 | Potencia:255HP | ID Veh\u00edculo:32068",
+          "Modelo: S 3.2 | Potencia:280HP | ID Veh\u00edculo:18290",
+          "Modelo: S 3.4 (987.760, 987.761) | Potencia:320HP | ID Veh\u00edculo:139327",
+          "Modelo: S 3.4 | Potencia:295HP | ID Veh\u00edculo:22542",
+          "Modelo: S 3.4 | Potencia:310HP | ID Veh\u00edculo:31364"
+      ],
+      "BOXSTER Spyder (981) 2015-2016": [
+          "Modelo: 3.8 | Potencia:375HP | ID Veh\u00edculo:112947"
+      ],
+      "BOXSTER Spyder (987) 2007-2011": [
+          "Modelo: GOLF III (1H1) | Potencia:320HP | ID Veh\u00edculo:505"
+      ],
+      "CARRERA GT (980) 2003-2006": [
+          "Modelo: 5.7 | Potencia:612HP | ID Veh\u00edculo:17275"
+      ],
+      "CAYENNE (92A) 2010": [
+          "Modelo: 3.0 Diesel | Potencia:245HP | ID Veh\u00edculo:11585",
+          "Modelo: 3.0 S E-Hybrid | Potencia:416HP | ID Veh\u00edculo:33664",
+          "Modelo: 3.6 GTS | Potencia:440HP | ID Veh\u00edculo:110624",
+          "Modelo: 3.6 S | Potencia:420HP | ID Veh\u00edculo:107544",
+          "Modelo: 3.6 | Potencia:300HP | ID Veh\u00edculo:33662",
+          "Modelo: 4.2 S Diesel | Potencia:385HP | ID Veh\u00edculo:107543",
+          "Modelo: 4.8 GTS | Potencia:420HP | ID Veh\u00edculo:56026",
+          "Modelo: 4.8 S | Potencia:400HP | ID Veh\u00edculo:33663",
+          "Modelo: 4.8 Turbo S | Potencia:570HP | ID Veh\u00edculo:111985",
+          "Modelo: 4.8 Turbo | Potencia:500HP | ID Veh\u00edculo:2479",
+          "Modelo: 4.8 Turbo | Potencia:520HP | ID Veh\u00edculo:107545"
+      ],
+      "CAYENNE (9PA) 2002-2010": [
+          "Modelo: 3.2 | Potencia:241HP | ID Veh\u00edculo:21569",
+          "Modelo: 3.2 | Potencia:250HP | ID Veh\u00edculo:17693",
+          "Modelo: 3.6 | Potencia:290HP | ID Veh\u00edculo:20112",
+          "Modelo: GTS 4.8 | Potencia:405HP | ID Veh\u00edculo:24478",
+          "Modelo: S 4.5 | Potencia:340HP | ID Veh\u00edculo:16695",
+          "Modelo: S 4.8 | Potencia:385HP | ID Veh\u00edculo:20113",
+          "Modelo: Turbo 4.5 | Potencia:450HP | ID Veh\u00edculo:16848",
+          "Modelo: Turbo S 4.5 | Potencia:500HP | ID Veh\u00edculo:18918",
+          "Modelo: Turbo S 4.5 | Potencia:521HP | ID Veh\u00edculo:19451",
+          "Modelo: Turbo S 4.8 | Potencia:500HP | ID Veh\u00edculo:20114",
+          "Modelo: Turbo S 4.8 | Potencia:550HP | ID Veh\u00edculo:32082"
+      ],
+      "CAYENNE Coupe (9YB) 2019": [
+          "Modelo: 2.9 S AWD (9YBBB1) | Potencia:440HP | ID Veh\u00edculo:136655",
+          "Modelo: 3.0 AWD (9YBAA1) | Potencia:340HP | ID Veh\u00edculo:136654",
+          "Modelo: 4.0 GTS AWD (9YBBG1) | Potencia:460HP | ID Veh\u00edculo:141721",
+          "Modelo: 4.0 Turbo AWD (9YBCF1) | Potencia:550HP | ID Veh\u00edculo:136656",
+          "Modelo: 4.0 Turbo GT AWD (9YBCQ1) | Potencia:640HP | ID Veh\u00edculo:144667"
+      ],
+      "CAYENNE SUV (9YA) 2017": [
+          "Modelo: 3.0 E-Hybrid AWD (9YAAE1) | Potencia:462HP | ID Veh\u00edculo:140120",
+          "Modelo: 4.0 GTS (9YABG1) | Potencia:460HP | ID Veh\u00edculo:140905"
+      ],
+      "CAYMAN (981) 2013-2016": [
+          "Modelo: 2.7 | Potencia:275HP | ID Veh\u00edculo:57364",
+          "Modelo: 3.8 GT4 | Potencia:385HP | ID Veh\u00edculo:111984",
+          "Modelo: GTS 3.4 | Potencia:340HP | ID Veh\u00edculo:101142",
+          "Modelo: S 3.4 | Potencia:325HP | ID Veh\u00edculo:57365"
+      ],
+      "CAYMAN (987) 2005-2013": [
+          "Modelo: 2.7 | Potencia:245HP | ID Veh\u00edculo:19546",
+          "Modelo: 2.9 | Potencia:265HP | ID Veh\u00edculo:32075",
+          "Modelo: R 3.4 | Potencia:330HP | ID Veh\u00edculo:11323",
+          "Modelo: S 3,4 Sport | Potencia:303HP | ID Veh\u00edculo:28246",
+          "Modelo: S 3.4 | Potencia:295HP | ID Veh\u00edculo:18917",
+          "Modelo: S 3.4 | Potencia:320HP | ID Veh\u00edculo:32077"
+      ],
+      "MACAN (95B) 2014": [
+          "Modelo: 2.0 (95BAU1) | Potencia:265HP | ID Veh\u00edculo:145236",
+          "Modelo: 2.0 | Potencia:252HP | ID Veh\u00edculo:117979",
+          "Modelo: 2.9 GTS (95BBL1) | Potencia:380HP | ID Veh\u00edculo:139008",
+          "Modelo: 2.9 Turbo AWD (95BCI1) | Potencia:440HP | ID Veh\u00edculo:137954",
+          "Modelo: 3.0 GTS | Potencia:360HP | ID Veh\u00edculo:117977",
+          "Modelo: 3.0 S Diesel | Potencia:245HP | ID Veh\u00edculo:107684",
+          "Modelo: 3.0 S | Potencia:340HP | ID Veh\u00edculo:100638",
+          "Modelo: 3.0 S | Potencia:354HP | ID Veh\u00edculo:135274",
+          "Modelo: 3.6 Turbo | Potencia:400HP | ID Veh\u00edculo:100639",
+          "Modelo: 3.6 Turbo | Potencia:440HP | ID Veh\u00edculo:122815"
+      ],
+      "PANAMERA (970) 2009-2017": [
+          "Modelo: 3.0 4S | Potencia:420HP | ID Veh\u00edculo:59590",
+          "Modelo: 3.0 D | Potencia:250HP | ID Veh\u00edculo:11691",
+          "Modelo: 3.0 S E-Hybrid | Potencia:416HP | ID Veh\u00edculo:59587",
+          "Modelo: 3.0 S | Potencia:420HP | ID Veh\u00edculo:59589",
+          "Modelo: 3.6 4 | Potencia:310HP | ID Veh\u00edculo:59592",
+          "Modelo: 3.6 | Potencia:310HP | ID Veh\u00edculo:59591",
+          "Modelo: 4.8 4S | Potencia:400HP | ID Veh\u00edculo:32065",
+          "Modelo: 4.8 S | Potencia:400HP | ID Veh\u00edculo:32064",
+          "Modelo: 4.8 Turbo | Potencia:500HP | ID Veh\u00edculo:32066"
+      ],
+      "PANAMERA (971) 2016": [
+          "Modelo: 2.9 4 E-Hybrid (97ABE1, 97BBE1, 97ABX1) | Potencia:462HP | ID Veh\u00edculo:122834",
+          "Modelo: 2.9 4S E-Hybrid | Potencia:560HP | ID Veh\u00edculo:144472",
+          "Modelo: 3.0 (97AAA1, 97BAA1) | Potencia:330HP | ID Veh\u00edculo:124806",
+          "Modelo: 4.0 Turbo S E-Hybrid (97AFT1) | Potencia:700HP | ID Veh\u00edculo:146731"
+      ],
+      "PANAMERA Sport Turismo (971) 2017": [
+          "Modelo: 2.9 4 (97CBY1, 97CBI1) | Potencia:330HP | ID Veh\u00edculo:135746",
+          "Modelo: 2.9 4 E-Hybrid (97CBE1) | Potencia:462HP | ID Veh\u00edculo:126896",
+          "Modelo: 4.0 S 4 Diesel (97CDD1) | Potencia:422HP | ID Veh\u00edculo:126899",
+          "Modelo: 4.0 Turbo S E-Hybrid (97CFT1) | Potencia:700HP | ID Veh\u00edculo:146732"
+      ],
+      "TAYCAN (Y1A) 2019": [
+          "Modelo: 4S (Y1ADB1) | Potencia:530HP | ID Veh\u00edculo:139256",
+          "Modelo: GTS (Y1ADE1) | Potencia:598HP | ID Veh\u00edculo:147377",
+          "Modelo: Turbo (Y1AFC1) | Potencia:680HP | ID Veh\u00edculo:139257",
+          "Modelo: Turbo S (Y1AFH1) | Potencia:761HP | ID Veh\u00edculo:139258"
+      ]
   },
-  "Ford": {
-    "Five Hundred": ["2007", "2006", "2005"],
-    "Contour": ["2001", "2000", "1999", "1998"],
-    "Crown Victoria": ["2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998"],
-    "Escape": ["2012", "2011", "2010", "2009", "2008"],
-    "Expedition": ["2001", "2000", "1999", "1998", "1997"],
-    "Explorer": ["2007", "2006", "2005", "2004", "2003", "2002"],
-    "Flex": ["2015", "2014", "2013", "2012", "2011", "2010", "2009"],
-    "F-150": ["2008", "2007", "2006", "2005", "2004"],
-    "Fiesta": ["2015", "2014", "2013", "2012", "2011"],
-    "Focus": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000"],
-    "Fusion": ["2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006"],
-    "F-150 Lightning": ["2004", "2003", "2002", "2001", "2000", "1999"],
-    "Mustang": ["2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005"],
-    "Mustang GT": ["2004", "2003", "2002", "2001", "2000", "1999"],
-    "Mustang GT350R": ["2016", "2015"],
-    "Mustang GT500": ["2009", "2008", "2007", "2006", "2005"],
-    "Taurus": ["2012", "2011", "2010", "2009", "2008"],
-    "Thunderbird": ["1997", "1996", "1995", "1996", "1995", "1994", "1993", "1992", "1991", "1990", "1989"]
+  "SEAT": {
+      "ALHAMBRA (7V8, 7V9) 1996-2010": [
+          "Modelo: 1.8 T 20V | Potencia:150HP | ID Veh\u00edculo:9048",
+          "Modelo: 2.8 V6 | Potencia:204HP | ID Veh\u00edculo:14939"
+      ],
+      "ALTEA (5P1) 2004-2015": [
+          "Modelo: 1.4 TSI | Potencia:125HP | ID Veh\u00edculo:24240",
+          "Modelo: 1.8 TFSI | Potencia:160HP | ID Veh\u00edculo:23232",
+          "Modelo: 2.0 FSI | Potencia:150HP | ID Veh\u00edculo:17901"
+      ],
+      "ALTEA XL (5P5, 5P8) 2006-2015": [
+          "Modelo: 1.4 TSI | Potencia:125HP | ID Veh\u00edculo:24241",
+          "Modelo: 1.8 TFSI | Potencia:160HP | ID Veh\u00edculo:22695",
+          "Modelo: 2.0 Freetrack | Potencia:211HP | ID Veh\u00edculo:121578",
+          "Modelo: 2.0 TFSI | Potencia:200HP | ID Veh\u00edculo:56814"
+      ],
+      "ARONA (KJ7, KJP) 2017": [
+          "Modelo: 1.6 SRE | Potencia:110HP | ID Veh\u00edculo:131316"
+      ],
+      "ATECA (KH7, KHP) 2016": [
+          "Modelo: 1.4 TSI 4Drive | Potencia:150HP | ID Veh\u00edculo:119697",
+          "Modelo: 1.4 TSI | Potencia:150HP | ID Veh\u00edculo:119696"
+      ],
+      "CORDOBA (6K1, 6K2) 1993-2002": [
+          "Modelo: 1.6 i | Potencia:75HP | ID Veh\u00edculo:18154"
+      ],
+      "CORDOBA (6L2) 2002-2009": [
+          "Modelo: 1.6 16V | Potencia:105HP | ID Veh\u00edculo:20056",
+          "Modelo: 1.6 | Potencia:101HP | ID Veh\u00edculo:17925",
+          "Modelo: 2.0 | Potencia:115HP | ID Veh\u00edculo:18896"
+      ],
+      "EXEO (3R2) 2008-2013": [
+          "Modelo: 2.0 TFSI | Potencia:200HP | ID Veh\u00edculo:30999"
+      ],
+      "IBIZA II (6K1) 1993-2002": [
+          "Modelo: 1.6 i | Potencia:101HP | ID Veh\u00edculo:5677"
+      ],
+      "IBIZA III (6L1) 2002-2009": [
+          "Modelo: 1.6 16V | Potencia:105HP | ID Veh\u00edculo:20057",
+          "Modelo: 1.6 | Potencia:101HP | ID Veh\u00edculo:17924",
+          "Modelo: 1.8 T Cupra R | Potencia:180HP | ID Veh\u00edculo:17298",
+          "Modelo: 1.8 T FR | Potencia:150HP | ID Veh\u00edculo:17836",
+          "Modelo: 2.0 | Potencia:116HP | ID Veh\u00edculo:20846"
+      ],
+      "IBIZA IV (6J5, 6P1) 2008-2017": [
+          "Modelo: 1.2 TSI | Potencia:105HP | ID Veh\u00edculo:33689",
+          "Modelo: 1.2 TSI | Potencia:110HP | ID Veh\u00edculo:116635",
+          "Modelo: 1.6 | Potencia:105HP | ID Veh\u00edculo:31112",
+          "Modelo: 1.6 | Potencia:110HP | ID Veh\u00edculo:117372",
+          "Modelo: 2.0 | Potencia:115HP | ID Veh\u00edculo:31118"
+      ],
+      "IBIZA IV SC (6J1, 6P5) 2008-2018": [
+          "Modelo: 1.2 TSI | Potencia:105HP | ID Veh\u00edculo:33690",
+          "Modelo: 1.2 TSI | Potencia:110HP | ID Veh\u00edculo:116636",
+          "Modelo: 1.4 TSI Cupra | Potencia:180HP | ID Veh\u00edculo:31603",
+          "Modelo: 1.4 TSI | Potencia:150HP | ID Veh\u00edculo:31602",
+          "Modelo: 1.6 | Potencia:105HP | ID Veh\u00edculo:31113",
+          "Modelo: 1.6 | Potencia:110HP | ID Veh\u00edculo:117373",
+          "Modelo: 2.0 | Potencia:115HP | ID Veh\u00edculo:31119"
+      ],
+      "IBIZA V (KJ1, KJG) 2017": [
+          "Modelo: 1.0 TSI | Potencia:115HP | ID Veh\u00edculo:127210",
+          "Modelo: 1.6 | Potencia:110HP | ID Veh\u00edculo:127213"
+      ],
+      "LEON (1M1) 1999-2006": [
+          "Modelo: 1.8 20V T 4 | Potencia:180HP | ID Veh\u00edculo:14416",
+          "Modelo: 1.8 20V T | Potencia:180HP | ID Veh\u00edculo:14413",
+          "Modelo: 1.8 20V | Potencia:125HP | ID Veh\u00edculo:13160",
+          "Modelo: 1.8 T Cupra R | Potencia:209HP | ID Veh\u00edculo:16692",
+          "Modelo: 1.8 T Cupra R | Potencia:225HP | ID Veh\u00edculo:17297"
+      ],
+      "LEON (1P1) 2005-2013": [
+          "Modelo: 1.4 TSI | Potencia:125HP | ID Veh\u00edculo:28173",
+          "Modelo: 1.8 TSI | Potencia:160HP | ID Veh\u00edculo:28174",
+          "Modelo: 2.0 TFSI | Potencia:200HP | ID Veh\u00edculo:20048",
+          "Modelo: 2.0 TFSI | Potencia:211HP | ID Veh\u00edculo:31586",
+          "Modelo: 2.0 TFSI | Potencia:240HP | ID Veh\u00edculo:20049"
+      ],
+      "LEON (5F1) 2012-2021": [
+          "Modelo: 1.4 TSI | Potencia:122HP | ID Veh\u00edculo:56779",
+          "Modelo: 1.4 TSI | Potencia:125HP | ID Veh\u00edculo:106385",
+          "Modelo: 1.4 TSI | Potencia:140HP | ID Veh\u00edculo:57590",
+          "Modelo: 1.4 TSI | Potencia:150HP | ID Veh\u00edculo:106386",
+          "Modelo: 1.8 TSI | Potencia:180HP | ID Veh\u00edculo:57592",
+          "Modelo: 2.0 Cupra | Potencia:265HP | ID Veh\u00edculo:100788",
+          "Modelo: 2.0 Cupra | Potencia:290HP | ID Veh\u00edculo:118000"
+      ],
+      "LEON (KL1) 2019": [
+          "Modelo: 1.4 TSI | Potencia:150HP | ID Veh\u00edculo:150768",
+          "Modelo: 2.0 TFSI | Potencia:190HP | ID Veh\u00edculo:143678"
+      ],
+      "LEON SC (5F5) 2013-2018": [
+          "Modelo: 1.4 TSI | Potencia:122HP | ID Veh\u00edculo:59598",
+          "Modelo: 1.4 TSI | Potencia:125HP | ID Veh\u00edculo:106388",
+          "Modelo: 1.4 TSI | Potencia:140HP | ID Veh\u00edculo:59599",
+          "Modelo: 1.4 TSI | Potencia:150HP | ID Veh\u00edculo:106389",
+          "Modelo: 1.8 TSI | Potencia:180HP | ID Veh\u00edculo:59601",
+          "Modelo: 2.0 Cupra | Potencia:265HP | ID Veh\u00edculo:100790"
+      ],
+      "LEON ST (5F8) 2012-2020": [
+          "Modelo: 1.4 TSI | Potencia:140HP | ID Veh\u00edculo:21803",
+          "Modelo: 1.4 TSI | Potencia:150HP | ID Veh\u00edculo:106395",
+          "Modelo: 2.0 Cupra | Potencia:290HP | ID Veh\u00edculo:118002"
+      ],
+      "TARRACO (KN2) 2018": [
+          "Modelo: 1.4 TSI | Potencia:150HP | ID Veh\u00edculo:139052"
+      ],
+      "TOLEDO II (1M2) 1998-2006": [
+          "Modelo: 1.8 20V | Potencia:125HP | ID Veh\u00edculo:10047",
+          "Modelo: 1.8 20VT | Potencia:180HP | ID Veh\u00edculo:17926"
+      ],
+      "TOLEDO III (5P2) 2004-2009": [
+          "Modelo: 2.0 FSI | Potencia:150HP | ID Veh\u00edculo:18381",
+          "Modelo: 2.0 TFSI | Potencia:200HP | ID Veh\u00edculo:26558"
+      ],
+      "TOLEDO IV (KG3) 2012-2019": [
+          "Modelo: 1.0 TSI | Potencia:110HP | ID Veh\u00edculo:128157",
+          "Modelo: 1.2 TSI | Potencia:105HP | ID Veh\u00edculo:57524",
+          "Modelo: 1.2 TSI | Potencia:110HP | ID Veh\u00edculo:115145",
+          "Modelo: 1.4 TSI | Potencia:122HP | ID Veh\u00edculo:57525",
+          "Modelo: 1.4 TSI | Potencia:125HP | ID Veh\u00edculo:115146",
+          "Modelo: 1.6 TDI | Potencia:105HP | ID Veh\u00edculo:57526",
+          "Modelo: 1.6 | Potencia:105HP | ID Veh\u00edculo:59063",
+          "Modelo: 1.6 | Potencia:110HP | ID Veh\u00edculo:117374"
+      ]
   },
-  "GMC": {
-    "Denali": ["1999", "1998", "1997", "1996", "1995", "1996", "1995", "1994"],
-    "Envoy": ["2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002"],
-    "Sierra": ["2013", "2012", "2011", "2010", "2009", "2008", "2007"],
-    "Tahoe": ["2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2005", "2004", "2003", "2002"],
-    "Yukon": ["2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2005", "2004", "2003", "2002", "1999", "1998", "1997", "1996", "1995", "1996", "1995", "1994"]
+  "SMART": {
+      "CABRIO (450) 2000-2004": [
+          "Modelo: 0.6 (S1OLD2, 450.452) | Potencia:61HP | ID Veh\u00edculo:15670"
+      ],
+      "FORFOUR (454) 2004-2006": [
+          "Modelo: 1.1 (454.030) | Potencia:75HP | ID Veh\u00edculo:17747",
+          "Modelo: 1.1 (454.033) | Potencia:64HP | ID Veh\u00edculo:19323",
+          "Modelo: 1.3 (454.031) | Potencia:95HP | ID Veh\u00edculo:17748",
+          "Modelo: 1.5 (454.032) | Potencia:109HP | ID Veh\u00edculo:17749",
+          "Modelo: 1.5 (454.032) | Potencia:122HP | ID Veh\u00edculo:22561",
+          "Modelo: 1.5 BRABUS (454.034) | Potencia:177HP | ID Veh\u00edculo:18576"
+      ],
+      "FORFOUR Hatchback (453) 2014": [
+          "Modelo: 1.0 (453.042, 453.043) | Potencia:71HP | ID Veh\u00edculo:107341"
+      ],
+      "FORTWO Cabrio (450) 2004-2007": [
+          "Modelo: 0.6 Brabus (450.433) | Potencia:75HP | ID Veh\u00edculo:32236",
+          "Modelo: 0.7 (450.452) | Potencia:61HP | ID Veh\u00edculo:18146"
+      ],
+      "FORTWO Cabrio (451) 2007": [
+          "Modelo: 1.0 (451.431, 451.480) | Potencia:71HP | ID Veh\u00edculo:22477",
+          "Modelo: 1.0 Turbo (451.432) | Potencia:84HP | ID Veh\u00edculo:22478",
+          "Modelo: 1.0 Turbo Brabus (451.433) | Potencia:102HP | ID Veh\u00edculo:33859"
+      ],
+      "FORTWO Coup\u00e9 (450) 2004-2007": [
+          "Modelo: 0.6 (450.314) | Potencia:75HP | ID Veh\u00edculo:132058",
+          "Modelo: 0.6 (450.332) | Potencia:61HP | ID Veh\u00edculo:27992",
+          "Modelo: 0.7 (450.352, 450.332) | Potencia:61HP | ID Veh\u00edculo:18143"
+      ],
+      "FORTWO Coup\u00e9 (451) 2007": [
+          "Modelo: 1.0 (451.330, 451.334) | Potencia:61HP | ID Veh\u00edculo:22473",
+          "Modelo: 1.0 (451.331, 451.380) | Potencia:71HP | ID Veh\u00edculo:22474",
+          "Modelo: 1.0 Turbo (451.332) | Potencia:84HP | ID Veh\u00edculo:22472",
+          "Modelo: 1.0 Turbo Brabus (451.333) | Potencia:102HP | ID Veh\u00edculo:33856"
+      ],
+      "FORTWO Coup\u00e9 (453) 2014": [
+          "Modelo: 0.9 (453.344, 453.353) | Potencia:90HP | ID Veh\u00edculo:107960",
+          "Modelo: 1.0 (453.342, 453.343) | Potencia:71HP | ID Veh\u00edculo:107340"
+      ],
+      "ROADSTER (452) 2003-2005": [
+          "Modelo: 0.7 (452.432) | Potencia:61HP | ID Veh\u00edculo:17202",
+          "Modelo: 0.7 (452.434) | Potencia:82HP | ID Veh\u00edculo:17106",
+          "Modelo: 0.7 Brabus (452.437) | Potencia:101HP | ID Veh\u00edculo:18006"
+      ],
+      "ROADSTER Coup\u00e9 (452) 2003-2005": [
+          "Modelo: 0.7 (452.332) | Potencia:61HP | ID Veh\u00edculo:23279"
+      ]
   },
-  "Honda": {
-    "Accord 2DR": ["2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1996", "1995", "1994"],
-    "Accord 4DR": ["2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1996", "1995", "1994"],
-    "CRV": ["2011", "2010", "2009", "2008", "2007"],
-    "Civic 2DR": ["2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1996"],
-    "Civic 4DR": ["2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1996"],
-    "Del Sol": ["1997", "1996", "1995", "1996", "1995", "1994", "1993"],
-    "Element": ["2011", "2010", "2009", "2008", "2007", "2005", "2004", "2003"],
-    "S2000": ["2007", "2005", "2004", "2003", "2002", "2001", "2000"]
+  "VOLKSWAGEN": {
+      "AMAROK (2HA, 2HB, S1B, S6B, S7A, S7B) 2010": [
+          "Modelo: 2.0 BiTDI 4motion | Potencia:163HP | ID Veh\u00edculo:33472",
+          "Modelo: 2.0 BiTDI 4motion | Potencia:180HP | ID Veh\u00edculo:22936",
+          "Modelo: 2.0 BiTDI | Potencia:163HP | ID Veh\u00edculo:33470",
+          "Modelo: 2.0 BiTDI | Potencia:180HP | ID Veh\u00edculo:56028",
+          "Modelo: 2.0 TDI 4motion | Potencia:140HP | ID Veh\u00edculo:56897",
+          "Modelo: 2.0 TDI | Potencia:140HP | ID Veh\u00edculo:56896",
+          "Modelo: 2.0 TSI | Potencia:160HP | ID Veh\u00edculo:12071",
+          "Modelo: 3.0 TDI 4motion | Potencia:224HP | ID Veh\u00edculo:120195"
+      ],
+      "ATLANTIC I (16) 1978-1987": [
+          "Modelo: 1.6 | Potencia:67HP | ID Veh\u00edculo:118066",
+          "Modelo: 1.7 | Potencia:69HP | ID Veh\u00edculo:113074",
+          "Modelo: 1.8 | Potencia:73HP | ID Veh\u00edculo:133208",
+          "Modelo: 1.8 | Potencia:91HP | ID Veh\u00edculo:121256"
+      ],
+      "ATLAS CROSS SPORT (CMC) 2019": [
+          "Modelo: 3.6 FSI 4motion | Potencia:280HP | ID Veh\u00edculo:140647",
+          "Modelo: 3.6 FSI | Potencia:280HP | ID Veh\u00edculo:140646"
+      ],
+      "BEETLE (5C1, 5C2) 2011-2019": [
+          "Modelo: 1.8 TSI | Potencia:170HP | ID Veh\u00edculo:107040",
+          "Modelo: 2.0 TSI | Potencia:211HP | ID Veh\u00edculo:59066",
+          "Modelo: 2.5 | Potencia:170HP | ID Veh\u00edculo:58101"
+      ],
+      "BEETLE Descapotable (5C7, 5C8) 2011-2019": [
+          "Modelo: 2.5 | Potencia:170HP | ID Veh\u00edculo:116818"
+      ],
+      "BORA V (1K2) 2004-2013": [
+          "Modelo: 1.9 TDI | Potencia:101HP | ID Veh\u00edculo:57640",
+          "Modelo: 1.9 TDI | Potencia:105HP | ID Veh\u00edculo:18668",
+          "Modelo: 2.0 TFSI | Potencia:200HP | ID Veh\u00edculo:19179",
+          "Modelo: 2.0 | Potencia:116HP | ID Veh\u00edculo:58888",
+          "Modelo: 2.5 | Potencia:150HP | ID Veh\u00edculo:26559",
+          "Modelo: 2.5 | Potencia:170HP | ID Veh\u00edculo:28146"
+      ],
+      "BRASILIA  1973-1982": [
+          "Modelo: 1.6 | Potencia:45HP | ID Veh\u00edculo:113075",
+          "Modelo: 1.6 | Potencia:60HP | ID Veh\u00edculo:13047"
+      ],
+      "CADDY IV Mini Van (SAB, SAJ) 2015": [
+          "Modelo: 1.6 | Potencia:110HP | ID Veh\u00edculo:126341",
+          "Modelo: 2.0 TDI | Potencia:110HP | ID Veh\u00edculo:118472"
+      ],
+      "CADDY V Mini Van (SBB, SBJ) 2020": [
+          "Modelo: 1.6 SRE | Potencia:110HP | ID Veh\u00edculo:143962",
+          "Modelo: 2.0 | Potencia:110HP | ID Veh\u00edculo:148189"
+      ],
+      "CARIBE I (17) 1974-1985": [
+          "Modelo: 1.6 D | Potencia:54HP | ID Veh\u00edculo:1631",
+          "Modelo: 1.6 | Potencia:75HP | ID Veh\u00edculo:19419",
+          "Modelo: 1.8 GTI | Potencia:112HP | ID Veh\u00edculo:1628"
+      ],
+      "CC B7 (358) 2011-2016": [
+          "Modelo: 2.0 TSI | Potencia:210HP | ID Veh\u00edculo:26740",
+          "Modelo: 3.6 FSI 4motion | Potencia:280HP | ID Veh\u00edculo:58062",
+          "Modelo: 3.6 FSI | Potencia:280HP | ID Veh\u00edculo:59910"
+      ],
+      "CLASICO (9M2) 2005-2014": [
+          "Modelo: 1.8 Turbo | Potencia:179HP | ID Veh\u00edculo:108429"
+      ],
+      "CORRADO (53I) 1987-1995": [
+          "Modelo: 1.8 G60 | Potencia:160HP | ID Veh\u00edculo:1753"
+      ],
+      "CORSAR B2 Variant (33B) 1980-1989": [
+          "Modelo: 1.8 | Potencia:90HP | ID Veh\u00edculo:1929"
+      ],
+      "DERBY III CLASSIC (6V2) 1995-2009": [
+          "Modelo: 1.6 | Potencia:101HP | ID Veh\u00edculo:100417",
+          "Modelo: 1.8 | Potencia:86HP | ID Veh\u00edculo:137630",
+          "Modelo: 2.0 | Potencia:110HP | ID Veh\u00edculo:135277",
+          "Modelo: 90 1.8 | Potencia:90HP | ID Veh\u00edculo:8432"
+      ],
+      "DERBY III Sed\u00e1n (6K2) 1994-2009": [
+          "Modelo: 1.8 | Potencia:90HP | ID Veh\u00edculo:154875",
+          "Modelo: 1.8 | Potencia:98HP | ID Veh\u00edculo:121535",
+          "Modelo: 2.0 | Potencia:111HP | ID Veh\u00edculo:50773"
+      ],
+      "DERBY IV Sed\u00e1n (9A4, 9A2, 9N2, 9A6) 2002": [
+          "Modelo: 1.6 | Potencia:101HP | ID Veh\u00edculo:24253",
+          "Modelo: 2.0 | Potencia:115HP | ID Veh\u00edculo:24255"
+      ],
+      "EOS (1F7, 1F8) 2006-2015": [
+          "Modelo: 2.0 TFSI | Potencia:200HP | ID Veh\u00edculo:18976"
+      ],
+      "FOX CrossFox (5Z1, 5Z3, 5Z4) 2003-2015": [
+          "Modelo: 1.6 CrossFox | Potencia:101HP | ID Veh\u00edculo:22590"
+      ],
+      "FOX CrossFox (5Z5) 2014": [
+          "Modelo: 1.6 CrossFox | Potencia:110HP | ID Veh\u00edculo:119297"
+      ],
+      "GOL (5U4, 5U2, 5U6, 5UG) 2008": [
+          "Modelo: 1.6 | Potencia:101HP | ID Veh\u00edculo:10315"
+      ],
+      "GOL V  2008": [
+          "Modelo: 1.6 | Potencia:101HP | ID Veh\u00edculo:59837",
+          "Modelo: 1.6 | Potencia:102HP | ID Veh\u00edculo:56724"
+      ],
+      "GOL VI 2012": [
+          "Modelo: 1.6 | Potencia:102HP | ID Veh\u00edculo:121175"
+      ],
+      "GOLF I Cabriolet (155) 1979-1993": [
+          "Modelo: 1.8 | Potencia:90HP | ID Veh\u00edculo:1946",
+          "Modelo: 1.8 | Potencia:95HP | ID Veh\u00edculo:1947",
+          "Modelo: 1.8 | Potencia:98HP | ID Veh\u00edculo:1949"
+      ],
+      "GOLF II (19E, 1G1) 1983-1992": [
+          "Modelo: 1.8 GTI 16V | Potencia:136HP | ID Veh\u00edculo:23406",
+          "Modelo: 1.8 i Cat | Potencia:90HP | ID Veh\u00edculo:1651",
+          "Modelo: 1.8 | Potencia:102HP | ID Veh\u00edculo:106023",
+          "Modelo: 1.8 | Potencia:69HP | ID Veh\u00edculo:110625",
+          "Modelo: 1.8 | Potencia:84HP | ID Veh\u00edculo:1649",
+          "Modelo: 1.8 | Potencia:90HP | ID Veh\u00edculo:8050"
+      ],
+      "GOLF III (1H1) 1989-1998": [
+          "Modelo: 1.8 | Potencia:75HP | ID Veh\u00edculo:1871",
+          "Modelo: 1.8 | Potencia:90HP | ID Veh\u00edculo:1872",
+          "Modelo: 2.0 GL | Potencia:107HP | ID Veh\u00edculo:21377",
+          "Modelo: 2.0 GTI 16V | Potencia:150HP | ID Veh\u00edculo:1875",
+          "Modelo: 2.0 | Potencia:115HP | ID Veh\u00edculo:1874",
+          "Modelo: 2.8 VR6 | Potencia:174HP | ID Veh\u00edculo:1877"
+      ],
+      "GOLF III Cabriolet (1E7) 1993-1998": [
+          "Modelo: 2.0 | Potencia:115HP | ID Veh\u00edculo:1905"
+      ],
+      "GOLF IV (1J1) 1997-2008": [
+          "Modelo: 1.8 T GTI | Potencia:180HP | ID Veh\u00edculo:16253",
+          "Modelo: 1.8 T | Potencia:150HP | ID Veh\u00edculo:8801",
+          "Modelo: 2.0 | Potencia:115HP | ID Veh\u00edculo:11779",
+          "Modelo: 3.2 R32 4motion | Potencia:241HP | ID Veh\u00edculo:16846"
+      ],
+      "GOLF IV Cabriolet (1E7, 1V7) 1998-2002": [
+          "Modelo: 1.8 | Potencia:110HP | ID Veh\u00edculo:135278",
+          "Modelo: 2.0 | Potencia:115HP | ID Veh\u00edculo:10054"
+      ],
+      "GOLF V Variant (1K5) 2007-2009": [
+          "Modelo: 2.5 | Potencia:170HP | ID Veh\u00edculo:57736"
+      ],
+      "GOLF VI (5K1) 2008-2014": [
+          "Modelo: 1.4 TSI | Potencia:160HP | ID Veh\u00edculo:29993",
+          "Modelo: 2.0 GTi | Potencia:210HP | ID Veh\u00edculo:30971"
+      ],
+      "GOLF VI Sportwagen (AJ5) 2009-2014": [
+          "Modelo: 2.5 Golf Sportwagen | Potencia:170HP | ID Veh\u00edculo:57733"
+      ],
+      "GOLF VII (5G1, BQ1, BE1, BE2, AU1, AU2) 2012-2021": [
+          "Modelo: 1.4 TSI | Potencia:140HP | ID Veh\u00edculo:56144",
+          "Modelo: 1.4 TSI | Potencia:150HP | ID Veh\u00edculo:105912",
+          "Modelo: 1.6 | Potencia:110HP | ID Veh\u00edculo:107945",
+          "Modelo: 2.0 GTI | Potencia:220HP | ID Veh\u00edculo:59115",
+          "Modelo: 2.0 GTI | Potencia:230HP | ID Veh\u00edculo:59116",
+          "Modelo: 2.0 GTI | Potencia:231HP | ID Veh\u00edculo:140211",
+          "Modelo: 2.0 R 4motion | Potencia:290HP | ID Veh\u00edculo:125995"
+      ],
+      "GOLF VII Variant (BA5, BV5, BX5, BX6) 2013-2022": [
+          "Modelo: 1.4 TSI | Potencia:150HP | ID Veh\u00edculo:106231"
+      ],
+      "JETTA \/ CLASICO VI (162, 163, AV3, AV2) 2008-2019": [
+          "Modelo: 2.0 TFSI | Potencia:200HP | ID Veh\u00edculo:9630",
+          "Modelo: 2.0 TSI | Potencia:211HP | ID Veh\u00edculo:57480",
+          "Modelo: 2.0 | Potencia:115HP | ID Veh\u00edculo:9753",
+          "Modelo: 2.5 | Potencia:170HP | ID Veh\u00edculo:9749"
+      ],
+      "JETTA II (19E, 1G2, 165) 1983-1992": [
+          "Modelo: 1.8 Cat | Potencia:107HP | ID Veh\u00edculo:1669",
+          "Modelo: 1.8 | Potencia:105HP | ID Veh\u00edculo:27225",
+          "Modelo: 1.8 | Potencia:107HP | ID Veh\u00edculo:8049",
+          "Modelo: 1.8 | Potencia:112HP | ID Veh\u00edculo:1670",
+          "Modelo: 1.8 | Potencia:69HP | ID Veh\u00edculo:113067",
+          "Modelo: 1.8 | Potencia:90HP | ID Veh\u00edculo:8052"
+      ],
+      "JETTA III (1H2) 1991-1998": [
+          "Modelo: 1.8 | Potencia:90HP | ID Veh\u00edculo:1886",
+          "Modelo: 2.0 | Potencia:115HP | ID Veh\u00edculo:1887",
+          "Modelo: 2.8 VR6 | Potencia:174HP | ID Veh\u00edculo:1889"
+      ],
+      "JETTA IV I (1J2, 9M2) 1998-2013": [
+          "Modelo: 1.8 T | Potencia:150HP | ID Veh\u00edculo:15631",
+          "Modelo: 1.8 T | Potencia:180HP | ID Veh\u00edculo:16700",
+          "Modelo: 2.0 | Potencia:115HP | ID Veh\u00edculo:10001",
+          "Modelo: 2.8 VR6 | Potencia:177HP | ID Veh\u00edculo:27249"
+      ],
+      "JETTA IV Variant (1J6) 1999-2005": [
+          "Modelo: 2.0 | Potencia:115HP | ID Veh\u00edculo:11760"
+      ],
+      "JETTA VII Sed\u00e1n (BU3, BU4) 2017": [
+          "Modelo: 1.4 TSI | Potencia:150HP | ID Veh\u00edculo:134743",
+          "Modelo: 2.0 GLI | Potencia:231HP | ID Veh\u00edculo:141305",
+          "Modelo: GLI | Potencia:230HP | ID Veh\u00edculo:138050"
+      ],
+      "LUPO II (5Z1) 2003-2009": [
+          "Modelo: 1.6 | Potencia:101HP | ID Veh\u00edculo:9868"
+      ],
+      "NEW BEETLE (9C1, 1C1) 1998-2010": [
+          "Modelo: 1.8 T | Potencia:150HP | ID Veh\u00edculo:14238",
+          "Modelo: 2.0 | Potencia:115HP | ID Veh\u00edculo:8979",
+          "Modelo: 2.5 | Potencia:150HP | ID Veh\u00edculo:23865"
+      ],
+      "NEW BEETLE Descapotable (1Y7) 2002-2011": [
+          "Modelo: 2.0 | Potencia:115HP | ID Veh\u00edculo:17074"
+      ],
+      "NIVUS (CH1) 2020": [
+          "Modelo: 1.0 TSi | Potencia:116HP | ID Veh\u00edculo:147370"
+      ],
+      "PASSAT B3\/B4 (3A2, 35I) 1988-1997": [
+          "Modelo: 2.0 16V | Potencia:136HP | ID Veh\u00edculo:1720",
+          "Modelo: 2.0 16V | Potencia:150HP | ID Veh\u00edculo:3927",
+          "Modelo: 2.0 | Potencia:107HP | ID Veh\u00edculo:11240",
+          "Modelo: 2.0 | Potencia:115HP | ID Veh\u00edculo:1712",
+          "Modelo: 2.8 VR6 | Potencia:174HP | ID Veh\u00edculo:1721"
+      ],
+      "PASSAT B3\/B4 Variant (3A5, 35I) 1988-1997": [
+          "Modelo: 2.8 VR6 | Potencia:174HP | ID Veh\u00edculo:1920"
+      ],
+      "PASSAT B5 (3B2) 1996-2001": [
+          "Modelo: 1.8 T | Potencia:150HP | ID Veh\u00edculo:5726",
+          "Modelo: 1.8 | Potencia:125HP | ID Veh\u00edculo:5725",
+          "Modelo: 2.8 V6 4motion | Potencia:190HP | ID Veh\u00edculo:16309",
+          "Modelo: 2.8 V6 | Potencia:190HP | ID Veh\u00edculo:16308",
+          "Modelo: 2.8 V6 | Potencia:193HP | ID Veh\u00edculo:7941"
+      ],
+      "PASSAT B5 Variant (3B5) 1997-2001": [
+          "Modelo: 1.8 T | Potencia:150HP | ID Veh\u00edculo:7934",
+          "Modelo: 1.8 | Potencia:125HP | ID Veh\u00edculo:7933",
+          "Modelo: 2.8 V6 4motion | Potencia:190HP | ID Veh\u00edculo:16313",
+          "Modelo: 2.8 V6 | Potencia:190HP | ID Veh\u00edculo:16312",
+          "Modelo: 2.8 V6 | Potencia:193HP | ID Veh\u00edculo:7936",
+          "Modelo: GOLF VI Sportwagen (AJ5) | Potencia:125HP | ID Veh\u00edculo:8442"
+      ],
+      "PASSAT B5.5 (3B3) 2000-2005": [
+          "Modelo: 1.8 T | Potencia:170HP | ID Veh\u00edculo:16703",
+          "Modelo: 2.0 | Potencia:115HP | ID Veh\u00edculo:15420",
+          "Modelo: 4.0 W8 4motion | Potencia:275HP | ID Veh\u00edculo:16035"
+      ],
+      "PASSAT B5.5 Variant (3B6) 2000-2005": [
+          "Modelo: 4.0 W8 4motion | Potencia:275HP | ID Veh\u00edculo:16036"
+      ],
+      "PASSAT B6 (3C2) 2005-2010": [
+          "Modelo: 2.0 FSI | Potencia:150HP | ID Veh\u00edculo:18521",
+          "Modelo: 2.0 TFSI | Potencia:200HP | ID Veh\u00edculo:19395",
+          "Modelo: 3.6 FSI 4motion | Potencia:280HP | ID Veh\u00edculo:24258",
+          "Modelo: 3.6 FSI | Potencia:280HP | ID Veh\u00edculo:27327"
+      ],
+      "PASSAT B7 (A32, A33) 2011-2020": [
+          "Modelo: 2.5 | Potencia:170HP | ID Veh\u00edculo:20876",
+          "Modelo: 3.6 FSI | Potencia:280HP | ID Veh\u00edculo:55315"
+      ],
+      "PASSAT CC B6 (357) 2008-2012": [
+          "Modelo: 2.0 TFSI | Potencia:200HP | ID Veh\u00edculo:28284",
+          "Modelo: 3.6 FSI 4motion | Potencia:280HP | ID Veh\u00edculo:11259",
+          "Modelo: 3.6 FSI | Potencia:280HP | ID Veh\u00edculo:11271"
+      ],
+      "POINTER  1993-2003": [
+          "Modelo: 2.0 | Potencia:111HP | ID Veh\u00edculo:24970"
+      ],
+      "POINTER  1998-2005": [
+          "Modelo: 1.8 | Potencia:99HP | ID Veh\u00edculo:24974"
+      ],
+      "POINTER  2005": [
+          "Modelo: 1.8 | Potencia:99HP | ID Veh\u00edculo:24975"
+      ],
+      "POINTER Pickup  1993-2010": [
+          "Modelo: 1.6 | Potencia:99HP | ID Veh\u00edculo:28856"
+      ],
+      "POINTER Variant  2002-2006": [
+          "Modelo: 1.8 | Potencia:99HP | ID Veh\u00edculo:24973"
+      ],
+      "POLO (9N_, 9A_) 2001-2014": [
+          "Modelo: 1.6 | Potencia:101HP | ID Veh\u00edculo:20831"
+      ],
+      "POLO V (6R1, 6C1) 2009-2022": [
+          "Modelo: 1.2 TSI | Potencia:105HP | ID Veh\u00edculo:32813",
+          "Modelo: 1.4 GTI | Potencia:180HP | ID Veh\u00edculo:33491",
+          "Modelo: 1.6 | Potencia:105HP | ID Veh\u00edculo:56019",
+          "Modelo: 1.8 GTI | Potencia:192HP | ID Veh\u00edculo:108640"
+      ],
+      "POLO VI (AW1, BZ1, AE1) 2017": [
+          "Modelo: 1.0 TSi | Potencia:101HP | ID Veh\u00edculo:156590",
+          "Modelo: 1.6 MSi | Potencia:110HP | ID Veh\u00edculo:130033"
+      ],
+      "RABBIT V (1K1) 2003-2010": [
+          "Modelo: 2.0 GTI | Potencia:200HP | ID Veh\u00edculo:18387",
+          "Modelo: 2.0 GTI | Potencia:230HP | ID Veh\u00edculo:20064"
+      ],
+      "ROUTAN  2008-2013": [
+          "Modelo: 3.6 | Potencia:267HP | ID Veh\u00edculo:15887",
+          "Modelo: 3.8 | Potencia:200HP | ID Veh\u00edculo:11911"
+      ],
+      "SAFARI SUV  1969-1983": [
+          "Modelo: 1.6 | Potencia:44HP | ID Veh\u00edculo:1757",
+          "Modelo: 1.6 | Potencia:48HP | ID Veh\u00edculo:1758"
+      ],
+      "SAVEIRO V (5U8, 5U9) 2009": [
+          "Modelo: 1.6 | Potencia:101HP | ID Veh\u00edculo:13058"
+      ],
+      "SAVEIRO VI (5UA, 5UB, 5UC) 2014": [
+          "Modelo: 1.6 | Potencia:110HP | ID Veh\u00edculo:136296"
+      ],
+      "SCIROCCO (53) 1974-1980": [
+          "Modelo: 1.5 | Potencia:75HP | ID Veh\u00edculo:6265"
+      ],
+      "SEDAN  2047-2003": [
+          "Modelo: 1500 1.5 (11) | Potencia:44HP | ID Veh\u00edculo:1555",
+          "Modelo: 1600 (Mexico) | Potencia:46HP | ID Veh\u00edculo:8890",
+          "Modelo: 1600 i (Mexico) | Potencia:46HP | ID Veh\u00edculo:8891"
+      ],
+      "SHARAN (7M8, 7M9, 7M6) 1995-2010": [
+          "Modelo: 1.8 T 20V | Potencia:150HP | ID Veh\u00edculo:8958"
+      ],
+      "SPORTVAN (5Z6, 5Z7, 5Z9) 2006": [
+          "Modelo: 1.6 | Potencia:101HP | ID Veh\u00edculo:27552"
+      ],
+      "T-CROSS (C11, D31) 2018": [
+          "Modelo: 1.0 TSi | Potencia:116HP | ID Veh\u00edculo:134295",
+          "Modelo: 1.6 | Potencia:110HP | ID Veh\u00edculo:136990"
+      ],
+      "TAIGUN (CW1) 2021": [
+          "Modelo: TSI | Potencia:115HP | ID Veh\u00edculo:146075"
+      ],
+      "TAOS (CL1, CP1, CQ1) 2020": [
+          "Modelo: 1.4 TSI | Potencia:150HP | ID Veh\u00edculo:144325"
+      ],
+      "TERAMONT SUV (CA1, CA2, CA3) 2016": [
+          "Modelo: 2.0 TSI 4motion | Potencia:273HP | ID Veh\u00edculo:155721",
+          "Modelo: 2.0 TSI | Potencia:238HP | ID Veh\u00edculo:128512",
+          "Modelo: 2.0 TSI | Potencia:273HP | ID Veh\u00edculo:155722",
+          "Modelo: 3.6 FSI 4motion | Potencia:280HP | ID Veh\u00edculo:128511",
+          "Modelo: 3.6 FSI | Potencia:280HP | ID Veh\u00edculo:128509"
+      ],
+      "TIGUAN (AD1, AX1) 2016": [
+          "Modelo: 1.4 TSI | Potencia:150HP | ID Veh\u00edculo:119768",
+          "Modelo: 2.0 TSI 4motion | Potencia:180HP | ID Veh\u00edculo:118646"
+      ],
+      "TIGUAN (BW2, BJ2) 2017": [
+          "Modelo: 1.4 TSI | Potencia:150HP | ID Veh\u00edculo:128188",
+          "Modelo: 1.4 TSI | Potencia:150HP | ID Veh\u00edculo:146612",
+          "Modelo: 2.0 TSI 4motion | Potencia:180HP | ID Veh\u00edculo:128189",
+          "Modelo: 2.0 TSI 4motion | Potencia:185HP | ID Veh\u00edculo:146814",
+          "Modelo: 2.0 TSI 4motion | Potencia:186HP | ID Veh\u00edculo:128706"
+      ],
+      "TIGUAN\/TIGUAN LIMITED (5N_) 2007-2018": [
+          "Modelo: 1.4 TSI | Potencia:150HP | ID Veh\u00edculo:116130",
+          "Modelo: 1.4 TSI | Potencia:150HP | ID Veh\u00edculo:29996",
+          "Modelo: 1.4 TSI | Potencia:160HP | ID Veh\u00edculo:10929",
+          "Modelo: 2.0 TFSI 4motion | Potencia:200HP | ID Veh\u00edculo:23180",
+          "Modelo: 2.0 TFSI | Potencia:200HP | ID Veh\u00edculo:9770"
+      ],
+      "TOUAREG (7LA, 7L6, 7L7) 2002-2013": [
+          "Modelo: 3.2 V6 | Potencia:241HP | ID Veh\u00edculo:18427",
+          "Modelo: 3.6 V6 FSI | Potencia:280HP | ID Veh\u00edculo:19455",
+          "Modelo: 4.2 V8 FSI | Potencia:350HP | ID Veh\u00edculo:23298",
+          "Modelo: 4.2 V8 | Potencia:310HP | ID Veh\u00edculo:17178",
+          "Modelo: 5.0 V10 TDI | Potencia:313HP | ID Veh\u00edculo:16820"
+      ],
+      "TOUAREG (7P5, 7P6) 2010-2018": [
+          "Modelo: 3.0 V6 TDI | Potencia:240HP | ID Veh\u00edculo:33307",
+          "Modelo: 3.0 V6 TDI | Potencia:245HP | ID Veh\u00edculo:9264",
+          "Modelo: 3.0 V6 TSI Hybrid | Potencia:379HP | ID Veh\u00edculo:33309",
+          "Modelo: 3.6 V6 FSI | Potencia:280HP | ID Veh\u00edculo:33306",
+          "Modelo: 4.2 V8 FSI | Potencia:360HP | ID Veh\u00edculo:9615"
+      ],
+      "UP! (121, 122, BL1, BL2, 6A1, 6A5, BL3, 123) 2011": [
+          "Modelo: 1.0 | Potencia:75HP | ID Veh\u00edculo:11817"
+      ],
+      "VENTO (602, 604) 2010": [
+          "Modelo: 1.5 TDI | Potencia:110HP | ID Veh\u00edculo:146252"
+      ],
+      "VENTO V Sed\u00e1n (602, 604, 612, 614) 2009": [
+          "Modelo: 1.5 TDI | Potencia:110HP | ID Veh\u00edculo:121214",
+          "Modelo: 1.6 TDI | Potencia:105HP | ID Veh\u00edculo:12094",
+          "Modelo: 1.6 | Potencia:105HP | ID Veh\u00edculo:12093"
+      ],
+      "VIRTUS Sed\u00e1n (BZ2) 2017": [
+          "Modelo: 1.0 TSI | Potencia:115HP | ID Veh\u00edculo:147444",
+          "Modelo: 1.6 MSI | Potencia:110HP | ID Veh\u00edculo:130775"
+      ]
   },
-  "Hummer": {
-    "H2": ["2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003"],
-    "H3": ["2010", "2009", "2008", "2007", "2006", "2005"]
-  },
-  "Hyundai": {
-    "Accent": ["2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006"],
-    "Azera": ["2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006"],
-    "Elantra": ["2017","2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2006", "2005", "2004"],
-    "Elantra Touring": ["2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009"],
-    "Genesis 2DR": ["2016", "2015", "2014", "2013", "2012", "2011", "2010"],
-    "Genesis 4DR": ["2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009"],
-    "Genesis Hood Scoop": ["2014", "2013", "2012", "2011", "2010", "2009"],
-    "Santa Fe": ["2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001"],
-    "Sonata": ["2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006"],
-    "Tiburon": ["2002", "2001", "2000"],
-    "Tiburon GT-V6": ["2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003"],
-    "Tucson": ["2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005"]
-  },
-  "Infiniti": {
-    "G20": ["2002", "2001", "2000", "1999"],
-    "G35 2DR": ["2007", "2006", "2005", "2004", "2003"],
-    "G35 4DR": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003"],
-    "G37 2DR": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008"],
-    "G37 4DR": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007"],
-    "G37 Side Scoops": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008"],
-    "M35": ["2010", "2009", "2008", "2007", "2006"],
-    "M37": ["2016", "2015", "2014", "2013", "2012", "2011"],
-    "M45": ["2010", "2009", "2008", "2007", "2006"],
-    "Q50": ["2016","2015", "2014"],
-    "Q70": ["2016", "2015"],
-    "QX56": ["2010", "2009", "2008", "2007", "2006", "2005", "2004"],
-    "I30": ["2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1996"],
-    "I35": ["2004", "2003", "2002", "2001", "2000"]
-  },
-  "Jaguar": {
-    "S-Type R": ["2004", "2003", "2002", "2001", "2000"],
-    "XF": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009"]
-  },
-  "Jeep": {
-    "Grand Cherokee": ["2010", "2009", "2008", "2007", "2006", "2005"],
-    "Liberty": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007"],
-    "Patriot": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007"]
-  },
-  "Kia": {
-    "Amanti": ["2009", "2008", "2007", "2006", "2005", "2004"],
-    "Cadenza": ["2016","2015", "2014"],
-    "Forte Koup": ["2016","2015", "2014", "2013", "2012", "2011", "2010"],
-    "Forte Koup-R": ["2013", "2012", "2011", "2010"],
-    "Forte Sedan": ["2016","2015", "2014", "2013", "2012", "2011", "2010"],
-    "Optima": ["2017", "2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001"],
-    "Rio": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006"],
-    "Rondo": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007"],
-    "Sedona": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002"],
-    "Soul": ["2016","2015", "2014", "2013", "2012", "2011", "2010"],
-    "Sorento": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003"],
-    "Spectra": ["2009", "2008", "2007", "2006", "2005", "2004"],
-    "Sportage": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005"]
-  },
-  "Land Rover": {
-    "Range Rover": ["2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005"],
-    "Range Rover Sport": ["2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006"]
-  },
-  "Lexus": {
-    "ES": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002"],
-    "GS": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006"],
-    "GS300": ["2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998"],
-    "GS400": ["2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998"],
-    "GX470": ["2009", "2008", "2007", "2006", "2005", "2004", "2003"],
-    "IS": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006"],
-    "IS250": ["2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006"],
-    "IS300": ["2005", "2004", "2003", "2002", "2001"],
-    "LS460": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007"],
-    "LX470": ["2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999"],
-    "RC": ["2015"],
-    "RX300": ["2003", "2002", "2001", "2000", "1999"]
-  },
-  "Lincoln": {
-    "Continental": ["1997", "1996", "1995"],
-    "LS": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000"],
-    "MKS": ["2014", "2013", "2012", "2011", "2010"],
-    "MKZ": ["2016", "2015", "2014", "2012", "2011", "2010", "2009", "2008", "2007", "2006"],
-    "Navigator": ["2001", "2000", "1999", "1998", "1997"],
-    "Navigator Hood Scoop": ["2010", "2009", "2008", "2007"],
-    "Zephyr": ["2012", "2011", "2010", "2009", "2008", "2007", "2006"]
-  },
-  "Mazda": {
-    "CX-7": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007"],
-    "MPV": ["2005", "2004", "2003", "2002", "2001", "2000"],
-    "Mazda 3": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004"],
-    "Mazda 5 Hatchback": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006"],
-    "Mazda 6": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003"],
-    "Mazda 626": ["2002", "2001", "2000", "1999", "1998"],
-    "Miata MX-5": ["2017", "2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006"],
-    "Protege MP3": ["2003", "2002", "2001", "2000", "1999"],
-    "RX-8": ["2008", "2007", "2006", "2005", "2004"],
-    "Tribute": ["2012", "2011", "2010", "2009", "2008"]
-  },
-  "Mercedes": {
-    "C-Class C55": ["2007", "2006", "2005", "2004", "2003", "2002", "2001"],
-    "C-Class Coupe": ["2016","2015", "2014", "2013", "2012"],
-    "C-Class Sedan": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008"],
-    "CL": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008"],
-    "CLA": ["2016","2015", "2014"],
-    "CLK": ["2002", "2001", "2000", "1999"],
-    "CLK55": ["2009", "2008", "2007", "2006", "2005", "2004", "2003"],
-    "CLS": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006"],
-    "E-Class": ["2009", "2008", "2007", "2006", "2005", "2004", "2003"],
-    "E-Class Convertible": ["2016","2015", "2014", "2013", "2012", "2011", "2010"],
-    "E-Class Coupe": ["2016","2015", "2014", "2013", "2012", "2011", "2010"],
-    "E-Class E63": ["2009", "2008", "2007", "2006", "2005", "2004", "2003"],
-    "E-Class Sedan": ["2016","2015", "2014", "2013", "2012", "2011", "2010"],
-    "GL": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007"],
-    "ML": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006"],
-    "ML320": ["2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998"],
-    "ML430": ["2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998"],
-    "ML500": ["2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998"],
-    "S-Class": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007"],
-    "SL63": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003"],
-    "SLK": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005"]
-  },
-  "Mercury": {
-    "Cougar": ["2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994", "1993", "1992", "1991", "1990", "1989"],
-    "Grand Marquis": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003"],
-    "Marauder": ["2005", "2004", "2003"],
-    "Mariner": ["2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005"],
-    "Milan": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006"],
-    "Montego": ["2007", "2006", "2005"],
-    "Mountaineer": ["2007", "2006", "2005", "2004", "2003", "2002"],
-    "Mystique": ["2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995"],
-    "Sable": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2006", "2005", "2004", "2003", "2002", "2001", "2000"]
-  },
-  "Mitsubishi": {
-    "Diamante": ["2004", "2003", "2002", "1996", "1995", "1994", "1993"],
-    "Eclipse": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995"],
-    "Eclipse Coupe": ["2012", "2011", "2010", "2009", "2008", "2007", "2006"],
-    "Eclipse Coupe SS": ["2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006"],
-    "Galant": ["2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994"],
-    "Lancer": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008"],
-    "Lancer Ralliart": ["2007", "2006", "2005", "2004"],
-    "Montero": ["2006", "2005", "2004", "2003", "2002", "2001"]
-  },
-  "Nissan": {
-    "300ZX": [ "1997", "1996", "1995", "1994", "1993", "1992", "1991", "1990"],
-    "350Z": ["2009", "2008", "2007", "2006", "2005", "2004", "2003"],
-    "350Z Coupe": ["2008", "2007", "2006", "2005", "2004", "2003"],
-    "350Z Roadster": ["2009", "2008", "2007", "2006", "2005", "2004", "2003"],
-    "370Z": ["2016","2015", "2014", "2013", "2012", "2011", "2010"],
-    "370Z Coupe": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009"],
-    "370Z Roadster": ["2016","2015", "2014", "2013", "2012", "2011", "2010"],
-    "Altima": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2006", "2005", "2004", "2003", "2002"],
-    "Altima Coupe": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008"],
-    "Altima SE-R": ["2006", "2005", "2004", "2003", "2002"],
-    "Altima Sedan": ["2017","2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007"],
-    "Armada": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004"],
-    "Cube": ["2016","2015", "2014", "2013", "2012", "2011", "2010"],
-    "Juke": ["2016","2015", "2014", "2013", "2012", "2011"],
-    "Maxima": ["2017","2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000"],
-    "Pathfinder": ["2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005"],
-    "Rogue": ["2013", "2012", "2011", "2010", "2009", "2008"],
-    "Rogue Select": ["2016","2015", "2014"],
-    "Sentra": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000","1994", "1993", "1992", "1991"],
-    "Sentra SE-R": ["2012", "2011", "2010", "2009", "2008", "2007"],
-    "Versa": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006"],
-    "Versa Hatchback": ["2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006"],
-    "Versa Note": ["2016","2015", "2014"],
-    "Xterra": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000"]
-  },
-  "Pontiac": {
-    "G6 Coupe": ["2010", "2009", "2008", "2007", "2006", "2005"],
-    "G6 Sedan": ["2010", "2009", "2008", "2007", "2006", "2005"],
-    "Grand Am": ["2005", "2004", "2003", "2002", "2001", "2000", "1999"],
-    "Grand Prix": ["2003", "2002", "2001", "2000", "1999", "1998", "1997"],
-    "Solstice": ["2010", "2009", "2008", "2007", "2006"],
-    "Sunfire": ["2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995"],
-    "Vibe": ["2008", "2007", "2006", "2005", "2004", "2003", "2002"]
-  },
-  "Saab": {
-    "9.3": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004"],
-    "9.3 Vector": ["2007", "2006", "2005", "2004", "2003"],
-    "9.5": ["2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995"],
-    "900": ["2001", "2000", "1999", "1998", "1997", "1996"]
-  },
-  "Saturn": {
-    "Astra": ["2010", "2009", "2008"],
-    "Aura": ["2010", "2009", "2008", "2007"],
-    "Ion Coupe": ["2008", "2007", "2006", "2005", "2004", "2003"],
-    "Ion Quad Coupe": ["2008", "2007", "2006", "2005", "2004", "2003"],
-    "Ion Sedan": ["2008", "2007", "2006", "2005", "2004", "2003"],
-    "Outlook": ["2010", "2009", "2008", "2007"],
-    "SL": ["2002", "2001", "2000"],
-    "Sky": ["2010", "2009", "2008", "2007", "2006"],
-    "Vue": ["2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002"]
-  },
-  "Scion": {
-    "BR-Z": ["2016","2015", "2014", "2013"],
-    "FR-S": ["2016","2015", "2014", "2013"],
-    "IQ": ["2016","2015", "2014", "2013", "2012"],
-    "TC": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005"],
-    "XB": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004"],
-    "XD": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008"]
-  },
-  "Subaru": {
-    "BR-Z": ["2016","2015", "2014", "2013"],
-    "Forester": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003"],
-    "Impreza": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008"],
-    "Impreza WRX": ["2016", "2015", "2007", "2006", "2005", "2004", "2003", "2002"],
-    "Legacy": ["2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005"],
-    "XV Crosstrek": ["2016","2015", "2014", "2013", "2012"],
-    "WRX STI": ["2017", "2016"]
-  },
-  "Suzuki": {
-    "Forenza": ["2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004"],
-    "Grand Vitara": ["2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006"],
-    "SX-4": ["2016","2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007"],
-    "Verona": ["2006", "2005", "2004", "2003"]
-  },
-  "Toyota": {
-    "4Runner": ["2009", "2008", "2007", "2006", "2005", "2004", "2003"],
-    "Avalon": ["2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000"],
-    "Camry": ["2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994", "1993", "1992"],
-    "Celica": ["2005", "2004", "2003", "2002", "2001", "2000"],
-    "Corolla": ["2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998"],
-    "Echo": ["2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000"],
-    "GT-86": ["2016", "2015", "2014", "2013", "2012"],
-    "Highlander": ["2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001"],
-    "MR2 Spyder": ["2005", "2004", "2003", "2002", "2001", "2000"],
-    "Matrix": ["2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003"],
-    "Sequoia": ["2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001"],
-    "Sienna": ["2010", "2009", "2008", "2007", "2006", "2005", "2004"],
-    "Solara": ["2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999"],
-    "Tundra": ["2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007"],
-    "Yaris Hatchback": ["2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007"],
-    "Yaris Sedan": ["2011", "2010", "2009", "2008", "2007"]
-  },
-  "Volkswagen": {
-    "Beetle": ["2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998"],
-    "CC": ["2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009"],
-    "EOS": ["2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007"],
-    "Jetta": ["2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999"],
-    "Passat": ["2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998"],
-    "Touareg": ["2007", "2006", "2005", "2004", "2003"]
-  },
-  "Volvo": {
-    "850": ["1998", "1997", "1996", "1995", "1994"],
-    "S40": ["2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000"],
-    "S60": ["2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004"],
-    "S70": ["2000", "1999", "1998"]
+  "VOLVO": {
+      "240 Estate\/Combi (P245) 1974-1993": [
+          "Modelo: 2.0 240 Estate\/Combi | Potencia:117HP | ID Veh\u00edculo:8634"
+      ],
+      "740 Estate\/Combi (745) 1984-1992": [
+          "Modelo: 2.3 740 Estate\/Combi | Potencia:115HP | ID Veh\u00edculo:2798"
+      ],
+      "760 Kombi (704, 765) 1982-1992": [
+          "Modelo: 2.4 D | Potencia:82HP | ID Veh\u00edculo:17552"
+      ],
+      "780 (782) 1986-1990": [
+          "Modelo: 2.9 | Potencia:147HP | ID Veh\u00edculo:6380"
+      ],
+      "940 Estate\/Combi (945) 1990-1995": [
+          "Modelo: 2.4 940 Estate\/Combi | Potencia:130HP | ID Veh\u00edculo:122382"
+      ],
+      "960 (964) 1990-1994": [
+          "Modelo: 2.9 | Potencia:204HP | ID Veh\u00edculo:2847"
+      ],
+      "960 II (964) 1994-1996": [
+          "Modelo: 2.9 | Potencia:204HP | ID Veh\u00edculo:3983"
+      ],
+      "C30 (533) 2006-2013": [
+          "Modelo: 1.6 | Potencia:100HP | ID Veh\u00edculo:19808",
+          "Modelo: 2.4 i | Potencia:170HP | ID Veh\u00edculo:19811",
+          "Modelo: T5 | Potencia:230HP | ID Veh\u00edculo:23141"
+      ],
+      "C40 (539) 2021": [
+          "Modelo: Recharge AWD | Potencia:408HP | ID Veh\u00edculo:146116",
+          "Modelo: Recharge | Potencia:231HP | ID Veh\u00edculo:147561"
+      ],
+      "C70 I Coup\u00e9 (872) 1997-2002": [
+          "Modelo: T-5 | Potencia:240HP | ID Veh\u00edculo:8426"
+      ],
+      "C70 II Descapotable (542) 2006-2013": [
+          "Modelo: T5 | Potencia:220HP | ID Veh\u00edculo:19563",
+          "Modelo: T5 | Potencia:230HP | ID Veh\u00edculo:23149"
+      ],
+      "S40 I (644) 1995-2004": [
+          "Modelo: 1.9 T4 | Potencia:200HP | ID Veh\u00edculo:8693",
+          "Modelo: 2.0 T | Potencia:163HP | ID Veh\u00edculo:16568",
+          "Modelo: 2.0 T | Potencia:165HP | ID Veh\u00edculo:14959"
+      ],
+      "S40 II (544) 2003-2012": [
+          "Modelo: 2.0 | Potencia:146HP | ID Veh\u00edculo:20090",
+          "Modelo: 2.4 | Potencia:140HP | ID Veh\u00edculo:17819",
+          "Modelo: 2.4 | Potencia:170HP | ID Veh\u00edculo:17822",
+          "Modelo: T5 AWD | Potencia:220HP | ID Veh\u00edculo:18110",
+          "Modelo: T5 AWD | Potencia:230HP | ID Veh\u00edculo:23143",
+          "Modelo: T5 | Potencia:220HP | ID Veh\u00edculo:17823",
+          "Modelo: T5 | Potencia:230HP | ID Veh\u00edculo:23142"
+      ],
+      "S60 I (384) 2000-2010": [
+          "Modelo: 2.0 T | Potencia:180HP | ID Veh\u00edculo:16352",
+          "Modelo: 2.4 T AWD | Potencia:200HP | ID Veh\u00edculo:16186",
+          "Modelo: 2.4 T | Potencia:200HP | ID Veh\u00edculo:15150",
+          "Modelo: 2.4 | Potencia:140HP | ID Veh\u00edculo:15148",
+          "Modelo: 2.4 | Potencia:170HP | ID Veh\u00edculo:15149",
+          "Modelo: 2.5 T AWD | Potencia:210HP | ID Veh\u00edculo:18223",
+          "Modelo: 2.5 T | Potencia:210HP | ID Veh\u00edculo:18008",
+          "Modelo: R 2,5 T AWD | Potencia:300HP | ID Veh\u00edculo:17133",
+          "Modelo: T5 | Potencia:250HP | ID Veh\u00edculo:15151",
+          "Modelo: T5 | Potencia:260HP | ID Veh\u00edculo:18224"
+      ],
+      "S60 II (134) 2010-2019": [
+          "Modelo: T4 | Potencia:180HP | ID Veh\u00edculo:33375",
+          "Modelo: T4 | Potencia:190HP | ID Veh\u00edculo:114198",
+          "Modelo: T5 AWD | Potencia:254HP | ID Veh\u00edculo:116593",
+          "Modelo: T5 | Potencia:240HP | ID Veh\u00edculo:33377",
+          "Modelo: T5 | Potencia:245HP | ID Veh\u00edculo:100522",
+          "Modelo: T6 AWD | Potencia:304HP | ID Veh\u00edculo:33378",
+          "Modelo: T6 AWD | Potencia:306HP | ID Veh\u00edculo:118986"
+      ],
+      "S60 II Cross Country (134) 2015-2018": [
+          "Modelo: T5 AWD | Potencia:254HP | ID Veh\u00edculo:147931"
+      ],
+      "S60 III (224) 2019": [
+          "Modelo: B4 Mild-Hybrid | Potencia:197HP | ID Veh\u00edculo:140464",
+          "Modelo: T5 Polestar AWD | Potencia:253HP | ID Veh\u00edculo:141756",
+          "Modelo: T5 Polestar | Potencia:253HP | ID Veh\u00edculo:136760",
+          "Modelo: T8 Plug-in Hybrid AWD | Potencia:407HP | ID Veh\u00edculo:143303"
+      ],
+      "S70 (874) 1996-2000": [
+          "Modelo: 2.5 TDI | Potencia:140HP | ID Veh\u00edculo:7255",
+          "Modelo: T5 | Potencia:239HP | ID Veh\u00edculo:7254"
+      ],
+      "S80 I (184) 1998-2008": [
+          "Modelo: 2.5 T AWD | Potencia:210HP | ID Veh\u00edculo:17283",
+          "Modelo: 2.5 T | Potencia:210HP | ID Veh\u00edculo:18602",
+          "Modelo: 2.5 TDI | Potencia:140HP | ID Veh\u00edculo:9464",
+          "Modelo: 2.9 | Potencia:200HP | ID Veh\u00edculo:13087",
+          "Modelo: 2.9 | Potencia:204HP | ID Veh\u00edculo:9421",
+          "Modelo: 3.0 | Potencia:196HP | ID Veh\u00edculo:16474",
+          "Modelo: T6 | Potencia:272HP | ID Veh\u00edculo:16475",
+          "Modelo: T6 | Potencia:272HP | ID Veh\u00edculo:9422"
+      ],
+      "S80 II (124) 2006-2016": [
+          "Modelo: 2.0 | Potencia:146HP | ID Veh\u00edculo:33802",
+          "Modelo: 2.5 T FlexFuel | Potencia:231HP | ID Veh\u00edculo:32849",
+          "Modelo: 2.5 T | Potencia:200HP | ID Veh\u00edculo:19753",
+          "Modelo: 2.5 T | Potencia:231HP | ID Veh\u00edculo:33800",
+          "Modelo: 3.2 AWD | Potencia:238HP | ID Veh\u00edculo:23146",
+          "Modelo: 3.2 | Potencia:238HP | ID Veh\u00edculo:19754",
+          "Modelo: 4.4 V8 AWD | Potencia:316HP | ID Veh\u00edculo:19337",
+          "Modelo: T5 | Potencia:241HP | ID Veh\u00edculo:6278",
+          "Modelo: T6 AWD | Potencia:286HP | ID Veh\u00edculo:23147",
+          "Modelo: T6 AWD | Potencia:305HP | ID Veh\u00edculo:6279"
+      ],
+      "S90 II (234) 2016": [
+          "Modelo: T6 AWD | Potencia:320HP | ID Veh\u00edculo:119949"
+      ],
+      "V40 Cross Country (526) 2012-2019": [
+          "Modelo: D2 | Potencia:114HP | ID Veh\u00edculo:147919",
+          "Modelo: T3 | Potencia:152HP | ID Veh\u00edculo:147900",
+          "Modelo: T4 AWD | Potencia:180HP | ID Veh\u00edculo:29682",
+          "Modelo: T4 AWD | Potencia:190HP | ID Veh\u00edculo:112412",
+          "Modelo: T4 GTDi | Potencia:180HP | ID Veh\u00edculo:147917",
+          "Modelo: T4 | Potencia:180HP | ID Veh\u00edculo:147909",
+          "Modelo: T4 | Potencia:190HP | ID Veh\u00edculo:147904",
+          "Modelo: T5 AWD | Potencia:245HP | ID Veh\u00edculo:108766",
+          "Modelo: T5 AWD | Potencia:254HP | ID Veh\u00edculo:59786",
+          "Modelo: T5 | Potencia:254HP | ID Veh\u00edculo:147923"
+      ],
+      "V40 Hatchback (525) 2012-2019": [
+          "Modelo: T3 GTDi | Potencia:150HP | ID Veh\u00edculo:55096",
+          "Modelo: T3 | Potencia:152HP | ID Veh\u00edculo:111858",
+          "Modelo: T4 GTDi | Potencia:180HP | ID Veh\u00edculo:55097",
+          "Modelo: T4 | Potencia:180HP | ID Veh\u00edculo:32346",
+          "Modelo: T4 | Potencia:190HP | ID Veh\u00edculo:116592",
+          "Modelo: T5 | Potencia:245HP | ID Veh\u00edculo:106280",
+          "Modelo: T5 | Potencia:254HP | ID Veh\u00edculo:57488"
+      ],
+      "V40 Station Wagon (645) 1995-2004": [
+          "Modelo: 1.6 | Potencia:105HP | ID Veh\u00edculo:7921",
+          "Modelo: 1.6 | Potencia:109HP | ID Veh\u00edculo:12520",
+          "Modelo: 1.9 T4 | Potencia:200HP | ID Veh\u00edculo:8694",
+          "Modelo: 2.0 T | Potencia:160HP | ID Veh\u00edculo:11119",
+          "Modelo: 2.0 T | Potencia:163HP | ID Veh\u00edculo:16569"
+      ],
+      "V50 (545) 2003-2012": [
+          "Modelo: T5 AWD | Potencia:220HP | ID Veh\u00edculo:18112",
+          "Modelo: T5 | Potencia:220HP | ID Veh\u00edculo:17824"
+      ],
+      "V60 I (155) 2010-2018": [
+          "Modelo: T4 | Potencia:190HP | ID Veh\u00edculo:114200",
+          "Modelo: T5 AWD | Potencia:254HP | ID Veh\u00edculo:116595",
+          "Modelo: T5 | Potencia:240HP | ID Veh\u00edculo:105580",
+          "Modelo: T5 | Potencia:245HP | ID Veh\u00edculo:100376"
+      ],
+      "V60 I Cross Country (157) 2010-2018": [
+          "Modelo: T5 | Potencia:245HP | ID Veh\u00edculo:147937"
+      ],
+      "V70 I (875, 876) 1995-2000": [
+          "Modelo: 2.4 Turbo | Potencia:193HP | ID Veh\u00edculo:7259"
+      ],
+      "V70 II (285) 1999-2008": [
+          "Modelo: 2.4 T | Potencia:193HP | ID Veh\u00edculo:119795",
+          "Modelo: 2.5 T AWD | Potencia:209HP | ID Veh\u00edculo:17139",
+          "Modelo: 2.5 T | Potencia:209HP | ID Veh\u00edculo:18221",
+          "Modelo: T5 | Potencia:250HP | ID Veh\u00edculo:14617"
+      ],
+      "XC40 SUV (536) 2017": [
+          "Modelo: Recharge AWD | Potencia:408HP | ID Veh\u00edculo:144518",
+          "Modelo: T4 | Potencia:190HP | ID Veh\u00edculo:131094",
+          "Modelo: T5 AWD | Potencia:247HP | ID Veh\u00edculo:128759",
+          "Modelo: T5 AWD | Potencia:249HP | ID Veh\u00edculo:134183",
+          "Modelo: T5 Plug-in Hybrid | Potencia:262HP | ID Veh\u00edculo:136722"
+      ],
+      "XC60 I SUV (156) 2008-2017": [
+          "Modelo: 3.2 AWD | Potencia:238HP | ID Veh\u00edculo:32120",
+          "Modelo: T5 AWD | Potencia:254HP | ID Veh\u00edculo:108270",
+          "Modelo: T5 | Potencia:241HP | ID Veh\u00edculo:6168",
+          "Modelo: T5 | Potencia:245HP | ID Veh\u00edculo:100383",
+          "Modelo: T6 AWD | Potencia:286HP | ID Veh\u00edculo:28228",
+          "Modelo: T6 AWD | Potencia:304HP | ID Veh\u00edculo:33384",
+          "Modelo: T6 AWD | Potencia:306HP | ID Veh\u00edculo:117792",
+          "Modelo: T6 | Potencia:306HP | ID Veh\u00edculo:100384"
+      ],
+      "XC60 II SUV (246) 2017": [
+          "Modelo: 2.0 B5 Mild-Hybrid AWD | Potencia:249HP | ID Veh\u00edculo:147102",
+          "Modelo: T5 AWD | Potencia:249HP | ID Veh\u00edculo:129973",
+          "Modelo: T5 AWD | Potencia:254HP | ID Veh\u00edculo:126480",
+          "Modelo: T6 AWD | Potencia:320HP | ID Veh\u00edculo:126481",
+          "Modelo: T6 Polestar AWD | Potencia:326HP | ID Veh\u00edculo:136761",
+          "Modelo: T8 Hybrid AWD | Potencia:407HP | ID Veh\u00edculo:126482",
+          "Modelo: T8 Hybrid AWD | Potencia:456HP | ID Veh\u00edculo:146619",
+          "Modelo: T8 Hybrid Polestar AWD | Potencia:334HP | ID Veh\u00edculo:143450",
+          "Modelo: T8 Hybrid Polestar AWD | Potencia:420HP | ID Veh\u00edculo:141761"
+      ],
+      "XC70 I Cross Country (295) 1997-2007": [
+          "Modelo: 2.5 T XC AWD | Potencia:209HP | ID Veh\u00edculo:16995"
+      ],
+      "XC70 II (136) 2007-2016": [
+          "Modelo: 3.2 AWD | Potencia:238HP | ID Veh\u00edculo:23155"
+      ],
+      "XC90 I (275) 2002-2015": [
+          "Modelo: 2.5 T AWD | Potencia:209HP | ID Veh\u00edculo:16570",
+          "Modelo: 3.2 AWD | Potencia:238HP | ID Veh\u00edculo:23056",
+          "Modelo: T6 AWD | Potencia:272HP | ID Veh\u00edculo:16571",
+          "Modelo: V8 AWD | Potencia:316HP | ID Veh\u00edculo:18291",
+          "Modelo: V8 AWD | Potencia:320HP | ID Veh\u00edculo:108617"
+      ],
+      "XC90 II (256) 2014": [
+          "Modelo: T6 AWD | Potencia:320HP | ID Veh\u00edculo:107555",
+          "Modelo: T8 Hybrid AWD | Potencia:405HP | ID Veh\u00edculo:117609",
+          "Modelo: T8 Plug-in Hybrid Polestar AWD | Potencia:334HP | ID Veh\u00edculo:138837"
+      ]
   }
 }
