@@ -7,15 +7,15 @@
 {% endcomment %}
 
 {% if shop.money_format contains 'money' %}
-  {% assign saved_amount = saved_amount | money %}
+  {% assign saved_amount = saved_amount | money_with_currency %}
 {% else %}
   {% if saved_amount > 1000 %}
     {% if shop.money_format contains '{{amount}}' and shop.money_format contains '.' %}
       {% assign saved_amount = saved_amount | money_without_trailing_zeros %}
     {% elsif shop.money_format contains '{{amount}}' %}
-      {% assign saved_amount = saved_amount | money | split: '.' | first %}
+      {% assign saved_amount = saved_amount | money_with_currency | split: '.' | first %}
     {% elsif shop.money_format contains '{{amount_with_comma_separator}}' %}
-      {% assign saved_amount = saved_amount | money | split: ',' | first %}
+      {% assign saved_amount = saved_amount | money_with_currency | split: ',' | first %}
     {% else %}
       {% assign saved_amount = saved_amount | money_without_trailing_zeros %}
     {% endif %}
