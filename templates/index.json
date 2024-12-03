@@ -510,6 +510,7 @@
           "type": "category",
           "settings": {
             "image": "shopify://shop_images/VOLKSWAGEN.png",
+            "imageHover": "shopify://shop_images/Volkswagen-hover_2.png",
             "heading_text": "Volkswagen",
             "heading_link": "shopify://collections/all",
             "category": "",
@@ -521,6 +522,7 @@
           "type": "category",
           "settings": {
             "image": "shopify://shop_images/BMW.png",
+            "imageHover": "shopify://shop_images/Marca_de_carros_hover.png",
             "heading_text": "BMW",
             "heading_link": "shopify://collections/all",
             "category": "",
@@ -532,6 +534,7 @@
           "type": "category",
           "settings": {
             "image": "shopify://shop_images/PORSCHE.png",
+            "imageHover": "shopify://shop_images/Porsche-hover_2_41a7ab9f-3dac-4ec8-9e1b-b22d7fbebd43.png",
             "heading_text": "Porsche",
             "heading_link": "shopify://collections/all",
             "category": "",
@@ -543,6 +546,7 @@
           "type": "category",
           "settings": {
             "image": "shopify://shop_images/AUDI.png",
+            "imageHover": "shopify://shop_images/Audi-hover.png",
             "heading_text": "Audi",
             "heading_link": "shopify://collections/all",
             "category": "",
@@ -554,6 +558,7 @@
           "type": "category",
           "settings": {
             "image": "shopify://shop_images/MB.png",
+            "imageHover": "shopify://shop_images/Mercedes_Benz-hover.png",
             "heading_text": "Mercedes Benz",
             "heading_link": "shopify://collections/all",
             "category": "",
@@ -565,6 +570,7 @@
           "type": "category",
           "settings": {
             "image": "shopify://shop_images/MINI.png",
+            "imageHover": "shopify://shop_images/Mini-hover.png",
             "heading_text": "MINI",
             "heading_link": "shopify://collections",
             "category": "",
@@ -576,6 +582,7 @@
           "type": "category",
           "settings": {
             "image": "shopify://shop_images/VOLVO.png",
+            "imageHover": "shopify://shop_images/Volvo-hover.png",
             "heading_text": "Volvo",
             "heading_link": "shopify://collections/all",
             "category": "",
@@ -587,6 +594,7 @@
           "type": "category",
           "settings": {
             "image": "shopify://shop_images/JAGUAR.png",
+            "imageHover": "shopify://shop_images/Jaguar-hover.png",
             "heading_text": "Jaguar",
             "heading_link": "",
             "category": "",
@@ -598,6 +606,7 @@
           "type": "category",
           "settings": {
             "image": "shopify://shop_images/LAND-ROVER.png",
+            "imageHover": "shopify://shop_images/Land-Rover-hover.png",
             "heading_text": "Land Rover",
             "heading_link": "",
             "category": "",
@@ -609,6 +618,7 @@
           "type": "category",
           "settings": {
             "image": "shopify://shop_images/SMART_1.png",
+            "imageHover": "shopify://shop_images/Smart-hover.png",
             "heading_text": "Smart",
             "heading_link": "",
             "category": "",
@@ -620,6 +630,7 @@
           "type": "category",
           "settings": {
             "image": "shopify://shop_images/SEAT_1.png",
+            "imageHover": "shopify://shop_images/Seat-hover.png",
             "heading_text": "Seat",
             "heading_link": "",
             "category": "",
@@ -631,6 +642,7 @@
           "type": "category",
           "settings": {
             "image": "shopify://shop_images/CUPRA_1.png",
+            "imageHover": "shopify://shop_images/Cupra-hover.png",
             "heading_text": "Cupra",
             "heading_link": "",
             "category": "",
